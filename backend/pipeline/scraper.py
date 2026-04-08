@@ -422,7 +422,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Patent ingestion pipeline")
     parser.add_argument("--api-key",    default=os.getenv("SERPAPI_KEY"),
                         help="SerpAPI key (or set SERPAPI_KEY env var)")
-    parser.add_argument("--output-dir", default="./data/raw",
+    parser.add_argument("--output-dir", default="../data/raw",
                         help="Root output directory")
     parser.add_argument("--dry-run",    action="store_true",
                         help="Phase 1 only — no detail fetches or HTML scraping")
