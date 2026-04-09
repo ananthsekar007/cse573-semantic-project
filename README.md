@@ -405,9 +405,8 @@ touching pipeline logic.
 |---|---|---|
 | Data collection | ✅ Complete | `scraper.py` |
 | Preprocessing | ✅ Complete | `preprocessor.py` |
-| Embedding generation | 🔲 Next | `embedder.py` (planned) |
-| FAISS index building | 🔲 Planned | `faiss_store.py` (planned) |
-| HDBSCAN clustering | 🔲 Planned | `clusterer.py` (planned) |
+| Embedding generation & Fiass Store | ✅ Complete | `embedder.py` |
+| HDBSCAN clustering | 🔲 Next | `clusterer.py` (planned) |
 | KeyBERT labeling | 🔲 Planned | `labeler.py` (planned) |
 | RAG pipeline | 🔲 Planned | `chat.py` (planned) |
 | Novelty scoring | 🔲 Planned | `novelty.py` (planned) |
