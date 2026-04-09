@@ -82,19 +82,6 @@ def load_model() -> SentenceTransformer:
     log.info("Model loaded on CPU. Max sequence length: %d tokens", model.max_seq_length)
     return model
 
-# def embed_texts(model, texts, batch_size=BATCH_SIZE, desc="Embedding"):
-#     outs = []
-#     for idx, text in enumerate(texts):
-#         print("Encoding", idx, "chars=", len(text), "preview=", repr(text[:120]))
-#         vec = model.encode(
-#             [text],
-#             batch_size=1,
-#             show_progress_bar=False,
-#             normalize_embeddings=True,
-#             convert_to_numpy=True,
-#         )
-#         print("OK", idx, vec.shape)
-
 def embed_texts(
     model: SentenceTransformer,
     texts: list[str],
