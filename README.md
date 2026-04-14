@@ -18,6 +18,9 @@
 - [Pipeline Stages](#pipeline-stages)
   - [Stage 1 — Data Collection](#stage-1--data-collection)
   - [Stage 2 — Preprocessing](#stage-2--preprocessing)
+  - [Stage 3 — Clustering](#stage-3--clustering-baseline--sota)
+- [Evaluation and Results](#evaluation-and-results)
+- [Novelty and Intelligence Layer](#novelty-and-intelligence-layer)
 - [Data Flow](#data-flow)
 - [Configuration](#configuration)
 - [Current Status](#current-status)
@@ -38,7 +41,7 @@ This system addresses that by building a pipeline that:
 - **Embeds** patents as dense vectors using Sentence-BERT (planned)
 - **Clusters** patents into technology domains using HDBSCAN + UMAP (planned)
 - **Enables conversational search** via a RAG pipeline backed by FAISS + Grok LLM (planned)
-- **Scores novelty** of new patent proposals against prior art using cosine similarity (planned)
+- **Scores novelty** of new patent proposals against prior art using cosine similarity
 
 ### Target Domains
 
@@ -462,6 +465,38 @@ the algorithmic baseline. If the corpus has not been collected yet, the code is
 still ready, but the numeric results will only appear once the processed dataset
 is present.
 
+### Novelty and intelligence layer
+
+**Script:** `pipeline/novelty.py`
+
+The novelty baseline uses the FAISS document index to compare a patent against
+its nearest prior-art neighbor. The novelty score is defined as `1 - max_similarity`.
+
+#### What it does
+
+1. Loads `data/embeddings/doc_embeddings.npy` and `data/embeddings/doc_metadata.json`
+2. Builds or loads `data/embeddings/faiss_doc.index`
+3. Scores each patent against its nearest non-self neighbor
+4. Writes a per-patent score file and a summary statistics file
+
+#### Outputs
+
+- `data/novelty/novelty_scores.json`
+- `data/novelty/novelty_summary.json`
+
+#### Usage
+
+```bash
+# Corpus-level novelty scoring
+python pipeline/novelty.py
+
+# Score a new candidate patent text
+python pipeline/novelty.py --query-text "A device for..."
+
+# Score a text file
+python pipeline/novelty.py --query-file ./candidate_patent.txt
+```
+
 ---
 
 ## Data Flow
@@ -523,6 +558,6 @@ touching pipeline logic.
 | Clustering and evaluation | ✅ Baseline + SOTA implemented | `clusterer.py` |
 | KeyBERT labeling | 🔲 Planned | `labeler.py` (planned) |
 | RAG pipeline | 🔲 Planned | `chat.py` (planned) |
-| Novelty scoring | 🔲 Planned | `novelty.py` (planned) |
+| Novelty scoring | ✅ Baseline implemented | `novelty.py` |
 | FastAPI backend | 🔲 Planned | `backend/` (planned) |
 | React frontend | 🔲 Planned | `frontend/` (planned) |
