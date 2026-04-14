@@ -17,4 +17,9 @@ torch>=2.0.0
 faiss-cpu==1.8.0
 numpy==1.26.4
 tqdm==4.66.4
+
+# Clustering and evaluation
+scikit-learn==1.5.1
+umap-learn==0.5.6
+hdbscan==0.8.38.post1
  

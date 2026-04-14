@@ -4,5 +4,14 @@ data
 
 env
 
+.venv/
+venv/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
 random_stuff
 description_files
+Group21-Project9-SP26-Group-Project-Presentation.pdf

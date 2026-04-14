@@ -350,6 +350,120 @@ interrupt and restart at any point.
 
 ---
 
+### Stage 3 — Clustering (Baseline + SOTA)
+
+**Script:** `pipeline/clusterer.py`
+
+Runs two algorithm tracks for technology-domain discovery:
+
+1. **Baseline (implemented): TF-IDF + K-Means**
+2. **SOTA track (implemented): SBERT doc embeddings + UMAP + HDBSCAN**
+
+#### Baseline approach (recommended for your project milestone)
+
+- Input: `data/processed/doc_txt/<id>.txt`
+- Vectorization: TF-IDF or BM25 with unigram+bigram features
+- Clustering: K-Means (`k=5` by default for the 5 target domains)
+- Optional linear projection: PCA before K-Means (`--pca-components > 0`)
+- Outputs:
+  - `data/clustering/baseline_cluster_assignments.json`
+  - `data/clustering/baseline_metrics.json`
+- Metrics generated:
+  - Adjusted Rand Index (ARI)
+  - Normalized Mutual Information (NMI)
+  - Homogeneity
+  - Silhouette score
+  - Cluster purity
+
+#### SOTA track
+
+- Input: `data/embeddings/doc_embeddings.npy`
+- Projection: UMAP
+- Clustering: HDBSCAN (noise-aware, no fixed k)
+- Outputs:
+  - `data/clustering/sota_cluster_assignments.json`
+  - `data/clustering/sota_metrics.json`
+
+#### Usage
+
+```bash
+# Baseline only
+python pipeline/clusterer.py --method baseline
+
+# Baseline with BM25 vectors
+python pipeline/clusterer.py --method baseline --vectorizer bm25
+
+# Baseline with PCA linear projection before K-Means
+python pipeline/clusterer.py --method baseline --vectorizer tfidf --pca-components 50
+
+# SOTA only (requires embeddings from embedder.py)
+python pipeline/clusterer.py --method sota
+
+# Run both tracks
+python pipeline/clusterer.py --method both
+```
+
+### Keyword retrieval baselines (inverted index + Boolean syntax)
+
+**Script:** `pipeline/keyword_search.py`
+
+Implements exact-term lookup with an inverted index and supports Boolean query
+syntax (`AND`, `OR`, `NOT`, and parentheses).
+
+```bash
+# Build index from processed corpus
+python pipeline/keyword_search.py --build-index
+
+# Exact/Boolean keyword search
+python pipeline/keyword_search.py --query "semiconductor AND lithography"
+python pipeline/keyword_search.py --query "(5g OR telecom) AND NOT satellite"
+```
+
+---
+
+## Evaluation and Results
+
+The clustering stage is evaluated against the known patent domain labels that are
+already present in the cleaned corpus metadata. The baseline is the primary
+milestone deliverable because it is deterministic, easy to reproduce, and gives a
+clear comparison point against the more advanced HDBSCAN track.
+
+### Evaluation protocol
+
+1. Run preprocessing so `data/processed/doc_txt/<id>.txt` and
+  `data/processed/cleaned_json/<id>.json` exist for the same patent IDs.
+2. Run `pipeline/clusterer.py --method baseline` to assign each patent to a
+  K-Means cluster.
+3. Compare predicted clusters against the domain field stored in the cleaned
+  JSON metadata.
+4. Save the resulting assignments and summary metrics under
+  `data/clustering/` for reporting and analysis.
+
+### Metrics reported
+
+| Metric | Purpose |
+|---|---|
+| ARI | Measures agreement with the known domain labels after accounting for chance |
+| NMI | Captures shared information between predicted clusters and true domains |
+| Homogeneity | Checks whether each cluster contains patents from a single domain |
+| Silhouette score | Measures how well-separated the TF-IDF clusters are |
+| Cluster purity | Fraction of patents assigned to the dominant label in each cluster |
+
+### Result artifacts
+
+The baseline run writes two files:
+
+- `data/clustering/baseline_cluster_assignments.json`
+- `data/clustering/baseline_metrics.json`
+
+The SOTA run writes the equivalent `sota_*` files. The metrics file is the one to
+reference in the presentation because it captures the quantitative evaluation of
+the algorithmic baseline. If the corpus has not been collected yet, the code is
+still ready, but the numeric results will only appear once the processed dataset
+is present.
+
+---
+
 ## Data Flow
 
 ```
@@ -406,7 +520,7 @@ touching pipeline logic.
 | Data collection | ✅ Complete | `scraper.py` |
 | Preprocessing | ✅ Complete | `preprocessor.py` |
 | Embedding generation & Fiass Store | ✅ Complete | `embedder.py` |
-| HDBSCAN clustering | 🔲 Next | `clusterer.py` (planned) |
+| Clustering and evaluation | ✅ Baseline + SOTA implemented | `clusterer.py` |
 | KeyBERT labeling | 🔲 Planned | `labeler.py` (planned) |
 | RAG pipeline | 🔲 Planned | `chat.py` (planned) |
 | Novelty scoring | 🔲 Planned | `novelty.py` (planned) |
