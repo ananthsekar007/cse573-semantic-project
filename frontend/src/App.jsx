@@ -4,6 +4,12 @@ const CHART_WIDTH = 1040;
 const CHART_HEIGHT = 700;
 const CHART_MARGIN = 64;
 const THEMES = ["light", "dark"];
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
+const TABS = [
+  { id: "clustering", label: "Clustering" },
+  { id: "novelty", label: "Novelty Scoring" },
+  { id: "rag", label: "RAG Chat" },
+];
 
 function formatMetric(value) {
   if (value == null) return "N/A";
@@ -25,12 +31,43 @@ function scale(value, domain, range) {
   return r0 + ((value - d0) / (d1 - d0)) * (r1 - r0);
 }
 
+async function readJsonSafely(response) {
+  const text = await response.text();
+  if (!text.trim()) {
+    throw new Error(`Empty response body (${response.status})`);
+  }
+  try {
+    return JSON.parse(text);
+  } catch {
+    throw new Error(`Server returned non-JSON response (${response.status})`);
+  }
+}
+
 function ThemeToggle({ theme, onToggle }) {
   return (
     <button className="theme-toggle" onClick={onToggle} type="button" aria-label="Toggle theme">
       <span className={`theme-pill ${theme === "light" ? "is-active" : ""}`}>Light</span>
       <span className={`theme-pill ${theme === "dark" ? "is-active" : ""}`}>Dark</span>
     </button>
+  );
+}
+
+function TabBar({ activeTab, onSelectTab }) {
+  return (
+    <div className="tab-bar" role="tablist" aria-label="Dashboard sections">
+      {TABS.map((tab) => (
+        <button
+          key={tab.id}
+          className={`tab-button ${activeTab === tab.id ? "tab-button-active" : ""}`}
+          onClick={() => onSelectTab(tab.id)}
+          role="tab"
+          aria-selected={activeTab === tab.id}
+          type="button"
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
   );
 }
 
@@ -138,6 +175,241 @@ function ClusterInsight({ cluster, summary, metrics }) {
           </div>
         </div>
       </div>
+    </section>
+  );
+}
+
+function ToolPreviewCard({ title, eyebrow, description, children }) {
+  return (
+    <section className="panel tool-panel">
+      <div className="panel-head">
+        <p className="panel-kicker">{eyebrow}</p>
+        <h2>{title}</h2>
+        <p className="hero-copy compact-copy">{description}</p>
+      </div>
+      <div className="tool-panel-body">{children}</div>
+    </section>
+  );
+}
+
+function NoveltyTab() {
+  const [title, setTitle] = useState("");
+  const [abstract, setAbstract] = useState("");
+  const [claimText, setClaimText] = useState("");
+  const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    setLoading(true);
+    setError("");
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/novelty/score`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title,
+          abstract,
+          claim_text: claimText,
+          top_k: 5,
+        }),
+      });
+      const payload = await readJsonSafely(response);
+      if (!response.ok) {
+        throw new Error(payload.detail || "Novelty scoring failed");
+      }
+      setResult(payload);
+    } catch (err) {
+      setError(err.message || "Novelty scoring failed");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <section className="tool-grid">
+      <ToolPreviewCard
+        eyebrow="Novelty workflow"
+        title="Score a candidate invention against prior art"
+        description="This uses the existing FAISS document index over the SBERT patent embeddings. Submit a candidate title, abstract, and representative claim to see the nearest prior-art matches from the corpus."
+      >
+        <form className="form-shell" onSubmit={handleSubmit}>
+          <label className="form-field">
+            <span className="field-label">Patent title</span>
+            <input
+              type="text"
+              value={title}
+              onChange={(event) => setTitle(event.target.value)}
+              placeholder="Ex: Adaptive wireless scheduling for edge AI inference"
+            />
+          </label>
+          <label className="form-field">
+            <span className="field-label">Abstract or summary</span>
+            <textarea
+              rows="7"
+              value={abstract}
+              onChange={(event) => setAbstract(event.target.value)}
+              placeholder="Paste the abstract or a concise invention summary here."
+            />
+          </label>
+          <label className="form-field">
+            <span className="field-label">Claim 1 or key claim</span>
+            <textarea
+              rows="5"
+              value={claimText}
+              onChange={(event) => setClaimText(event.target.value)}
+              placeholder="Paste the strongest claim language for novelty comparison."
+            />
+          </label>
+          <div className="tool-actions">
+            <button className="primary-button" type="submit" disabled={loading}>
+              {loading ? "Scoring..." : "Score novelty"}
+            </button>
+            <span className="status-pill">FAISS doc index</span>
+          </div>
+          {error ? <p className="inline-error">{error}</p> : null}
+        </form>
+      </ToolPreviewCard>
+
+      <ToolPreviewCard
+        eyebrow="Scoring output"
+        title="Novelty result + nearest prior art"
+        description="The novelty score is computed as one minus the highest similarity found in the current patent corpus."
+      >
+        <div className="preview-metrics">
+          <MetricCard label="Novelty score" value={result?.novelty_score ?? "Pending"} tone="accent" />
+          <MetricCard label="Top similarity" value={result?.top_similarity ?? "Pending"} />
+          <MetricCard label="Retrieval mode" value={result?.retrieval_mode ?? "Pending"} tone="success" />
+        </div>
+        {result ? (
+          <div className="placeholder-stack">
+            <article className="placeholder-row">
+              <strong>Interpretation</strong>
+              <span>{result.interpretation}</span>
+            </article>
+            {result.matches.map((match) => (
+              <article className="placeholder-row" key={`${match.patent_id}-${match.rank}`}>
+                <strong>
+                  {match.rank}. {match.patent_id}
+                </strong>
+                <span>{match.title}</span>
+                <span>
+                  Domain: {match.domain} · similarity: {formatMetric(match.similarity)} · novelty:{" "}
+                  {formatMetric(match.novelty_score)}
+                </span>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="placeholder-stack">
+            <article className="placeholder-row">
+              <strong>Nearest prior art</strong>
+              <span>Submit a candidate invention to see the closest patents in the corpus.</span>
+            </article>
+          </div>
+        )}
+      </ToolPreviewCard>
+    </section>
+  );
+}
+
+function RagTab() {
+  const [question, setQuestion] = useState("");
+  const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    setLoading(true);
+    setError("");
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/rag/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          question,
+          top_k: 6,
+        }),
+      });
+      const payload = await readJsonSafely(response);
+      if (!response.ok) {
+        throw new Error(payload.detail || "RAG request failed");
+      }
+      setResult(payload);
+    } catch (err) {
+      setError(err.message || "RAG request failed");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <section className="tool-grid">
+      <ToolPreviewCard
+        eyebrow="RAG workflow"
+        title="Patent chat over chunk-level retrieval"
+        description="This uses the chunk-level FAISS index for retrieval. If Grok credentials are configured, the backend will call Grok for answer synthesis; otherwise it returns a grounded retrieval-only answer."
+      >
+        <form className="form-shell" onSubmit={handleSubmit}>
+          <label className="form-field">
+            <span className="field-label">Ask a patent question</span>
+            <textarea
+              rows="6"
+              value={question}
+              onChange={(event) => setQuestion(event.target.value)}
+              placeholder="Ex: Which patents in this corpus discuss operator network scheduling or wireless edge optimization?"
+            />
+          </label>
+          <div className="tool-actions">
+            <button className="primary-button" type="submit" disabled={loading}>
+              {loading ? "Retrieving..." : "Retrieve answer"}
+            </button>
+            <span className="status-pill">FAISS chunk index</span>
+          </div>
+          {error ? <p className="inline-error">{error}</p> : null}
+        </form>
+      </ToolPreviewCard>
+
+      <ToolPreviewCard
+        eyebrow="Answer surface"
+        title="Grounded response + citations"
+        description="The answer is paired with retrieved chunks and source patents so users can inspect the supporting evidence."
+      >
+        {result ? (
+          <>
+            <div className="preview-metrics">
+              <MetricCard label="Answer mode" value={result.mode} tone="accent" />
+              <MetricCard label="Retrieval mode" value={result.retrieval_mode} />
+              <MetricCard label="Chunks retrieved" value={result.retrieved_chunks.length} />
+              <MetricCard label="Supporting patents" value={result.supporting_patents.length} tone="success" />
+            </div>
+            <div className="placeholder-stack">
+              <article className="placeholder-row">
+                <strong>Generated answer</strong>
+                <span>{result.answer}</span>
+              </article>
+              {result.retrieved_chunks.map((chunk) => (
+                <article className="placeholder-row" key={`${chunk.patent_id}-${chunk.chunk_index}`}>
+                  <strong>
+                    {chunk.patent_id} · chunk {chunk.chunk_index} · score {formatMetric(chunk.similarity)}
+                  </strong>
+                  <span>{chunk.title}</span>
+                  <span>{chunk.text}</span>
+                </article>
+              ))}
+            </div>
+          </>
+        ) : (
+          <div className="placeholder-stack">
+            <article className="placeholder-row">
+              <strong>Generated answer</strong>
+              <span>Ask a question to retrieve supporting chunks and generate a grounded answer.</span>
+            </article>
+          </div>
+        )}
+      </ToolPreviewCard>
     </section>
   );
 }
@@ -263,6 +535,7 @@ function ClusterPlot({ points, clusters, activeClusterId, onSelectCluster }) {
 export default function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
+  const [activeTab, setActiveTab] = useState("clustering");
   const [theme, setTheme] = useState(() => {
     const stored = window.localStorage.getItem("patent-dashboard-theme");
     return THEMES.includes(stored) ? stored : "light";
@@ -279,11 +552,11 @@ export default function App() {
 
     async function load() {
       try {
-        const response = await fetch("/api/dashboard/clusters");
+        const response = await fetch(`${API_BASE_URL}/api/dashboard/clusters`);
         if (!response.ok) {
           throw new Error(`Request failed with ${response.status}`);
         }
-        const payload = await response.json();
+        const payload = await readJsonSafely(response);
         if (active) {
           setData(payload);
           if (payload.clusters.length > 0) {
@@ -370,52 +643,63 @@ export default function App() {
         </div>
       </section>
 
-      <section className="metrics-grid">
-        {metricCards.map(([label, value, tone]) => (
-          <MetricCard key={label} label={label} value={value} tone={tone} />
-        ))}
+      <section className="shell-toolbar">
+        <TabBar activeTab={activeTab} onSelectTab={setActiveTab} />
       </section>
 
-      <section className="main-grid">
-        <div className="panel wide-panel">
-          <div className="panel-head panel-head-row">
-            <div>
-              <p className="panel-kicker">Visualization</p>
-              <h2>UMAP cluster formation</h2>
-            </div>
-            <button className="ghost-button" onClick={() => setActiveClusterId(null)} type="button">
-              Show all clusters
-            </button>
-          </div>
-          <ClusterPlot
-            points={data.points}
-            clusters={data.clusters}
-            activeClusterId={activeClusterId}
-            onSelectCluster={setActiveClusterId}
-          />
-        </div>
-
-        <div className="panel side-panel">
-          <div className="panel-head">
-            <div>
-              <p className="panel-kicker">Interpretation</p>
-              <h2>Cluster labels</h2>
-            </div>
-          </div>
-          <div className="cluster-list">
-            {data.clusters.map((cluster) => (
-              <ClusterCard
-                key={cluster.cluster_id}
-                cluster={cluster}
-                isActive={activeClusterId === cluster.cluster_id}
-                onSelect={setActiveClusterId}
-              />
+      {activeTab === "clustering" ? (
+        <>
+          <section className="metrics-grid">
+            {metricCards.map(([label, value, tone]) => (
+              <MetricCard key={label} label={label} value={value} tone={tone} />
             ))}
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <ClusterInsight cluster={activeCluster} summary={data.summary} metrics={data.metrics} />
+          <section className="main-grid">
+            <div className="panel wide-panel">
+              <div className="panel-head panel-head-row">
+                <div>
+                  <p className="panel-kicker">Visualization</p>
+                  <h2>UMAP cluster formation</h2>
+                </div>
+                <button className="ghost-button" onClick={() => setActiveClusterId(null)} type="button">
+                  Show all clusters
+                </button>
+              </div>
+              <ClusterPlot
+                points={data.points}
+                clusters={data.clusters}
+                activeClusterId={activeClusterId}
+                onSelectCluster={setActiveClusterId}
+              />
+            </div>
+
+            <div className="panel side-panel">
+              <div className="panel-head">
+                <div>
+                  <p className="panel-kicker">Interpretation</p>
+                  <h2>Cluster labels</h2>
+                </div>
+              </div>
+              <div className="cluster-list">
+                {data.clusters.map((cluster) => (
+                  <ClusterCard
+                    key={cluster.cluster_id}
+                    cluster={cluster}
+                    isActive={activeClusterId === cluster.cluster_id}
+                    onSelect={setActiveClusterId}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <ClusterInsight cluster={activeCluster} summary={data.summary} metrics={data.metrics} />
+        </>
+      ) : null}
+
+      {activeTab === "novelty" ? <NoveltyTab /> : null}
+      {activeTab === "rag" ? <RagTab /> : null}
     </main>
   );
 }

@@ -27,6 +27,7 @@ hdbscan==0.8.38.post1
 # Backend API
 fastapi==0.115.5
 uvicorn==0.32.0
+httpx==0.28.1
 
 keybert==0.9.0
  

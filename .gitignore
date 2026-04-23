@@ -2,10 +2,13 @@ key
 
 data
 
+.env
 env
+
 
 .venv/
 venv/
+env/
 
 __pycache__/
 *.pyc
@@ -17,3 +20,4 @@ description_files
 Group21-Project9-SP26-Group-Project-Presentation.pdf
 
 node_modules/
+frontend/dist/
