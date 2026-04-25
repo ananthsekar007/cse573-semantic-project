@@ -1,0 +1,11 @@
+Method to form a 3D integrated circuit. A method to form a 3D integrated circuit, the method including: providing a first wafer including a first crystalline substrate, a plurality of first transistors, and first copper interconnecting layers, where the first copper interconnecting layers at least interconnect the plurality of first transistors; providing a second wafer including a second crystalline substrate, a plurality of second transistors, and second copper interconnecting layers, where the second copper interconnecting layers at least interconnect the plurality of second transistors; and then performing a face-to-face bonding of the second wafer on top of the first wafer, where the face-to-face bonding includes copper to copper bonding; and thinning the second crystalline substrate to a thickness of less than 5 micro-meters. 1. A method to form a 3D integrated circuit, the method comprising:
+providing a first wafer comprising a first crystalline substrate, a plurality of first transistors, and first copper interconnecting layers,
+wherein said first copper interconnecting layers at least interconnect said plurality of first transistors;
+
+providing a second wafer comprising a second crystalline substrate, a plurality of second transistors, and second copper interconnecting layers,
+wherein said second copper interconnecting layers at least interconnect said plurality of second transistors; and then
+
+performing a face-to-face bonding of said second wafer on top of said first wafer,
+wherein said face-to-face bonding comprises copper to copper bonding; and
+
+thinning said second crystalline substrate to a thickness of less than 5 micro-meters.

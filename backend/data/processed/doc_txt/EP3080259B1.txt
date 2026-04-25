@@ -1,0 +1,11 @@
+Engineering of systems, methods and optimized guide compositions with new …. A non-naturally occurring or engineered CRISPR-Cas system guide RNA, optionally chimeric single guide RNA molecule (sgRNA), comprising a guide sequence capable of hybridizing to a target sequence in a genomic locus of interest in a cell, and capable of effecting the manipulation of a target A non-naturally occurring or engineered CRISPR-Cas system guide RNA, optionally chimeric single guide RNA molecule (sgRNA), comprising a guide sequence capable of hybridizing to a target sequence in a genomic locus of interest in a cell, and capable of effecting the manipulation of a target nucleic acid within a prokaryotic or eukaryotic cell when in complex within the cell with a CRISPR protein,
+wherein architecture of the guide RNA or optionally sgRNA comprises a modification selected from the following modifications, corresponding with +85 sgRNA architecture having a 20 nucleotide guide sequence at positions 1 to 20 and the sequence GUUUUAGAGCUAGAAAUAGCAAGUUAAAAUAAGGCUAGUCCGUUAUCAACUUGA AAAAGUGGCACCGAGUCGGUGCUUUUUU at positions 21 to 102:
+- replacement of a poly U tract (22-25 with respect to the position numbering of +85 sgRNA architecture) with poly C;
+- replacement of a poly A tract (46-49 with respect to the position numbering of +85 sgRNA architecture) with poly G;
+- replacement of bases acuu and aagu in stemloop 2 with complimentary GC-rich regions of 4 nucleotides;
+- a G43C mutation (with respect to the position numbering of +85 sgRNA architecture);
+- a U44G mutation (with respect to the position numbering of +85 sgRNA architecture);
+- a U50C or U50A mutation (with respect to the position numbering of +85 sgRNA architecture);
+- a U59A or U59C mutation (with respect to the position numbering of +85 sgRNA architecture);
+- a G89A or G89C or G89T mutation (with respect to the position numbering of +85 sgRNA architecture); or
+- a U90A or U90C mutation (with respect to the position numbering of +85 sgRNA architecture).

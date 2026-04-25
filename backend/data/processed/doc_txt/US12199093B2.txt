@@ -1,0 +1,19 @@
+3D semiconductor devices and structures with metal layers. A semiconductor device including: a first silicon level including a first single crystal silicon layer and a plurality of first transistors; a first metal layer disposed over the first silicon level; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, disposed over the third metal layer; a third level including a plurality of third transistors, disposed over the second level; a via disposed through the second and third levels; a fourth metal layer disposed over the third level; a fifth metal layer disposed over the fourth metal layer; and a fourth level including a second single crystal silicon layer and is disposed over the fifth metal layer, where each of the plurality of second transistors includes a metal gate, and the via has a diameter of less than 450 nm. 1. A semiconductor device, the semiconductor device comprising:
+a first silicon level comprising a first single crystal silicon layer and a plurality of first transistors;
+a first metal layer disposed over said first silicon level;
+a second metal layer disposed over said first metal layer;
+a third metal layer disposed over said second metal layer;
+a second level comprising a plurality of second transistors, said second level disposed over said third metal layer;
+a third level comprising a plurality of third transistors, said third level disposed over said second level;
+a fourth metal layer disposed over said third level;
+a fifth metal layer disposed over said fourth metal layer,
+a fourth level comprising a second single crystal silicon layer,
+wherein said fourth level is disposed over said fifth metal layer,
+wherein each of said plurality of second transistors comprises a metal gate,
+wherein said fifth metal layer comprises global power delivery; and
+
+a via disposed through said second level and through said third level,
+wherein each of said plurality of third transistors comprises a metal gate,
+
+wherein said via has a diameter of less than 450 nm, and
+wherein a typical thickness of said second metal layer is greater than a typical thickness of said third metal layer by at least 50%.

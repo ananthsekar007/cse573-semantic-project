@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patent UMAP + HDBSCAN Clusters</title>
+  <style>
+    :root {
+      --bg: #f4f0e8;
+      --panel: #fffdf8;
+      --ink: #1e1b18;
+      --muted: #6f685f;
+      --grid: #ddd3c6;
+      --accent: #bf5b04;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(191, 91, 4, 0.10), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(31, 119, 180, 0.10), transparent 24%),
+        linear-gradient(180deg, #f8f4ed, var(--bg));
+    }
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 20px 40px;
+    }
+    .header {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 1rem;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin: 18px 0 22px;
+    }
+    .metric {
+      background: rgba(255, 253, 248, 0.88);
+      border: 1px solid rgba(111, 104, 95, 0.18);
+      border-radius: 16px;
+      padding: 14px 16px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 8px 26px rgba(50, 38, 24, 0.06);
+    }
+    .metric .label {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .metric .value {
+      display: block;
+      margin-top: 6px;
+      font-size: 1.45rem;
+      font-weight: 700;
+    }
+    .panel {
+      background: rgba(255, 253, 248, 0.92);
+      border: 1px solid rgba(111, 104, 95, 0.18);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 14px 40px rgba(50, 38, 24, 0.08);
+    }
+    .panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 18px;
+      border-bottom: 1px solid rgba(111, 104, 95, 0.14);
+    }
+    .panel-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(244, 240, 232, 0.95);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      display: inline-block;
+      border: 1px solid rgba(0, 0, 0, 0.18);
+    }
+    .chart-wrap {
+      position: relative;
+      padding: 16px;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.8), rgba(250,247,241,0.96));
+      border-radius: 16px;
+    }
+    .tooltip {
+      position: absolute;
+      min-width: 240px;
+      max-width: 320px;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate(-50%, calc(-100% - 14px));
+      background: rgba(28, 24, 20, 0.95);
+      color: #fff9f0;
+      border-radius: 12px;
+      padding: 10px 12px;
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.22);
+      transition: opacity 120ms ease;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+    .tooltip strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.92rem;
+    }
+    .foot {
+      padding: 14px 18px 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.92em;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>Patent Cluster Map</h1>
+      <p class="subtitle">
+        UMAP projection of the document embeddings, with HDBSCAN cluster assignments.
+        Hover any point to inspect the patent metadata used in the demo corpus.
+      </p>
+    </div>
+
+    <div class="metrics" id="metrics"></div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p>Each point is one patent embedding from <code>doc_embeddings.npy</code>.</p>
+        <div class="legend" id="legend"></div>
+      </div>
+      <div class="chart-wrap">
+        <svg id="chart" viewBox="0 0 1100 760" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="tooltip" id="tooltip"></div>
+      </div>
+      <div class="foot">
+        Noise points are marked as cluster <code>-1</code>. Metrics shown here are computed from
+        the same clustering run and the known domain labels already present in the metadata.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const points = [{"index": 0, "patent_id": "AU2015101792A4", "title": "Engineering of systems, methods and optimized enzyme and guide scaffolds for …", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 8.481098175048828, "umap_y": 6.515492916107178, "color": "#d62728"}, {"index": 1, "patent_id": "CN101941519B", "title": "Wind-light energy and shore-electricity charged storage-battery electric ship …", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 9.93143081665039, "umap_y": -5.129405975341797, "color": "#2ca02c"}, {"index": 2, "patent_id": "CN102355006B", "title": "Joint wind-solar-storage joint grid-connected power generation coordination …", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 9.51188850402832, "umap_y": -5.291345119476318, "color": "#2ca02c"}, {"index": 3, "patent_id": "CN102384039B", "title": "Mixed wind-light compensation water pumping and energy storing system and …", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 9.989964485168457, "umap_y": -5.3922553062438965, "color": "#2ca02c"}, {"index": 4, "patent_id": "CN104734195B", "title": "A monitoring method for a wind-solar-storage integrated microgrid capable of …", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 9.684222221374512, "umap_y": -5.339757442474365, "color": "#2ca02c"}, {"index": 5, "patent_id": "CN109194248A", "title": "A kind of spherical integral type wind and solar hybrid generating system and …", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 9.684786796569824, "umap_y": -5.246206283569336, "color": "#2ca02c"}, {"index": 6, "patent_id": "CN109888803B", "title": "Optimization method of capacity configuration of hybrid energy storage power …", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 9.801237106323242, "umap_y": -5.528632164001465, "color": "#2ca02c"}, {"index": 7, "patent_id": "CN111817338A", "title": "A black-start control method and system for a wind-solar-storage new energy …", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 9.75507926940918, "umap_y": -5.607808589935303, "color": "#2ca02c"}, {"index": 8, "patent_id": "CN111934919B", "title": "Network convergence and networking method, equipment and storage medium thereof", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": -1, "was_noise": true, "umap_x": 0.7226324081420898, "umap_y": 9.132944107055664, "color": "#9467bd"}, {"index": 9, "patent_id": "CN112054588B", "title": "Wind-solar hybrid power generation system", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 9.745656967163086, "umap_y": -4.948850631713867, "color": "#2ca02c"}, {"index": 10, "patent_id": "CN112530913B", "title": "Packaging structure and manufacturing method thereof", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -5.529839992523193, "umap_y": 8.928401947021484, "color": "#1f77b4"}, {"index": 11, "patent_id": "CN113055887B", "title": "Network channel safety protection system for electric power 5G application", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": 4, "was_noise": false, "umap_x": 0.22872871160507202, "umap_y": 9.459388732910156, "color": "#9467bd"}, {"index": 12, "patent_id": "CN114015674A", "title": "Novel CRISPR-Cas12i system", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 8.481927871704102, "umap_y": 6.225974082946777, "color": "#d62728"}, {"index": 13, "patent_id": "CN114419515B", "title": "Video processing method, machine learning model training method and related …", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": -1, "was_noise": true, "umap_x": -1.1260846853256226, "umap_y": 8.812799453735352, "color": "#ff7f0e"}, {"index": 14, "patent_id": "CN114464247B", "title": "Binding affinity prediction method and device based on antigen and antibody …", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": -1, "was_noise": true, "umap_x": -1.4262537956237793, "umap_y": 9.275642395019531, "color": "#ff7f0e"}, {"index": 15, "patent_id": "CN201650611U", "title": "New Hybrid Energy System", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 10.198507308959961, "umap_y": -5.095624923706055, "color": "#2ca02c"}, {"index": 16, "patent_id": "EP3080259B1", "title": "Engineering of systems, methods and optimized guide compositions with new …", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 7.805851936340332, "umap_y": 6.314737319946289, "color": "#d62728"}, {"index": 17, "patent_id": "JP6712948B2", "title": "Compositions and methods of using the CRISPR-cas system in nucleotide repeat …", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 8.672799110412598, "umap_y": 6.332919120788574, "color": "#d62728"}, {"index": 18, "patent_id": "JP7514300B2", "title": "Artificial Intelligence Coregistration and Marker Detection Including Machine …", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": -1, "was_noise": true, "umap_x": -1.4121010303497314, "umap_y": 8.864294052124023, "color": "#ff7f0e"}, {"index": 19, "patent_id": "KR102579783B1", "title": "Vision inspection system by using remote learning of product defects image", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": -1, "was_noise": true, "umap_x": -1.304181694984436, "umap_y": 8.433748245239258, "color": "#ff7f0e"}, {"index": 20, "patent_id": "TW202320263A", "title": "Semiconductor package", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -5.420607566833496, "umap_y": 9.060429573059082, "color": "#1f77b4"}, {"index": 21, "patent_id": "US10334446B2", "title": "Private multefire network with SDR-based massive MIMO, multefire and network …", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": 4, "was_noise": false, "umap_x": 0.23322726786136627, "umap_y": 8.952555656433105, "color": "#9467bd"}, {"index": 22, "patent_id": "US10689691B2", "title": "Unbiased identification of double-strand breaks and genomic rearrangement by …", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 8.135308265686035, "umap_y": 6.25770378112793, "color": "#d62728"}, {"index": 23, "patent_id": "US10694399B1", "title": "Cellular system", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": 4, "was_noise": false, "umap_x": 0.07596248388290405, "umap_y": 9.164690017700195, "color": "#9467bd"}, {"index": 24, "patent_id": "US10812992B1", "title": "Cellular system", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": 4, "was_noise": false, "umap_x": -0.25316354632377625, "umap_y": 9.20127010345459, "color": "#9467bd"}, {"index": 25, "patent_id": "US10910364B2", "title": "3D semiconductor device", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -5.060399055480957, "umap_y": 9.152281761169434, "color": "#1f77b4"}, {"index": 26, "patent_id": "US11018133B2", "title": "3D integrated circuit", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -5.124106407165527, "umap_y": 8.924708366394043, "color": "#1f77b4"}, {"index": 27, "patent_id": "US11101266B2", "title": "3D device and devices with bonding", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -4.805229663848877, "umap_y": 9.2805814743042, "color": "#1f77b4"}, {"index": 28, "patent_id": "US11124796B2", "title": "Delivery, use and therapeutic applications of the CRISPR-Cas systems and …", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 8.272764205932617, "umap_y": 6.602197647094727, "color": "#d62728"}, {"index": 29, "patent_id": "US11232382B2", "title": "Systems and methods for providing and managing proactive and intelligent …", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": 3, "was_noise": false, "umap_x": -0.8470849990844727, "umap_y": 9.092595100402832, "color": "#ff7f0e"}, {"index": 30, "patent_id": "US11374118B2", "title": "Method to form a 3D integrated circuit", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -5.289035320281982, "umap_y": 8.64748477935791, "color": "#1f77b4"}, {"index": 31, "patent_id": "US11459557B2", "title": "Use and production of CHD8+/− transgenic animals with behavioral phenotypes …", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 8.140591621398926, "umap_y": 6.774988651275635, "color": "#d62728"}, {"index": 32, "patent_id": "US11481652B2", "title": "System and method for recommendations in ubiquituous computing environments", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": -1, "was_noise": true, "umap_x": -0.6603818535804749, "umap_y": 9.280973434448242, "color": "#ff7f0e"}, {"index": 33, "patent_id": "US11605630B2", "title": "3D integrated circuit device and structure with hybrid bonding", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -4.907958984375, "umap_y": 9.126534461975098, "color": "#1f77b4"}, {"index": 34, "patent_id": "US11646309B2", "title": "3D semiconductor devices and structures with metal layers", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -5.139488697052002, "umap_y": 8.836418151855469, "color": "#1f77b4"}, {"index": 35, "patent_id": "US11783025B2", "title": "Training diverse and robust ensembles of artificial intelligence computer …", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": 3, "was_noise": false, "umap_x": -1.1163395643234253, "umap_y": 9.140654563903809, "color": "#ff7f0e"}, {"index": 36, "patent_id": "US11791877B1", "title": "Hybrid digital-analog MMWAVE repeater/relay with full duplex", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": 4, "was_noise": false, "umap_x": 0.26620981097221375, "umap_y": 8.79161548614502, "color": "#9467bd"}, {"index": 37, "patent_id": "US11984445B2", "title": "3D semiconductor devices and structures with metal layers", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -5.13304328918457, "umap_y": 9.404991149902344, "color": "#1f77b4"}, {"index": 38, "patent_id": "US12001403B2", "title": "Blockchain cell system", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": 4, "was_noise": false, "umap_x": 0.3236706852912903, "umap_y": 9.200193405151367, "color": "#9467bd"}, {"index": 39, "patent_id": "US12176630B2", "title": "Wireless system", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": 4, "was_noise": false, "umap_x": -0.05876325070858002, "umap_y": 8.955583572387695, "color": "#9467bd"}, {"index": 40, "patent_id": "US12199093B2", "title": "3D semiconductor devices and structures with metal layers", "domain_true": "semiconductor", "cluster_pred": 0, "raw_cluster_pred": 0, "was_noise": false, "umap_x": -5.002811908721924, "umap_y": 8.99768352508545, "color": "#1f77b4"}, {"index": 41, "patent_id": "US12224070B2", "title": "Method of evaluating autoimmune disease risk and treatment selection", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": -1, "was_noise": true, "umap_x": -1.3995417356491089, "umap_y": 9.33141040802002, "color": "#ff7f0e"}, {"index": 42, "patent_id": "US12314060B2", "title": "Value chain network planning using machine learning and digital twin simulation", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": 3, "was_noise": false, "umap_x": -0.5657805800437927, "umap_y": 8.660334587097168, "color": "#ff7f0e"}, {"index": 43, "patent_id": "US12490343B2", "title": "5G/4G/3G/2G cloud-native OpenRAN architecture", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": 4, "was_noise": false, "umap_x": -0.010523230768740177, "umap_y": 9.448776245117188, "color": "#9467bd"}, {"index": 44, "patent_id": "US20200354751A1", "title": "Genome editing using cas9 nickases", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 8.307085990905762, "umap_y": 6.107607841491699, "color": "#d62728"}, {"index": 45, "patent_id": "US20210192412A1", "title": "Cognitive Intelligent Autonomous Transformation System for actionable Business …", "domain_true": "ai_machine_learning", "cluster_pred": 3, "raw_cluster_pred": 3, "was_noise": false, "umap_x": -0.8506897687911987, "umap_y": 8.59481143951416, "color": "#ff7f0e"}, {"index": 46, "patent_id": "US20220090070A1", "title": "Methods and compositions for altering function and structure of chromatin loops …", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 7.989086627960205, "umap_y": 6.429696559906006, "color": "#d62728"}, {"index": 47, "patent_id": "US20220154222A1", "title": "Novel nucleic acid modifiers", "domain_true": "biotechnology", "cluster_pred": 1, "raw_cluster_pred": 1, "was_noise": false, "umap_x": 7.9428486824035645, "umap_y": 6.313107967376709, "color": "#d62728"}, {"index": 48, "patent_id": "US20240188189A1", "title": "5G OpenRAN Controller", "domain_true": "telecommunications_5g", "cluster_pred": 4, "raw_cluster_pred": 4, "was_noise": false, "umap_x": 0.5367475152015686, "umap_y": 9.411611557006836, "color": "#9467bd"}, {"index": 49, "patent_id": "US8866334B2", "title": "Dispatchable power from a renewable energy facility", "domain_true": "renewable_energy", "cluster_pred": 2, "raw_cluster_pred": 2, "was_noise": false, "umap_x": 10.375052452087402, "umap_y": -4.936317443847656, "color": "#2ca02c"}];
+    const metrics = {
+  "method": "embedding_hdbscan_plus_umap_visualizer",
+  "num_documents": 50,
+  "num_clusters": 5,
+  "noise_points": 0,
+  "raw_noise_points": 7,
+  "noise_reassigned": 7,
+  "umap_neighbors": 15,
+  "umap_min_dist": 0.0,
+  "min_cluster_size": 4,
+  "min_samples": 1,
+  "cluster_selection_method": "leaf",
+  "clustering_space": "original_embeddings",
+  "visualization_space": "umap_2d",
+  "assign_noise": true,
+  "ari": 1.0,
+  "nmi": 1.0,
+  "homogeneity": 1.0,
+  "purity": 1.0,
+  "silhouette": 0.7950320243835449
+};
+
+    const svg = document.getElementById("chart");
+    const tooltip = document.getElementById("tooltip");
+    const metricsEl = document.getElementById("metrics");
+    const legendEl = document.getElementById("legend");
+
+    const width = 1100;
+    const height = 760;
+    const margin = 70;
+
+    const minX = Math.min(...points.map(p => p.umap_x));
+    const maxX = Math.max(...points.map(p => p.umap_x));
+    const minY = Math.min(...points.map(p => p.umap_y));
+    const maxY = Math.max(...points.map(p => p.umap_y));
+
+    const scaleX = value => {
+      if (maxX === minX) return width / 2;
+      return margin + ((value - minX) / (maxX - minX)) * (width - 2 * margin);
+    };
+    const scaleY = value => {
+      if (maxY === minY) return height / 2;
+      const t = (value - minY) / (maxY - minY);
+      return height - margin - t * (height - 2 * margin);
+    };
+
+    function fmt(value) {
+      if (value === null || value === undefined) return "N/A";
+      if (typeof value === "number") return Number(value).toFixed(4);
+      return String(value);
+    }
+
+    const metricCards = [
+      ["Documents", metrics.num_documents],
+      ["Clusters", metrics.num_clusters],
+      ["Noise Points", metrics.noise_points],
+      ["ARI", metrics.ari],
+      ["NMI", metrics.nmi],
+      ["Homogeneity", metrics.homogeneity],
+      ["Purity", metrics.purity],
+      ["Silhouette", metrics.silhouette],
+    ];
+
+    metricsEl.innerHTML = metricCards.map(([label, value]) => `
+      <div class="metric">
+        <span class="label">${label}</span>
+        <span class="value">${fmt(value)}</span>
+      </div>
+    `).join("");
+
+    const clusterIds = [...new Set(points.map(p => p.cluster_pred))].sort((a, b) => a - b);
+    legendEl.innerHTML = clusterIds.map(cid => `
+      <span class="legend-item">
+        <span class="swatch" style="background:${points.find(p => p.cluster_pred === cid).color}"></span>
+        Cluster ${cid}
+      </span>
+    `).join("");
+
+    const svgns = "http://www.w3.org/2000/svg";
+
+    function addLine(x1, y1, x2, y2, stroke, widthValue, dash = "") {
+      const line = document.createElementNS(svgns, "line");
+      line.setAttribute("x1", x1);
+      line.setAttribute("y1", y1);
+      line.setAttribute("x2", x2);
+      line.setAttribute("y2", y2);
+      line.setAttribute("stroke", stroke);
+      line.setAttribute("stroke-width", widthValue);
+      if (dash) line.setAttribute("stroke-dasharray", dash);
+      svg.appendChild(line);
+    }
+
+    function addText(x, y, text, fill, anchor = "middle", size = "13") {
+      const node = document.createElementNS(svgns, "text");
+      node.setAttribute("x", x);
+      node.setAttribute("y", y);
+      node.setAttribute("fill", fill);
+      node.setAttribute("font-size", size);
+      node.setAttribute("font-family", "ui-sans-serif, system-ui, sans-serif");
+      node.setAttribute("text-anchor", anchor);
+      node.textContent = text;
+      svg.appendChild(node);
+    }
+
+    for (let i = 0; i < 5; i += 1) {
+      const x = margin + ((width - 2 * margin) / 4) * i;
+      addLine(x, margin, x, height - margin, "rgba(110,104,95,0.22)", 1, "4 8");
+    }
+    for (let i = 0; i < 5; i += 1) {
+      const y = margin + ((height - 2 * margin) / 4) * i;
+      addLine(margin, y, width - margin, y, "rgba(110,104,95,0.22)", 1, "4 8");
+    }
+
+    addLine(margin, height - margin, width - margin, height - margin, "#7b7268", 1.5);
+    addLine(margin, margin, margin, height - margin, "#7b7268", 1.5);
+    addText(width / 2, height - 20, "UMAP-1", "#6f685f");
+    addText(24, height / 2, "UMAP-2", "#6f685f");
+
+    points.forEach(point => {
+      const circle = document.createElementNS(svgns, "circle");
+      circle.setAttribute("cx", scaleX(point.umap_x));
+      circle.setAttribute("cy", scaleY(point.umap_y));
+      circle.setAttribute("r", point.cluster_pred === -1 ? 5.5 : 7);
+      circle.setAttribute("fill", point.color);
+      circle.setAttribute("fill-opacity", point.cluster_pred === -1 ? "0.55" : "0.82");
+      circle.setAttribute("stroke", point.cluster_pred === -1 ? "#6f685f" : "rgba(20,20,20,0.45)");
+      circle.setAttribute("stroke-width", point.cluster_pred === -1 ? "1.2" : "0.8");
+      circle.style.cursor = "pointer";
+
+      circle.addEventListener("mouseenter", event => {
+        tooltip.style.opacity = "1";
+        tooltip.innerHTML = `
+          <strong>${point.patent_id}</strong>
+          <div>${point.title}</div>
+          <div>True domain: ${point.domain_true}</div>
+          <div>Cluster: ${point.cluster_pred}</div>
+          <div>UMAP: (${point.umap_x.toFixed(3)}, ${point.umap_y.toFixed(3)})</div>
+        `;
+      });
+
+      circle.addEventListener("mousemove", event => {
+        const bounds = svg.getBoundingClientRect();
+        const wrapBounds = svg.parentElement.getBoundingClientRect();
+        tooltip.style.left = `${event.clientX - wrapBounds.left}px`;
+        tooltip.style.top = `${event.clientY - wrapBounds.top}px`;
+      });
+
+      circle.addEventListener("mouseleave", () => {
+        tooltip.style.opacity = "0";
+      });
+
+      svg.appendChild(circle);
+    });
+  </script>
+</body>
+</html>

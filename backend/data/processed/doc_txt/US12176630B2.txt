@@ -1,0 +1,5 @@
+Wireless system. A system includes a transceiver to communicate with a predetermined target; one or more antennas coupled to the transceiver each electrically or mechanically steerable to the predetermined target; and an edge processing module coupled to the transceiver and one or more antennas to provide low-latency computation for the predetermined target. 1. A system, comprising:
+a transceiver to communicate with a predetermined target;
+one or more antennas coupled to the transceiver each electrically or mechanically steerable to the predetermined target;
+artificial intelligence (AI) software or a neural network to allocate slices of cellular frequencies to different wireless devices to optimize frequency utilization across available bandwidth; and
+an edge processing module coupled to the transceiver and one or more antennas on a tower to provide low latency computation for the predetermined target.

@@ -1,0 +1,13 @@
+Packaging structure and manufacturing method thereof. The disclosed embodiments are related to a packaging structure and a manufacturing method thereof. A packaging structure includes a circuit element, a first semiconductor die, a second semiconductor die, a heat dissipation element, and an insulating encapsulation body. The first semiconductor die and the second semiconductor die are located on the circuit element. The heat dissipation element is connected to the first semiconductor die, and the first semiconductor die is located between the circuit element and the heat dissipation element, wherein the sum of the first thickness of the first semiconductor die and the third thickness of the heat dissipation element is substantially equal to the second thickness of the second semiconductor die. The insulating encapsulation body encapsulates the first semiconductor die, the second semiconductor die, and the heat dissipation element, wherein the surface of the heat dissipation element is substantially flush with the insulating encapsulation body. 1.一种封装结构，包括：1. A packaging structure, comprising:
+ 
+ 
+ 电路元件；Circuit components;
+ 
+ 
+ 第一半导体管芯及第二半导体管芯，位于所述电路元件上；A first semiconductor die and a second semiconductor die are located on the circuit element;
+ 
+ 
+ 散热元件，连接到所述第一半导体管芯，所述第一半导体管芯位于所述电路元件与所述散热元件之间，其中所述第一半导体管芯的第一厚度与所述散热元件的第三厚度之和实质上等于所述第二半导体管芯的第二厚度；以及a heat sink element connected to the first semiconductor die, the first semiconductor die being located between the circuit element and the heat sink element, wherein a sum of a first thickness of the first semiconductor die and a third thickness of the heat sink element is substantially equal to a second thickness of the second semiconductor die; and
+ 
+ 
+ 绝缘包封体，包封所述第一半导体管芯、所述第二半导体管芯及所述散热元件，其中所述散热元件的表面与所述绝缘包封体的表面实质上齐平。An insulating encapsulation body encapsulates the first semiconductor die, the second semiconductor die, and the heat dissipation element, wherein a surface of the heat dissipation element is substantially flush with a surface of the insulating encapsulation body.

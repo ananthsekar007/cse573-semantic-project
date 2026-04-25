@@ -1,0 +1,10 @@
+Unbiased identification of double-strand breaks and genomic rearrangement by …. The invention provides for systems, methods, compositions, and kits for the complete characterization of targeted nuclease specificity which necessitates techniques that can assess the full possibility space of off-target activity and genomic stability following genome editing. Also provided are the materials and techniques which enable the comprehensive genomic stability accompanying a range of cellular perturbations, including genome editing (ZFN, TALEN, CRISPR, and future technologies) and disease modeling among other applications. 1. A method for identifying the location of at least one double strand break (DSB) in DNA of a cell or tissue, the method comprising:
+a) ligating a linker to each end of the DSB to create a linker-DSB conjugate at each end,
+wherein the linker comprises:
+i) a promoter sequence for linear amplification, and
+ii) a unique molecular identifier sequence;
+
+b) producing a polynucleotide complementary to the linker-DSB conjugate by linear amplification; and
+c) determining the sequence of the complementary polynucleotide, whereby the location of the DSB is identified;
+
+ wherein each linker comprises a different unique molecular identifier sequence, and wherein the complementary polynucleotide comprises a sequence of the DNA adjacent to the DSB.

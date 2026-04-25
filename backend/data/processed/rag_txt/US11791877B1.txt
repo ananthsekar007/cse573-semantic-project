@@ -1,0 +1,2862 @@
+PATENT ID: US11791877B1
+TITLE: Hybrid digital-analog MMWAVE repeater/relay with full duplex
+DOMAIN: telecommunications_5g
+INVENTOR: Solyman Ashrafi
+ASSIGNEE: Nxgen Partners Ip, Llc
+FILING DATE: 2022-10-18
+
+=== ABSTRACT ===
+A system for transmitting millimeter wave signals includes at least one repeater for communicating with a plurality of remote locations over millimeter wave communications links. The at least one repeater further includes multiple input multiple output (MIMO) transmission circuitry for transmitting signals and receiving signals over the millimeter wave communications links to the plurality of remote locations. The at least one repeater further includes full-duplex transmission circuitry for processing the transmitted signals and the received signals over the millimeter wave communications links using full-duplex communications with the plurality of remote locations. The at least one repeater relays the millimeter wave signals between at least a first millimeter wave transceiver at a first one of the plurality of remote locations and a second millimeter wave transceiver at a second one of the plurality of remote locations.
+
+=== CLAIMS ===
+  1. A system for transmitting millimeter wave signals, comprising:
+at least one repeater for communicating with a plurality of remote locations over millimeter wave communications links, wherein the at least one repeater further comprises:
+multiple input multiple output (MIMO) transmission circuitry for transmitting signals and receiving signals over the millimeter wave communications links to the plurality of remote locations;
+full-duplex transmission circuitry for processing the transmitted signals and the received signals over the millimeter wave communications links using full-duplex communications with the plurality of remote locations; and
+
+wherein the at least one repeater relays the millimeter wave signals between at least a first millimeter wave transceiver at a first one of the plurality of remote locations and a second millimeter wave transceiver at a second one of the plurality of remote locations.
+  2. The system of claim 1, wherein the MIMO transmission circuitry limits interference between the transmitted signals and the received signals.
+  3. The system of claim 1 further comprising orbital angular momentum (OAM) processing circuitry for applying a selected orbital angular momentum to the transmitted signals, wherein the selected orbital angular momentum limits interference between the transmitted signals and the received signals.
+  4. The system of claim 1, wherein the first millimeter wave transceiver is associated with an enodeB and the second millimeter wave transceiver is associated with customer premises equipment.
+  5. The system of claim 4, wherein the at least one repeater relays the millimeter wave signals between the first millimeter wave transceiver at the first one of the plurality of remote locations and the second millimeter wave transceiver at the second one of the plurality of remote locations and a third millimeter wave transceiver at a third one of the plurality of remote locations, the third millimeter wave transciever associated with a second customer premises equipment.
+  6. The system of claim 4 further comprising a passive reflector located between the at least one repeater and the customer premises equipment for reflecting the transmitted signals from the at least one repeater to the second millimeter wave transceiver associated with the customer premises equipment.
+  7. The system of claim 1, wherein the at least one repeater comprises a first repeater and a second repeater relaying the transmitted signals and the received signals therebetween, further wherein the first millimeter wave transceiver is associated with an enodeB and the second millimeter wave transceiver is associated with customer premises equipment.
+  8. A system for transmitting RF signals, comprising:
+at least one repeater for communicating with a plurality of remote locations over RF communications links, wherein the at least one repeater further comprises:
+multiple input multiple output (MIMO) transmission circuitry for transmitting signals and receiving signals over the RF communications links to the plurality of remote locations;
+full-duplex transmission circuitry for processing the transmitted signals and the received signals over the RF communications links using full-duplex communications with the plurality of remote locations; and
+
+wherein the at least one repeater relays the RF signals between at least a first RF transceiver at a first one of the plurality of remote locations and a second RF transceiver at a second one of the plurality of remote locations.
+  9. The system of claim 8, wherein the MIMO transmission circuitry limits interference between the transmitted signals and the received signals.
+  10. The system of claim 8 further comprising orbital angular momentum (OAM) processing circuitry for applying a selected orbital angular momentum to the transmitted signals, wherein the selected orbital angular momentum limits interference between the transmitted signals and the received signals.
+  11. The system of claim 8, wherein the first RF transceiver is associated with an enodeB and the second RF transceiver is associated with customer premises equipment.
+  12. The system of claim 11, wherein the at least one repeater relays the RF signals between the first RF transceiver at the first one of the plurality of remote locations and the second RF transceiver at the second one of the plurality of remote locations and a third RF transceiver at a third one of the plurality of remote locations, the third RF transceiver associated with a second customer premises equipment.
+  13. The system of claim 11 further comprising a passive reflector located between the at least one repeater and the customer premises equipment for reflecting the transmitted signals from the at least one repeater to the second RF transceiver associated with the customer premises equipment.
+  14. The system of claim 8, wherein the at least one repeater comprises a first repeater and a second repeater relaying the transmitted signals and the received signals therebetween, further wherein the first RF transceiver is associated with an enodeB and the second RF transceiver is associated with customer premises equipment.
+  15. A system for transmitting RF signals, comprising:
+an enodeB including a first RF transceiver located at a first remote location for transmitting RF signals over RF communications links;
+consumer premises equipment including a second RF transceiver located at a second remote location for transmitting the RF signals over the RF communications links;
+at least one repeater for communicating with a plurality of remote locations over the RF communications links, wherein the at least one repeater further comprises:
+multiple input multiple output (MIMO) transmission circuitry for transmitting signals and receiving signals over the RF communications links to the plurality of remote locations, wherein the MIMO transmission circuitry limits interference between the transmitted signals and the received signals;
+full-duplex transmission circuitry for processing the transmitted signals and the received signals over the RF communications links using full-duplex communications with the plurality of remote locations; and
+wherein the at least one repeater relays the RF signals between the first RF transceiver at the enodeB at the first remote location and the second RF transceiver at the consumer premises equipment at the second remote location.
+  16. The system of claim 15, wherein the at least one repeater further includes orbital angular momentum (OAM) processing circuitry for applying a selected orbital angular momentum to the transmitted signals, wherein the selected orbital angular momentum limits interference between the transmitted signals and the received signals.
+  17. The system of claim 15, wherein the at least one repeater further comprises a first repeater and a second repeater, the RF signals are bilaterally transmitted between the enodeB and the consumer premises equipment by relaying the RF signals through the first repeater and the second repeater.
+  18. The system of claim 15 further comprising a passive reflector located between the at least one repeater and customer premises equipment for reflecting the transmitted signals from the at least one repeater to the second RF transceiver associated with the customer premises equipment.
+  19. The system of claim 15, wherein the at least one repeater receives the RF signals from the enodeB and relays the RF signals to a plurality of RF transceivers located remotely form the at least one repeater.
+  20. The system of claim 15, wherein the RF signals comprise millimeter wave signals.
+
+=== DESCRIPTION ===
+CROSS-REFERENCE TO RELATED APPLICATIONS
+ S. patent application Ser. No. 17/487,298, filed Sep. 28, 2021, entitled HYBRID DIGITAL-ANALOG MMWAVE REPEATER/RELAY WITH FULL DUPLEX, issuing as on Nov. 1, 2022, which is a Continuation of U.S. patent application Ser. No. 17/080,384, filed Oct. 26, 2020, entitled HYBRID DIGITAL-ANALOG MMWAVE REPEATER/RELAY WITH FULL DUPLEX, issued as on Oct. 19, 2021, which claims the benefit of U.S. Patent Application No. 62/965,019, filed Jan. 23, 2020, entitled HYBRID DIGITAL-ANALOG MMWAVE REPEATER/RELAY WITH FULL DUPLEX, which is incorporated by reference herein in its entirety.
+TECHNICAL FIELD
+The present invention related to repeater/relay transmitters, and more particularly, to a millimeter wave repeater/relay using full duplex.
+SUMMARY
+The present invention, as disclosed and described herein, in one aspect thereof, comprises a repeater for transmitting millimeter wave signals. A transceiver communicates with a plurality of remote locations over millimeter wave communications links. The of transceiver comprises a patch antenna array including a plurality of patch antennas. The plurality of patch antennas include a transmitter array portion in a first orientation for transmitting signals and a receiver array portion in a second orientation for receiving signals. The receiver array portion is vertically separated from the transmitter array portion by a predetermined distance. The first and second orientations and the predetermined distance vertically separating the transmitter array portion from the receiver array portion limit interference between the transmitted signals and the received signals. Transceiver circuitry transmits the millimeter wave signals with at least a first millimeter wave transceiver at first one of the plurality of remote locations and a second millimeter wave transceiver at a second one of the plurality of remote locations.
+BRIEF DESCRIPTION OF THE DRAWINGS
+For a more complete understanding, reference is now made to the following description taken in conjunction with the accompanying Drawings in which:
+ 
+is a block diagram of a building penetration system;
+ 
+illustrates the bi-directional nature of the building penetration system for transmissions from the outside;
+ 
+illustrates the bi-directional nature of the building penetration system for transmissions from the inside;
+ 
+illustrates a network deployment of the building penetration system of
+ 
+A
+;
+ 
+illustrates a block diagram of an optical bridge for transmitting millimeter wave transmissions through a window;
+ 
+is a more detailed block diagram of the millimeter wave regeneration and retransmission circuitry;
+ 
+illustrates the RF transceiver circuitry of the millimeter wave regeneration and retransmission circuitry;
+ 
+illustrates various techniques for increasing spectral efficiency within a transmitted signal;
+ 
+illustrates a particular technique for increasing spectral efficiency within a transmitted signal;
+ 
+illustrates a general overview of the manner for providing communication bandwidth between various communication protocol interfaces;
+ 
+illustrates the manner for utilizing multiple level overlay modulation with twisted pair/cable interfaces;
+ 
+illustrates a general block diagram for processing a plurality of data streams within an optical communication system;
+ 
+is a functional block diagram of a system for generating orbital angular momentum within a communication system;
+ 
+is a functional block diagram of the orbital angular momentum signal processing block of
+ 
+;
+ 
+is a functional block diagram illustrating the manner for removing orbital angular momentum from a received signal including a plurality of data streams;
+ 
+illustrates a single wavelength having two quanti-spin polarizations providing an infinite number of signals having various orbital angular momentums associated therewith;
+ 
+A
+illustrates a plane wave having only variations in the spin angular momentum;
+ 
+B
+illustrates a signal having both spin and orbital angular momentum applied thereto;
+ 
+A-
+18
+C
+illustrate various signals having different orbital angular momentum applied thereto;
+ 
+D
+illustrates a propagation of Poynting vectors for various Eigen modes;
+ 
+E
+illustrates a spiral phase plate;
+ 
+illustrates various manners for converting a Gaussian beam into an OAM beam;
+ 
+A
+illustrates a fabricated metasurface phase plate;
+ 
+B
+illustrates a magnified structure of the metasurface phase plate;
+ 
+A
+illustrates the steps to produce 24 multiplex OAM beams;
+ 
+B
+illustrates the optical spectrum of a WDM signal carrier on an OAM beam;
+ 
+A
+illustrates a turbulence emulator;
+ 
+B
+illustrates the measured power distribution of an OAM beam after passing through turbulence with a different strength;
+ 
+A
+illustrates how turbulence effects mitigation using adaptive optics;
+ 
+B
+illustrates experimental results of distortion mitigation using adaptive optics;
+ 
+is a functional block diagram of a residential IP network system;
+ 
+illustrates the manner in which a mmwave system may be utilized to transmit information to a residential IP network system;
+ 
+illustrates a first embodiment for wireless transmission of broadband data to a residential IP network system;
+ 
+illustrates a second embodiment for wireless transmission of broadband data to a residential IP network system;
+ 
+illustrates a third embodiment for wireless transmission of broadband data to a residential IP network system;
+ 
+illustrates an implementation of vOLTHA on an OLT and ONU link;
+ 
+illustrates a broadband link between an OLT and home gateway;
+ 
+illustrates the interface between and ONU and the plurality of home gateways;
+ 
+illustrates a first embodiment of a broadband data communications link between an OLT and home gateway;
+ 
+illustrates a second embodiment of a broadband data communications link between an OLT and virtual reality goggles;
+ 
+illustrates the structure for communication through a window or wall using transceiver dongles;
+ 
+A
+illustrates a functional block diagram of a
+RK
+3399 processor and a Peraso chipset;
+ 
+B
+illustrates a more detailed block diagram of a
+RK
+3399 processor and a Peraso chipset;
+ 
+C
+illustrates a block diagram of a transceiver dongle for providing full-duplex communications;
+ 
+D
+illustrates a block diagram a device implementing a Peraso chipset;
+ 
+is a top-level block diagram of a Peraso transceiver;
+ 
+A and
+37
+B
+illustrate a detailed application diagram of a Peraso chipset;
+ 
+illustrates serial transmissions between Peraso transceivers;
+ 
+illustrates parallel transmissions between Peraso transceivers;
+ 
+illustrates a transceiver dongle and a multilevel patch antenna array for transmitting and receiving OAM signals;
+ 
+illustrates a side view of the transceiver dongle;
+ 
+illustrates a transceiver dongle and a multilevel patch antenna array for transmitting and receiving OAM signals;
+ 
+illustrates a view of a three layer patch antenna;
+ 
+illustrates a top view of the three layer patch antenna;
+ 
+illustrates the separation between antenna layer of the three layer patch antenna;
+ 
+illustrates the analog and digital cancellation for multiple transmit and receive chains;
+ 
+illustrates a block diagram of the transmitter and receiver circuit;
+ 
+illustrates transmit and receive paths for the analog and digital cancellation processes.
+ 
+illustrates a simplified block diagram of an RF receiver;
+ 
+illustrates a block diagram of a full-duplex design with three cancellation techniques;
+ 
+illustrates a block diagram of a full-duplex system;
+ 
+illustrates a circuit for measuring the cancellation performance of signal inversion versus offset;
+ 
+illustrates the cancellation of a self-interference signal with balun versus with phase offset;
+ 
+illustrates cancellation performance with increasing signal bandwidth using a balun method versus using a phase offset cancellation;
+ 
+illustrates full-duplex transmissions between first and second transceivers;
+ 
+illustrates full-duplex transmissions using orbital angular momentum between first and second transceivers;
+ 
+illustrates signals received by antennas in full-duplex with OAM communications;
+ 
+illustrates a block diagram of a transceiver implementing full-duplex communications;
+ 
+illustrates a block diagram of a Backhaul Network Key Performance Indicator;
+ 
+illustrates a small cell private network;
+ 
+illustrates a small cell node having a primary link and one or more backup links;
+ 
+illustrates a small cell node including means for multiplexing between multiple transceiver types;
+ 
+illustrates an SDN-based architecture for link generation;
+ 
+illustrates a small cell node implementing fast local restoration within its data plane layer;
+ 
+illustrates a flow diagram describing the process for implementing SDN-based local repair;
+ 
+illustrates a flow diagram describing the process for detecting link state and for the transmission on primary and backup links;
+ 
+illustrates a private network wirelessly connecting to users to provide a connection to the network core;
+ 
+illustrates a mesh network for interconnecting an edge network with users;
+ 
+illustrates the components of a self-organized network for access;
+ 
+illustrates a number of mesh network nodes;
+ 
+illustrates a mesh network with interfering structure;
+ 
+illustrates a mesh network of access sites connected to multiple users;
+ 
+illustrates the wireless connections between an optimally located access site and an associated network site and resident are enterprise users;
+ 
+illustrates a network of a plurality of optimally located access sites and network sites using both licensed and unlicensed data bands;
+ 
+illustrates the software components of a 60 GHz last drop system;
+ 
+illustrates the manner in which a central controller and mesh client operate on top of a WiGig baseband layer;
+ 
+illustrates the various mesh software functions for the mesh controller and mesh node;
+ 
+illustrates a system providing full cancellation operation;
+ 
+illustrates a full-duplex cancellation technique;
+ 
+illustrates vertically separated patch antennas;
+ 
+illustrates combination of self interference cancellation techniques with OAM orthogonality techniques;
+ 
+illustrates a first manner for improving isolation using orthogonal Gaussian modes;
+ 
+illustrates a second matter for improving isolation using orthogonal Gaussian modes;
+ 
+illustrates a table of effects caused by rotation of a circular receiver array within a patch antenna;
+ 
+illustrates a patch antenna array having a 12 patch antenna circular receiver antenna array;
+ 
+illustrates a table of effects caused by rotation of a circular receiver of Ray including 12 patch antennas;
+ 
+illustrates vertically separated transmitter arrays and receiver arrays;
+ 
+illustrates received voltage values for different patch antenna configurations;
+ 
+-
+106
+illustrate various voltage plots for differing patch antenna array durations of a circular transmitter array and a circular receiver array;
+ 
+illustrates a for transmitting and receiving system;
+ 
+illustrates various transmission towers for antenna;
+ 
+illustrates a link budget plot for a patch antenna array;
+ 
+a transmitting and receiving patch antenna arrays;
+ 
+illustrates a link budget for transmitting signals in cross issues for a transmitting and receiving array;
+ 
+illustrates a block diagram of a system for transmitting millimeter wave signals;
+ 
+illustrates various functionalities associated with a repeater/relay;
+ 
+illustrates a single relay system;
+ 
+illustrates a tandem relay configuration;
+ 
+illustrates a wide junction relay configuration;
+ 
+illustrates an H junction relay configuration;
+ 
+illustrates a tandem wide junction relay configuration;
+ 
+illustrates a configuration of tandem repeaters and a passive reflector;
+ 
+illustrates the full duplex and half duplex communications used within a Peter system;
+ 
+illustrates a block diagram of a transceiver dongle implementing the millimeter wave repeater/relay; and
+ 
+illustrates the various functionalities implemented within the millimeter/wave repeater/relay.
+DETAILED DESCRIPTION
+Referring now to the drawings, wherein like reference numbers are used herein to designate like elements throughout, the various views and embodiments of hybrid digital-analog mmwave repeater/relay with full duplex and various embodiments associated therewith are illustrated and described, and other possible embodiments are described. The figures are not necessarily drawn to scale, and in some instances the drawings have been exaggerated and/or simplified in places for illustrative purposes only. One of ordinary skill in the art will appreciate the many possible applications and variations based on the following examples of possible embodiments.
+One issue with wireless telecommunications is the inability of high frequency RF waves to penetrate through windows and walls of homes and business offices. If a window includes any infrared (IR) shielding in order to save energy within the house or office building, the losses in signals transmitted through the shielding are typically up to 40 or 50 dB. Thus, the millimeter wave system described herein provides the ability to provide tunneling of such optical and high frequency radio waves without requiring the need to drill through the glass, window or building to provide a physical portal therethrough would provide great benefits to wireless communication technologies. This may be done at any frequency that has problems penetrating through the glass or building. Glass is one of the most popular and versatile due to its constantly improving solar and thermal performance. One manner for achieving this performance is through the use of passive and solar control low emissivity coatings. These low emissivity glass materials produce a huge loss for millimeter wave spectrum transmissions and create a huge problem for transmission of millimeter waves through such glass. The system described herein below provides for the ability to allow frequencies having a problem penetrating through a glass or building to be processed in such a manner to enable the signals to be transmitted into or out of a home or building.
+Millimeter wave signaling was developed when the FCC devised a band plan making 1300 MHz of the local multipoint distribution service (LMDS) spectrum available within each basic trading area across the United States. The plan allocated two LMDS licenses per BTA (basic trading area), an A Block  and a B Block  in each. The A Block license comprised 1150 MHz of total bandwidth, and the B Block license consisted of 150 MHz of total bandwidth. A license holder Teligent developed a system for fixed wireless point to multipoint technology that could send high speed broadband from rooftops to surrounding small and medium-size businesses. However, the system, as well as others provided by Winstar and NextLink, did not succeed and many of the LMDS licenses fell back into the hands of the FCC. These licenses and related spectrum are seen as useful for 5G trials and services.
+Additionally there is a need to provide signals between the base station transceivers that are connected to a voice or data transmission network and the devices associated with the homes or buildings enabling the transmission of signals into the interior of the buildings as described more fully herein.
+Referring now to
+ 
+, there is illustrated a general block diagram of the building
+penetration transmission system
+102
+. The building
+penetration transmission system
+102
+uses 5G fixed millimeter wave deployments to overcome high building penetration losses due to RF and optical obstructions such as windows, brick and concrete walls. The building
+penetration transmission system
+102
+greatly increases the number of enterprise and residential buildings where 5G millimeter wave signals can be used to deliver gigabyte ethernet services. The system provides an optical or RF tunnel through the window or
+wall
+106
+without requiring the drilling of any holes or the creation of some type of signal permeable portal within the window or wall. The generation of direction radio waves using the describe system enables the generation of directional beams to tunnel through low-e glass or walls. The system enables link budgets between the interior and exterior transceivers be satisfied. The system greatly increases the number of building that may use millimeter wave signals to deliver Gigabit Ethernet using consumer installed devices.
+The building
+penetration transmission system
+102
+generally includes an
+exterior repeater transmitter
+104
+located on the exterior of the window or
+wall
+106
+. The
+repeater transmitter
+104
+transmits and receives a number of frequencies including 2.5 GHz band, 3.5 GHz band, 5 GHz band, 24 GHz band, 28 GHz band (A1, A2, B1 and B2), 39 GHz band, 60 GHz band, 71 GHz band and 81 GHz band. The 3.5 GHz band is CBRS (Citizens Band Radio Service), the 60 GHz band is V-band and the 71 GHz and 81 GHz are E-band. The
+repeater transmitter
+104
+is powered using magnetic resonance or inductive coupling such that the outside unit requires no external power source. The
+repeater
+104
+transmits received signals through the window or
+wall
+106
+to a
+transceiver
+108
+located on the interior of the building. The
+transceiver
+108
+includes an
+antenna
+110
+for providing ethernet and/or power connections. The building
+penetration transmission system
+102
+may provide one gigabit per second throughput traffic tunneling through a building structure such as a window or wall. The
+transceiver
+108
+may include a
+port
+112
+providing femto cell connectivity, but in general transmits Wi-Fi indoors using the
+antenna
+110
+. Alternatively, the ethernet or power connections can be hardwired to the
+transceiver
+108
+. The building
+penetration transmission system
+102
+may be located at any point on a wall or window of a structure. The building
+penetration transmission system
+102
+is designed to work with different types of walls and windows in order to enable millimeter wave signals to penetrate different types of structures. The
+repeater
+104
+and
+transceiver
+108
+are constructed of a metal/plastic design to withstand the harshest environments including precipitation, hot/cold weather and high/low humidity.
+The
+transceiver
+108
+includes gigabyte ethernet ports, a power output, at least one USB 2.0 port and dual flash image support. The building
+penetration transmission system
+102
+provides a range of up to 200 feet (60 m). The system requires a 24 V/M passive gigabyte PoE and has a 20 W maximum power consumption that may be powered using magnetic resonance wireless charging in one embodiment. The system provides 2 GHz of
+channel bandwidth
+60 GHz.
+ 
+and
+3
+illustrates the bidirectional communication between
+transceiver
+104
+located on the exterior side of the window or
+wall
+106
+and
+transceiver
+108
+located on the interior side of the window or
+wall
+106
+. A remote
+base station transmitter
+109
+transmits wireless signals to an
+external transceiver
+104
+. Communication transmissions from the
+exterior transceiver
+104
+to the
+interior transceiver
+108
+occur over a
+communications link
+114
+. The signals transmitted to the interior may then be transmitted to consumer premises equipment (CPE)
+111
+using beam forming or
+WiFi
+113
+from an
+internal router
+115
+. As shown in
+ 
+C
+, internal devices
+117
+(such as mobile devices or Internet-of-Things devices) transmit signals to the
+internal router
+115
+. The
+internal router
+115
+provides the signals to the
+internal transceiver
+108
+. Transmissions from the interior of the window or
+wall
+106
+to the exterior are from
+transceiver
+108
+to
+transceiver
+104
+are on communications link
+116
+. The
+external transceiver
+104
+then transmits the signals to the
+external base station
+109
+. Thus, the system enables bidirectional communications that may utilize RF, optical or other types of communication technologies as more fully described hereinbelow.
+Referring now to
+ 
+, there is illustrated a network deployment of the building penetration system discussed with respect to
+ 
+-
+3
+. A
+provider network
+130
+interfaces with the local network through fiber PoP (point of presence)
+cabinets
+132
+. The
+cabinets
+132
+have a
+fiber link
+134
+to an
+access point
+136
+. Each of the
+access points
+136
+wirelessly communicates with a network of
+other access points
+136
+that are located for example on light poles within a local area over wireless communication links using any number of communication frequencies as will be described herein. The access points
+136
+communicate with
+transceiver systems
+138
+that comprise the building penetration system described herein where in signals are wirelessly transmitted to an external transceiver and then transmitted to the interior of the business or home such that information may be bi-directionally transmitted from the
+provider network
+130
+to/from devices located within the interior of various structures. In this manner, data may be provided between the
+network provider
+130
+and devices of all types located within the structures using wireless communications that normally would not penetrate to the interior of the structures due to losses occurring by penetration of the signals into the interior of the structures.
+ 
+illustrates one manner for transmitting millimeter wave signals inside of a building using an
+optical bridge
+502
+mounted to a
+window
+504
+. The
+optical bridge
+502
+includes a
+first portion
+506
+included on an outside of the
+window
+504
+and a
+second portion
+508
+included on the inside of the
+window
+504
+. The
+first portion
+506
+includes a 28
+GHz transceiver
+510
+that is mounted on the outside of the
+window
+504
+. The 28
+GHz transceiver
+510
+receives the millimeter wave transmissions that are being transmitted from, for example, a
+base station
+104
+such as that described with respect to
+ 
+. The received/transmitted signals are transmitted to and from the
+transceiver
+510
+using a receiver optical subassembly (ROSA)/transmission optical subassembly (TOSA)
+512
+. A receiver optical subassembly is a component used for receiving optical signals in a fiber optic system. Similarly, a transceiver optical subassembly is a component used for transmitting optical signals in a fiber optic system. ROSA/
+TOSA component
+512
+transmits or receives the optical signals through the
+window
+504
+to a ROSA/
+TOSA component
+514
+located on the inside of the
+window
+504
+. The signals are forwarded from the ROSA/
+TOSA
+514
+to a Wi-
+Fi transmitter
+516
+for transmissions within the building.
+Referring now to
+ 
+, there is illustrated a more detailed illustration of the components for transmitting millimeter wave transmissions through a window or wall of a building. The
+transceiver
+600
+includes an optional
+antenna gain element
+602
+for receiving the millimeter wave transmissions transmitted on a down/up
+link
+604
+from a
+base station
+605
+. The down/
+uplink
+604
+comprises a 28 GHz beam transmission. However other frequency transmissions may also be utilized. An
+RF receiver
+606
+is used for receiving information from the base station
+204
+over the down/up
+link
+604
+. Similarly, the
+RF transmitter
+608
+is used for transmitting information on the down/up
+link
+604
+to a
+base station
+605
+. Receive signals are provided to a
+demodulator
+610
+for demodulation of any received signals. The demodulated signals are provided to a
+groomer
+612
+which places the signals in the appropriate configuration for transmission by the optical transmission components. When translating different modulations (say from a high order QAM to OOK (On-Off Keying)), there are signaling conversions that require some grooming (or signal conditioning) to ensure all bits translate properly and still provide a low BER. The present system translates from RF at a high QAM rate to raw bit rates of OOK to enable transmissions using the VCSELs to go through the glass of the window. VCSELs only work with OOK and therefore a translation using the
+groomer
+612
+is needed. If a received signal were just down-convert from 28 GHz directly to 5.8 GHz (because 5.8 GHz does pass through the wall and glass), then we do not need to worry about complications of translating to low order modulation. The problem is that down-converting signal from 28 GHz to 5.8 GHz requires expensive components. The
+groomer
+612
+completes the translation of the received 28 GHz signal to a frequency for transmission through a glass or wall without the more expensive components.
+The signals to be transmitted are passed through an
+amplifier
+614
+to amplify the signal for transmission. The amplified signal is provided to VCSELs
+616
+for optically transmitting the signal. The
+VCSEL
+616
+is a vertical cavity surface emitting laser that is a type of semiconductor laser diode with laser beam omissions perpendicular from the top surface. In a preferred embodiment, the
+VCSEL
+616
+comprises a Finisar VCSEL having a wavelength of approximately 780 nm, a modulation rate of 4 Gb per second and an optical output power of 2.2 mW (3.4 to dBm). In alternative embodiments the components for transmitting the optical signals across the
+window
+604
+may comprise an LED (light emitting diode) or EEL (edge emitting lasers). The different lasers enable different optical re-transmissions at different frequencies based on different characteristics of a window such as tint.
+The
+VCSEL
+616
+includes a transmission optical subassembly (TOSA) for generating the optical signals for transmission from
+VCSEL
+616
+to
+VCSEL
+618
+located on the opposite side of the
+window
+604
+. The
+VCSELs
+616
+and
+618
+comprise a laser source for generating the optical signals for transmission across the
+window
+604
+. In one embodiment, the VCSEL comprises a Finisar VCSEL that provides a 780 nm optical signal having a maximum modulation rate of 4 Gb per second when running at 1 Gb per second and an optical output power of 3 mW (5 dBm). The TOSA includes a laser device or LED device for converting electrical signals from the
+amplifier
+614
+into light signal transmissions. Transmissions from the
+outside VCSEL
+616
+to the inside VCSEL
+418
+and an associated receiver optical subassembly (ROSA).
+The optical signals are transmitted through the
+window
+604
+using optical focusing circuitry
+617
+. The
+optical link
+628
+between
+VCSEL
+616
+and
+VCSEL
+618
+has an optical link budget associated therewith that defines the losses that may be accepted while still transmitting the information between the
+VCSELs
+616
+,
+618
+. The VCSEL has an output power of approximately 5 dBm. The detector at the receiver within the VCSEL can detect a signal at approximately 12 dBm. The glass losses associated with the optical signal passing through the glass at a wavelength of 780 nm is 7.21 dB. The coupling loss and lens gain associated with the transmission is approximately 0.1 dB. The maximum displacement loss caused by a lens displacement of 3.5 mm is 6.8 dB. Thus, the total link margin equals 2.88 dB based upon a subtraction of the detector sensitivity, glass losses, coupling loss and lens gain and maximum displacement loss from the VCSEL output power. The 2.88 dB link margin is provided for unexpected an extra losses such as len's losses and unexpected output variances.
+Referring now to
+ 
+there is illustrated a more detailed block diagram of the transceiver
+310
+. The receiver portion
+702
+includes an
+RF receiver
+704
+for receiving the RF signals transmitted from the base station on the
+downlink
+706
+. The
+receiver
+704
+generates output signals having a
+real portion BBI
+708
+and an
+imaginary portion BBQ
+710
+. The
+RF receiver
+704
+generates the
+real signal
+708
+and
+imaginary signal
+710
+responsive to the receive signal and inputs from a phase locked loop/
+voltage control oscillator
+705
+. The phase locked loop/
+voltage control oscillator
+705
+provides inputs to the
+RF receiver
+704
+responsive to a reference oscillator signal provided from
+reference oscillator
+707
+and a voltage controlled oscillator signal provided from
+oscillator
+709
+. The
+real signal
+708
+and the
+imaginary signal
+710
+are provided to analog-to-
+digital converters
+712
+for conversion to a digital signal. The analog-to-
+digital converters
+712
+are clocked by an associated
+clock input
+714
+provided from
+clock generation circuit
+716
+. The
+clock generation circuit
+716
+also receives an input from the
+reference oscillator
+707
+. The real and imaginary
+digital signals
+718
+and
+720
+are input to a
+digital down converter
+722
+. The digital signals are down converted to a lower frequency and output as a
+bit stream
+724
+to the optical transmission circuitry (VCSEL) for transmitting across the window glass.
+The
+transmitter portion
+724
+receives a
+digital bitstream
+726
+from the optical circuitry and provides this bitstream to the real and imaginary portions of digital up
+converters
+728
+to convert the digital data to a higher frequency for transmission. The real and imaginary portions of the up-converted digital signal are provided to a crest
+factor reduction processor
+730
+. Some signals (especially OFDM-based systems) have high peak-to-average power ratio (PAR) that negatively impacts the efficiency of power amplifiers (PAs). Crest factor reduction (CFR) schemes implemented by the processor help reduce PAR and have been used for many networks (CDMA & OFDM). However, CFR schemes developed primarily for CDMA signals have a poor performance when used in in OFDM (given the tight error vector magnitude (EVM) requirements). With a well-designed CFR algorithm on FPGAs, one can achieve low-latency, high-performance that can significantly reduce the PAR of the output signal which improves PA efficiency and reduced cost.
+The real and imaginary signals are provided from the crest
+factor reduction processor
+730
+to a digital to
+analog converter
+732
+. The digital to
+analog converter
+732
+converts the real and imaginary digital signals into real and imaginary
+analog signals BBI
+734
+and
+BBQ
+736
+. The real and imaginary analog signals are inputs to the
+RF transmitter
+738
+. The
+RF transmitter
+738
+processes the
+real signal
+734
+and
+imaginary signal
+736
+responsive to input from the phase locked loop/
+voltage control oscillator
+704
+to generate RF signals for transmission on the
+uplink
+740
+to generate the millimeter wave and transmissions.
+Referring now to
+ 
+, the communication system configuration introduces two techniques, one from the
+signal processing techniques
+804
+category and one from the creation of new
+eigen channels
+806
+category that are entirely independent from each other. Their combination provides a unique manner to disrupt the access part of an end to end communications system from twisted pair and cable to fiber optics, to free space optics, to RF used in cellular, backhaul and satellite. The first technique involves the use of a new signal processing technique using new orthogonal signals to upgrade QAM modulation using non sinusoidal functions. This particular embodiment is referred to as quantum level overlay (QLO)
+902
+as shown in
+ 
+. The second embodiment involves the application of new electromagnetic wavefronts using a property of electromagnetic waves or photon, called orbital angular momentum (QAM)
+904
+. Application of each of the quantum
+level overlay techniques
+902
+and orbital
+angular momentum application
+904
+uniquely offers orders of magnitude higher
+spectral efficiency
+906
+within communication systems in their combination.
+With respect to the quantum
+level overlay technique
+902
+, new eigen functions are introduced that when overlapped (on top of one another within a symbol) significantly increases the spectral efficiency of the system. The quantum level overlay technique
+302
+borrows from quantum mechanics, special orthogonal signals that reduce the time bandwidth product and thereby increase the spectral efficiency of the channel. Each orthogonal signal is overlaid within the symbol acts as an independent channel. These independent channels differentiate the technique from existing modulation techniques.
+With respect to the application of orbital
+angular momentum
+904
+, this embodiment introduces twisted electromagnetic waves, or light beams, having helical wave fronts that carry orbital angular momentum (OAM). Different OAM carrying waves/beams can be mutually orthogonal to each other within the spatial domain, allowing the waves/beams to be efficiently multiplexed and demultiplexed within a communications link. OAM beams are interesting in communications due to their potential ability in special multiplexing multiple independent data carrying channels.
+With respect to the combination of quantum
+level overlay techniques
+902
+and orbital
+angular momentum application
+904
+, the combination is unique as the OAM multiplexing technique is compatible with other electromagnetic techniques such as wave length and polarization division multiplexing. This suggests the possibility of further increasing system performance. The application of these techniques together in high capacity data transmission disrupts the access part of an end to end communications system from twisted pair and cable to fiber optics, to free space optics, to RF used in cellular/backhaul and satellites.
+Each of these techniques can be applied independent of one another, but the combination provides a unique opportunity to not only increase spectral efficiency, but to increase spectral efficiency without sacrificing distance or signal to noise ratios.
+Using the Shannon Capacity Equation, a determination may be made if spectral efficiency is increased. This can be mathematically translated to more bandwidth. Since bandwidth has a value, one can easily convert spectral efficiency gains to financial gains for the business impact of using higher spectral efficiency. Also, when sophisticated forward error correction (FEC) techniques are used, the net impact is higher quality but with the sacrifice of some bandwidth. However, if one can achieve higher spectral efficiency (or more virtual bandwidth), one can sacrifice some of the gained bandwidth for FEC and therefore higher spectral efficiency can also translate to higher quality.
+Telecom operators and vendors are interested in increasing spectral efficiency. However, the issue with respect to this increase is the cost. Each technique at different layers of the protocol has a different price tag associated therewith. Techniques that are implemented at a physical layer have the most impact as other techniques can be superimposed on top of the lower layer techniques and thus increase the spectral efficiency further. The price tag for some of the techniques can be drastic when one considers other associated costs. For example, the multiple input multiple output (MIMO) technique uses additional antennas to create additional paths where each RF path can be treated as an independent channel and thus increase the aggregate spectral efficiency. In the MIMO scenario, the operator has other associated soft costs dealing with structural issues such as antenna installations, etc. These techniques not only have tremendous cost, but they have huge timing issues as the structural activities take time and the achieving of higher spectral efficiency comes with significant delays which can also be translated to financial losses.
+The quantum
+level overlay technique
+902
+has an advantage that the independent channels are created within the symbols without needing new antennas. This will have a tremendous cost and time benefit compared to other techniques. Also, the quantum
+layer overlay technique
+902
+is a physical layer technique, which means there are other techniques at higher layers of the protocol that can all ride on top of the
+QLO techniques
+902
+and thus increase the spectral efficiency even further.
+QLO technique
+902
+uses standard QAM modulation used in OFDM based multiple access technologies such as WIMAX or LTE.
+QLO technique
+902
+basically enhances the QAM modulation at the transceiver by injecting new signals to the I & Q components of the baseband and overlaying them before QAM modulation as will be more fully described herein below. At the receiver, the reverse procedure is used to separate the overlaid signal and the net effect is a pulse shaping that allows better localization of the spectrum compared to standard QAM or even the root raised cosine. The impact of this technique is a significantly higher spectral efficiency.
+Referring now more particularly to
+ 
+, there is illustrated a general overview of the manner for providing improved communication bandwidth within various
+communication protocol interfaces
+1002
+, using a combination of multiple
+level overlay modulation
+1004
+and the application of orbital
+angular momentum
+1006
+to increase the number of communications channels. The following discussions of orbital angular momentum processing and multiple level overlay modulation illustrate two techniques that may or may not be implemented in RF transmissions in the below described systems and embodiments. RF transmissions may be configured to implement one, both or neither of the techniques in the described embodiments.
+The various
+communication protocol interfaces
+1002
+may comprise a variety of communication links, such as RF communication, wireline communication such as cable or twisted pair connections, or optical communications making use of light wavelengths such as fiber-optic communications or free-space optics. Various types of RF communications may include a combination of RF microwave or RF satellite communication, as well as multiplexing between RF and free-space optics in real time.
+By combining a multiple layer
+overlay modulation technique
+1004
+with orbital angular momentum (OAM)
+technique
+1006
+, a higher throughput over various types of
+communication links
+1002
+may be achieved. The use of multiple level overlay modulation alone without OAM increases the spectral efficiency of
+communication links
+1002
+, whether wired, optical, or wireless. However, with OAM, the increase in spectral efficiency is even more significant.
+Multiple
+overlay modulation techniques
+1004
+provide a new degree of freedom beyond the conventional 2 degrees of freedom, with time T and frequency F being independent variables in a two-dimensional notational space defining orthogonal axes in an information diagram. This comprises a more general approach rather than modeling signals as fixed in either the frequency or time domain. Previous modeling methods using fixed time or fixed frequency are considered to be more limiting cases of the general approach of using multiple
+level overlay modulation
+1004
+. Within the multiple level
+overlay modulation technique
+1004
+, signals may be differentiated in two-dimensional space rather than along a single axis. Thus, the information-carrying capacity of a communications channel may be determined by a number of signals which occupy different time and frequency coordinates and may be differentiated in a notational two-dimensional space.
+Within the notational two-dimensional space, minimization of the time bandwidth product, i.e., the area occupied by a signal in that space, enables denser packing, and thus, the use of more signals, with higher resulting information-carrying capacity, within an allocated channel. Given the frequency channel delta (Îf), a given signal transmitted through it in minimum time Ît will have an envelope described by certain time-bandwidth minimizing signals. The time-bandwidth products for these signals take the form;
+Î
+tÎf=
+ ½(2
+n+
+1)
+where n is an integer ranging from 0 to infinity, denoting the order of the signal.
+These signals form an orthogonal set of infinite elements, where each has a finite amount of energy. They are finite in both the time domain and the frequency domain, and can be detected from a mix of other signals and noise through correlation, for example, by match filtering. Unlike other wavelets, these orthogonal signals have similar time and frequency forms.
+The orbital
+angular momentum process
+1006
+provides a twist to wave fronts of the electromagnetic fields carrying the data stream that may enable the transmission of multiple data streams on the same frequency, wavelength, or other signal-supporting mechanism. This will increase the bandwidth over a communications link by allowing a single frequency or wavelength to support multiple eigen channels, each of the individual channels having a different orthogonal and independent orbital angular momentum associated therewith.
+Referring now to
+ 
+, there is illustrated a further communication implementation technique using the above described techniques as twisted pairs or cables carry electrons (not photons). Rather than using each of the multiple
+level overlay modulation
+1004
+and orbital
+angular momentum techniques
+1006
+, only the multiple
+level overlay modulation
+1004
+can be used in conjunction with a single wireline interface and, more particularly, a twisted pair communication link or a
+cable communication link
+1102
+. The operation of the multiple
+level overlay modulation
+1104
+, is similar to that discussed previously with respect to
+ 
+, but is used by itself without the use of orbital
+angular momentum techniques
+1006
+, and is used with either a twisted pair communication link or cable
+interface communication link
+1102
+.
+Referring now to
+ 
+, there is illustrated a general block diagram for processing a plurality of
+data streams
+1202
+for transmission in an optical communication system. The
+multiple data streams
+1202
+are provided to the multi-layer
+overlay modulation circuitry
+1204
+wherein the signals are modulated using the multi-layer overlay modulation technique. The modulated signals are provided to orbital angular
+momentum processing circuitry
+1206
+which applies a twist to each of the wave fronts being transmitted on the wavelengths of the optical communication channel. The twisted waves are transmitted through the
+optical interface
+1208
+over an optical communications link such as an optical fiber or free space optics communication system.
+ 
+may also illustrate an RF mechanism wherein the
+interface
+1208
+would comprise and RF interface rather than an optical interface.
+Referring now more particularly to
+ 
+, there is illustrated a functional block diagram of a system for generating the orbital angular momentum twist  within a communication system, such as that illustrated with respect to
+ 
+, to provide a data stream that may be combined with multiple other data streams for transmission upon a same wavelength or frequency.
+Multiple data streams
+1302
+are provided to the
+transmission processing circuitry
+1300
+. Each of the data streams
+1302
+comprises, for example, an end to end link connection carrying a voice call or a packet connection transmitting non-circuit switch packed data over a data connection. The
+multiple data streams
+1302
+are processed by modulator/
+demodulator circuitry
+1304
+. The modulator/
+demodulator circuitry
+1304
+modulates the received
+data stream
+1302
+onto a wavelength or frequency channel using a multiple level overlay modulation technique, as will be more fully described herein below. The communications link may comprise an optical fiber link, free-space optics link, RF microwave link, RF satellite link, wired link (without the twist), etc.
+The modulated data stream is provided to the orbital angular momentum (OAM)
+signal processing block
+1306
+. Each of the modulated data streams from the modulator/
+demodulator
+1304
+are provided a different orbital angular momentum by the orbital angular momentum
+electromagnetic block
+1306
+such that each of the modulated data streams have a unique and different orbital angular momentum associated therewith. Each of the modulated signals having an associated orbital angular momentum are provided to an
+optical transmitter
+1308
+that transmits each of the modulated data streams having a unique orbital angular momentum on a same wavelength. Each wavelength has a selected number of bandwidth slots B and may have its data transmission capability increase by a factor of the number of degrees of orbital angular momentum l that are provided from the OAM
+electromagnetic block
+1306
+. The
+optical transmitter
+1308
+transmitting signals at a single wavelength could transmit B groups of information. The
+optical transmitter
+1308
+and OAM
+electromagnetic block
+1306
+may transmit lÃB groups of information according to the configuration described herein.
+In a receiving mode, the
+optical transmitter
+1308
+will have a wavelength including multiple signals transmitted therein having different orbital angular momentum signals embedded therein. The
+optical transmitter
+1308
+forwards these signals to the OAM
+signal processing block
+1306
+, which separates each of the signals having different orbital angular momentum and provides the separated signals to the
+demodulator circuitry
+1304
+. The demodulation process extracts the data streams
+1302
+from the modulated signals and provides it at the receiving end using the multiple layer overlay demodulation technique.
+Referring now to
+ 
+, there is provided a more detailed functional description of the OAM
+signal processing block
+1406
+. Each of the input data streams are provided to
+OAM circuitry
+1402
+. Each of the
+OAM circuitry
+1402
+provides a different orbital angular momentum to the received data stream. The different orbital angular momentums are achieved by applying different currents for the generation of the signals that are being transmitted to create a particular orbital angular momentum associated therewith. The orbital angular momentum provided by each of the
+OAM circuitries
+1402
+are unique to the data stream that is provided thereto. An infinite number of orbital angular momentums may be applied to different input data streams using many different currents. Each of the separately generated data streams are provided to a
+signal combiner
+1404
+, which combines the signals onto a wavelength for transmission from the
+transmitter
+1406
+.
+Referring now to
+ 
+, there is illustrated the manner in which the
+OAM processing circuitry
+1306
+may separate a received signal into multiple data streams. The
+receiver
+1502
+receives the combined OAM signals on a single wavelength and provides this information to a
+signal separator
+1504
+. The
+signal separator
+1504
+separates each of the signals having different orbital angular momentums from the received wavelength and provides the separated signals to
+OAM de-twisting circuitry
+1506
+. The
+OAM de-twisting circuitry
+1506
+removes the associated OAM twist from each of the associated signals and provides the received modulated data stream for further processing. The
+signal separator
+1504
+separates each of the received signals that have had the orbital angular momentum removed therefrom into individual received signals. The individually received signals are provided to the
+receiver
+1502
+for demodulation using, for example, multiple level overlay demodulation as will be more fully described herein below.
+ 
+illustrates in a manner in which a single wavelength or frequency, having two quanti-spin polarizations may provide an infinite number of twists having various orbital angular momentums associated therewith. The l axis represents the various quantized orbital angular momentum states which may be applied to a particular signal at a selected frequency or wavelength. The symbol omega (Ï) represents the various frequencies to which the signals of differing orbital angular momentum may be applied. The
+top grid
+1602
+represents the potentially available signals for a left handed signal polarization, while the
+bottom grid
+1604
+is for potentially available signals having right handed polarization.
+By applying different orbital angular momentum states to a signal at a particular frequency or wavelength, a potentially infinite number of states may be provided at the frequency or wavelength. Thus, the state at the frequency ÎÏ or wavelength
+1606
+in both the left handed
+polarization plane
+1602
+and the right
+handed polarization plane
+1604
+can provide an infinite number of signals at different orbital angular momentum states Îl.
+Blocks
+1608
+and
+1610
+represent a particular signal having an orbital angular momentum Îl at a frequency ÎÏ or wavelength in both the right
+handed polarization plane
+1604
+and left
+handed polarization plane
+1610
+, respectively. By changing to a different orbital angular momentum within the same frequency ÎÏ or wavelength
+1606
+, different signals may also be transmitted. Each angular momentum state corresponds to a different determined current level for transmission from the optical transmitter. By estimating the equivalent current for generating a particular orbital angular momentum within the optical domain and applying this current for transmission of the signals, the transmission of the signal may be achieved at a desired orbital angular momentum state.
+Thus, the illustration of
+ 
+, illustrates two possible angular momentums, the spin angular momentum, and the orbital angular momentum. The spin version is manifested within the polarizations of macroscopic electromagnetism, and has only left and right hand polarizations due to up and down spin directions. However, the orbital angular momentum indicates an infinite number of states that are quantized. The paths are more than two and can theoretically be infinite through the quantized orbital angular momentum levels.
+Using the orbital angular momentum state of the transmitted energy signals, physical information can be embedded within the radiation transmitted by the signals. The Maxwell-Heaviside equations can be represented as:
+ 
+ ·
+E
+=
+Ï
+Îµ
+0
+ 
+Ã
+E
+=
+-
+ 
+B
+ 
+t
+ 
+ ·
+B
+=
+0
+ 
+Ã
+B
+=
+Îµ
+0
+ ¢
+Î¼
+0
+ ¢
+ 
+E
+ 
+t
++
+Î¼
+0
+ ¢
+j
+ ¢
+(
+t
+,
+x
+)
+where  is the del operator, E is the electric field intensity and B is the magnetic flux density. Using these equations, one can derive 23 symmetries/conserved quantities from Maxwell's original equations. However, there are only ten well-known conserved quantities and only a few of these are commercially used. Historically if Maxwell's equations where kept in their original quaternion forms, it would have been easier to see the symmetries/conserved quantities, but when they were modified to their present vectoral form by Heaviside, it became more difficult to see such inherent symmetries in Maxwell's equations.
+Maxwell's linear theory is of U(1) symmetry with Abelian commutation relations. They can be extended to higher symmetry group SU(2) form with non-Abelian commutation relations that address global (non-local in space) properties. The Wu-Yang and Harmuth interpretation of Maxwell's theory implicates the existence of magnetic monopoles and magnetic charges. As far as the classical fields are concerned, these theoretical constructs are pseudo-particle, or instanton. The interpretation of Maxwell's work actually departs in a significant ways from Maxwell's original intention. In Maxwell's original formulation, Faraday's electrotonic states (the AÎ¼ field) was central making them compatible with Yang-Mills theory (prior to Heaviside). The mathematical dynamic entities called solitons can be either classical or quantum, linear or non-linear and describe EM waves. However, solitons are of SU(2) symmetry forms. In order for conventional interpreted classical Maxwell's theory of U(1) symmetry to describe such entities, the theory must be extended to SU(2) forms.
+Besides the half dozen physical phenomena (that cannot be explained with conventional Maxwell's theory), the recently formulated Harmuth Ansatz also address the incompleteness of Maxwell's theory. Harmuth amended Maxwell's equations can be used to calculate EM signal velocities provided that a magnetic current density and magnetic charge are added which is consistent to Yang-Mills filed equations. Therefore, with the correct geometry and topology, the AÎ¼ potentials always have physical meaning
+The conserved quantities and the electromagnetic field can be represented according to the conservation of system energy and the conservation of system linear momentum. Time symmetry, i.e. the conservation of system energy can be represented using Poynting's theorem according to the equations:
+H
+=
+ 
+i
+m
+i
+ ¢
+Î³
+i
+ ¢
+c
+2
++
+Îµ
+0
+2
+ ¢
+  
+d
+3
+ ¢
+x
+ ¢
+(
+ 
+"\[LeftBracketingBar]"
+E
+ 
+"\[RightBracketingBar]"
+2
++
+c
+2
+ ¢
+ 
+"\[LeftBracketingBar]"
+B
+ 
+"\[RightBracketingBar]"
+2
+)
+d
+ ¢
+U
+m
+ ¢
+e
+ ¢
+c
+ ¢
+h
+d
+ ¢
+t
++
+d
+ ¢
+U
+e
+ ¢
+m
+d
+ ¢
+t
++
+  
+s
+ ²
+d
+2
+ ¢
+x
+ ²
+ ¢
+n
+ ²
+^
+ ·
+S
+=
+0
+Hamiltonian (total energy)
+conservation of energy
+The space symmetry, i.e., the conservation of system linear momentum representing the electromagnetic Doppler shift can be represented by the equations:
+p
+=
+ 
+i
+m
+i
+ ¢
+Î³
+i
+ ¢
+v
+i
++
+Îµ
+0
+ ¢
+  
+d
+3
+ ¢
+x
+ ¢
+(
+E
+Ã
+B
+)
+dp
+m
+ ¢
+e
+ ¢
+c
+ ¢
+h
+d
+ ¢
+t
++
+dp
+e
+ ¢
+m
+d
+ ¢
+t
++
+  
+s
+ ²
+d
+2
+ ¢
+x
+ ²
+ ¢
+n
+ ²
+^
+ ·
+T
+=
+0
+linear momentum
+conservation of linear momentum
+The conservation of system center of energy is represented by the equation:
+R
+=
+1
+H
+ ¢
+ 
+i
+(
+x
+i
+-
+x
+0
+)
+ ¢
+m
+i
+ ¢
+Î³
+i
+ ¢
+c
+2
++
+Îµ
+0
+2
+ ¢
+H
+ ¢
+  
+d
+3
+ ¢
+x
+ ¡
+(
+x
+-
+x
+0
+)
+ ¢
+(
+ 
+"\[LeftBracketingBar]"
+E
+2
+ 
+"\[RightBracketingBar]"
++
+c
+2
+ ¢
+ 
+"\[LeftBracketingBar]"
+B
+2
+ 
+"\[RightBracketingBar]"
+)
+Similarly, the conservation of system angular momentum, which gives rise to the azimuthal Doppler shift is represented by the equation:
+dJ
+m
+ ¢
+e
+ ¢
+c
+ ¢
+h
+d
+ ¢
+t
++
+dJ
+e
+ ¢
+m
+d
+ ¢
+t
++
+  
+s
+ ²
+d
+2
+ ¢
+x
+ ²
+ ¢
+n
+ ²
+^
+ ·
+M
+=
+0
+conservation of angular momentum
+For radiation beams in free space, the EM field angular momentum J
+em
+can be separated into two parts:
+J
+em
+=Îµ
+0
+  
+V ²
+d
+3
+x
+ ²(
+EÃA
+)+Îµ
+0
+  
+V ²
+d
+3
+x ²E
+i
+[(
+x ² x
+0
+)Ã ]
+A
+i
+For each singular Fourier mode in real valued representation:
+J
+e
+ ¢
+m
+=
+-
+i
+ ¢
+Îµ
+0
+2
+ ¢
+Ï
+ ¢
+  
+V
+ ²
+d
+3
+ ¢
+x
+ ²
+(
+E
+*
+ 
+Ã
+E
+)
+-
+i
+ ¢
+Îµ
+0
+2
+ ¢
+Ï
+ ¢
+  
+V
+ ²
+d
+3
+ ¢
+x
+ ²
+ ¢
+E
+i
+[
+(
+x
+ ²
+-
+x
+0
+)
+Ã
+ 
+]
+ ¢
+E
+i
+The first part is the EM spin angular momentum Sem, its classical manifestation is wave polarization. And the second part is the EM orbital angular momentum Lem its classical manifestation is wave helicity. In general, both EM linear momentum Pem, and EM angular momentum Jem=Lem+Sem are radiated all the way to the far field.
+By using Poynting theorem, the optical vorticity of the signals may be determined according to the optical velocity equation:
+ 
+U
+ 
+t
++
+ 
+ ·
+S
+=
+0
+,
+continuity equation
+where S is the Poynting vector
+S
+=
+1
+4
+ ¢
+(
+E
+Ã
+H
+*
++
+E
+*
+Ã
+H
+)
+,
+and U is the energy density
+U
+=
+1
+4
+ ¢
+(
+Îµ
+ ¢
+ 
+"\[LeftBracketingBar]"
+E
+ 
+"\[RightBracketingBar]"
+2
++
+Î¼
+0
+ ¢
+ 
+"\[LeftBracketingBar]"
+H
+ 
+"\[RightBracketingBar]"
+2
+)
+,
+with E and H comprising the electric field and the magnetic field, respectively, and Îµ and Î¼
+0
+being the permittivity and the permeability of the medium, respectively. The optical vorticity V may then be determined by the curl of the optical velocity according to the equation:
+V
+=
+ 
+Ã
+v
+opt
+=
+ 
+Ã
+(
+E
+Ã
+H
+*
++
+E
+*
+Ã
+H
+Îµ
+ ¢
+ 
+"\[LeftBracketingBar]"
+E
+ 
+"\[RightBracketingBar]"
+2
++
+Î¼
+0
+ ¢
+ 
+"\[LeftBracketingBar]"
+H
+ 
+"\[RightBracketingBar]"
+2
+)
+Referring now to
+ 
+A and
+17
+B
+, there is illustrated the manner in which a signal and its associated Poynting vector in a plane wave situation. In the plane wave situation illustrated generally at
+1702
+, the transmitted signal may take one of three configurations. When the electric field vectors are in the same direction, a linear signal is provided, as illustrated generally at
+1704
+. Within a
+circular polarization
+1706
+, the electric field vectors rotate with the same magnitude. Within the
+elliptical polarization
+1708
+, the electric field vectors rotate but have differing magnitudes. The Poynting vector remains in a constant direction for the signal configuration to
+ 
+A
+and always perpendicular to the electric and magnetic fields. Referring now to
+ 
+B
+, when a unique orbital angular momentum is applied to a signal as described here and above, the
+Poynting vector S
+1710
+will spiral about the direction of propagation of the signal. This spiral may be varied in order to enable signals to be transmitted on the same frequency as described herein.
+ 
+A through
+18
+C
+illustrate the differences in signals having different helicity (i.e., orbital angular momentums). Each of the spiraling Poynting vectors associated with the
+signals
+1802
+,
+1804
+, and
+1806
+provide a different shaped signal.
+Signal
+1802
+has an orbital angular momentum of +1,
+signal
+1804
+has an orbital angular momentum of +3, and
+signal
+1806
+has an orbital angular momentum of 4. Each signal has a distinct angular momentum and associated Poynting vector enabling the signal to be distinguished from other signals within a same frequency. This allows differing type of information to be transmitted on the same frequency, since these signals are separately detectable and do not interfere with each other (Eigen channels).
+ 
+D
+illustrates the propagation of Poynting vectors for various Eigen modes. Each of the
+rings
+1820
+represents a different Eigen mode or twist representing a different orbital angular momentum within the same frequency. Each of these
+rings
+1820
+represents a different orthogonal channel. Each of the Eigen modes has a
+Poynting vector
+1822
+associated therewith.
+Topological charge may be multiplexed to the frequency for either linear or circular polarization. In case of linear polarizations, topological charge would be multiplexed on vertical and horizontal polarization. In case of circular polarization, topological charge would multiplex on left hand and right hand circular polarizations. The topological charge is another name for the helicity index I  or the amount of twist or OAM applied to the signal. The helicity index may be positive or negative. In RF, different topological charges can be created and muxed together and de-muxed to separate the topological charges.
+The topological charges l s can be created using Spiral Phase Plates (SPPs) as shown in
+ 
+E
+using a proper material with specific index of refraction and ability to machine shop or phase mask, holograms created of new materials or a new technique to create an RF version of Spatial Light Modulator (SLM) that does the twist of the RF waves (as opposed to optical beams) by adjusting voltages on the device resulting in twisting of the RF waves with a specific topological charge. Spiral Phase plates can transform a RF plane wave (l=0) to a twisted RF wave of a specific helicity (i.e. l=+1).
+Cross talk and multipath interference can be corrected using RF Multiple-Input-Multiple-Output (MIMO). Most of the channel impairments can be detected using a control or pilot channel and be corrected using algorithmic techniques (closed loop control system).
+As described previously with respect to
+ 
+, each of the multiple data streams applied within the processing circuitry has a multiple layer overlay modulation scheme applied thereto.
+Mode Conversion Approaches
+Referring now to
+ 
+, among all external-cavity methods, perhaps the most straightforward one is to pass a Gaussian beam through a coaxially placed spiral phase plate (SPP)
+1902
+. An
+SPP
+1902
+is an optical element with a helical surface, as shown in
+ 
+E
+. To produce an OAM beam with a state of l, the thickness profile of the plate should be machined as lÎ Î¸/2Ï(n 1), where n is the refractive index of the medium. A limitation of using an
+SPP
+1902
+is that each OAM state requires a different specific plate. As an alternative, reconfigurable diffractive optical elements, e.g., a pixelated spatial light modulator (SLM)
+1904
+, or a digital micro-mirror device can be programmed to function as any refractive element of choice at a given wavelength. As mentioned above, a helical phase profile exp(ilÎ¸) converts a linearly polarized Gaussian laser beam into an OAM mode, whose wave front resembles an
+l-fold corkscrew
+1906
+, as shown at
+1904
+. Importantly, the generated OAM beam can be easily changed by simply updating the hologram loaded on the
+SLM
+1904
+. To spatially separate the phase-modulated beam from the zeroth-order non-phase-modulated reflection from the SLM, a linear phase ramp is added to helical phase code (i.e., a fork -
+like phase pattern
+1908
+to produce a spatially distinct first-order diffracted OAM beam, carrying the desired charge. It should also be noted that the aforementioned methods produce OAM beams with only an azimuthal index control. To generate a pure LG_(l,p) mode, one must jointly control both the phase and the intensity of the wavefront. This could be achieved using a phase-only SLM with a more complex phase hologram.
+Some novel material structures, such as metal-surface, can also be used for OAM generation. A compact metal-surface could be made into a phase plate by manipulation of the structure caused spatial phase response. As shown in
+ 
+A and
+20
+B
+, a V-shaped
+antenna array
+2002
+is fabricated on the
+metal surface
+2004
+, each of which is composed of two
+arms
+2006
+,
+2008
+connected at one
+end
+2010
+. A light reflected by this plate would experience a phase change ranging from 0 to 2Ï, determined by the length of the arms and angle between two arms. To generate an OAM beam, the surface is divided into 8
+sectors
+2012
+, each of which introduces a phase shift from 0 to 7Ï/4 with a step of Ï/4. The OAM beam with l=+1 is obtained after the reflection, as shown in
+ 
+C
+.
+A following experiment doubled the spectral efficiency by adding the polarization multiplexing into the OAM-multiplexed free-space data link. Four different OAM beams (l=+4, +8, 8, +16) on each of two orthogonal polarizations (eight channels in total) were used to achieve a Terabit/s transmission link. The eight OAM beams were multiplexed and demultiplexed using the same approach as mentioned above. The measured crosstalk among channels carried by the eight OAM beams is shown in Table 1, with the largest crosstalk being Ë 18.5 dB. Each of the beams was encoded with a 42.8 Gbaud 16-QAM signal, allowing a total capacity of Ë1.4 (42.8Ã4Ã4Ã2) Tbit/s.
+TABLE 1
+OAM
++4
+OAM
++8
+OAM
+ 8
+OAM
++16
+Measured Crosstalk
+X-
+Y-
+X-
+Y-
+X-
+Y-
+X-
+Y-
+OAM
++4
+(dB)
+X-Pol.
+ 
+ 23.2
+ 26.7
+ 30.8
+ 30.5
+ 27.7
+ 24.6
+ 30.1
+Y-Pol.
+ 25.7
+ 
+OAM
++8
+(dB)
+X-Pol.
+ 26.6
+ 23.5
+ 
+ 21.6
+ 18.9
+ 25.4
+ 23.9
+ 28.8
+Y-Pol.
+ 25.0
+ 
+OAM
+ 8
+(dB)
+X-Pol.
+ 27.5
+ 33.9
+ 27.6
+ 30.8
+ 
+ 20.5
+ 26.5
+ 21.6
+Y-Pol.
+ 26.8
+ 
+OAM
++16
+(dB) 
+X-Pol.
+ 24.5
+ 31.2
+ 23.7
+ 23.3
+ 25.8
+ 26.1
+ 
+ 30.2
+Y-Pol.
+ 24.0
+ 
+Total from other OAMs *
+ 21.8
+ 21.0
+ 21.2
+ 21.4
+ 18.5
+ 21.2
+ 22.2
+ 20.7
+The capacity of the free-space data link was further increased to 100 Tbit/s by combining OAM multiplexing with PDM (phase division multiplexing) and WDM (wave division multiplexing). In this experiment, 24 OAM beams (l= 4, 7, 10, 13, 16, and 19, each with two polarizations) were prepared using 2 SLMs, the procedures for which are shown in
+ 
+A
+at
+2102
+-
+2106
+. Specifically, one SLM generated a superposition of OAM beams with l=+4, +10, and +16, while the other SLM generated another set of three OAM beams with l=+7, +13, and +19 (
+ 
+A
+). These two outputs were multiplexed together using a beam splitter, thereby multiplexing six OAM beams: l=+4, +7, +10, +13, +16, and +19 (
+ 
+A
+). Secondly, the six multiplexed OAM beams were split into two copies. One copy was reflected five times by three mirrors and two beam splitters, to create another six OAM beams with inverse charges (
+ 
+B
+). There was a differential delay between the two light paths to de-correlate the data. These two copies were then combined again to achieve 12 multiplexed OAM beams with l= 4, 7, 10, 13, 16, and 19 (
+ 
+B
+). These 12 OAM beams were split again via a beam splitter. One of these was polarization-rotated by 90 degrees, delayed by Ë33 symbols, and then recombined with the other copy using a polarization beam splitter (PBS), finally multiplexing 24 OAM beams (with l= 4, 7, 10, 13, 16, and 19 on two polarizations). Each of the beam carried a WDM signal comprising 100 GHz-spaced 42 wavelengths (1,536.34-1,568.5 nm), each of which was modulated with 100 Gbit/s QPSK data. The observed optical spectrum of the WDM signal carried on one of the demultiplexed OAM beams (l=+10).
+Atmospheric Turbulence Effects on OAM Beams
+One of the critical challenges for a practical free-space optical communication system using OAM multiplexing is atmospheric turbulence. It is known that inhomogeneities in the temperature and pressure of the atmosphere lead to random variations in the refractive index along the transmission path, and can easily distort the phase front of a light beam. This could be particularly important for OAM communications, since the separation of multiplexed OAM beams relies on the helical phase-front. As predicted by simulations in the literature, these refractive index inhomogeneities may cause inter-modal crosstalk among data channels with different OAM states.
+The effect of atmospheric turbulence is also experimentally evaluated. For the convenience of estimating the turbulence strength, one approach is to emulate the turbulence in the lab using an SLM or a rotating phase plate.
+ 
+A
+illustrates an emulator built using a thin
+phase screen plate
+2202
+that is mounted on a
+rotation stage
+2204
+and placed in the middle of the optical path. The pseudo-random phase distribution machined on the
+plate
+2202
+obeys Kolmogorov spectrum statistics, which are usually characterized by a specific effective Fried coherence length r0. The strength of the
+simulated turbulence
+4906
+can be varied either by changing to a
+plate
+2202
+with a different r0, or by adjusting the size of the beam that is incident on the plate. The resultant turbulence effect is mainly evaluated by measuring the power of the distorted beam distributed to each OAM mode using an OAM mode sorter. It was found that, as the turbulence strength increases, the power of the transmitted OAM mode would leak to neighboring modes and tend to be equally distributed among modes for stronger turbulence. As an example,
+ 
+B
+shows the measured average power (normalized) l=3 beam under different emulated turbulence conditions. It can be seen that the majority of the power is still in the transmitted
+OAM mode
+2208
+under weak turbulence, but it spreads to neighboring modes as the turbulence strength increases.
+Turbulence Effects Mitigation Techniques
+One approach to mitigate the effects of atmospheric turbulence on OAM beams is to use an adaptive optical (AO) system. The general idea of an AO system is to measure the phase front of the distorted beam first, based on which an error correction pattern can be produced and can be applied onto the beam transmitter to undo the distortion. As for OAM beams with helical phase fronts, it is challenging to directly measure the phase front using typical wavefront sensors due to the phase singularity. A modified AO system can overcome this problem by sending a Gaussian beam as a probe beam to sense the distortion, as shown in
+ 
+A
+. Due to the fact that turbulence is almost independent of the light polarization, the probe beam is orthogonally polarized as compared to all other beams for the sake of convenient separation at
+beam separator
+2302
+. The correction phase pattern can be derived based on the probe beam distortion that is directly measured by a
+wavefront sensor
+2304
+. It is noted that this phase correction pattern can be used to simultaneously compensate multiple coaxially propagating OAM beams.
+ 
+B
+at
+2310
+-
+2320
+illustrate the intensity profiles of OAM beams with l=1, 5 and 9, respectively, for a random turbulence realization with and without mitigation. From the far-field images, one can see that the distorted OAM beams (upper), up to l=9, were partially corrected, and the measured power distribution also indicates that the channel crosstalk can be reduced.
+Another approach for combating turbulence effects is to partially move the complexity of optical setup into the electrical domain, and use digital signal processing (DSP) to mitigate the channel crosstalk. A typical DSP method is the multiple-input-multiple-output (MIMO) equalization, which is able to blindly estimate the channel crosstalk and cancel the interference. The implementation of a 4Ã4 adaptive MIMO equalizer in a four-channel OAM multiplexed free space optical link using heterodyne detection may be used. Four OAM beams (l=+2, +4, +6 and +8), each carrying 20 Gbit/s QPSK data, were collinearly multiplexed and propagated through a weak turbulence emulated by the rotating phase plate under laboratory condition to introduce distortions. After demultiplexing, four channels were coherently detected and recorded simultaneously. The standard constant modulus algorithm is employed in addition to the standard procedures of coherent detection to equalize the channel interference. Results indicate that MIMO equalization could be helpful to mitigate the crosstalk caused by either turbulence or imperfect mode generation/detection, and improve both error vector magnitude (EVM) and the bit-error-rate (BER) of the signal in an OAM-multiplexed communication link. MIMO DSP may not be universally useful as outage could happen in some scenarios involving free space data links. For example, the majority power of the transmitted OAM beams may be transferred to other OAM states under a strong turbulence without being detected, in which case MIMO would not help to improve the system performance.
+ 
+illustrates a functional block diagram of a residential
+IP network system
+2402
+. An
+input
+2404
+from a millimeter wave transmission system that enables the transmission of millimeter waves from an exterior transmission unit to the interior of the structure provides broadband signals to a residential
+IP network gateway
+2406
+. The residential
+IP network gateway
+2406
+determines where the signal coming from the
+input
+2404
+needs to be routed and provides the output on one of a plurality of possible outputs to the appropriate destination IP address associated with the device requesting the broadband information. The output lines may comprise a
+coaxial cable
+2408
+, an
+ethernet cable
+2410
+or existing
+phone line
+2412
+. The
+coaxial cables
+2408
+may provide inputs to a
+set top box
+2414
+that then provides an output to a
+living room TV
+2416
+through for example an
+HDMI connection
+2418
+. A
+first ethernet connection
+2410
+may connect to a set top box/
+DVR
+2420
+. A
+further ethernet connection
+2422
+provides data to a
+second television
+2424
+.
+Ethernet connections
+2410
+may also provide data to a
+PC
+2426
+or a
+network drive
+2428
+. The existing
+phone line connection
+2412
+would be provided to a
+phone outlet
+2430
+for connection of a telephone. Finally, a Wi-
+Fi antenna
+2432
+provides the ability for the residential IP network Gateway
+2462
+to provide a Wi-Fi network connection within a structure. The Wi-Fi network connection enables devices such as a
+PC
+2434
+,
+laptop
+2436
+,
+iPad
+2438
+or
+iPhone
+2440
+to wirelessly connect to the residential
+IP network Gateway
+2406
+to receive broadband data.
+ 
+illustrates the manner in which a millimeter wave system may be utilized to transmit information to a residential IP network system. An
+access unit
+2502
+located on the outside of a structure wirelessly transmits broadband data to CPE (customer premises equipment)
+units
+2504
+located within one or more structures associated with the residential IP network system. The
+access unit
+2502
+may receive the broadband data for transmission to the
+CPE units
+2504
+via wireless transmissions or a hardwired connection. The wireless access provided between the
+access unit
+2502
+and the
+CPE units
+2504
+may be provided in any of a number of frequency bands including, but not limited to millimeter bands 24 GHz, 28 GHz, 39 GHz, 60 GHz as well as 2.5 GHz, the CBRS band 3.5 GHz, Wi-Fi bands at 2.4 and 5 GHz. The signals are transmitted from outside the structure to inside the structure using any of the above described transmission techniques for transmitting signals through a wall or window. Within the structure the
+CPE unit
+2504
+uses Wi-Fi or other unlicensed bands within the premises to transmit signals to Internet of things (IOT)
+devices
+2506
+,
+PCs
+2508
+,
+IP TVs
+2510
+, closed
+circuit televisions
+2512
+,
+IP telephones
+2514
+and Wi-
+Fi extenders
+2516
+. These are only some examples of IP-based devices and any type of Wi-Fi connectable device may be utilized within the structure for communications with the
+CPE
+2504
+. The manner in which broadband data may be transmitted from the exterior of the structure to the interior of the structure may be configured utilizing the above described millimeter wave transmission systems in a number of fashions.
+ 
+illustrates a first embodiment wherein the
+access unit
+2502
+wirelessly transmits the broadband data to a millimeter
+wave system transceiver
+2602
+located on an external side of a window or
+wall
+2604
+. The system is consumer installed with the repeater (transceiver
+2602
+) outside of the building and a
+transceiver
+2606
+on the inside of the building. This configuration uses millimeter wave transmitters on both sides of the glass or wall enabling tunneling of radio waves using either optical signals or RF signals. The broadband signals are connected directly to the
+CPE device
+2504
+via electronic integration at an integrated window unit to provide access to the
+residential IP network
+2608
+. The wireless transmissions to the
+millimeter wave transceiver
+2602
+may be within any frequency band including, but not limited to, millimeter wave bands such as to 24 GHz, 28 GHz, 39 GHz, 60 GHz and 2.5 GHz; CBRS bands such as 3.5 GHz; and Wi-Fi bands such as 2.4 and 5 GHz.
+Millimeter wave transceiver
+2602
+transmits the signals through the window or
+wall
+2604
+to a second
+millimeter wave transceiver
+2606
+located on the interior of the structure. The composition of the
+millimeter wave transceivers
+2602
+and
+2606
+may be any of those discussed herein above with respect to systems for transmitting signals through a window or
+wall
+2604
+. The interior
+millimeter wave transceiver
+2606
+outputs received data to (or receives data from) a
+customer premises equipment
+2504
+associated with the
+residential network IP
+2608
+. The
+millimeter wave transceiver
+2606
+and
+CPE
+2504
+may comprise integrated equipment within a same box or device for receiving the signals from the
+millimeter wave transceiver
+2602
+located on the external of the structure and providing the data to the
+residential IP network
+2608
+and associated devices.
+ 
+illustrates an alternative embodiment wherein the
+access unit
+2502
+wirelessly transmits the broadband data signals to the external
+millimeter wave transceiver
+2602
+as described previously with respect to
+ 
+. In this embodiment, millimeter wave transceivers are provided on sides of the window or
+wall
+2604
+enabling tunneling of radio waves using either optical signals or RF signals. The signals transmitted through the window or
+wall
+2604
+are then wirelessly connected to the
+CPE
+2504
+using either an unlicensed band or unlicensed Wi-Fi with beamforming. The external
+millimeter wave transceiver
+2602
+transmits the data through the window or
+wall
+2604
+as described herein to an internal
+millimeter wave transceiver
+2606
+. The internal
+millimeter wave transceiver
+2606
+incorporates a beamforming device or Wi-Fi router that allows for transmission of the received signals using beam forming license or Wi-Fi to an integrated
+millimeter wave transceiver
+2501
+and
+CPE
+2504
+. The
+CPE
+2504
+transmits the data to the
+residential IP network
+2608
+and associated devices.
+Referring now to
+ 
+there is illustrated a further embodiment of a system for transmitting the broadband signals to a
+residential IP network
+2608
+wherein the
+access unit
+2402
+wirelessly transmits the signals to a
+millimeter wave transceiver
+2802
+located on an external side of a
+window
+2804
+of a building or structure. A
+millimeter wave transceiver
+2802
+is located on the outside of a window glass and uses high power phased array and
+beamforming circuitry
+2803
+to enable tunneling of radio waves to wirelessly connect to the
+CPE
+2808
+located a distance from the
+window
+2804
+using either a licensed band or unlicensed Wi-Fi. The
+millimeter wave transceiver
+2802
+includes a high-powered phased
+array
+2803
+providing beamforming or Wi-Fi router capabilities for transmitting signals wirelessly through the
+window
+2804
+to a
+millimeter wave transceiver
+2806
+located on an interior of the structure but placed at a location that is not directly on the opposite side of the
+window
+2804
+. The
+millimeter wave transceiver
+2806
+is integrated with the
+CPE
+2808
+that transmits the broadband data to the
+residential IP network
+2608
+and associated devices.
+The described system provides an optical or RF tunnel that allows signals to be transmitted from outside a building to devices within the building. Once the broadband access is delivered into the premises (residential or commercial), other unlicensed bands can be used inside the premises. The optical or RF tunnel can also be used to allow signals from the Internet of Things devices located within the building to go from inside to outside. In addition to the techniques described herein above, other near field techniques can be used for transmitting the information through the window or wall.
+Millimeter Wave with Optical Networks
+Each access technology brings its own protocols and concepts which means control and management of legacy access devices can be a problem. vOLTHA confines the differences of access technology to the locality of access and hides them from the upper layers of the OSS stack. Referring now to
+ 
+there is illustrated the implementation of vOLTHA with an
+OLT
+2902
+and
+ONU
+2904
+link. The
+OLT
+2902
+communicates with
+multiple ONUs
+2904
+through a splitter
+2905
+. vOLTHA containers communicate over gRPC. The main container publishes events to Kafka and persists data in Consul for service discovery.
+Southbound OLT adapters
+2906
+and
+ONU adapters
+2908
+will be their own containers as well.
+OLT adapter
+2906
+and
+ONU adapter
+2908
+enables OLT-ONU interoperability through the vOLTHA core
+29310
+. The
+ONU adapter
+2908
+sends OMCI (ONT management control interface) to the
+OLT
+2902
+through the
+OLT adapter
+2906
+.
+Using vOLTHA to create hardware abstraction layers for Wave Agility enables integration to a residential network IP gateway over mmWave Fixed Wireless Access (gigabit rate access with Dynamic QoS-Application & Network slicing support). One of the challenges faced in the next generation broadband access at gigabit rates is the need for running fiber to the home or business. Referring now to
+ 
+, with fixed mmWave 5G wireless access technology ONUs
+12402
+(PON end points) can be utilized for the aggregation of self-installed fixed wireless access points.
+Almost all recent FTTH (fiber to the home) deployments, as well as those currently being planned, use passive optical networking. The concept of a Passive Optical Network (PON)
+3012
+, involves the use of passive fiber splitters which allow multiple customers (typically 32-128) to share a single fiber pair. GPON has also seen trials and initial deployments by several large Telco's, but these are largely used as a basis for transmitting Ethernet via encapsulation within GEM frames (GPON Encapsulation Method)
+15926
+(
+ 
+). GPON was designed with very strict timing requirements. Both EPON and GPON therefore use Time Division Multiple Access (TDMA), informally known as time-sharing.  Time is divided into slots, of either fixed or variable length or long enough to contain one or more data frames (usually around 100-1000 msec). During a given slot, one
+ONU
+3002
+is permitted to transmit and all others must have turned off their lasers. The
+OLT
+3010
+is responsible for determining a transmission schedule and sending that to the ONUs
+3002
+(this is sometimes considered to be a form of batch polling by the OLT) and the ONUs must maintain an accurate clock which is synchronized to that of the OLT in order to transmit at exactly the right time.
+The number of time slots allocated to each
+ONU
+3002
+need not remain fixed. Both EPON and GPON provide flexible mechanisms to allow the
+OLT
+3010
+to dynamically allocate bandwidth to ONUs according to demand and the network operator's policy. These mechanisms are nonspecific as to the algorithms employed, particularly in the case of EPON where the extremely simple request-based protocol leaves a lot of scope for interesting dynamic bandwidth allocation algorithms. Extending bandwidth assignments to the mmWave technology is desirable with PON technology, a channel is broadcast to all
+ONUs
+3002
+, and each frame is labelled with the address of its target ONU. That
+ONU
+3002
+will forward the frame onto its end user's LAN through the
+home gateway
+3006
+, and all other ONUs will discard the frame. This is a form of TDMA, with the
+OLT
+3010
+determining its own transmission schedule and each time slot lasting the duration of a frame.
+A
+mmWave system
+3004
+can also take advantage of mmWave beam forming and beam steering technologies to ensure QoS to the home applications accessed via a
+home gateway
+3006
+in the dynamically changing network conditions. Given the current Residential Gateway (RGW)
+devices
+3006
+do not have the ability to directly and dynamically trigger or adjust the service flow operations based on the network conditions, the
+hybrid ONU
+3002
+and mmWave Remote Units (RUs)
+3008
+can be designed with innovative SDN enabled beam steering mechanisms to achieve high quality user experience with dynamic network slicing mechanisms and optimized OLT-ONU (gPON) signaling frameworks. Millimeter wave frequencies implemented by the
+mmWave system
+3004
+are roughly defined as bands in 24, 28, 39 and 60 GHz. However, such an approach is also applicable to 3.5 GHz CBRS. The
+mmWave system
+3004
+provides much potential for use as wireless broadband services with beam steering under control of SDN towards the self-installed mmWave home modems. As mentioned previously, the SDN beam steering mechanisms and dynamic network slicing mechanisms may use those techniques describe in U.S. patent application Ser. No. 15/664,764, which is incorporated herein by reference.
+In the vOLTHA scenario,
+home gateways
+3006
+can connect to
+ONUs
+3002
+via mmWave technologies within the
+mmWave System
+3004
+in the last drop (100s of meters) where wireless access points are directly connected to
+ONUs
+3002
+via
+mmWave RUs
+3008
+. Hybrid virtual OLT (vOLTHA)
+3010
+and mmWave Fixed Broadband Wireless technology through the
+mmWave system
+3004
+can provide self-installed access opportunities to homes and businesses. In addition, the synchronous nature of vOLTHA based on gPON can extend itself to map to beam steering control technology for mapping/distribution of ONU traffic among
+multiple mmWave modems
+3008
+with support for slicing control at home networks. In this scenario, a
+single PON
+3012
+will be seen by an Ethernet switch as a collection of point-to-point links, one per
+Hybrid ONU
+3002
++
+mmWave Radio Unit
+3008
+. The
+PON
+3012
+will typically connect up to 128
+ONUs
+3002
+to each
+OLT
+3010
+, and hybrid ONU-RU will connect to multiple mm-wave modems utilizing beam steering control plans. The
+mmWave Modems
+3008
+are self-installed and reduce the need for a fiber connection to the home/apartments as well as further provide for additional statistical gain and aggregation points at the ONU+RU at the Ethernet layer, customers served by these
+PONs
+3012
+will be on a single large Ethernet. Furthermore, if delay and cost is not a factor, the ONU+RU's are integrated and can be treated as IP routers with load balancing and slicing capabilities, provide statistical gain and an aggregation point.
+Thus, from the operator's perspective, by bridging together all of a central office's
+PONs
+3012
+and serving ONU+
+RU
+3002
+/
+3008
+at the Ethernet layer, customers served by these
+PONs
+3012
+will be on a single large Ethernet. Furthermore, if delay and cost is not a factor we can threat the ONU+
+RUs
+3002
+/
+3008
+as IP routers with opportunities for load balancing and additional slicing capabilities. The system may also be designed wherein where transmit is done at higher 60 GHz band channel from outside to inside and a and lower 60 GHz band channel from inside to outside.
+The
+current ONUs
+3002
+in vOLTHA will be complemented with
+mmWave RUs
+3008
+which will perform beam steering functions with modems installed at each home. In practical scenarios, small cells deployed with each
+ONU
+3002
+in urban outdoor environments are regularly affected by trees and passing objects. In millimeter wave beamforming systems, the environmental issues such as wind-induced movement, blockage by trees, may be resolved by beam steering technologies under control of SDN where each wavelength uses a very narrow beam pattern. The practical impairments of a lamppost deployment scenario need be incorporated into the beamforming system and system design.
+Almost all
+modern PONs
+3012
+run on Ethernet at some level either used as the native protocol on an EPON, or encapsulated in GEM on a GPON, with physical and logical topology of a simple Ethernet PON deployment shown as follows. Ethernet is now predominantly used as a basis for the data link layer and Internet Protocol (IP) as ubiquitous network layer protocol. Some networks still use separate fibers for transmission in each direction (1310 nm and 1490 nm for bidirectional use). The Ethernet PHY is responsible for providing a serialized bit stream facility (only) to the Medium Access Control (MAC) layer. The MAC is responsible for dividing the bit stream into frames. Frames are labelled with a header containing, source and destination MAC addresses. This enables the statistical multiplexing of multiple hosts' frames on a single link.
+ 
+illustrates the interface between the
+ONU
+3002
+and the plurality of
+home gateways
+3006
+. A single
+optical fiber pair
+3102
+provides data to and from the
+ONU
+3002
+. The
+ONU
+3002
+interfaces with a millimeter wave
+remote unit
+3008
+, having the ability to generate
+RF beams
+3104
+that may be directed toward one or more millimeter
+wave radio units
+3008
+B associated with a home or business. The interface between the millimeter wave
+remote units
+3008
+A and
+3008
+B may include one or more of the building penetration techniques described herein. The millimeter
+wave radio units
+3008
+provide beam steering techniques and slice control techniques enabling the control of the transmission of data bidirectionally between the
+ONU
+3002
+and
+home gateways
+3006
+. The millimeter wave
+remote units
+3008
+B associated with the home or business interface with the
+home gateways
+3006
+to provide broadband data connections to the associated home or business structure.
+Referring now to
+ 
+and
+166
+, there are more particularly illustrated embodiments for broadband data communications between an
+OLT
+3010
+and devices located within a structure. With respect to
+ 
+, the
+OLT
+3010
+is located at a central office/
+MEC
+3202
+that may be part of a virtual base band unit (VBBU). The
+OLT
+3010
+schedules transmissions over the
+fiber
+3204
+to the ONU's
+3002
+. The
+OLT
+3010
+connects to a number of ONU's
+3002
+through optical fiber pairs
+3204
+. The
+ONU
+3002
+maintains an accurate clock to sync with the
+OLT
+3010
+. Associated with the
+ONU
+3002
+is a
+remote unit
+3008
+. The
+remote unit
+3008
+is part of the
+millimeter wave system
+3004
+described hereinabove. The combined ONU/RV is treated as an IP router providing load-balancing and slicing and further providing statistical gain for signal transmission and acts as an aggregation point for received data. The combined ONV/RV also provides for wireless communications with remote units associated with structures. The
+remote unit
+3008
+is located on a light pole or tower located near a structure and provides the wireless last drop connection to a home or business that replaces fiber DSL and cable.
+The
+remote unit
+3008
+utilizes controlled beamforming and slice control techniques to generate
+radio beams
+3206
+that are transmitted to an exterior
+millimeter wave transceiver
+3208
+located on an exterior of the structure. The exterior
+millimeter wave transceiver
+3208
+repeats signals receive from the exterior hub and allows the signal to penetrate through the glass or building. The exterior
+millimeter wave transceiver
+3208
+transmits the broadband data signals through a window or
+wall
+3202
+and internal
+millimeter wave transceiver
+3212
+using one of the above described techniques for transmitting through a wall or window. The interior
+millimeter wave transceiver
+3212
+also utilizes beamforming and slicing techniques as described herein to transmit
+wireless beams
+3214
+within the structure to a
+residential gateway
+3216
+. The
+residential gateway
+3216
+comprises a self-installed home modem that provides an interconnection between the broadband data received from the interior
+millimeter wave transceiver
+3212
+and devices located within the structure that communicate with the
+residential gateway
+3216
+via wired or wireless connections. The
+OLT
+3010
+,
+ONU
+3002
+,
+RU
+3008
+,
+millimeter wave transceivers
+3208
+/
+3212
+and
+residential gateway
+3216
+all include a hardware abstraction layer from vOLTHA as previously described enable a SDN to control the entire end-to-end configuration of the components to access the last drop connection.
+ 
+illustrates the same structure described with respect to
+ 
+for broadband data transmissions between the
+OLT
+3010
+and the interior
+millimeter wave transceiver
+3212
+. Rather than illustrating a connection to a
+residential gateway
+3216
+, which the system may still do, a 60 GHz wireless connection to a pair of virtual reality (VR)
+goggles
+3302
+is illustrated. A 60
+GHz transceiver dongle
+3304
+, as will be more fully described herein below, is inserted into a USB port of the interior
+millimeter wave transceiver
+3212
+. This provides the ability for the interior
+millimeter wave transceiver
+3212
+to bidirectionally communicate through the 60
+GHz transceiver dongle
+3304
+with the
+VR goggles
+3302
+located on the interior of the structure. The
+VR goggles
+3302
+may then be used wirelessly with any interior computer or with a central office without the need for a local computer. While
+ 
+illustrates a 60 GHz wireless link to
+VR goggles
+3302
+, other types of devices may also wirelessly connected to the 60
+GHz transceiver dongle
+3304
+in order to enable broadband data transmissions thereto. The control of data transmissions between the optical data transmission portions and that the RF data transmission portions using SDN slicing as mentioned hereinabove are applicable to each of the embodiments in
+ 
+and
+33
+. The
+OLT
+3010
+,
+ONU
+3002
+,
+RU
+3008
+,
+millimeter wave transceivers
+3208
+/
+3212
+and
+VR goggles
+3302
+all include a hardware abstraction layer from vOLTHA as previously described enable a SDN to control the entire end-to-end configuration of the components to access the last drop connection.
+Referring now to
+ 
+, there is illustrated a further embodiment of a means for wirelessly transmitting signals between an interior of a
+building
+3402
+and an exterior of the
+building
+3404
+through a window or
+wall
+3406
+. An external
+transceiver processing unit
+3408
+is located on an
+exterior side
+3404
+of the window or
+wall
+3406
+. The
+transceiver processing unit
+3408
+provides transmissions to/from the external environment rather than transmissions from the interior of the building using for example the techniques described herein above and provides processing of the received signals before they are transmitted to the building interior. Similarly, an internal
+transceiver processing unit
+3410
+is located on the
+interior side
+3402
+of the window or
+wall
+3406
+. The
+transceiver processing unit
+3410
+provides transmissions to/from the interior environment of the building rather than transmissions from the exterior of the building using for example the techniques described herein above and provides processing of the received interior signal before they are transmitted to the building exterior. Inserted within a
+USB interface
+3412
+of each of the internal
+transceiver processing unit
+3410
+and external
+transceiver processing unit
+3408
+is a transceiver dongle
+3414
+. A dongle
+3414
+as described herein comprises a hardware interface for wirelessly communicating signals between an interior and an exterior of a structure and/or other functionalities. The dongle
+3414
+may comprise a circuit, peripheral device, etc. that connects with a processor on the interior and the exterior of the structure to enable communication between the interior and the exterior of the structure and/or the other functionalities.
+The
+transceiver dongle
+3414
+A located with the
+external transceiver processor
+3408
+is responsible for the transmission and reception of signals to/from the
+interior
+3402
+of the building through the window or
+wall
+3406
+. The
+transceiver dongle
+3414
+B located with the
+internal transceiver processor
+3410
+transmits and receives signals to/from the
+exterior
+3404
+of the building through the window or
+wall
+3406
+. The transceiver dongles
+3414
+enable the transmission of signals between the interior and an exterior of the building in a similar manner to that described herein above with respect to other embodiments. The transceiver dongles
+3414
+consume approximately 2 W of power in each dongle. The signals from the interior of the building are transmitted from or received at a Wi-
+Fi transceiver
+3416
+. While one embodiment envisions the use of a Wi-Fi transceiver, other transmission protocols can be used for the transmissions within the building. This solution is applicable to all types of access at any frequency band such as LTE bands including new NR radio; 3.5 GHz CBRS; 5 GHz WiFi; 24, 28 and 39 Ghz licensed bands; and 60 GHz bands as well as 70/80 GHz E-band, ect.
+Referring now to
+ 
+A
+, there is illustrated a top level block diagram of the embodiment of
+ 
+. The
+Peraso chipset
+3510
+is implemented on a transceiver dongle as will be more fully described herein below. The
+Peraso chipset
+3510
+is used for generating signals that can be transmitted through a window or wall between transceiver dongles
+3414
+located on the interior and exterior of a building. The signals are transmitted from
+antennas
+3530
+that comprise a patch antenna array as described above and as will be more fully described herein below. In one embodiment, the
+transceiver processor circuitry
+3408
+/
+3410
+would be at least partially implemented using the
+RK
+3399
+processor
+3532
+. The
+RK
+3399
+processor
+3532
+comprises a low power, high performance processor for computing, personal mobile Internet devices and other smart device applications. The
+RK
+3399
+processor
+3532
+and the
+Peraso chipset
+3510
+are powered by a
+power driver
+3534
+. The
+power driver
+3534
+may comprise any of the power circuitry configurations described herein such as those described in
+ 
+-
+94
+. The
+power driver
+3534
+may comprise a single circuit that provides power to both the internal and external components of the communication system. Alternatively, each of the internal and external components may have
+separate power drivers
+3534
+to power the components.
+ 
+B
+more particularly illustrates a block diagram of the
+RK
+3399
+processor
+3532
+and the
+Peraso chipset
+3510
+. The
+RK
+3399
+processor
+3532
+, which will be more fully described herein below includes a
+RAM memory
+3533
+, a USB 3.0
+interface
+3535
+for interfacing with the
+Peraso chipset
+3510
+, a Linux/
+ARM
+3537
+port is used for connecting and ARM processor, a
+GPIO connection
+3539
+, an
+Ethernet PHY connection
+3541
+and an
+RJ45 connection
+3543
+.
+The
+Peraso chipset
+3510
+is implemented on a pair of
+processing devices
+3545
+and
+3547
+.
+Processing device
+3545
+includes a USB 3.0
+interface
+3549
+, an on-
+chip packet buffer
+3551
+, connection circuitry
+3553
+including a SPI, I2C, PWM, UART and GPIO, and an
+interface
+3555
+comprising an IEEE 802.11ad SC MAC/PHY. The
+second processing device
+3547
+includes a TX/RX front-end, phase locked
+loop
+3559
+, RX common
+3561
+, TX common
+3563
+,
+bias circuit
+3565
+and configuration and
+control
+3567
+. Connected to the
+second processing
+3547
+are first and
+second antenna arrays
+3562
+.
+Referring now to
+ 
+C
+, there is illustrated a functional block diagram of a further implementation of a transceiver dongle that may be used for transmitting signals through a window or wall of a structure as described hereinabove. The transceivers may be implemented in the form of a
+dongle
+3502
+that may be inserted for example into a USB port of a transceiver processor located internally or externally of a building for implementing the transmission through the window or wall. However, other types of connection ports may also be utilized. The
+dongle
+3502
+would include
+transceiver circuitry
+3504
+,
+BBU circuitry
+3506
+and a
+patch antenna array
+3508
+. The
+transceiver circuitry
+3504
+in combination with the
+BBU circuitry
+3506
+is responsible for processing received data signals for transmission and processing received data signals into their individual signals as has been described hereinabove in a number of places with respect to the transmission of data using OAM or other types of signal processing.
+The
+BBU
+3506
+implements PRS4601 WiGig baseband that is compliant with IEEE 802.11ad. The
+BBU
+3506
+includes a USB 2.0 and 3.0 device/
+host system interface
+3512
+supporting link speeds of up to 2.0 Gb/s, but it is possible to configure the PRS4601 as a multi-gigabit WiGig. The
+BBU
+3506
+can modulate/demodulate all control and carrier signals up to 16-QAM WiGig coding schemes (MCS0 to MCS12) up to a maximum rate of 4.62 Gb/s. The
+BBU
+3506
+also includes
+programmable IO subsystem
+3514
+consisting of GPIO, UART, SPI, TWI, PWM and JTAG.
+The
+transceiver circuitry
+3504
+implements PRS1126 which is a highly integrated, low power, single-chip mm-wave radio transceiver compliant with the IEEE 802.11ad specification. The high performance allows the
+dongle
+3502
+to support all WiGig protocol application layers. The
+patch antenna array
+3508
+may in one embodiment comprises a PRA613-A1 which is a 4Ã4 concentric patch antenna in a single level array. The
+patch antenna array
+3508
+is a high efficiency, high bandwidth device with gain greater than 8 dB across all four channels. As a stand-alone antenna, it enables independent product design when used with Peraso radio transceiver PRS1126. In further embodiments, the
+patch antenna array
+3508
+may utilize the multilevel arrays described herein for the transmission of data. The patch antennas making up the
+patch antenna array
+3508
+operate in the unlicensed 57 to 66 GHz fr
+
+[TRUNCATED]

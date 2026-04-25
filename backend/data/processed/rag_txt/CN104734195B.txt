@@ -1,0 +1,281 @@
+PATENT ID: CN104734195B
+TITLE: A monitoring method for a wind-solar-storage integrated microgrid capable of …
+DOMAIN: renewable_energy
+INVENTOR: 李毅斌
+ASSIGNEE: 杭州瑞亚教育科技有限公司
+FILING DATE: 2015-04-13
+
+=== ABSTRACT ===
+A monitoring method of a wind-solar-storage integrated micro-grid capable of being operated in a grid-connected mode can predict the power generation power of wind-solar power generation equipment in the micro-grid and the load change in the micro-grid, track voltage information of grid-connected points of a large power grid, acquire a large power grid dispatching instruction in real time, detect the battery capacity of a storage battery module in real time, set a discharge interval of an energy storage system, optimally manage the energy of the energy storage system based on an SOC hierarchical control strategy, correct the charge-discharge power of the energy storage system in real time, optimize the working performance of the energy storage system, make and implement an optimal control strategy, ensure that the micro-grid participates in voltage regulation of the large power grid according to the requirements of the large power grid when in grid-.
+
+=== CLAIMS ===
+  1. a kind of monitoring method of the wind-light storage one micro-capacitance sensor being incorporated into the power networks, method comprise the steps：
+ S1. wind power plant and photovoltaic power generation equipment monitoring module obtain wind power plant and photovoltaic power generation equipment in real time
+Service data, and data storage, obtain load power demand situation in micro-capacitance sensor in real time；Sent out according to wind power plant, photovoltaic
+The service data of electric equipment, the output to the wind power plant in following predetermined instant, photovoltaic power generation equipment are active and idle
+It is predicted；
+ S2. grid entry point information of voltage is gathered, while determining that micro-capacitance sensor is active and idle output demand according to bulk power grid dispatch command；
+ S3. real-time detection obtains the SOC of battery module, and setting energy storage system discharges are interval, build SOC muti-layer control tactics；
+ S4. bearing power in micro-capacitance sensor active and idle output demand, current SOC muti-layer control tactics, current micro-capacitance sensor is needed
+Ask, wind power plant and photovoltaic power generation equipment it is exportable active and idle as constraints, realize the optimization fortune of micro-capacitance sensor
+OK；
+ In step s3, following concrete steps are specifically included：
+ S31. energy storage system discharges are set interval
+ Energy storage system discharges interval determiner do not break through after wind power is received electrical network can utilize spatial margins value when
+Section, sets the discharge range α, 0≤α of energy-storage system 0
+ 
+ 
+ 
+ xc=(S-Smax)/(Spre_max-Smax) (6)
+ Energy-storage system is under discharge condition, PESS(t)<0
+ 
+ 
+ 
+ xf=(S-Smin)/(Spre_min-Smin) (8)
+ Adjusted COEFFICIENT KSOCAmendment determines the actual charge-discharge electric power P of energy-storage systemSOC_ESST () is：
+ PSOC_ESS(t)=KSOCPESS(t) (9)
+ State-of-charges of the wherein S for energy-storage system；SmaxFor the lower limit of the emergency stratum that do not charge；Smax、Spre_maxFor few charging preventive stratum
+Bound；Spre_max、Spre_minFor the bound of normal discharge and recharge safe floor；SminFor the lower limit of few electric discharge preventive stratum；XcFor
+K is calculated under energy-storage system charged stateSOCCoefficient；XfTo calculate K under energy storage system discharges stateSOCCoefficient.
+  2. the method for claim 1, it is characterised in that in step s3, photovoltaic power generation equipment includes photovoltaic module, institute
+State in step sl, predict the output of photovoltaic power generation equipment in the following way：
+ S11. set up the model of exerting oneself of photovoltaic module：Ppv(t)=ηinvηpv(t)G(t)Spv (10)
+ S in formulapvArea (the m of solar irradiation radiation is received for photovoltaic panel2), G (t) light radiation numerical value (W/m2), ηpvT () is
+Photovoltaic module energy conversion efficiency, ηinvFor inverter conversion efficiency；
+ Wherein, the energy conversion efficiency of photovoltaic module and the temperature of environment are relevant, and ambient temperature is imitated to the conversion of photovoltaic module energy
+The impact of rate is：
+ 
+ 
+ 
+ η in formularFor the reference energy conversion efficiency tested under photovoltaic module standard temperature, β is temperature to energy conversion efficiency
+Affect coefficient, TCThe temperature value of (t) for t photovoltaic module, TCrFor photovoltaic module reference standard temperature value；Photovoltaic module absorbs
+Solar radiation, can be worked with ambient temperature one and cause photovoltaic module temperature to change, and its expression formula is as follows：
+ 
+ 
+ 
+ In formula, T is the ambient temperature of surrounding, TratThe rated temperature of photovoltaic module operation；
+ S12. the sunshine information and ambient temperature of the periphery of real-time detection and collection photovoltaics component, according to history sunshine information and ring
+Border temperature, the intensity of sunshine and ambient temperature in prediction following a period of time；
+ S13. according to the intensity of sunshine and ambient temperature in following a period of time, using the model calculating of exerting oneself of above-mentioned photovoltaic module
+The generated output of the photovoltaic power generation equipment in future time.
+  3. method as claimed in claim 2, it is characterised in that in step s3, also have the following steps after S1, according to wind speed
+With wind energy turbine set frequency modulation, pressure regulation spare capacity needs, using hypervelocity control and the award setting of Wind turbines, each typhoon electricity is determined
+The initial active power of unit, reactive power are exerted oneself and initial speed, initial propeller pitch angle.
+
+=== DESCRIPTION ===
+A kind of monitoring method of the wind-light storage one micro-capacitance sensor being incorporated into the power networks
+Art
+The present invention relates to a kind of monitoring method of the wind-light storage one micro-capacitance sensor being incorporated into the power networks.
+Background technology
+The energy and environmental crisis have become the major issue for affecting Human Sustainable Development, cleaning, the profit of regenerative resource
+With the fundamental way for being this problem of solution.With the renewable energy power generation technology such as wind-power electricity generation, photovoltaic generation, wave-activated power generation
+Maturation, increasing regenerative resource micro-capacitance sensor in a distributed manner form access electrical network, meet the daily production of people, life use
+The demand of electricity.
+Micro-capacitance sensor using wind-powered electricity generation and photovoltaic generation based on is used as supertension, the supplement of remote, bulk power grid powering mode, generation
+Table the new developing direction of power system.The motive power of Wind turbines is wind energy, and wind energy is due to the intermittent and random fluctuation of wind
+Property the power for sending of Wind turbines is interval and is fluctuated, the wind energy access system of these undulatory propertys can give power system
+Bring impact.Simultaneously as Wind turbines are asynchronous machine, if not being controlled by, while active power is sent, need to absorb
+Certain reactive power, does not utilize the voltage stabilization of system.When wind-powered electricity generation permeability is relatively low, these impacts are obvious, with wind
+The raising of electro-osmosis rate, impact of the wind energy to power system gradually increase, while economic benefit is brought to power system
+Certain difficulty is caused to the operation of electrical network.
+In the larger power system of the grid-connected proportion of wind light generation, as wind energy turbine set and photovoltaic DC field output have not
+Complete controllability and expected property, can change original electric power system tide distribution, circuit conveying power and whole to a certain extent
+The inertia of system, so as to generate impact to the active of electrical network, reactive power equilibrium, frequency and voltage stabilization.Energy storage technology is very
+The undulatory property and stochastic problems of generation of electricity by new energy are solved in big degree, the predictability in intermittent micro- source is effectively improved, is determined
+Property and economy.Additionally, energy storage technology is in frequency modulation and voltage modulation and improves that system is active, reactive balance level, micro-capacitance sensor is improved stable
+Effect in terms of service ability also obtain widely studied and prove.In the higher power system of wind light generation permeability, electricity
+When the Force system frequency of occurrences and change in voltage, it is desirable to honourable accumulation to the real-time of stability of power system and the quality of power supply compared with
+By force, it is necessary to according to the real-time status of power system, fully take into account the regulating power of honourable accumulation, just can guarantee that power system
+Reliability and economical operation.
+The content of the invention
+The present invention provides a kind of monitoring method of the wind-light storage one micro-capacitance sensor being incorporated into the power networks, and the monitoring method being somebody's turn to do can be pre-
+Load change in the generated output and micro-capacitance sensor of the wind light generation equipment in micrometer electrical network, the grid-connected point voltage of traceable bulk power grid
+Information, obtains bulk power grid dispatch command, the battery module battery capacity of real-time detection, setting energy storage system discharges area in real time
+Between, based on SOC muti-layer control tactics, management is optimized to energy-storage system energy, in real time amendment energy-storage system charge-discharge electric power,
+Optimization energy-storage system service behaviour, formulates and implements optimum control strategy, ensures micro-capacitance sensor when grid-connected according to bulk power grid
+Demand participate in bulk power grid voltage-regulation, voltage stabilization of guarantee when being incorporated into the power networks.
+To achieve these goals, the present invention provides a kind of monitoring side of the wind-light storage one micro-capacitance sensor being incorporated into the power networks
+Method, method comprise the stepsï¼
+S1. wind power plant and photovoltaic power generation equipment monitoring module obtain wind power plant in real time and photovoltaic generation sets
+Standby service data, and data storage, obtain load power demand situation in micro-capacitance sensor in real timeï¼According to wind power plant, light
+Volt generating equipment service data, the output to the wind power plant in following predetermined instant, photovoltaic power generation equipment it is active and
+It is idle to be predictedï¼
+S2. grid entry point information of voltage is gathered, while determining that micro-capacitance sensor is active and idle output according to bulk power grid dispatch command
+Demandï¼
+S3. real-time detection obtains the SOC of battery module, and setting energy storage system discharges are interval, build SOC hierarchical control plans
+Slightlyï¼
+S4. work(will be loaded in micro-capacitance sensor active and idle output demand, current SOC muti-layer control tactics, current micro-capacitance sensor
+Rate demand, wind power plant and photovoltaic power generation equipment are exportable active and idle as constraints, realize the excellent of micro-capacitance sensor
+Change operation.
+Preferably, in step s3, following concrete steps are specifically includedï¼
+S31. energy storage system discharges are set interval
+The energy storage system discharges interval determiner after wind power is received is not broken through electrical network and can utilize spatial margins value
+Period, set energy-storage system discharge range Î , 0 ¤Î 0
+x
+c
+=(S-S
+max
+)/(S
+pre_max
+-S
+max
+) (6)
+Energy-storage system is in
+Electric discharge
+Under state, P
+ESS
+(t) 0
+x
+c
+=(S-S
+max
+)/(S
+pre_max
+-S
+max
+) (6)
+Energy-storage system is in
+Electric discharge
+Under state, P
+ESS
+(t) 0
+x
+c
+=(S-S
+max
+)/(S
+pre_max
+-S
+max
+) (6)
+Energy-storage system is in
+Electric discharge
+Under state, P
+ESS
+(t)<0
+x
+f
+=(S-S
+min
+)/(S
+pre_min
+-S
+min
+) (8)
+Adjusted COEFFICIENT K
+SOC
+Amendment determines the actual charge-discharge electric power P of energy-storage system
+SOC_ESS
+T () isï¼
+P
+SOC_ESS
+(t)=K
+SOC
+P
+ESS
+(t) (9)
+State-of-charges of the wherein S for energy-storage systemï¼S
+max
+For the lower limit of the emergency stratum that do not chargeï¼S
+max
+ãS
+pre_max
+For few charging
+The bound of preventive stratumï¼S
+pre_max
+ãS
+pre_min
+For the bound of normal discharge and recharge safe floorï¼S
+min
+For under few electric discharge preventive stratum
+Limitï¼X
+c
+To calculate K under energy-storage system charged state
+SOC
+Coefficientï¼X
+f
+To calculate K under energy storage system discharges state
+SOC
+Coefficient.
+Preferably, photovoltaic power generation equipment includes photovoltaic module, it is described in step sl, predict that photovoltaic is sent out in the following way
+The output of electric equipmentï¼
+S11. set up the model of exerting oneself of photovoltaic moduleï¼P
+pv
+(t)=Î·
+inv
+Î·
+pv
+(t)G(t)S
+pv
+(10)
+S in formula
+pv
+Area (the m of solar irradiation radiation is received for photovoltaic panel
+2
+), G (t) light radiation numerical value (W/m
+2
+), Î·
+pv
+T () is photovoltaic module energy conversion efficiency, Î·
+inv
+For inverter conversion efficiencyï¼
+Wherein, the energy conversion efficiency of photovoltaic module and the temperature of environment are relevant, and ambient temperature turns to photovoltaic module energy
+The impact for changing efficiency isï¼
+Î· in formula
+r
+For the reference energy conversion efficiency tested under photovoltaic module standard temperature, Î² is that temperature is imitated to energy conversion
+The impact coefficient of rate, T
+C
+The temperature value of (t) for t photovoltaic module, T
+Cr
+For photovoltaic module reference standard temperature valueï¼Photovoltaic module
+Solar radiation is absorbed, can be worked with ambient temperature one and be caused photovoltaic module temperature to change, its expression formula is as followsï¼
+In formula, T is the ambient temperature of surrounding, T
+rat
+The rated temperature of photovoltaic module operationï¼
+S12. the sunshine information and ambient temperature of the periphery of real-time detection and collection photovoltaics component, according to history sunshine information
+And ambient temperature, the intensity of sunshine and ambient temperature in prediction following a period of timeï¼
+S13. according to the intensity of sunshine and ambient temperature in following a period of time, using the model of exerting oneself of above-mentioned photovoltaic module
+Calculate the generated output of the photovoltaic power generation equipment in future time.
+Preferably, also have the following steps after S1, according to wind speed and wind energy turbine set frequency modulation, pressure regulation spare capacity needs, utilize
+Wind turbines hypervelocity control and award setting, determine the initial active power of each typhoon group of motors, reactive power exert oneself and
+Initial speed, initial propeller pitch angle.
+Preferably, the determination of the initial speed of each typhoon group of motors is relevant with wind speed, defeated according to Wind turbines active power
+Wind speed is divided into threshold wind velocity section, low wind speed section, middle wind speed section and high wind speed by output capacity and power system frequency modulation stand-by requirement
+4 parts of section.Wherein, threshold wind velocity section is incision wind speed to threshold wind speed, threshold wind velocity section Wind turbines active power output energy
+Power is less, and rotation speed change affects little to the output of Wind turbines active powerï¼The low wind speed section upper limit is can be carried using hypervelocity control
+For the wind speed of whole power system frequency modulation stand-by requirementsï¼High wind speed section lower limit is the Wind turbines using during MPPT maximum power point tracking
+Rotating speed reaches wind speed during maximum (top) speedï¼Correspondence difference wind speed, the initial speed difference of Wind turbines, initial speed Ï and wind speed
+Relation meetsï¼
+In formula (4), R
+W
+For Wind turbines radius, Î is the leaf obtained when Wind turbines are controlled according to MPPT maximum power point tracking
+Tip-speed ratio, Î ' be Wind turbines according to the active power of reserved d% as frequency modulation spare capacity needs when the tip speed ratio that obtains,
+v
+Wind speed
+For the Wind turbines wind speed for detecting, v
+Threshold wind speed
+For the maximum wind velocity of threshold wind velocity section, v
+mid.in
+For the minimum wind of middle wind speed section
+Speed.
+Preferably, according to wind speed and wind energy turbine set frequency modulation, pressure regulation spare capacity needs, using Wind turbines hypervelocity control with
+Award setting, determine the initial active power of each typhoon group of motors, reactive power exert oneself, initial speed, initial propeller pitch angle, with
+And the state-of-charge of energy storage deviceï¼The wherein initial active power of the frequency modulation spare capacity needs of wind energy turbine set and each typhoon group of motors
+Exert oneself, initial speed, initial propeller pitch angle and energy storage device state-of-charge it is relevant, the pressure regulation spare capacity needs of wind energy turbine set with it is each
+The initial reactive power of typhoon group of motors is exerted oneself relevant.
+Wind energy turbine set frequency modulation spare capacity needs are provided with award setting jointly by the hypervelocity control of each typhoon group of motors.
+After the hypervelocity control and award setting for determining Wind turbines undertakes how many wind energy turbine set frequency modulation spare capacity needs respectively, it is obtained
+Corresponding to the initial speed and initial propeller pitch angle of the wind energy turbine set frequency modulation spare capacity needs, and by initial speed and initial propeller pitch angle
+Control Wind turbines send initial active power.When wind speed be in threshold wind velocity section when, Wind turbines using maximum power point with
+Track is controlled, and ignores wind energy turbine set frequency modulation spare capacity needsï¼In low wind speed section, electric power system dispatching requires what Wind turbines were reserved
+Wind energy turbine set frequency modulation non-firm power is all provided by the hypervelocity control of Wind turbinesï¼In middle wind speed section, frequency modulation non-firm power preferentially by
+The hypervelocity control of Wind turbines is provided, and insufficient section is provided using the award setting of Wind turbinesï¼In high wind speed section, wind turbine
+Group adopts constant speed control, frequency modulation non-firm power to be provided by the award setting of Wind turbines.
+Preferably, in step s 4, for the distribution of micro-capacitance sensor active power, Wind turbines and photovoltaic generation are preferentially utilized
+The active reserve capacity of equipment itself, when the active reserve capacity of Wind turbines and photovoltaic power generation equipment itself is not enough, then profit
+The deficiency that active power is exerted oneself is made up with energy-storage system.
+Above content is with reference to specific preferred implementation further description made for the present invention, it is impossible to assert
+The present invention be embodied as be confined to these explanations.For general technical staff of the technical field of the invention,
+On the premise of without departing from present inventive concept, some equivalent substitutes or obvious modification are made, and performance or purposes are identical, all should
+It is considered as belonging to protection scope of the present invention.

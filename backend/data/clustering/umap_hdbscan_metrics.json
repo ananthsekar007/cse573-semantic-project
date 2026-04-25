@@ -1,0 +1,21 @@
+{
+  "method": "embedding_hdbscan_plus_umap_visualizer",
+  "num_documents": 50,
+  "num_clusters": 5,
+  "noise_points": 0,
+  "raw_noise_points": 7,
+  "noise_reassigned": 7,
+  "umap_neighbors": 15,
+  "umap_min_dist": 0.0,
+  "min_cluster_size": 4,
+  "min_samples": 1,
+  "cluster_selection_method": "leaf",
+  "clustering_space": "original_embeddings",
+  "visualization_space": "umap_2d",
+  "assign_noise": true,
+  "ari": 1.0,
+  "nmi": 1.0,
+  "homogeneity": 1.0,
+  "purity": 1.0,
+  "silhouette": 0.7950320243835449
+}

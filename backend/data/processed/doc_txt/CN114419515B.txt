@@ -1,0 +1,16 @@
+Video processing method, machine learning model training method and related …. The present application discloses a video processing method, a machine learning model training method, and related devices and equipment. The method relates to artificial intelligence and includes: extracting features from a video to be processed to obtain a video feature vector; extracting features from a text to be processed to obtain a text feature vector; corresponding the text to be processed to the video to be processed; concatenating the text feature vector with the video feature vector to obtain a multimodal feature vector; fusing the multimodal feature vector to obtain a fused feature vector; and classifying the video to be processed based on the fused feature vector to obtain a label for the video to be processed. This method can improve the degree of fusion of video information and text information, allowing the two to complement each other and improve the accuracy of video label recognition, thereby facilitating a better understanding of the subject of the video. 1.一种视频处理方法，其特征在于，包括：1. A video processing method, comprising:
+ 
+ 
+ 从待处理视频中提取特征，得到视频特征向量；Extract features from the video to be processed to obtain a video feature vector;
+ 
+ 
+ 从待处理文本提取特征，得到文本特征向量；所述待处理文本与所述待处理视频相对应；Extract features from the text to be processed to obtain a text feature vector; the text to be processed corresponds to the video to be processed;
+ 
+ 
+ 将所述文本特征向量与所述视频特征向量进行拼接，得到多模态特征向量；Concatenating the text feature vector and the video feature vector to obtain a multimodal feature vector;
+ 
+ 
+ 将所述多模态特征向量进行特征融合，得到融合特征向量；Performing feature fusion on the multimodal feature vector to obtain a fused feature vector;
+ 
+ 
+ 确定所述融合特征向量中的每个特征的预测分数，基于每个特征的预测分数和第一阈值确定主要特征，确定每个主要特征为所述待处理视频的标签的概率，基于每个主要特征为所述待处理视频的标签的概率和第二阈值，从所述主要特征所对应的标签中确定所述待处理视频的标签，所述待处理视频的标签的数量为一个或者多个。Determine a prediction score for each feature in the fused feature vector, determine a main feature based on the prediction score of each feature and a first threshold, determine a probability that each main feature is a label for the video to be processed, and determine a label for the video to be processed from the labels corresponding to the main features based on the probability that each main feature is a label for the video to be processed and a second threshold, where the number of labels for the video to be processed is one or more.

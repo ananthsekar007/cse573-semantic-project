@@ -1,0 +1,25 @@
+Binding affinity prediction method and device based on antigen and antibody …. The application discloses a binding affinity prediction method and device based on antigen and antibody sequences. Wherein the method comprises the following steps: acquiring a first amino acid sequence of a target antigen and a second amino acid sequence of a target antibody, determining initial characteristics of M dimensions according to the first amino acid sequence of the target antigen and the second amino acid sequence of the target antibody, inputting the initial characteristics of M dimensions into a target characteristic fusion model to obtain M fusion characteristics, and inputting the M fusion characteristics into a target prediction neural network model to obtain predicted binding affinity parameters. The application can be at least applied to the field of intelligent medical treatment, and solves the technical problems of complex prediction mode and low prediction efficiency of the binding affinity of antigen and antibody in the related technology. 1.一种基于抗原和抗体序列的结合亲和力预测方法，其特征在于，包括：1. A method for predicting binding affinity based on antigen and antibody sequences, comprising:
+ 
+ 
+ 获取目标抗原的第一氨基酸序列和目标抗体的第二氨基酸序列；obtaining a first amino acid sequence of a target antigen and a second amino acid sequence of a target antibody;
+ 
+ 
+ 根据所述目标抗原的所述第一氨基酸序列和所述目标抗体的所述第二氨基酸序列，确定M个维度的初始特征，其中，M为大于或等于2的整数；Determining initial features in M dimensions according to the first amino acid sequence of the target antigen and the second amino acid sequence of the target antibody, where M is an integer greater than or equal to 2;
+ 
+ 
+ 对所述M个维度的初始特征进行融合，得到M个融合特征；The initial features of the M dimensions are fused to obtain M fused features;
+ 
+ 
+ 根据所述M个融合特征确定预测的结合亲和力参数，其中，所述预测的结合亲和力参数用于表示所述目标抗原与所述目标抗体的预测的结合亲和力；Determining a predicted binding affinity parameter according to the M fusion features, wherein the predicted binding affinity parameter is used to represent the predicted binding affinity between the target antigen and the target antibody;
+ 
+ 
+ 所述根据所述目标抗原的所述第一氨基酸序列和所述目标抗体的所述第二氨基酸序列，确定M个维度的初始特征，包括以下至少之二：Determining the initial features in M dimensions according to the first amino acid sequence of the target antigen and the second amino acid sequence of the target antibody comprises at least two of the following:
+ 
+ 
+ 根据所述目标抗原的所述第一氨基酸序列和所述目标抗体的所述第二氨基酸序列，确定蛋白质结构动力学特征；Determining protein structural dynamic characteristics according to the first amino acid sequence of the target antigen and the second amino acid sequence of the target antibody;
+ 
+ 
+ 根据所述目标抗原的所述第一氨基酸序列和所述目标抗体的所述第二氨基酸序列，确定序列词向量特征，其中，所述序列词向量特征通过按照预设的目标序列长度对所述第一氨基酸序列和所述第二氨基酸序进行转化，并输入至对应的特征生成网络模型确定；Determine a sequence word vector feature according to the first amino acid sequence of the target antigen and the second amino acid sequence of the target antibody, wherein the sequence word vector feature is determined by transforming the first amino acid sequence and the second amino acid sequence according to a preset target sequence length and inputting them into a corresponding feature generation network model;
+ 
+ 
+ 根据所述目标抗原的所述第一氨基酸序列和所述目标抗体的所述第二氨基酸序列，确定功能性或结构性特征。Functional or structural characteristics are determined based on the first amino acid sequence of the target antigen and the second amino acid sequence of the target antibody.

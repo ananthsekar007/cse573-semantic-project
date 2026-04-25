@@ -1,0 +1,15 @@
+3D integrated circuit device and structure with hybrid bonding. A 3D integrated circuit, the circuit including: a first level including a first wafer, the first wafer including a first crystalline substrate, a plurality of first transistors, and first copper interconnecting layers, where the first copper interconnecting layers at least interconnect the plurality of first transistors; and a second level including a second wafer, the second wafer including a second crystalline substrate, a plurality of second transistors, and second copper interconnecting layers, where the second copper interconnecting layers at least interconnect the plurality of second transistors, where the second level is bonded to the first level, where the bonded includes metal to metal bonding, where the bonded includes oxide to oxide bonding, and where at least one of the second transistors include a replacement gate. 1. A 3D semiconductor integrated circuit, the circuit comprising:
+a first level comprising a first wafer, said first wafer comprising a first crystalline substrate, a plurality of first transistors, and a plurality of first copper interconnecting layers,
+wherein said first copper interconnecting layers at least interconnect said plurality of first transistors;
+
+a second level comprising a second wafer, said second wafer comprising a second crystalline substrate, a plurality of second transistors, and a plurality of second copper interconnecting layers,
+wherein said plurality of second copper interconnecting layers at least interconnect said plurality of second transistors,
+wherein said second level is hybrid bonded to said first level,
+wherein said hybrid bonded comprises metal to metal bonding,
+wherein said hybrid bonded additionally comprises oxide to oxide bonding disposed on a same level as the metal to metal bonding; and
+
+a first metal layer, a second metal layer, and a third metal layer,
+wherein said first metal layer, said second metal layer, and said third metal layer are disposed between said first crystalline substrate and said second crystalline substrate,
+wherein said second metal layer is disposed between said first metal layer and said third metal layer,
+wherein said second metal layer thickness is at least double that of said first metal layer thickness, and
+wherein said second metal layer thickness is at least double that of said third metal layer thickness.

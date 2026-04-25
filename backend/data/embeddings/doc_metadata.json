@@ -1,0 +1,302 @@
+[
+  {
+    "index": 0,
+    "patent_id": "AU2015101792A4",
+    "domain": "biotechnology",
+    "title": "Engineering of systems, methods and optimized enzyme and guide scaffolds for …"
+  },
+  {
+    "index": 1,
+    "patent_id": "CN101941519B",
+    "domain": "renewable_energy",
+    "title": "Wind-light energy and shore-electricity charged storage-battery electric ship …"
+  },
+  {
+    "index": 2,
+    "patent_id": "CN102355006B",
+    "domain": "renewable_energy",
+    "title": "Joint wind-solar-storage joint grid-connected power generation coordination …"
+  },
+  {
+    "index": 3,
+    "patent_id": "CN102384039B",
+    "domain": "renewable_energy",
+    "title": "Mixed wind-light compensation water pumping and energy storing system and …"
+  },
+  {
+    "index": 4,
+    "patent_id": "CN104734195B",
+    "domain": "renewable_energy",
+    "title": "A monitoring method for a wind-solar-storage integrated microgrid capable of …"
+  },
+  {
+    "index": 5,
+    "patent_id": "CN109194248A",
+    "domain": "renewable_energy",
+    "title": "A kind of spherical integral type wind and solar hybrid generating system and …"
+  },
+  {
+    "index": 6,
+    "patent_id": "CN109888803B",
+    "domain": "renewable_energy",
+    "title": "Optimization method of capacity configuration of hybrid energy storage power …"
+  },
+  {
+    "index": 7,
+    "patent_id": "CN111817338A",
+    "domain": "renewable_energy",
+    "title": "A black-start control method and system for a wind-solar-storage new energy …"
+  },
+  {
+    "index": 8,
+    "patent_id": "CN111934919B",
+    "domain": "telecommunications_5g",
+    "title": "Network convergence and networking method, equipment and storage medium thereof"
+  },
+  {
+    "index": 9,
+    "patent_id": "CN112054588B",
+    "domain": "renewable_energy",
+    "title": "Wind-solar hybrid power generation system"
+  },
+  {
+    "index": 10,
+    "patent_id": "CN112530913B",
+    "domain": "semiconductor",
+    "title": "Packaging structure and manufacturing method thereof"
+  },
+  {
+    "index": 11,
+    "patent_id": "CN113055887B",
+    "domain": "telecommunications_5g",
+    "title": "Network channel safety protection system for electric power 5G application"
+  },
+  {
+    "index": 12,
+    "patent_id": "CN114015674A",
+    "domain": "biotechnology",
+    "title": "Novel CRISPR-Cas12i system"
+  },
+  {
+    "index": 13,
+    "patent_id": "CN114419515B",
+    "domain": "ai_machine_learning",
+    "title": "Video processing method, machine learning model training method and related …"
+  },
+  {
+    "index": 14,
+    "patent_id": "CN114464247B",
+    "domain": "ai_machine_learning",
+    "title": "Binding affinity prediction method and device based on antigen and antibody …"
+  },
+  {
+    "index": 15,
+    "patent_id": "CN201650611U",
+    "domain": "renewable_energy",
+    "title": "New Hybrid Energy System"
+  },
+  {
+    "index": 16,
+    "patent_id": "EP3080259B1",
+    "domain": "biotechnology",
+    "title": "Engineering of systems, methods and optimized guide compositions with new …"
+  },
+  {
+    "index": 17,
+    "patent_id": "JP6712948B2",
+    "domain": "biotechnology",
+    "title": "Compositions and methods of using the CRISPR-cas system in nucleotide repeat …"
+  },
+  {
+    "index": 18,
+    "patent_id": "JP7514300B2",
+    "domain": "ai_machine_learning",
+    "title": "Artificial Intelligence Coregistration and Marker Detection Including Machine …"
+  },
+  {
+    "index": 19,
+    "patent_id": "KR102579783B1",
+    "domain": "ai_machine_learning",
+    "title": "Vision inspection system by using remote learning of product defects image"
+  },
+  {
+    "index": 20,
+    "patent_id": "TW202320263A",
+    "domain": "semiconductor",
+    "title": "Semiconductor package"
+  },
+  {
+    "index": 21,
+    "patent_id": "US10334446B2",
+    "domain": "telecommunications_5g",
+    "title": "Private multefire network with SDR-based massive MIMO, multefire and network …"
+  },
+  {
+    "index": 22,
+    "patent_id": "US10689691B2",
+    "domain": "biotechnology",
+    "title": "Unbiased identification of double-strand breaks and genomic rearrangement by …"
+  },
+  {
+    "index": 23,
+    "patent_id": "US10694399B1",
+    "domain": "telecommunications_5g",
+    "title": "Cellular system"
+  },
+  {
+    "index": 24,
+    "patent_id": "US10812992B1",
+    "domain": "telecommunications_5g",
+    "title": "Cellular system"
+  },
+  {
+    "index": 25,
+    "patent_id": "US10910364B2",
+    "domain": "semiconductor",
+    "title": "3D semiconductor device"
+  },
+  {
+    "index": 26,
+    "patent_id": "US11018133B2",
+    "domain": "semiconductor",
+    "title": "3D integrated circuit"
+  },
+  {
+    "index": 27,
+    "patent_id": "US11101266B2",
+    "domain": "semiconductor",
+    "title": "3D device and devices with bonding"
+  },
+  {
+    "index": 28,
+    "patent_id": "US11124796B2",
+    "domain": "biotechnology",
+    "title": "Delivery, use and therapeutic applications of the CRISPR-Cas systems and …"
+  },
+  {
+    "index": 29,
+    "patent_id": "US11232382B2",
+    "domain": "ai_machine_learning",
+    "title": "Systems and methods for providing and managing proactive and intelligent …"
+  },
+  {
+    "index": 30,
+    "patent_id": "US11374118B2",
+    "domain": "semiconductor",
+    "title": "Method to form a 3D integrated circuit"
+  },
+  {
+    "index": 31,
+    "patent_id": "US11459557B2",
+    "domain": "biotechnology",
+    "title": "Use and production of CHD8+/− transgenic animals with behavioral phenotypes …"
+  },
+  {
+    "index": 32,
+    "patent_id": "US11481652B2",
+    "domain": "ai_machine_learning",
+    "title": "System and method for recommendations in ubiquituous computing environments"
+  },
+  {
+    "index": 33,
+    "patent_id": "US11605630B2",
+    "domain": "semiconductor",
+    "title": "3D integrated circuit device and structure with hybrid bonding"
+  },
+  {
+    "index": 34,
+    "patent_id": "US11646309B2",
+    "domain": "semiconductor",
+    "title": "3D semiconductor devices and structures with metal layers"
+  },
+  {
+    "index": 35,
+    "patent_id": "US11783025B2",
+    "domain": "ai_machine_learning",
+    "title": "Training diverse and robust ensembles of artificial intelligence computer …"
+  },
+  {
+    "index": 36,
+    "patent_id": "US11791877B1",
+    "domain": "telecommunications_5g",
+    "title": "Hybrid digital-analog MMWAVE repeater/relay with full duplex"
+  },
+  {
+    "index": 37,
+    "patent_id": "US11984445B2",
+    "domain": "semiconductor",
+    "title": "3D semiconductor devices and structures with metal layers"
+  },
+  {
+    "index": 38,
+    "patent_id": "US12001403B2",
+    "domain": "telecommunications_5g",
+    "title": "Blockchain cell system"
+  },
+  {
+    "index": 39,
+    "patent_id": "US12176630B2",
+    "domain": "telecommunications_5g",
+    "title": "Wireless system"
+  },
+  {
+    "index": 40,
+    "patent_id": "US12199093B2",
+    "domain": "semiconductor",
+    "title": "3D semiconductor devices and structures with metal layers"
+  },
+  {
+    "index": 41,
+    "patent_id": "US12224070B2",
+    "domain": "ai_machine_learning",
+    "title": "Method of evaluating autoimmune disease risk and treatment selection"
+  },
+  {
+    "index": 42,
+    "patent_id": "US12314060B2",
+    "domain": "ai_machine_learning",
+    "title": "Value chain network planning using machine learning and digital twin simulation"
+  },
+  {
+    "index": 43,
+    "patent_id": "US12490343B2",
+    "domain": "telecommunications_5g",
+    "title": "5G/4G/3G/2G cloud-native OpenRAN architecture"
+  },
+  {
+    "index": 44,
+    "patent_id": "US20200354751A1",
+    "domain": "biotechnology",
+    "title": "Genome editing using cas9 nickases"
+  },
+  {
+    "index": 45,
+    "patent_id": "US20210192412A1",
+    "domain": "ai_machine_learning",
+    "title": "Cognitive Intelligent Autonomous Transformation System for actionable Business …"
+  },
+  {
+    "index": 46,
+    "patent_id": "US20220090070A1",
+    "domain": "biotechnology",
+    "title": "Methods and compositions for altering function and structure of chromatin loops …"
+  },
+  {
+    "index": 47,
+    "patent_id": "US20220154222A1",
+    "domain": "biotechnology",
+    "title": "Novel nucleic acid modifiers"
+  },
+  {
+    "index": 48,
+    "patent_id": "US20240188189A1",
+    "domain": "telecommunications_5g",
+    "title": "5G OpenRAN Controller"
+  },
+  {
+    "index": 49,
+    "patent_id": "US8866334B2",
+    "domain": "renewable_energy",
+    "title": "Dispatchable power from a renewable energy facility"
+  }
+]

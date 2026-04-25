@@ -1,0 +1,54 @@
+Optimization method of capacity configuration of hybrid energy storage power …. The invention discloses a method for optimizing the capacity configuration of a hybrid energy storage power source in a wind and solar power generation system, comprising: establishing energy models of a wind power generator set, a photovoltaic solar generator set, a storage battery and a super capacitor respectively; Based on the tolerant hierarchical sequence optimization method, according to the pre-set importance ranking, the one-time investment cost and The optimization objective function and the corresponding optimization constraints are established for the operating cost of the whole life cycle; according to the establishment sequence of the optimization objective function and the optimization constraints, the optimal parameters are obtained by solving in turn to realize the optimization of the capacity configuration of the hybrid energy storage power supply. While maximizing the utilization of wind energy and photovoltaic solar energy resources under the premise of load demand, it greatly reduces the one-time investment cost and the operating cost of the whole life cycle. 1. The optimization method for the capacity configuration of the hybrid energy storage power supply in the wind and light power generation system is characterized by being applied to the wind and light power generation system, wherein the wind and light power generation system comprises a wind generating set, a photovoltaic solar generating set and the hybrid energy storage power supply, the hybrid energy storage power supply comprises a storage battery for providing energy and a super capacitor for providing power, and the wind generating set and the photovoltaic solar generating set are respectively connected with the hybrid energy storage power supply in parallel; the optimization method for capacity configuration of the hybrid energy storage power supply in the wind and light power generation system comprises the following steps:
+ s10, respectively establishing energy models of a wind generating set, a photovoltaic solar generating set, a storage battery and a super capacitor, wherein the wind generating set comprises a small turbine generator;
+ s20, establishing an optimization model of capacity configuration and corresponding constraint conditions according to the one-time investment cost and the operation cost of the full life cycle of the hybrid energy storage power supply, wherein the constraint conditions comprise charge and discharge current constraint and maximum residual energy constraint of a super capacitor, and the maximum residual energy constraint is established according to energy models of a wind generating set, a photovoltaic solar generating set, a storage battery and the super capacitor;
+ s30, based on a tolerant hierarchical sequence optimization method, establishing an optimization objective function and a corresponding optimization constraint condition respectively aiming at the one-time investment cost and the operation cost of the full life cycle of the hybrid energy storage power supply according to the preset importance degree ranking and the optimization model and the constraint condition established in the step S20;
+ s40, according to the establishment sequence of the optimization objective function and the optimization constraint condition, solving is sequentially carried out to obtain optimal parameters, and optimization of capacity allocation of the hybrid energy storage power supply is achieved;
+ in the step S20, in step S20,
+ assuming that the life cycle of the wind-solar power generation system is k years, establishing an optimization model L of capacity allocation of the hybrid energy storage power supply according to the one-time investment cost and the operation cost of the full life cycle of the hybrid energy storage power supply as follows:
+ 
+ 
+ 
+ wherein L is1One-time investment cost for hybrid energy storage power supply, and L1＝pBAT QBAT+pSC QSC；L2The operating cost for the whole life cycle of the hybrid energy storage power supply, and L2＝k λBAT pBAT QBAT+k mBAT QBAT+k λSC pSC QSC+k mSC QSC；pBATPrice of accumulator per unit energy, pSCFor the price of a supercapacitor per unit energy, λBATIs the annual rate of conversion per unit energy, lambda, of the accumulatorSCIs the annual rate of conversion per unit energy, m, of the super capacitorBATFor each unit of accumulatorAnnual maintenance charge of energy, mSCAnnual maintenance charge, Q, for a supercapacitor per unit of energyBATIs the energy of the accumulator, QSCEnergy stored for the super capacitor;
+ the charge and discharge current constraints of the super capacitor are as follows:
+ 
+ 
+ 
+ wherein, Is1Charging current for the supercapacitor, Is2Is the discharge current of the supercapacitor, IsmaxThe maximum charge-discharge current of the super capacitor; i iscThe rated charging current of the storage battery monomer is obtained;
+ the maximum remaining energy constraint is:
+ Ew+Es-El≥QBAT+QSC 
+ wherein E islEnergy consumed for the load; ewAnnual energy production of small turbo-generators, EsThe annual energy production of a photovoltaic array in the photovoltaic solar generating set;
+ in step S30, the importance ranks set in advance are: firstly considering the one-time investment cost and secondly considering the operation cost of the whole life cycle;
+ first optimization objective function f established aiming at one-time investment cost of hybrid energy storage power supply1Comprises the following steps:
+ f1＝min(L1)＝min(pBAT QBAT+pSC QSC)
+ the first optimization constraint is:
+ 
+ 
+ 
+ second optimization objective function f established for full life cycle operation cost of hybrid energy storage power supply2Comprises the following steps:
+ 
+ 
+ 
+ the second optimization constraint condition is as follows:
+ 
+ 
+ 
+ wherein, is a tolerance coefficient, and>0；for one-off investment cost L1The minimum value of (a) is determined,for the first optimization of the objective function f1Optimized super capacitor charging current Is1The optimum solution of (a) to (b),for the first optimization of the objective function f1Optimized discharge current I of super capacitors2The optimal solution of (2);
+ in the step S10, in step S10,
+ when the charging current and the discharging current of the storage battery monomer are both rated charging current IcWhen it is storing charging energy Qb1And discharge energy Qb2Respectively as follows:
+ Qb1＝U Ic tc 
+ Qb2＝U Ic td 
+ wherein, tcFor charging the accumulator cell, tdThe discharge time of the storage battery monomer is U, and the reference voltage of the storage battery monomer is U;
+ energy Q of accumulatorBATComprises the following steps:
+ QBAT＝(Qb1+Qb2) h l
+ h is the serial number of the storage battery monomers in the storage battery, and l is the parallel number of the storage battery monomers in the storage battery;
+ in the step S10, in step S10,
+ the equivalent capacitance C of the supercapacitor is:
+ 
+ 
+ 
+ wherein m is the serial number of the super capacitor monomers in the super capacitor, n is the parallel number of the super capacitor monomers in the super capacitor, CfThe capacity of the supercapacitor monomer;
+ energy Q stored by a supercapacitorSCComprises the following steps:
+ 
+ 
+ 
+ wherein, UmaxIs the maximum voltage of the supercapacitor, UminIs the minimum voltage of the supercapacitor, UsmaxIs the maximum voltage of the supercapacitor cell, UsminIs the minimum voltage of the supercapacitor cell.

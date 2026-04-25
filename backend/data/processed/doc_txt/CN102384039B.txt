@@ -1,0 +1,22 @@
+Mixed wind-light compensation water pumping and energy storing system and …. The invention provides a hybrid wind-solar hybrid pumped storage system, which includes a wind-solar hybrid unit, a controller, a DC load, an AC load, an inverter, and a pumped storage unit; the wind-solar hybrid unit includes a wind power generator set and a photovoltaic array; the pumped storage unit It includes a reversible water pump turbine unit, an upper pool and a lower pool; the controller includes a wind-solar hybrid controller, a digital signal processor chip, a voltage/current sampling circuit, a voltage/current transformer group, a circuit breaker drive circuit and three circuit breakers device. In the present invention, the traditional wind-solar hybrid system energy storage device—the storage battery pack is replaced by a pumped storage power generation system, and a reversible pump turbine is used in the pumped storage unit to pump water or generate electricity, and the segmental integration method is applied to the pumped storage unit. The pool performs energy monitoring and control. The invention solves the disadvantages of high price, short service life, environmental pollution and the like of the storage battery pack, improves system stability and power supply reliability, and reduces system construction and operation costs. 1.一种混合风光互补抽水蓄能系统，其特征在于：包括风光互补单元、控制器、直流负载、交流负载、逆变器和抽水蓄能单元；
+ 1. A hybrid wind-solar hybrid pumped storage system, characterized in that it includes a wind-solar hybrid unit, a controller, a DC load, an AC load, an inverter and a pumped storage unit;
+ 
+ 
+ 
+ 所述风光互补单元包括风力发电机组和光伏阵列；
+ The wind-solar complementary unit includes wind power generators and photovoltaic arrays;
+ 
+ 
+ 
+ 所述抽水蓄能单元包括可逆式水泵水轮机组、上水池和下水池，水泵水轮机组置于上、下水池之间，所述可逆式水泵水轮机组，包括直流可逆式水泵水轮机和交流可逆式水泵水轮机；
+ The pumped energy storage unit includes a reversible pump-turbine unit, an upper pool and a lower pool. The pump-turbine unit is placed between the upper and lower pools. The reversible pump-turbine unit includes a DC reversible pump-turbine and an AC reversible water pump. water turbine;
+ 
+ 
+ 
+ 所述控制器包括风光互补控制器，数字信号处理器（DSP）芯片，电压/电流采样电路，电压/电流互感器组，断路器驱动电路和三个断路器； 风光互补控制器输出端分别接三个断路器，DSP输出的控制信号经断路器驱动电路连接至三个断路器，控制断路器的开合，电压/电流互感器组输出端连接至电压/电流采样电路输入端，电压/电流采样电路输出端接至DSP，电压/电流互感器组输入端相连至三个断路器的输出端；
+ The controller includes a wind-solar hybrid controller, a digital signal processor (DSP) chip, a voltage/current sampling circuit, a voltage/current transformer group, a circuit breaker drive circuit and three circuit breakers; the output terminals of the wind-solar hybrid controller are respectively connected to Three circuit breakers, the control signal output by the DSP is connected to the three circuit breakers through the circuit breaker drive circuit to control the opening and closing of the circuit breakers, the output terminal of the voltage/current transformer group is connected to the input terminal of the voltage/current sampling circuit, and the voltage/current The output terminal of the sampling circuit is connected to the DSP, and the input terminal of the voltage/current transformer group is connected to the output terminals of the three circuit breakers;
+ 
+ 
+ 
+ 系统具体连接是：风力发电机组和光伏阵列的输出端分别连接控制器的输入端，控制器的输出端分别连接直流负载、直流可逆式水泵水轮机组的输入端和逆变器的输入端，逆变器的输出端分别连接交流可逆式水泵水轮机组的输入端和交流负载，直流可逆式水泵水轮机组的输出端连接直流负载，交流可逆式水泵水轮机组的输出端连接交流负载，控制器的风光互补控制器输入端分别接风力发电机组的输出端和光伏阵列的输出端，控制器的风光互补控制器的输出端分别连接直流负载、直流可逆式水泵水轮机组和逆变器输入端，控制器的电压/电流互感器组输入端连接到交流可逆式水泵水轮机的输出端。
+ The specific connection of the system is: the output terminals of the wind turbine and the photovoltaic array are respectively connected to the input terminal of the controller, and the output terminals of the controller are respectively connected to the DC load, the input terminal of the DC reversible pump-turbine unit, and the input terminal of the inverter. The output end of the inverter is respectively connected to the input end of the AC reversible pump-turbine set and the AC load, the output end of the DC reversible water pump-turbine set is connected to the DC load, and the output end of the AC reversible pump-turbine set is connected to the AC load. The input terminals of the complementary controller are respectively connected to the output terminal of the wind power generating set and the output terminal of the photovoltaic array. The input end of the voltage/current transformer group is connected to the output end of the AC reversible water pump turbine.

@@ -1,0 +1,328 @@
+PATENT ID: CN112054588B
+TITLE: Wind-solar hybrid power generation system
+DOMAIN: renewable_energy
+INVENTOR: 王文全
+ASSIGNEE: 四川大学
+FILING DATE: 2020-09-10
+GRANT DATE: 2022-06-21
+
+=== ABSTRACT ===
+The invention discloses a wind-solar hybrid power generation system which comprises a wind power generation system, a solar power generation system and a rainwater collection system. The wind power generation system is used for converting mechanical energy into electric energy and storing the electric energy in the storage battery; the solar power generation system is used for converting solar radiation energy into electric energy through a photoelectric effect and storing the electric energy in the storage battery; when raining, the rainwater collection system collects rainwater that falls on the system. This power generation system includes wind power generation, solar energy power generation and the combination of rainwater collection function, and system simple structure generates electricity green safety, and electricity generation economic benefits is high, builds at high-rise building top, and the geometry depends on the building structure profile, both can provide the green energy for the building, can not cause negative visual effect again, can also eliminate the worry to the bird problem of hitting, improves the security and reduces the vibration. The system can also be used in urban areas and remote areas with low wind speed and high wind speed, and has strong practicability.
+
+=== CLAIMS ===
+  1. A wind-solar hybrid power generation system, comprising:
+      a battery for storing electrical energy;
+      the wind power generation system comprises a wind turbine, a power turbine guide vane and a generator, wherein the wind turbine is positioned in the middle of the device and surrounded by the power turbine guide vane, and a central driving shaft of the wind turbine is connected with the generator; the generator is used for converting mechanical energy into electric energy and storing the electric energy through the storage battery; the power turbine guide vane comprises an upper wall guide plate, a lower wall guide plate and guide blades, wherein the upper wall guide plate and/or the lower wall guide plate are conical plates, the upper wall guide plate and the lower wall guide plate are opposite to each other in an up-down mode and are provided with openings facing outwards, the upper wall guide plate and the lower wall guide plate are connected through a plurality of guide blades, and the guide blades are arranged in a circumferential array;
+      the solar power generation system comprises a solar panel, the solar panel is mounted on the top surface of the upper wall guide plate, and the solar panel is obliquely arranged; the solar panel is used for converting solar radiation energy into electric energy through a photoelectric effect and storing the electric energy through the storage battery;
+      the rainwater collecting system is used for collecting rainwater falling on the system;
+      the wind turbine and the power turbine guide vane are taken as a structural unit, and a plurality of structural units can be vertically stacked.
+  2. The wind-solar hybrid power generation system according to claim 1, wherein the rainwater collection system comprises a rainwater filter, a rainwater passage, a water storage tank and a control switch; the rainwater channel is positioned below the solar cell panel; the top of the rainwater channel is connected with the rainwater filter, and the bottom of the rainwater channel is connected with the water storage tank; the control switch is arranged on the water storage tank and used for controlling the drainage of rainwater in the water storage tank.
+  3. The wind-solar hybrid power generation system of claim 1, wherein the wind turbine is a vertical axis wind turbine; the power turbine guide vane is a fixed guide vane mechanism or an adjustable guide vane mechanism.
+  4. The wind-solar hybrid power system according to claim 1, wherein the solar panel is a solar photovoltaic or solar thermal panel.
+  5. The wind-solar hybrid power generation system of claim 1, wherein the bottom of the solar panel is mounted by a gimbal structure; the solar power generation system further comprises an intelligent controller, and the intelligent controller can automatically control the solar panel to pivot in a universal mode by detecting the illumination direction and/or the illumination intensity.
+  6. The wind-solar hybrid power generation system of claim 1, further comprising a mesh enclosure, wherein the mesh enclosure is sleeved on the outermost side of the system and is used for preventing foreign objects from impacting the wind turbine.
+  7. The complementary wind and solar power generation system of claim 1, wherein the system is adapted to be built on top of a building or structure and is provided with mounting and locking means.
+
+=== DESCRIPTION ===
+ä¸ç§é£åäºè¡¥åçµç³»ç»
+A wind-solar hybrid power generation system
+ææ¯é¢å
+technical field
+æ¬åææ¶åè½æºæ¶éè®¾å¤ææ¯é¢åï¼ç¹å«æ¯æ¶åä¸ç§é£åäºè¡¥åçµç³»ç»ã
+The invention relates to the technical field of energy collection equipment, in particular to a wind-solar hybrid power generation system.
+èæ¯ææ¯
+Background technique
+éçç¤¾ä¼ç»æµçåå±ï¼å©ç¨æ¸æ´è½æºåçµå·²ç»æä¸ºç­ç¹ãç®åï¼ä¸çåå½æç¨ççæå ä¹é½æ¯åç³çæãç¶èåç³çæè´èéæéãè½æºæ¶èå¤§ï¼æ­£é¢ä¸´çæ¯ç«­çå±é©ãèä¸åç³çæçç§æ¶äº§ççåç§æ°ä½ä¸åºä½åºç©ä¼å¯¼è´æ¸©å®¤æåºå å§åé¸é¨ï¼æ¹åå¨ççæ°åï¼çæå¹³è¡¡å¤±è¡¡ãå æ­¤ï¼ç ç©¶è®¾è®¡ä»¥ç»¿è²å¯åçè½æºä¸ºä¸»å¨åçåçµç³»ç»å·æéå¤§çæä¹ï¼å¯ä»¥ä¿è¿è½æºçç»¿è²åå¯æç»­å©ç¨ï¼åæåç³çæçæéæ§ã
+With the development of social economy, the use of clean energy to generate electricity has become a hot spot. At present, almost all the fuels used in the world are fossil fuels. However, fossil fuel reserves are limited and energy consumption is high, and they are facing the danger of depletion. Moreover, the various gases and solid wastes produced by the burning of fossil fuels will lead to aggravation of the greenhouse effect and acid rain, changing the global climate and imbalance of the ecological balance. Therefore, it is of great significance to study and design a power generation system powered by green renewable energy, which can promote the green and sustainable utilization of energy and overcome the limitations of fossil fuels.
+æ°´ååçµè¦æ·¹æ²¡å¤§éåå°ï¼æå¯è½å¯¼è´çæç¯å¢é­å°ç ´åï¼èä¸æ°´èµæºä¹æ¯æéçï¼è¿ä¼åå°å­£èçå½±åãæ ¸çµå¨æ­£å¸¸æåµä¸æ¯å¹²åçï¼ä½æ¯ä¸ä¸åçæ ¸æ³æ¼äºæï¼åææ¯ä¸å ªè®¾æ³çãé£è½åå¤ªé³è½æ¯æ½å¨çåè´¹ãæ¸æ´ååä¹ä¸å°½ç¨ä¹ä¸ç«­çè½æºãå©ç¨å¤ªé³è½åé£è½åçµä¸éè¦ä½¿ç¨æ°´ï¼ä¸å©ç¨æ°´åãçç©è´¨è½åæ ¸è½ç­å¶ä»è½æºåçµç¸æ¯ï¼å®ä»¬ä¸ä¼å¼èµ·ç¯å¢é®é¢ã
+Hydropower generation will flood a large amount of land, which may lead to the destruction of the ecological environment, and the water resources are also limited and affected by the season. Nuclear power is clean under normal circumstances, but in the event of a nuclear leakage accident, the consequences are disastrous. Wind and solar energy are potentially free, clean and inexhaustible sources of energy. Generating electricity from solar and wind power does not require the use of water, and they cause no environmental problems compared to generating electricity from other sources such as hydro, biomass and nuclear.
+ç®åï¼å¤ªé³è½åçµææ¯ç§ç±»ç¹å¤ï¼ç°æå¤ªé³è½åçµè£ç½®ä¸»è¦æ¯ç±å¤ªé³è½çµæ± æ¹éµãèçµæ± ç»ãåæ¾çµæ§å¶å¨ãéåå¨ãäº¤æµéçµæãå¤ªé³è·è¸ªæ§å¶ç³»ç»ç­è®¾å¤ç»æï¼ç±äºç»æç®åãæå®è£å»ºè®¾ãæ¸æ´å®å¨ç­ä¼ç¹èè¢«å¹¿æ³åºç¨ãå¤ªé³è½åçµè£ç½®æ ¹æ®åçä¼ç¹æåºåçï¼å©ç¨å¤ªé³è½åä¼çµæ± æå¤ªé³è¾å°è½ç´æ¥è½¬åæçµè½ï¼å¨ç½å¤©é³ååè¶³çæ¡ä»¶ä¸ï¼åçµæçè¾é«ï¼ä½å¨å¤é´æé´å¤©æ åçæ¡ä»¶ä¸ï¼å¤ªé³è½ç³»ç»åºæ¬ä¸åçµï¼æ æ³å®ç°å¨å¤©ååçµãå¦ä¸æ¹é¢ï¼é£çµææ¯æ¥è¶æçï¼å·²æ¯ä¸ç§å®å¨å¯é çè½æºï¼é£ååçµçç»æµæ§ä¹æ¥çæé«ï¼å¶åçæ¯å©ç¨é£åå¸¦å¨é£è½¦å¶çæè½¬ï¼åéè¿å¢éæºå°æè½¬çéåº¦æåï¼æ¥ä¿ä½¿åçµæºåçµãä½æ¯ï¼ç°æçé£ååçµè£ç½®ä»éç¨äºé«é£éå°åºï¼å¯¹äºä½é£éå°åºæ æ³æ¨å¹¿ä½¿ç¨ï¼æå¾æ¹åã
+At present, there are many types of solar power generation technologies. The existing solar power generation devices are mainly composed of solar cell arrays, battery packs, charge and discharge controllers, inverters, AC power distribution cabinets, solar tracking control systems and other equipment. It is widely used due to its advantages of easy installation and construction, cleaning and safety. According to the principle of photovoltaic effect, solar power generation devices use solar photovoltaic cells to directly convert solar radiation energy into electrical energy. Under the conditions of sufficient sunlight during the day, the power generation efficiency is high, but under the conditions of night or cloudy days, the solar energy system is basically Without power generation, all-weather power generation cannot be achieved. On the other hand, wind power technology is becoming more and more mature, it is a safe and reliable energy source, and the economy of wind power generation is also increasing. Generator to generate electricity. However, the existing wind power generation device is only suitable for high wind speed areas, and cannot be widely used in low wind speed areas, and needs to be improved.
+å¦æå°é£çµææ¯åå¤ªé³è½åçµææ¯è¿è¡ç»åï¼å¤é´åé´å¤©æ é³åæ¶å©ç¨é£è½åçµï¼æ´å¤©å©ç¨å¤ªé³è½åçµï¼å¨æ¢æé£åæå¤ªé³çæåµä¸ä¸¤èåæ¶åæ¥ä½ç¨ï¼æ¢å¯å®ç°å¨å¤©åçåçµåè½ï¼åæ¶æ¯åç¨é£åãå¤ªé³è½åçµæ´ç»æµç§å­¦ãå æ­¤ï¼å¦ä½æä¾ä¸ç§é£åäºè¡¥åçµç³»ç»ï¼åæ¶æ¹åç°æé£ååçµè£ç½®æ æ³å¨ä½é£éå°åºéç¨çæåµï¼æ¯æ¬åæäºå¾è§£å³çææ¯é®é¢ã
+If the wind power technology and the solar power generation technology are combined, wind power is used to generate power at night and when there is no sunlight on cloudy days, and solar power is used for sunny days. When there is both wind and sun, the two can work at the same time, which can realize all-weather power generation function. At the same time, it is more economical and scientific than single wind and solar power generation. Therefore, how to provide a wind-solar hybrid power generation system and at the same time improve the situation that the existing wind power generation device cannot be applied in low wind speed areas is a technical problem to be solved urgently in the present invention.
+åæåå®¹
+SUMMARY OF THE INVENTION
+æ¬åæçç®çæ¯æä¾ä¸ç§é£åäºè¡¥åçµç³»ç»ï¼ä»¥è§£å³ä¸è¿°ç°æææ¯å­å¨çé®é¢ï¼å¤é´åé´å¤©æ é³åæ¶å©ç¨é£è½åçµï¼æ´å¤©å©ç¨å¤ªé³è½åçµï¼å¨æ¢æé£åæå¤ªé³çæåµä¸ä¸¤èåæ¶åæ¥ä½ç¨ï¼ä¸ä»å®ç°äºå¨å¤©åçåçµåè½ï¼æ¯åç¨é£åãå¤ªé³è½åçµæ´ç»æµç§å­¦ã
+The purpose of the present invention is to provide a wind-solar hybrid power generation system to solve the above-mentioned problems in the prior art. Wind energy is used to generate electricity at night and when there is no sunlight in cloudy days, and solar energy is used to generate electricity in sunny days. At the same time, it not only realizes the function of all-weather power generation, but also is more economical and scientific than single-use wind power and solar power generation.
+ä¸ºå®ç°ä¸è¿°ç®çï¼æ¬åææä¾äºå¦ä¸æ¹æ¡ï¼
+For achieving the above object, the present invention provides the following scheme:
+æ¬åææä¾ä¸ç§é£åäºè¡¥åçµç³»ç»ï¼ä¸»è¦åæ¬ï¼
+The present invention provides a wind-solar hybrid power generation system, which mainly includes:
+èçµæ± ï¼æè¿°èçµæ± ç¨äºå­å¨çµè½ï¼
+a battery for storing electrical energy;
+é£ååçµç³»ç»ï¼æè¿°é£ååçµç³»ç»åæ¬é£åæºãå¨åæ¶¡è½®å¯¼å¶ä»¥ååçµæºï¼æè¿°é£åæºä½äºè£ç½®çä¸­é´ï¼è¢«æè¿°å¨åæ¶¡è½®å¯¼å¶åå´ï¼æè¿°é£åæºçä¸­å¿é©±å¨è½´è¿æ¥æè¿°åçµæºï¼æè¿°åçµæºç¨äºå°æºæ¢°è½è½¬åä¸ºçµè½ï¼å¹¶éè¿æè¿°èçµæ± å°çµè½å¨å­èµ·æ¥ï¼
+A wind power generation system, the wind power generation system includes a wind turbine, a power turbine guide vane and a generator, the wind turbine is located in the middle of the device, surrounded by the power turbine guide vane, and the central drive shaft of the wind turbine is connected to the a generator; the generator is used to convert mechanical energy into electrical energy and store the electrical energy through the battery;
+å¤ªé³è½åçµç³»ç»ï¼æè¿°å¤ªé³è½åçµç³»ç»åæ¬å¤ªé³è½çµæ± æ¿ï¼æè¿°å¤ªé³è½çµæ± æ¿å®è£äºæè¿°é£ååçµç³»ç»çé¡¶é¨ï¼æè¿°å¤ªé³è½çµæ± æ¿ç¨äºå°å¤ªé³è¾å°è½éè¿åçµæåºè½¬æ¢ä¸ºçµè½ï¼å¹¶éè¿æè¿°èçµæ± å°çµè½å¨å­èµ·æ¥ï¼
+A solar power generation system, the solar power generation system includes a solar panel mounted on the top of the wind power generation system; the solar panel is used for converting solar radiation energy into electrical energy through the photoelectric effect, and through the The battery stores the electrical energy;
+é¨æ°´æ¶éç³»ç»ï¼æè¿°é¨æ°´æ¶éç³»ç»ç¨äºå°è½å¨ç³»ç»ä¸çé¨æ°´è¿è¡æ¶éã
+A rainwater collection system for collecting rainwater falling on the system.
+å¯éçï¼æè¿°å¨åæ¶¡è½®å¯¼å¶åæ¬ä¸å£å¯¼æ¿ãä¸å£å¯¼æ¿åå¯¼åå¶çï¼æè¿°ä¸å£å¯¼æ¿å/ææè¿°ä¸å£å¯¼æ¿ä¸ºé¥å½¢æ¿ï¼æè¿°ä¸å£å¯¼æ¿åæè¿°ä¸å£å¯¼æ¿ä¸ä¸ç¸å¯¹ä¸åå¼å£æå¤è®¾ç½®ï¼æè¿°ä¸å£å¯¼æ¿åæè¿°ä¸å£å¯¼æ¿éè¿è¥å¹²æè¿°å¯¼åå¶çè¿æ¥ï¼è¥å¹²æè¿°å¯¼åå¶çæåå¨éµåæå¸ã
+Optionally, the power turbine guide vane includes an upper wall guide plate, a lower wall guide plate and a guide vane; the upper wall guide plate and/or the lower wall guide plate are conical plates, and the upper wall guide plate and the lower wall guide plate are conical plates. The guide plates are opposite to each other from top to bottom and both are open to the outside, the upper wall guide plate and the lower wall guide plate are connected by a plurality of the guide vanes, and the plurality of the guide vanes are arranged in a circular array.
+å¯éçï¼æè¿°å¤ªé³è½çµæ± æ¿å®è£äºæè¿°ä¸å£å¯¼æ¿çé¡¶é¢ï¼ä¸æè¿°å¤ªé³è½çµæ± æ¿å¾æè®¾ç½®ã
+Optionally, the solar cell panel is installed on the top surface of the upper wall guide plate; and the solar cell panel is inclined.
+å¯éçï¼æè¿°é¨æ°´æ¶éç³»ç»åæ¬é¨æ°´è¿æ»¤å¨ãé¨æ°´ééãå¨æ°´ç®±åæ§å¶å¼å³ï¼æè¿°é¨æ°´ééä½äºæè¿°å¤ªé³è½çµæ± æ¿çä¸æ¹ï¼å¹¶è´¯ç©¿æè¿°å¤ªé³è½çµæ± æ¿è®¾ç½®ï¼æè¿°é¨æ°´ééçé¡¶é¨è¿æ¥æè¿°é¨æ°´è¿æ»¤å¨ï¼åºé¨è¿æ¥æè¿°å¨æ°´ç®±ï¼æè¿°æ§å¶å¼å³å®è£äºæè¿°å¨æ°´ç®±ï¼ç¨äºæ§å¶æè¿°å¨æ°´ç®±åé¨æ°´çææ¾ã
+Optionally, the rainwater collection system includes a rainwater filter, a rainwater channel, a water storage tank and a control switch; the rainwater channel is located below the solar cell panel and is arranged through the solar cell panel; The top is connected to the rainwater filter, and the bottom is connected to the water storage tank; the control switch is installed in the water storage tank for controlling the discharge of rainwater in the water storage tank.
+å¯éçï¼æè¿°é£åæºä¸ºåç´è½´é£åæºï¼æè¿°å¨åæ¶¡è½®å¯¼å¶ä¸ºåºå®å¼å¯¼å¶æºææå¯è°å¼å¯¼å¶æºæã
+Optionally, the wind turbine is a vertical axis wind turbine; the guide vane of the power turbine is a fixed guide vane mechanism or an adjustable guide vane mechanism.
+å¯éçï¼æè¿°å¤ªé³è½çµæ± æ¿ä¸ºå¤ªé³è½åä¼æå¤ªé³è½ç­çµæ± æ¿ã
+Optionally, the solar panel is a solar photovoltaic or solar thermal panel.
+å¯éçï¼æè¿°å¤ªé³è½çµæ± æ¿çåºé¨éè¿ä¸åèç»æå®è£ï¼æè¿°å¤ªé³è½åçµç³»ç»è¿åæ¬æºè½æ§å¶å¨ï¼æè¿°æºè½æ§å¶å¨è½å¤éè¿æ£æµåç§æ¹åå/æåç§å¼ºåº¦ï¼èªå¨æ§å¶æè¿°å¤ªé³è½çµæ± æ¿è¿è¡ä¸åæ¢è½¬ã
+Optionally, the bottom of the solar panel is installed through a universal joint structure; the solar power generation system further includes an intelligent controller, which can automatically control the solar energy by detecting the direction of illumination and/or intensity of illumination The battery plate is pivoted in a universal direction.
+å¯éçï¼ç³»ç»è¿åæ¬ç½ç½©ï¼æè¿°ç½ç½©å¥è®¾äºç³»ç»çæå¤ä¾§ï¼ç¨äºé²æ­¢å¼ç©æå»é£åæºã
+Optionally, the system further includes a net cover, the net cover is sleeved on the outermost side of the system to prevent foreign objects from hitting the wind turbine.
+å¯éçï¼ä»¥æè¿°é£åæºåæè¿°å¨åæ¶¡è½®å¯¼å¶ä¸ºä¸ä¸ªç»æååï¼å¤ä¸ªæè¿°ç»æååè½å¤åç´å å è®¾ç½®ã
+Optionally, the wind turbine and the power turbine guide vane are used as a structural unit, and a plurality of the structural units can be vertically stacked.
+å¯éçï¼ç³»ç»ç¨äºå»ºå¨å»ºç­ç©æç»æçé¡¶é¨ï¼ä¸éç½®æå®è£éå®è£ç½®ã
+Optionally, the system is used to build on top of a building or structure and is configured with a mounting locking device.
+æ¬åæç¸å¯¹äºç°æææ¯åå¾äºä»¥ä¸ææ¯ææï¼
+The present invention has achieved the following technical effects with respect to the prior art:
+æ¬åææä¾çé£åäºè¡¥åçµç³»ç»ï¼å½é£ä½ç¨å¨å¨åæ¶¡è½®å¯¼å¶ä¸æ¶ï¼é£åæºæè½¬äº§çæç»­çæºæ¢°è½ï¼éè¿åçµæºå°æºæ¢°è½è½¬åä¸ºçµè½ï¼å°çµè½å¨å­å¨èçµæ± ï¼å½å¤ªé³åç§å°å¨å¤ªé³è½çµæ± æ¿æ¶ï¼å¤ªé³è½çµæ± æ¿å°å¤ªé³è¾å°è½éè¿åçµæåºè½¬æ¢ä¸ºçµè½ï¼å°çµè½å¨å­å¨èçµæ± ä¸­ï¼å½ä¸é¨æ¶ï¼é¨æ°´æ¶éç³»ç»ç¨äºå°è½å¨ç³»ç»ä¸çé¨æ°´è¿è¡æ¶éï¼æ¶éçé¨æ°´å¯ç¨æ¥å²æ´åæãæµæ´è·¯é¢ãæµçè±èç­ãæ¬åçµç³»ç»åæ¬é£è½åçµãå¤ªé³è½åçµåé¨æ°´æ¶éåè½çç»åï¼ç³»ç»ç»æç®åï¼åçµç»¿è²ç¯ä¿å®å¨ï¼åçµç»æµæçé«ï¼å»ºå¨é«å±å»ºç­ç©é¡¶é¨ï¼å ä½å½¢ç¶åå³äºå»ºç­ç»æè½®å»ï¼æ¢å¯ä»¥ä¸ºå»ºç­ç©æä¾ç»¿è²è½æºï¼åä¸ä¼é æè´é¢è§è§å½±åï¼ç½ç½©è®¾ç½®è¿è½æ¶é¤å¯¹é¸å»é®é¢çæå¿§ï¼æé«äºç³»ç»å®å¨æ§å¹¶åå°æ¯å¨ãè¯¥ç³»ç»å¯ç¨äºä½é£éåé«é£éçå¸åºååè¿å°åºï¼å®ç¨æ§å¼ºã
+In the wind-solar hybrid power generation system provided by the present invention, when the wind acts on the guide vanes of the power turbine, the wind turbine rotates to generate continuous mechanical energy, the mechanical energy is converted into electrical energy by the generator, and the electrical energy is stored in the storage battery; When the solar panel is installed, the solar panel converts the solar radiation energy into electrical energy through the photoelectric effect, and stores the electrical energy in the battery; when it rains, the rainwater collection system is used to collect the rainwater falling on the system, and the collected rainwater can be used to flush the toilet. , watering the road, watering flowers and so on. The power generation system includes a combination of wind power generation, solar power generation and rainwater collection functions. The system has a simple structure, green and safe power generation, and high economic benefits of power generation. It is built on the top of high-rise buildings. The geometry depends on the outline of the building structure. Providing green energy without negative visual impact, the grille setup also eliminates concerns about bird strikes, improves system safety and reduces vibration. The system can be used in urban and remote areas with low wind speed and high wind speed, with strong practicability.
+éå¾è¯´æ
+Description of drawings
+ä¸ºäºæ´æ¸æ¥å°è¯´ææ¬åæå®æ½ä¾æç°æææ¯ä¸­çææ¯æ¹æ¡ï¼ä¸é¢å°å¯¹å®æ½ä¾ä¸­æéè¦ä½¿ç¨çéå¾ä½ç®åå°ä»ç»ï¼æ¾èæè§å°ï¼ä¸é¢æè¿°ä¸­çéå¾ä»ä»æ¯æ¬åæçä¸äºå®æ½ä¾ï¼å¯¹äºæ¬é¢åæ®éææ¯äººåæ¥è®²ï¼å¨ä¸ä»åºåé æ§å³å¨çåæä¸ï¼è¿å¯ä»¥æ ¹æ®è¿äºéå¾è·å¾å¶ä»çéå¾ã
+In order to more clearly illustrate the embodiments of the present invention or the technical solutions in the prior art, the accompanying drawings required in the embodiments will be briefly introduced below. Obviously, the drawings in the following description are only some of the present invention. In the embodiments, for those of ordinary skill in the art, other drawings can also be obtained according to these drawings without any creative effort.
+å¾1ä¸ºæ¬åæå·æé¨æ°´æ¶éåè½çé£åäºè¡¥åçµç³»ç»çç«ä½éè§å¾ï¼
+1 is a perspective view of a wind-solar hybrid power generation system with a rainwater collection function of the present invention;
+å¾2ä¸ºæ¬åæå·æé¨æ°´æ¶éåè½çé£åäºè¡¥åçµç³»ç»çä¾§é¢åè§å¾ï¼
+Fig. 2 is the side sectional view of the wind-solar hybrid power generation system with rainwater collection function of the present invention;
+å¶ä¸­ï¼éå¾æ è®°ä¸ºï¼å¨åæ¶¡è½®å¯¼å¶1ï¼é£åæº2ï¼å¯¼åå¶ç3ï¼é¨æ°´è¿æ»¤å¨4ï¼ä¸å£å¯¼æ¿5ï¼ä¸å£å¯¼æ¿6ï¼å¤ªé³è½çµæ± æ¿7ï¼æºè½æ§å¶å¨8ï¼é¨æ°´éé9ï¼åçµæº10ï¼èçµæ± 11ï¼å¨æ°´ç®±12ï¼ç½ç½©13ï¼æ§å¶å¼å³14ã
+Among them, the reference signs are: power
+turbine guide vane
+1,
+wind turbine
+2,
+guide vane
+3,
+rainwater filter
+4, upper
+wall guide plate
+5, lower
+wall guide plate
+6,
+solar panel
+7,
+intelligent controller
+8,
+rainwater channel
+9,
+Generator
+10 ,
+battery
+11 ,
+water storage tank
+12 ,
+grille
+13 ,
+control switch
+14 .
+å·ä½å®æ½æ¹å¼
+Detailed ways
+ä¸é¢å°ç»åæ¬åæå®æ½ä¾ä¸­çéå¾ï¼å¯¹æ¬åæå®æ½ä¾ä¸­çææ¯æ¹æ¡è¿è¡æ¸æ¥ãå®æ´å°æè¿°ï¼æ¾ç¶ï¼ææè¿°çå®æ½ä¾ä»ä»æ¯æ¬åæä¸é¨åå®æ½ä¾ï¼èä¸æ¯å¨é¨çå®æ½ä¾ãåºäºæ¬åæä¸­çå®æ½ä¾ï¼æ¬é¢åæ®éææ¯äººåå¨æ²¡æååºåé æ§å³å¨åæä¸æè·å¾çææå¶ä»å®æ½ä¾ï¼é½å±äºæ¬åæä¿æ¤çèå´ã
+The technical solutions in the embodiments of the present invention will be clearly and completely described below with reference to the accompanying drawings in the embodiments of the present invention. Obviously, the described embodiments are only a part of the embodiments of the present invention, but not all of the embodiments. Based on the embodiments of the present invention, all other embodiments obtained by those of ordinary skill in the art without creative efforts shall fall within the protection scope of the present invention.
+æ¬åæçç®çæ¯æä¾ä¸ç§é£åäºè¡¥åçµç³»ç»ï¼å¤é´åé´å¤©æ é³åæ¶å©ç¨é£è½åçµï¼æ´å¤©å©ç¨å¤ªé³è½åçµï¼å¨æ¢æé£åæå¤ªé³çæåµä¸ä¸¤èåæ¶åæ¥ä½ç¨ï¼ä¸ä»å®ç°äºå¨å¤©åçåçµåè½ï¼æ¯åç¨é£åãå¤ªé³è½åçµæ´ç»æµç§å­¦ã
+The purpose of the present invention is to provide a wind-solar hybrid power generation system, which uses wind energy to generate electricity at night and when there is no sunlight in cloudy days, and uses solar energy to generate electricity in sunny days, and both play a role at the same time when there is both wind and sun, which not only realizes all-weather power generation Power generation function is more economical and scientific than single use of wind and solar power generation.
+ä¸ºä½¿æ¬åæçä¸è¿°ç®çãç¹å¾åä¼ç¹è½å¤æ´å ææ¾ææï¼ä¸é¢ç»åéå¾åå·ä½å®æ½æ¹å¼å¯¹æ¬åæä½è¿ä¸æ­¥è¯¦ç»çè¯´æã
+In order to make the above objects, features and advantages of the present invention more clearly understood, the present invention will be described in further detail below with reference to the accompanying drawings and specific embodiments.
+å®æ½ä¾ä¸ï¼
+Example 1:
+å¦å¾1-2æç¤ºï¼æ¬å®æ½ä¾æä¾ä¸ç§å·æé¨æ°´æ¶éåè½çé£åäºè¡¥åçµç³»ç»ï¼ä¸ä¸ºåå¸é«å±åºç¨èè®¾è®¡ï¼åæ¬é£ååçµç³»ç»ãå¤ªé³è½åçµç³»ç»åé¨æ°´æ¶éç³»ç»ãå¶ä¸­ï¼
+As shown in Figures 1-2, this embodiment provides a wind-solar hybrid power generation system with a rainwater collection function, which is specially designed for urban high-rise applications, including a wind power generation system, a solar power generation system, and a rainwater collection system. in:
+é£ååçµç³»ç»åæ¬é£åæº2ãå¨åæ¶¡è½®å¯¼å¶1ä»¥ååçµæº10ï¼é£åæº2ä½äºç³»ç»çä¸­é´ï¼è¢«å¨åæ¶¡è½®å¯¼å¶1åå´ï¼é£åæº2çä¸­å¿é©±å¨è½´å¯ç´æ¥è¿æ¥è³åçµæº10ï¼åçµæº10è½å¤å°å¯¼å¶çæºæ¢°è½è½¬æ¢ä¸ºçµè½å¹¶å­å¨å¨èçµæ± 11ä¸­ï¼è¯¥åçµåçä¸ºæ¬é¢åå¬ç¥ï¼å¨æ­¤ä¸åèµè¿°ãå·ä½çï¼å¨åæ¶¡è½®å¯¼å¶1åæ¬ä¸å£å¯¼æ¿5ãä¸å£å¯¼æ¿6åè¥å¹²å¯¼åå¶ç3ï¼ä¸å£å¯¼æ¿5åä¸å£å¯¼æ¿6åä¸ºé¥å½¢æ¿ç»æï¼äºèç¸å¯¹ä¸å¼å£åæå¤è®¾ç½®ï¼ä¸å£å¯¼æ¿5åä¸å£å¯¼æ¿6ä¹é´éè¿è¥å¹²å¯¼åå¶ç3è¿è¡è¿æ¥å½¢æè½¬å­ç»æï¼è¯¥è½¬å­ç»æä¸­æ¯ç¸é»ä¸¤å¯¼åå¶ç3ä¹é´åå½¢æåå­å£ç¶ï¼æèé£å¢éçä½ç¨ï¼å¯æé«åçµæçï¼è½å¤éç¨äºä½é£éå°åºã
+The wind power generation system includes a
+wind turbine
+2, a power
+turbine guide vane
+1 and a
+generator
+10. The
+wind turbine
+2 is located in the middle of the system and is surrounded by the power
+turbine guide vane
+1. The central drive shaft of the
+wind turbine
+2 can be directly connected to the
+generator
+10 to generate electricity. The
+machine
+10 can convert the mechanical energy of the guide vanes into electrical energy and store it in the
+storage battery
+11 . The power generation principle is well known in the art and will not be repeated here. Specifically, the power
+turbine guide vane
+1 includes an upper
+wall guide plate
+5, a lower
+wall guide plate
+6 and a plurality of
+guide vanes
+3. The upper
+wall guide plate
+5 and the lower
+wall guide plate
+6 are both conical plate structures, and the two are opposite to each other and their openings are arranged outwards. The upper
+wall guide plate
+5 and the lower
+wall guide plate
+6 are connected by a plurality of
+guide vanes
+3 to form a rotor structure. In the rotor structure, a bell mouth shape is formed between every two
+adjacent guide vanes
+3, which has the effect of gathering wind and increasing speed. Improve power generation efficiency and can be applied to low wind speed areas.
+å¤ªé³è½åçµç³»ç»åæ¬å¤ªé³è½çµæ± æ¿7åæºè½æ§å¶å¨8ï¼å¤ªé³è½çµæ± æ¿ç¨äºå°å¤ªé³è¾å°è½éè¿åçµæåºè½¬æ¢ä¸ºçµè½ï¼å¹¶éè¿èçµæ± 11å°çµè½å¨å­èµ·æ¥ï¼è¯¥åçµåçä¸ºæ¬é¢åå¬ç¥ï¼å¨æ­¤ä¸åèµè¿°ãå·ä½çï¼å¤ªé³è½çµæ± æ¿7éè¿ä¸åèç»æå®è£å¨ä¸å£å¯¼æ¿5çå¤è¡¨é¢ï¼æºè½æ§å¶å¨8è½å¤éè¿æ£æµåç§æ¹åååç§å¼ºåº¦ï¼èªå¨æ§å¶å¤ªé³è½çµæ± æ¿7è¿è¡ä¸åæ¢è½¬ï¼å®ç°âè¶åâç¹æ§ï¼ä»¥ç¡®ä¿è½å¨å¤ªé³è½çµæ± æ¿7ä¸çåç§é¢ç§¯ååç§å¼ºåº¦å§ç»æ¯æå¤§çï¼æå©äºæé«åè½å©ç¨çï¼è¿èæé«åçµæçãå¶ä¸­ï¼å¤ªé³è½çµæ± æ¿7ä¸èçµæ± ä¹é´éç¨ç°æçµè¿æ¥æ¹å¼è¿è¡è¿æ¥ï¼ç¨äºçµè½çè¾éãå¹¶ä¸ï¼æºè½æ§å¶å¨8çâè¶åâåçéç¨ç°æææ¯ï¼æ¯å¦ï¼å°ç¹æ§å®å¨ç¸åçä¸¤ä¸ªåæçµé»åå«å®è£å¨å¤ªé³è½çµæ± æ¿7çä¸ãè¥¿æ¹åä¸ï¼å¹¶ç½®äºçµæ± æ¿ä¾§é¢ãå½å¤ªé³ååç´ç§å°å¨çµæ± æ¿çä¸è¥¿æ¹åæ¶ï¼ä¸¤ä¸ªåæçµé»çé»å¼å®å¨ç¸åï¼æ­¤æ¶æºè½æ§å¶å¨8ä¸å¨ä½ï¼å½å¤ªé³ååçµæ± æ¿æä¸å®å¤¹è§æ¶ï¼æºè½æ§å¶å¨8å°æ§å¶çµæºå¸¦å¨å¤ªé³è½çµæ± æ¿7æ¢è½¬ï¼ç´å°å¤ªé³è½çµæ± æ¿7éæ°å¯¹åå¤ªé³åä¸ºæ­¢ãä¸è¯¥ç³»ç»å¯å®ç°å¦ä¸åè½ï¼
+The solar power generation system includes a
+solar panel
+7 and an
+intelligent controller
+8. The solar panel is used to convert solar radiation energy into electrical energy through the photoelectric effect, and store the electrical energy through the
+storage battery
+11. The power generation principle is well known in the art, and is not described here. Repeat. Specifically, the
+solar cell panel
+7 is installed on the outer surface of the upper
+wall guide plate
+5 through a universal joint structure, and the
+intelligent controller
+8 can automatically control the
+solar cell panel
+7 to pivot in a universal direction by detecting the direction and intensity of illumination, so as to realize the "trend" "Light" feature to ensure that the light area and light intensity falling on the
+solar panel
+7 is always the largest, which is beneficial to improve the utilization rate of light energy, thereby improving the power generation efficiency. Among them, the
+solar cell panel
+7 and the battery are connected by the existing electrical connection mode, which is used for the transmission of electric energy. In addition, the "phototaxis" principle of the
+intelligent controller
+8 adopts the prior art, for example, two photoresistors with identical characteristics are respectively installed in the east and west direction of the
+solar panel
+7, and placed on the side of the panel. When the sunlight is vertically irradiated on the east-west direction of the battery panel, the resistance values of the two photoresistors are exactly the same, and the
+intelligent controller
+8 does not act at this time; when the sunlight and the battery panel have a certain angle, the
+intelligent controller
+8 will control the The motor drives the
+solar panel
+7 to pivot until the
+solar panel
+7 is re-aligned with sunlight. And the system can realize the following functions:
+1.å¸¸æ(å¥½å¤©æ°æåµ)ä¸å¯¹æ¥è·è¸ªï¼
+1. Daily tracking under normal conditions (good weather conditions);
+2.é´æ­å¼è·è¸ªï¼å¦ä¸å¤©å½ä¸­æä¸æ®µæ¶é´ä¸ºå¤äºæé´å¤©ææ¶å£å¤©æ°æ¶ï¼æºè½æ§å¶å¨ä¼ä½¿ç³»ç»å¤äºæåç¶æãå¾åçº¿åè·è¸ªæ¡ä»¶éå®æ¶ï¼æºè½æ§å¶å¨ä¼æä¸ä¸ªå¿«éè·è¸ªæä»¤ï¼ä½¿å¤ªé³è½çµæ± æ¿å¤§è´å¯¹åå¤ªé³ãä¹åï¼ç¨åºä¼è¿è¡å¦ä¸ç»ä¿¡å·ééå¤çï¼å®æç²¾ç»è·è¸ªï¼
+2. Intermittent tracking: If there is a period of cloudy or cloudy or bad weather in the day, the intelligent controller will make the system pause. When the light and tracking conditions are right, the smart controller has a fast-tracking command that aligns the solar panels roughly toward the sun. After that, the program will perform another set of signal acquisition and processing to complete fine tracking;
+3.èªå¨åä½ï¼æ¥è½åï¼ç³»ç»ä¼èªå¨è¿å¥ä¼ç ç¶æï¼å¹¶èªå¨åå½å°å¤ªé³åèµ·çæ¹ä½ï¼ç¬¬äºå¤©åèªå¨è¿å¥æ°ä¸è½®çè¿è½¬è°èï¼
+3. Automatic return: After sunset, the system will automatically enter the sleep state and automatically return to the position where the sun rises; the next day will automatically enter a new round of operation adjustment;
+4.æ¶å£å¤©æ°ç¶æçä¿æ¤ï¼å½ç¯å¢é£éæéæ°´ç­å ç´ ä¸éå®ç³»ç»å·¥ä½æ¶ï¼æºè½æ§å¶å¨ä¼ä½¿å¤ªé³è½çµæ± æ¿ä¸å°å¹³é¢æå¹³è¡ç¶ææåç´ç¶æï¼ä»¥é¿åç³»ç»é­å°ç ´åã
+4. Protection from bad weather conditions: When the environmental wind speed or precipitation and other factors are not suitable for the system to work, the intelligent controller will make the solar panel and the ground plane in a parallel or vertical state to avoid damage to the system.
+é¨æ°´æ¶éç³»ç»åæ¬é¨æ°´è¿æ»¤å¨4ãé¨æ°´éé9ãå¨æ°´ç®±12åæ§å¶å¼å³14ï¼é¨æ°´éé9ç«ç´è®¾ç½®ï¼ä½äºå¤ªé³è½çµæ± æ¿7çä¸æ¹ï¼ä¸è´¯ç©¿å¤ªé³è½çµæ± æ¿7è®¾ç½®ï¼é¨æ°´è¿æ»¤å¨4å®è£å¨é¨æ°´éé9çé¡¶é¨ï¼ç¨äºé²æ­¢å¼ç©ï¼æ¯å¦ç³å­ãæ å¶ç­ï¼æµå¥é¨æ°´éé9èå¯¼è´ééé»å¡ï¼å¨æ°´ç®±12è¿æ¥å¨é¨æ°´éé9çåºé¨ï¼é¨æ°´éè¿é¨æ°´è¿æ»¤å¨4åæµç»ç³»ç»ä¸­é´çé¨æ°´éé9å¯ä»¥å¨å­å¨å¨æ°´ç®±12ä¸­ï¼åéè¿æ§å¶å¼å³14å¯å°é¨æ°´ç»è¿ç®¡éè¾éï¼å¯ç¨æ¥å²æ´åæãæµæ´è·¯é¢ãæµçè±èç­ãå¶ä¸­ï¼æ§å¶å¼å³14ä¼éä¸ºç°æççµæ§éé¨ç»æï¼é¨æ°´è¿æ»¤å¨4å¯ä¼éä¸ºç°æçè¿æ»¤ç½ç»æã
+The rainwater collection system includes a
+rainwater filter
+4, a
+rainwater channel
+9, a
+water storage tank
+12 and a
+control switch
+14. The
+rainwater channel
+9 is vertically arranged, located below the
+solar cell panel
+7, and is arranged through the
+solar cell panel
+7, and the
+rainwater filter
+4 is installed in the The top of the
+rainwater channel
+9 is used to prevent foreign objects, such as stones, leaves, etc., from flowing into the
+rainwater channel
+9 and causing the channel to block; the
+water storage tank
+12 is connected to the bottom of the
+rainwater channel
+9, and the rainwater passes through the
+rainwater filter
+4 and flows through the rainwater in the middle of the system. The
+channel
+9 can be stored in the
+water storage tank
+12, and then the rainwater can be transported through the pipeline through the
+control switch
+14, which can be used for flushing toilets, watering roads, watering flowers and plants, and the like. Wherein, the
+control switch
+14 is preferably an existing electronically controlled valve structure; the
+rainwater filter
+4 can preferably be an existing filter screen structure.
+æ¬å®æ½ä¾ä¸­ï¼æ´ä¸ªåçµç³»ç»çå ä½å½¢ç¶åå³äºå»ºç­ç»æè½®å»ï¼å¯ä»¥ä¸ºå¦å¾1æç¤ºçåæ±å½¢ç¶æä»»ä½è®¾è®¡å½¢ç¶ã
+In this embodiment, the geometry of the entire power generation system depends on the outline of the building structure, and can be a cylindrical shape as shown in FIG. 1 or any design shape.
+æ¬å®æ½ä¾ä¸­ï¼é£åæº2å¯ä»¥éç¨ä»»ä½ç°æçåç´è½´é£åæºè®¾è®¡æå¶ç»åçå½¢ç¶ï¼ä¼éHååç´è½´é£åæºã
+In this embodiment, the
+wind turbine
+2 may adopt any existing vertical axis wind turbine design or the shape of its combination, preferably an H-type vertical axis wind turbine.
+æ¬å®æ½ä¾ä¸­ï¼å¨åæ¶¡è½®å¯¼å¶1å¯è®¾è®¡ä¸ºåºå®çæå¯è°çï¼ç±å·ææå®æååº¦å°ºå¯¸ååæå½¢ç¶ååçå¯¼åå¶ç3ç»æãäºæ¬å®æ½ä¾ä¸­ï¼è¥å¹²å¯¼åå¶ç3æåå¨éµååå¸ï¼ä¸ªæ°ä¼é8-10ä¸ªï¼ä¸ä¸å£å¯¼æ¿5åä¸å£å¯¼æ¿6å½¢æåå­å£ç¶ï¼æèé£å¢éçä½ç¨ï¼å¯æé«åçµæçã
+In this embodiment, the power
+turbine guide vane
+1 can be designed to be fixed or adjustable, and is composed of
+guide vanes
+3 with constant or varying thickness or shape. In this embodiment, a plurality of
+guide vanes
+3 are distributed in a circular array, and the number is preferably 8-10, forming a bell mouth shape with the upper
+wall guide plate
+5 and the lower
+wall guide plate
+6, which has the effect of gathering wind and increasing speed, which can improve the power generation efficiency. .
+æ¬å®æ½ä¾ä¸­ï¼å¤ªé³è½çµæ± æ¿7å¯ä¼éä¸ºå¤ªé³è½åä¼æå¤ªé³è½ç­çµæ± æ¿ãåæ¶ï¼å¦å¾1æç¤ºï¼å¤ªé³è½çµæ± æ¿7å¯å¾æè®¾ç½®ï¼ä¾¿äºå°é¨æ°´å¼åè³é¨æ°´éé9ã
+In this embodiment, the
+solar cell panel
+7 may preferably be a solar photovoltaic or solar thermal cell panel. Meanwhile, as shown in FIG. 1 , the
+solar cell panel
+7 can be inclined and arranged to facilitate the rainwater to be guided to the
+rainwater channel
+9 .
+æ¬å®æ½ä¾ä¸­ï¼ç³»ç»è¿è®¾ç½®äºç½ç½©13ï¼ç½ç½©13å®è£å¨å¨åæ¶¡è½®å¯¼å¶1çæå¤ä¾§ï¼ä»¥é²æ­¢å¼ç©æå»é£åæº2ï¼å¦æåºç°å¶çæéåå¶çæ æ³é£èµ·èä¸ä¼é æå¨å´äººååä¼¤ï¼è¿è½éä½ç³»ç»çåªå£°æ°´å¹³ã
+In this embodiment, the system is also provided with a
+mesh cover
+13, which is installed on the outermost side of the
+guide vane
+1 of the power turbine to prevent foreign objects from hitting the
+wind turbine
+2. If the blade fails, the blade cannot fly without causing damage to surrounding personnel. injury, but also reduces the noise level of the system.
+æ¬å®æ½ä¾ä¸­ï¼ä»¥é£åæº2åå¨åæ¶¡è½®å¯¼å¶1ä¸ºä¸ä¸ªç»æååï¼é£ä¹è¯¥ç»æååæ¯å¯ä»¥å¤å±å å çï¼å¯å¤§å¤§æé«é£ååçµæçï¼æ¹æ³æ¯å°åä¸è¿°ç»æåååç´å å å¨å»ºç­ç©æç»æçé¡¶å±æä¸å±ä¹é´ã
+In this embodiment, the
+wind turbine
+2 and the power
+turbine guide vane
+1 are used as a structural unit, then the structural unit can be stacked in multiple layers, which can greatly improve the efficiency of wind power generation. The method is to vertically stack each of the above structural units on the building. or between the top or upper layers of a structure.
+æ¬å®æ½ä¾ä¸­ï¼åçµç³»ç»ä¼éå»ºå¨å»ºç­ç©é¡¶é¨ï¼ä¾¿äºå®è£åç»´æ¤ï¼å¯ä»¥å®è£ç¸å³éå®è£ç½®ä»¥éä½ç³»ç»è¢«ç ´åçé£é©ã
+In this embodiment, the power generation system is preferably built on the top of the building, which is convenient for installation and maintenance, and a relevant locking device can be installed to reduce the risk of the system being damaged.
+æ¬å®æ½ä¾ä¸­ï¼èçµæ± 11åéµååå¸æå¤åï¼å¯æ ¹æ®ç³»ç»æéå¨çµå®¹éæ¥è°èèçµæ± çå·ä½è®¾ç½®æ°éã
+In this embodiment, there are
+multiple batteries
+11 distributed in an array, and the specific number of batteries can be adjusted according to the required storage capacity of the system.
+ä½¿ç¨æ¶ï¼å½å¤ªé³åç§å°å¨ç³»ç»ä¸é¨çå¤ªé³è½çµæ± æ¿7æ¶ï¼å¤ªé³è½çµæ± æ¿7å°å¤ªé³è¾å°è½éè¿åçµæåºè½¬æ¢ä¸ºçµè½ï¼å°çµè½å¨å­å¨èçµæ± 11ä¸­ãéç¨å¤ªé³è½åçµç»¿è²ç¯ä¿å®å¨ï¼å¯éä½ææ¬ï¼æé«åçµæçã
+When in use, when sunlight shines on the
+solar panel
+7 on the upper part of the system, the
+solar panel
+7 converts the solar radiation energy into electrical energy through the photoelectric effect, and stores the electrical energy in the
+storage battery
+11 . The use of solar power generation is green, environmentally friendly and safe, which can reduce costs and improve power generation efficiency.
+ä½¿ç¨æ¶ï¼å½ä¸æ­ååçé£ä½ç¨å¨å¨åæ¶¡è½®å¯¼å¶1ä¸æ¶ï¼é£åæº2æè½¬äº§çæç»­çæºæ¢°è½ï¼éè¿ä¸é£åæºè¿æ¥çåçµæº10å°æºæ¢°è½è½¬åä¸ºçµè½ï¼ç¶åéè¿èçµæ± 11å°çµè½å¨å­èµ·æ¥ãéç¨é£ååçµåçµæºç»æç®åï¼åçµç»æµæçé«ãå¨æ¢æå¤ªé³åæé£æ¶å¤ªé³è½åçµç³»ç»åé£ååçµç³»ç»åæ¶ä½ç¨ï¼æ¯åç¨é£åãå¤ªé³è½åçµæ´ç»æµç§å­¦ï¼å®ç°äºè¾é«çè½æºå©ç¨çã
+When in use, when the changing wind acts on the
+guide vane
+1 of the power turbine, the
+wind turbine
+2 rotates to generate continuous mechanical energy, and the mechanical energy is converted into electrical energy through the
+generator
+10 connected to the wind turbine, and then the electrical energy is stored through the
+battery
+11. . The structure of the wind power generator is simple, and the economic benefit of power generation is high. When there is both sun and wind, the solar power generation system and the wind power generation system work at the same time, which is more economical and scientific than the single use of wind power and solar power generation, and achieves a higher energy utilization rate.
+ä½¿ç¨æ¶ï¼å½é¨æ°´è½å¨ç³»ç»ä¸æ¶ï¼é¨æ°´éè¿é¨æ°´è¿æ»¤å¨4æé¤å¼ç©åæµç»ç³»ç»ä¸­é´çé¨æ°´éé9å¯ä»¥å¨å­å¨åºé¨çå¨æ°´ç®±12ä¸­ï¼åéè¿æ§å¶å¼å³14å¯å°é¨æ°´ç»è¿ç®¡éè¾éï¼å¯ç¨æ¥å²æ´åæãæµæ´è·¯é¢ãæµçè±èã
+When in use, when rainwater falls on the system, the rainwater passes through the
+rainwater filter
+4 to remove foreign matter and flows through the
+rainwater channel
+9 in the middle of the system and can be stored in the bottom
+water storage tank
+12, and then the
+control switch
+14 can transport the rainwater through the pipeline, It can be used to flush toilets, water roads, and water plants.
+ç±æ­¤å¯è§ï¼æ¬åçµç³»ç»åæ¬é£è½åçµãå¤ªé³è½åçµåé¨æ°´æ¶éåè½çç»åï¼ç³»ç»ç»æç®åï¼åçµç»¿è²ç¯ä¿å®å¨ï¼åçµç»æµæçé«ï¼å»ºå¨é«å±å»ºç­ç©é¡¶é¨ï¼å ä½å½¢ç¶åå³äºå»ºç­ç»æè½®å»ï¼æ¢å¯ä»¥ä¸ºå»ºç­ç©æä¾ç»¿è²è½æºï¼åä¸ä¼é æè´é¢è§è§å½±åï¼ç½ç½©è®¾ç½®è¿è½æ¶é¤å¯¹é¸å»é®é¢çæå¿§ï¼æé«äºç³»ç»å®å¨æ§å¹¶åå°æ¯å¨ãè¯¥ç³»ç»å¯ç¨äºä½é£éåé«é£éçå¸åºååè¿å°åºï¼å®ç¨æ§å¼ºã
+It can be seen that the power generation system includes a combination of wind power generation, solar power generation and rainwater collection functions. The system structure is simple, the power generation is environmentally friendly and safe, and the economic benefits of power generation are high. It is built on the top of a high-rise building. Providing green energy to the building without negative visual impact, the grille also eliminates concerns about bird strikes, improves system safety and reduces vibration. The system can be used in urban and remote areas with low wind speed and high wind speed, with strong practicability.
+éè¦è¯´æçæ¯ï¼å¯¹äºæ¬é¢åææ¯äººåèè¨ï¼æ¾ç¶æ¬åæä¸éäºä¸è¿°ç¤ºèæ§å®æ½ä¾çç»èï¼èä¸å¨ä¸èç¦»æ¬åæçç²¾ç¥æåºæ¬ç¹å¾çæåµä¸ï¼è½å¤ä»¥å¶ä»çå·ä½å½¢å¼å®ç°æ¬åæãå æ­¤ï¼æ è®ºä»åªä¸ç¹æ¥çï¼ååºå°å®æ½ä¾çä½æ¯ç¤ºèæ§çï¼èä¸æ¯ééå¶æ§çï¼æ¬åæçèå´ç±æéæå©è¦æ±èä¸æ¯ä¸è¿°è¯´æéå®ï¼å æ­¤æ¨å¨å°è½å¨æå©è¦æ±çç­åè¦ä»¶çå«ä¹åèå´åçææåååæ¬å¨æ¬åæåï¼ä¸åºå°æå©è¦æ±ä¸­çä»»ä½éå¾æ è®°è§ä¸ºéå¶ææ¶åçæå©è¦æ±ã
+It should be noted that it is obvious to those skilled in the art that the present invention is not limited to the details of the above-mentioned exemplary embodiments, and the present invention can be implemented in other specific forms without departing from the spirit or essential characteristics of the present invention. . Therefore, the embodiments are to be regarded in all respects as illustrative and not restrictive, and the scope of the invention is defined by the appended claims rather than the foregoing description, which are therefore intended to fall within the scope of the appended claims. All changes that come within the meaning and scope of equivalents of , are intended to be embraced within the invention, and any reference signs in the claims shall not be construed as limiting the involved claim.
+æ¬åæä¸­åºç¨äºå·ä½ä¸ªä¾å¯¹æ¬åæçåçåå®æ½æ¹å¼è¿è¡äºéè¿°ï¼ä»¥ä¸å®æ½ä¾çè¯´æåªæ¯ç¨äºå¸®å©çè§£æ¬åæçæ¹æ³åå¶æ ¸å¿ææ³ï¼åæ¶ï¼å¯¹äºæ¬é¢åçä¸è¬ææ¯äººåï¼ä¾æ®æ¬åæçææ³ï¼å¨å·ä½å®æ½æ¹å¼ååºç¨èå´ä¸åä¼ææ¹åä¹å¤ãç»¼ä¸æè¿°ï¼æ¬è¯´æä¹¦åå®¹ä¸åºçè§£ä¸ºå¯¹æ¬åæçéå¶ã
+In the present invention, specific examples are used to illustrate the principles and implementations of the present invention, and the descriptions of the above embodiments are only used to help understand the method and the core idea of the present invention; There will be changes in the specific implementation manner and application scope of the idea of the invention. In conclusion, the contents of this specification should not be construed as limiting the present invention.

@@ -1,0 +1,714 @@
+PATENT ID: CN109888803B
+TITLE: Optimization method of capacity configuration of hybrid energy storage power …
+DOMAIN: renewable_energy
+INVENTOR: 王琪
+ASSIGNEE: 江苏理工学院
+FILING DATE: 2019-01-28
+GRANT DATE: 2020-10-30
+
+=== ABSTRACT ===
+The invention discloses a method for optimizing the capacity configuration of a hybrid energy storage power source in a wind and solar power generation system, comprising: establishing energy models of a wind power generator set, a photovoltaic solar generator set, a storage battery and a super capacitor respectively; Based on the tolerant hierarchical sequence optimization method, according to the pre-set importance ranking, the one-time investment cost and The optimization objective function and the corresponding optimization constraints are established for the operating cost of the whole life cycle; according to the establishment sequence of the optimization objective function and the optimization constraints, the optimal parameters are obtained by solving in turn to realize the optimization of the capacity configuration of the hybrid energy storage power supply. While maximizing the utilization of wind energy and photovoltaic solar energy resources under the premise of load demand, it greatly reduces the one-time investment cost and the operating cost of the whole life cycle.
+
+=== CLAIMS ===
+  1. The optimization method for the capacity configuration of the hybrid energy storage power supply in the wind and light power generation system is characterized by being applied to the wind and light power generation system, wherein the wind and light power generation system comprises a wind generating set, a photovoltaic solar generating set and the hybrid energy storage power supply, the hybrid energy storage power supply comprises a storage battery for providing energy and a super capacitor for providing power, and the wind generating set and the photovoltaic solar generating set are respectively connected with the hybrid energy storage power supply in parallel; the optimization method for capacity configuration of the hybrid energy storage power supply in the wind and light power generation system comprises the following steps:
+      s10, respectively establishing energy models of a wind generating set, a photovoltaic solar generating set, a storage battery and a super capacitor, wherein the wind generating set comprises a small turbine generator;
+      s20, establishing an optimization model of capacity configuration and corresponding constraint conditions according to the one-time investment cost and the operation cost of the full life cycle of the hybrid energy storage power supply, wherein the constraint conditions comprise charge and discharge current constraint and maximum residual energy constraint of a super capacitor, and the maximum residual energy constraint is established according to energy models of a wind generating set, a photovoltaic solar generating set, a storage battery and the super capacitor;
+      s30, based on a tolerant hierarchical sequence optimization method, establishing an optimization objective function and a corresponding optimization constraint condition respectively aiming at the one-time investment cost and the operation cost of the full life cycle of the hybrid energy storage power supply according to the preset importance degree ranking and the optimization model and the constraint condition established in the step S20;
+      s40, according to the establishment sequence of the optimization objective function and the optimization constraint condition, solving is sequentially carried out to obtain optimal parameters, and optimization of capacity allocation of the hybrid energy storage power supply is achieved;
+      in the step S20, in step S20,
+      assuming that the life cycle of the wind-solar power generation system is k years, establishing an optimization model L of capacity allocation of the hybrid energy storage power supply according to the one-time investment cost and the operation cost of the full life cycle of the hybrid energy storage power supply as follows:
+      
+        
+      
+      wherein L is1One-time investment cost for hybrid energy storage power supply, and L1＝pBAT×QBAT+pSC×QSC；L2The operating cost for the whole life cycle of the hybrid energy storage power supply, and L2＝k×λBAT×pBAT×QBAT+k×mBAT×QBAT+k×λSC×pSC×QSC+k×mSC×QSC；pBATPrice of accumulator per unit energy, pSCFor the price of a supercapacitor per unit energy, λBATIs the annual rate of conversion per unit energy, lambda, of the accumulatorSCIs the annual rate of conversion per unit energy, m, of the super capacitorBATFor each unit of accumulatorAnnual maintenance charge of energy, mSCAnnual maintenance charge, Q, for a supercapacitor per unit of energyBATIs the energy of the accumulator, QSCEnergy stored for the super capacitor;
+      the charge and discharge current constraints of the super capacitor are as follows:
+      
+        
+      
+      wherein, Is1Charging current for the supercapacitor, Is2Is the discharge current of the supercapacitor, IsmaxThe maximum charge-discharge current of the super capacitor; i iscThe rated charging current of the storage battery monomer is obtained;
+      the maximum remaining energy constraint is:
+      Ew+Es-El≥QBAT+QSC 
+      wherein E islEnergy consumed for the load; ewAnnual energy production of small turbo-generators, EsThe annual energy production of a photovoltaic array in the photovoltaic solar generating set;
+      in step S30, the importance ranks set in advance are: firstly considering the one-time investment cost and secondly considering the operation cost of the whole life cycle;
+      first optimization objective function f established aiming at one-time investment cost of hybrid energy storage power supply1Comprises the following steps:
+      f1＝min(L1)＝min(pBAT×QBAT+pSC×QSC)
+      the first optimization constraint is:
+      
+        
+      
+      second optimization objective function f established for full life cycle operation cost of hybrid energy storage power supply2Comprises the following steps:
+      
+        
+      
+      the second optimization constraint condition is as follows:
+      
+        
+      
+      wherein, is a tolerance coefficient, and>0；for one-off investment cost L1The minimum value of (a) is determined,for the first optimization of the objective function f1Optimized super capacitor charging current Is1The optimum solution of (a) to (b),for the first optimization of the objective function f1Optimized discharge current I of super capacitors2The optimal solution of (2);
+      in the step S10, in step S10,
+      when the charging current and the discharging current of the storage battery monomer are both rated charging current IcWhen it is storing charging energy Qb1And discharge energy Qb2Respectively as follows:
+      Qb1＝U×Ic×tc 
+      Qb2＝U×Ic×td 
+      wherein, tcFor charging the accumulator cell, tdThe discharge time of the storage battery monomer is U, and the reference voltage of the storage battery monomer is U;
+      energy Q of accumulatorBATComprises the following steps:
+      QBAT＝(Qb1+Qb2)×h×l
+      h is the serial number of the storage battery monomers in the storage battery, and l is the parallel number of the storage battery monomers in the storage battery;
+      in the step S10, in step S10,
+      the equivalent capacitance C of the supercapacitor is:
+      
+        
+      
+      wherein m is the serial number of the super capacitor monomers in the super capacitor, n is the parallel number of the super capacitor monomers in the super capacitor, CfThe capacity of the supercapacitor monomer;
+      energy Q stored by a supercapacitorSCComprises the following steps:
+      
+        
+      
+      wherein, UmaxIs the maximum voltage of the supercapacitor, UminIs the minimum voltage of the supercapacitor, UsmaxIs the maximum voltage of the supercapacitor cell, UsminIs the minimum voltage of the supercapacitor cell.
+  2. The method for optimizing the capacity allocation of the hybrid energy storage power source in the wind-solar power generation system according to claim 1, wherein the output power P of the small-sized turbine generator is provided at step S10w(v) Comprises the following steps:
+      
+        
+      
+      wherein, PrRated power of small turbine generator, v is wind speed, v iscFor cutting into the wind speed, vrRated wind speed, vfIn order to cut out the wind speed, k' is the shape parameter of the Weibull distribution;
+      annual energy production E of small turbine generatorwComprises the following steps:
+      
+        
+      
+      wherein, tw1At wind speed v for small turbine generators each yearc≤v<vrOf intervalsWorking time, tw2At wind speed v for small turbine generators each yearr≤v≤vfThe operating time of the interval.
+  3. The method for optimizing the capacity allocation of the hybrid energy storage power source in the wind-solar power generation system according to claim 1, wherein in step S10,
+      under the condition of any radiation intensity S and ambient temperature T, the mathematical model of the photovoltaic array in the photovoltaic solar generating set is as follows:
+      
+        
+      
+      wherein I (S, T) is the output current of the photovoltaic array, Delta I (S, T) is the correction factor of the output current of the photovoltaic array, V (S, T) is the output voltage of the photovoltaic array, Delta V (S, T) is the correction factor of the output voltage of the photovoltaic array, RSIs the series resistance of the photovoltaic array, alpha is the short circuit temperature coefficient of the photovoltaic array, beta is the open circuit temperature coefficient of the photovoltaic array, and TNORIs the normal operating temperature of the photovoltaic array; i is at the radiation intensity SSTC＝1000W/m2And the ambient temperature TSTCOutput current of the photovoltaic array at 25 deg.C as a reference, and
+      
+        
+      
+      wherein V is the intensity of radiation SSTC＝1000W/m2And the ambient temperature TSTCOutput voltage of photovoltaic array at 25 deg.C reference, ISCShort circuit current, V, for photovoltaic arraysocIs the open circuit voltage, V, of the photovoltaic arraymFor maximum power P of photovoltaic arraymaxVoltage at output, ImFor maximum power P of photovoltaic arraymaxCurrent at the time of output;
+      actual output current I of photovoltaic arrayrealComprises the following steps:
+      
+        
+      
+      wherein, TCIs a weakening coefficient; n is a cloud cover coefficient, and is generally selected from 0 to 8, wherein 0 represents no cloud, and 8 represents full cloud; a. b and c are empirical coefficients respectively;
+      annual energy production E of photovoltaic arraysComprises the following steps:
+      Es＝η×Ireal×V(S,T)×NP×NS×ts 
+      where η is the efficiency of the photovoltaic array, NSNumber of series of photovoltaic arrays, NPNumber of parallel connections of the photovoltaic array, tsRepresenting the annual operating time of the photovoltaic array.
+  4. The method for optimizing the capacity allocation of the hybrid energy storage power source in the wind-solar energy generation system according to claim 1, wherein in step S40, the method further comprises:
+      s41, solving the first optimization objective function by adopting a differential evolution algorithm according to the first optimization constraint condition to obtain the charging current I of the super capacitors1Of (2) an optimal solutionDischarge current I of super capacitors2Of (2) an optimal solutionAnd a one-time investment cost L1Minimum value of (2) 
+      S42, solving the second optimization objective function by adopting a differential evolution algorithm according to the second optimization constraint condition to obtain the full life cycle operation cost L2Minimum value of (2)And the optimization of the capacity configuration of the hybrid energy storage power supply is completed.
+
+=== DESCRIPTION ===
+é£ååçµç³»ç»ä¸­æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¹æ³
+Optimization method of capacity configuration of hybrid energy storage power supply in wind and solar power generation system
+ææ¯é¢å
+technical field
+æ¬åææ¶åçµæ± ææ¯é¢åï¼å°¤å¶æ¶åä¸ç§é£ååçµç³»ç»ä¸­æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¹æ³ã
+The invention relates to the technical field of batteries, in particular to a method for optimizing the capacity configuration of a hybrid energy storage power source in a wind and solar power generation system.
+èæ¯ææ¯
+Background technique
+éçä¼ ç»ç³æ²¹èµæºçå¿«éæ¯ç«­åå¨çåæç°è±¡çæ¥çå å§ï¼ä¸çåå°çç ç©¶äººååç§å­¦å®¶é½å¨æåå¯»æ¾ç»¿è²æ¿ä»£è½æºï¼ç±é£è½ååä¼å¤ªé³è½ç»æçé£ååçµç³»ç»æä¸ºäºç ç©¶ç­ç¹ãä½æ¯ï¼é£è½ååä¼å¤ªé³è½é½æ¯é´æ­æ§çï¼ä¸ºäºç¡®ä¿è½æºä¾åºçç¨³å®æ§åå¯é æ§ï¼éå¸¸éè¦å¨é£ååçµç³»ç»ä¸­è®¾ç½®åéçå¨è½ç³»ç»ãä¸è¬æ¥è¯´ï¼å¨ç±é£è½ååä¼å¤ªé³è½ç»æçä¸­å°ååçµç³»ç»ä¸­ï¼ä½¿ç¨èçµæ± è¿è¡å¨è½ãä½æ¯ï¼ç±èçµæ± ç»æçå¨è½çµæºå­å¨å¯¿å½å¨æä½ãåçå¯åº¦ä½ãå/æ¾çµçµæµå­å¨éå¶åæåç¯å¢å½±åç­é®é¢ã
+With the rapid depletion of traditional petroleum resources and the increasing global warming, researchers and scientists around the world are striving to find green alternative energy sources. However, both wind energy and photovoltaic solar energy are intermittent. In order to ensure the stability and reliability of energy supply, it is usually necessary to set up a suitable energy storage system in the wind and solar power generation system. Generally speaking, in small and medium power generation systems consisting of wind and photovoltaic solar energy, storage batteries are used for energy storage. However, the energy storage power supply composed of batteries has problems such as low life cycle, low power density, limited charging/discharging current, and being easily affected by the environment.
+è¿å¹´æ¥ï¼è¶çº§çµå®¹å¨å­åé«åçå¯åº¦ãé¿å¯¿å½ãé«åæ¾çµæçç­ä¼ç¹éæ­¥å¾å°äºéè§ï¼ç¶èä»ç±è¶çº§çµå®¹å¨ç»æçå¨è½çµæºè½éå­å¨è½åéå¸¸æéï¼ä¸ææ¬æ¯ç±èçµæ± ç»æçå¨è½çµæºé«å¾å¤ãæ¾ç¶ï¼åç¬ä½¿ç¨èçµæ± æè¶çº§çµå®¹å¨ä½ä¸ºé£ååçµç³»ç»çå¨è½è£ç½®é½ä¼å­å¨ä¸å®çé®é¢ï¼ä»¥æ­¤ç»åäºä¸¤èçä¼ç¹çæ··åå¨è½çµæº(åæ¬èçµæ± åè¶çº§çµå®¹å¨)æä¸ºäºä¸ä¸ªä½ä¸ºé£ååçµç³»ç»å¨è½è£ç½®çç ç©¶æ¹åã
+In recent years, supercapacitors have gradually attracted attention due to their advantages of high power density, long life, and high charge-discharge efficiency. However, the energy storage capacity of energy storage power sources composed of supercapacitors only is very limited, and the cost is higher than that of energy storage power sources composed of batteries. much higher. Obviously, there will be certain problems when using batteries or supercapacitors alone as energy storage devices for wind and solar power generation systems, so the hybrid energy storage power supply (including batteries and super capacitors) that combines the advantages of both has become an energy storage device for wind and solar power generation systems. Research direction of energy devices.
+å¨é£ååçµç³»ç»çæ··åå¨è½çµæºä¸­ï¼å®¹ééç½®ä¼åæ¯ä¸ä¸ªé¾ç¹é®é¢ï¼å¶å¯¹å¨åçææ¬ä¸é£ååçµç³»ç»çå¯é è¿è¡è³å³éè¦ãç®åï¼å½åå¤å­¦èå¯¹å®¹ééç½®ä¼åçç ç©¶ç¸å¯¹è¾å°ï¼ä¸»è¦ä¼åæ¹æ³éä¸­å¨éä¼ ç®æ³åç²å­ç¾¤ç®æ³ï¼å¶ä¸­ï¼éä¼ ç®æ³è½ç¶ç®åæå®ç°ï¼å¨å±è§£çæç´¢è½åè¾å¼ºï¼ä½è¯¥æ¹æ³å±äºéæºç±»ç®æ³ï¼éè¦å¤æ¬¡è¿ç®ï¼è®¡ç®éå¤§ï¼è®¡ç®æ¶é´é¿ï¼èä¸ä¸è½å¾å°ç¨³å®çè§£ï¼ç²å­ç¾¤ç®æ³è½ç¶æç´¢éåº¦å¿«ï¼éè°æ´çåæ°å°ï¼æçé«ï¼ä½æ¯å­å¨æ¶æç²¾åº¦ä½ãæé·å¥å±é¨æä¼è§£çç¼ºç¹ã
+In the hybrid energy storage power source of wind and solar power generation system, the optimization of capacity configuration is a difficult problem, which is very important for the reliable operation of wind and solar power generation system at reasonable cost. At present, there are relatively few studies on capacity allocation optimization by domestic and foreign scholars, and the main optimization methods focus on genetic algorithm and particle swarm optimization. Although genetic algorithm is simple and easy to implement and has strong search ability for global solutions, this method belongs to the random category. The algorithm requires multiple operations, requires a large amount of calculation, takes a long time, and cannot obtain a stable solution; although the particle swarm algorithm has fast search speed, few parameters to be adjusted, and high efficiency, it has low convergence accuracy and is easy to fall into local optimum. The shortcomings of the solution.
+åæåå®¹
+SUMMARY OF THE INVENTION
+éå¯¹ä¸è¿°ç°æææ¯çä¸è¶³ï¼æ¬åææä¾äºä¸ç§é£ååçµç³»ç»ä¸­æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¹æ³ï¼ææè§£å³äºç°æé£ååçµç³»ç»æ··åå¨è½çµæºçå®¹ééç½®ä¸è½ææä¼åçææ¯é®é¢ã
+In view of the above-mentioned deficiencies of the prior art, the present invention provides a method for optimizing the capacity configuration of a hybrid energy storage power source in a wind and solar power generation system, which effectively solves the technical problem that the capacity configuration of the hybrid energy storage power source in the existing wind and solar power generation system cannot be effectively optimized.
+ä¸ºäºå®ç°ä¸è¿°ç®çï¼æ¬åæéè¿ä»¥ä¸ææ¯æ¹æ¡å®ç°ï¼
+In order to achieve the above object, the present invention is achieved through the following technical solutions:
+ä¸ç§é£ååçµç³»ç»ä¸­æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¹æ³ï¼å¶ç¹å¾å¨äºï¼åºç¨äºé£ååçµç³»ç»ï¼æè¿°é£ååçµç³»ç»ä¸­åæ¬é£ååçµæºç»ãåä¼å¤ªé³è½åçµæºç»åæ··åå¨è½çµæºï¼å¶ä¸­ï¼æ··åå¨è½çµæºä¸­åæ¬ç¨äºæä¾è½éçèçµæ± åç¨äºæä¾åççè¶çº§çµå®¹å¨ï¼æè¿°é£ååçµç³»ç»ä¸­æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¹æ³åæ¬ï¼
+A method for optimizing the capacity configuration of a hybrid energy storage power supply in a wind and solar power generation system, characterized in that it is applied to a wind and solar power generation system, wherein the wind and wind power generation system includes a wind turbine generator set, a photovoltaic solar generator set and a hybrid energy storage power supply, wherein the hybrid energy storage power supply The energy storage power source includes a battery for providing energy and a supercapacitor for providing power; an optimization method for the capacity configuration of the hybrid energy storage power source in the wind and solar power generation system includes:
+S10åå«å»ºç«é£ååçµæºç»ãåä¼å¤ªé³è½åçµæºç»ãèçµæ± åè¶çº§çµå®¹å¨çè½éæ¨¡åï¼
+S10 establishes the energy models of wind turbines, photovoltaic solar turbines, batteries and supercapacitors respectively;
+S20æ ¹æ®æ··åå¨è½çµæºçä¸æ¬¡æ§æèµææ¬åå¨çå½å¨æçè¿è¥ææ¬å»ºç«å¶å®¹ééç½®çä¼åæ¨¡ååç¸åºççº¦ææ¡ä»¶ï¼æè¿°çº¦ææ¡ä»¶åæ¬è¶çº§çµå®¹å¨çåæ¾çµçµæµçº¦æåæå¤§å©ä½è½éçº¦æï¼æè¿°æå¤§å©ä½è½éçº¦ææ ¹æ®é£ååçµæºç»ãåä¼å¤ªé³è½åçµæºç»ãèçµæ± åè¶çº§çµå®¹å¨çè½éæ¨¡åæå»ºï¼
+S20 establishes an optimization model of capacity configuration and corresponding constraints according to the one-time investment cost of the hybrid energy storage power supply and the operating cost of the whole life cycle. The constraints include the charge and discharge current constraints of the supercapacitor and the maximum remaining energy constraints, so The maximum residual energy constraint is constructed according to the energy models of wind turbines, photovoltaic solar turbines, batteries and supercapacitors;
+S30åºäºå®½å®¹åå±åºåä¼åæ¹æ³ï¼æ ¹æ®é¢åè®¾å®çéè¦ç¨åº¦æååæ­¥éª¤S20ä¸­å»ºç«çä¼åæ¨¡ååçº¦ææ¡ä»¶ï¼åå«éå¯¹æ··åå¨è½çµæºçä¸æ¬¡æ§æèµææ¬åå¨çå½å¨æçè¿è¥ææ¬å»ºç«ä¼åç®æ å½æ°åç¸åºçä¼åçº¦ææ¡ä»¶ï¼
+S30 is based on the tolerant hierarchical sequence optimization method, according to the preset importance ranking and the optimization model and constraints established in step S20, respectively establishes optimization objectives for the one-time investment cost and the full life cycle operating cost of the hybrid energy storage power source function and the corresponding optimization constraints;
+S40æ ¹æ®ä¼åç®æ å½æ°åä¼åçº¦ææ¡ä»¶çå»ºç«é¡ºåºï¼ä¾æ¬¡è¿è¡æ±è§£å¾å°æä¼åæ°ï¼å®ç°æ··åå¨è½çµæºå®¹ééç½®çä¼åã
+In S40, according to the establishment order of the optimization objective function and the optimization constraint conditions, the optimal parameters are obtained by solving successively, so as to realize the optimization of the capacity configuration of the hybrid energy storage power supply.
+å¨æ¬åææä¾çé£ååçµç³»ç»ä¸­æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¹æ³ä¸­ï¼åå«å»ºç«äºé£ååçµç³»ç»ä¸­é£ååçµæºç»ãåä¼å¤ªé³è½åçµæºç»ãèçµæ± åè¶çº§çµå®¹å¨çè½éæ¨¡åä¹åï¼è¿ä¸æ­¥æ ¹æ®é¢åè®¾å®çéè¦ç¨åº¦æååå®½å®¹åå±åºåä¼åæ¹æ³åå«éå¯¹æ··åå¨è½çµæºçä¸æ¬¡æ§æèµææ¬åå¨çå½å¨æçè¿è¥ææ¬å»ºç«ä¼åç®æ å½æ°åç¸åºçä¼åçº¦ææ¡ä»¶ï¼å¹¶æ ¹æ®ä¼åç®æ å½æ°åä¼åçº¦ææ¡ä»¶çå»ºç«é¡ºåºä¾æ¬¡éç¨å¾®åè¿åç®æ³è¿è¡æ±è§£åä¼åï¼åå«å®ç°æ··åå¨è½çµæºä¸æ¬¡æ§æèµææ¬åå¨çå½å¨æçè¿è¥ææ¬çæå°åï¼å¶å¨æ»¡è¶³è´è·éæ±çåæä¸æå¤§åå©ç¨é£è½ååä¼å¤ªé³è½èµæºçåæ¶ï¼å¤§å¤§éä½äºä¸æ¬¡æ§æèµææ¬åå¨çå½å¨æçè¿è¥ææ¬ã
+In the method for optimizing the capacity configuration of the hybrid energy storage power supply in the wind and solar power generation system provided by the present invention, after respectively establishing the energy models of the wind turbine generator set, the photovoltaic solar generator set, the storage battery and the super capacitor in the wind and wind power generation system, further according to the preset energy model The importance ranking and the tolerant hierarchical sequence optimization method respectively establish the optimization objective function and the corresponding optimization constraints for the one-time investment cost and the whole life cycle operating cost of the hybrid energy storage power supply, and according to the optimization objective function and the optimization constraints. The establishment sequence is solved and optimized by using the differential evolution algorithm in turn, so as to minimize the one-time investment cost and the operating cost of the whole life cycle of the hybrid energy storage power source, and maximize the utilization of wind energy and photovoltaic solar energy resources under the premise of meeting the load demand. At the same time, the one-time investment cost and the operating cost of the whole life cycle are greatly reduced.
+éå¾è¯´æ
+Description of drawings
+ç»åéå¾ï¼å¹¶éè¿åèä¸é¢çè¯¦ç»æè¿°ï¼å°ä¼æ´å®¹æå°å¯¹æ¬åæææ´å®æ´ççè§£å¹¶ä¸æ´å®¹æå°çè§£å¶ä¼´éçä¼ç¹åç¹å¾ï¼å¶ä¸­ï¼
+A more complete understanding of the present invention and its attendant advantages and features will be more readily appreciated by reference to the following detailed description in conjunction with the accompanying drawings, wherein:
+å¾1ä¸ºæ¬åæä¸­é£ååçµç³»ç»ä¸­æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¹æ³çæµç¨ç¤ºæå¾ã
+FIG. 1 is a schematic flowchart of a method for optimizing the capacity configuration of a hybrid energy storage power supply in a wind and solar power generation system according to the present invention.
+å·ä½å®æ½æ¹å¼
+Detailed ways
+ä¸ºä½¿æ¬åæçåå®¹æ´å æ¸æ¥ææï¼ä»¥ä¸ç»åè¯´æä¹¦éå¾ï¼å¯¹æ¬åæçåå®¹ä½è¿ä¸æ­¥è¯´æãå½ç¶æ¬åæå¹¶ä¸å±éäºè¯¥å·ä½å®æ½ä¾ï¼æ¬é¢ååçææ¯äººåæçç¥çä¸è¬æ¿æ¢ä¹æ¶µçå¨æ¬åæçä¿æ¤èå´åã
+In order to make the content of the present invention clearer and easier to understand, the content of the present invention will be further described below with reference to the accompanying drawings. Of course, the present invention is not limited to this specific embodiment, and general substitutions known to those skilled in the art are also covered within the protection scope of the present invention.
+éå¯¹ç°æé£ååçµç³»ç»æ··åå¨è½çµæºçå®¹ééç½®ä¸è½ææä¼åçææ¯é®é¢ï¼æ¬åææä¾äºä¸ç§é£ååçµç³»ç»ä¸­æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¹æ³ï¼åºç¨äºé£ååçµç³»ç»ï¼å·ä½ï¼å¨è¯¥é£ååçµç³»ç»ä¸­åæ¬é£ååçµæºç»ãåä¼å¤ªé³è½åçµæºç»åæ··åå¨è½çµæºï¼å¶ä¸­ï¼æ··åå¨è½çµæºä¸­åæ¬ç¨äºæä¾è½éçèçµæ± åç¨äºæä¾åççè¶çº§çµå®¹å¨ï¼é£ååçµæºç»ååä¼å¤ªé³è½åçµæºç»åå«ä¸æ··åå¨è½çµæºå¹¶èãå¨å·¥ä½è¿ç¨ä¸­ï¼å¦æé£ååçµæºç»ååä¼å¤ªé³è½åçµæºç»çåçµéè¾å¤ï¼åå¨æ»¡è¶³è´è½½çµè½éæ±çåæä¸ï¼å¯å°è´è½½æ¶èåå©ä½ççµè½å­å¨å¨æ··åå¨è½çµæºä¸­ï¼å¦æé£ååçµæºç»ååä¼å¤ªé³è½åçµæºç»çåçµéè¾å°ï¼ä¸è¶³ä»¥æ»¡è¶³è´è½½ççµè½éæ±ï¼æ··åå¨è½çµæºå¯å°å¶å­å¨ççµè½æä¾ç»è´è½½ã
+Aiming at the technical problem that the capacity configuration of the hybrid energy storage power source in the existing wind and solar power generation system cannot be effectively optimized, the present invention provides a method for optimizing the capacity configuration of the hybrid energy storage power source in the wind and solar power generation system, which is applied to the wind and solar power generation system. The wind and wind power generation system includes wind turbines, photovoltaic solar generators and hybrid energy storage power sources, wherein the hybrid energy storage power sources include batteries used to provide energy and super capacitors used to provide power, wind turbine generator sets and photovoltaic solar generator sets. They are respectively connected in parallel with the hybrid energy storage power supply. During the working process, if the wind turbines and photovoltaic solar generators generate a large amount of electricity, the remaining electrical energy after the load consumption can be stored in the hybrid energy storage power supply under the premise of meeting the load power demand; if the wind turbine generator set The power generation of the photovoltaic solar generator set is less, which is not enough to meet the power demand of the load, and the hybrid energy storage power supply can provide the stored power to the load.
+å¦å¾1æç¤ºï¼è¯¥é£ååçµç³»ç»ä¸­æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¹æ³ä¸­åæ¬ï¼
+As shown in Figure 1, the optimization method for the capacity configuration of the hybrid energy storage power supply in the wind and solar power generation system includes:
+S10åå«å»ºç«é£ååçµæºç»ãåä¼å¤ªé³è½åçµæºç»ãèçµæ± åè¶çº§çµå®¹å¨çè½éæ¨¡åï¼
+S10 establishes the energy models of wind turbines, photovoltaic solar turbines, batteries and supercapacitors respectively;
+S20æ ¹æ®æ··åå¨è½çµæºçä¸æ¬¡æ§æèµææ¬åå¨çå½å¨æçè¿è¥ææ¬å»ºç«å¶å®¹ééç½®çä¼åæ¨¡ååç¸åºççº¦ææ¡ä»¶ï¼çº¦ææ¡ä»¶åæ¬è¶çº§çµå®¹å¨çåæ¾çµçµæµçº¦æåæå¤§å©ä½è½éçº¦æï¼æå¤§å©ä½è½éçº¦ææ ¹æ®é£ååçµæºç»ãåä¼å¤ªé³è½åçµæºç»ãèçµæ± åè¶çº§çµå®¹å¨çè½éæ¨¡åæå»ºï¼
+S20 establishes the optimal model of the capacity configuration and the corresponding constraints according to the one-time investment cost of the hybrid energy storage power supply and the operating cost of the whole life cycle. Constraints are constructed from energy models of wind turbines, photovoltaic solar turbines, batteries, and supercapacitors;
+S30åºäºå®½å®¹åå±åºåä¼åæ¹æ³ï¼æ ¹æ®é¢åè®¾å®çéè¦ç¨åº¦æååæ­¥éª¤S20ä¸­å»ºç«çä¼åæ¨¡ååçº¦ææ¡ä»¶ï¼åå«éå¯¹æ··åå¨è½çµæºçä¸æ¬¡æ§æèµææ¬åå¨çå½å¨æçè¿è¥ææ¬å»ºç«ä¼åç®æ å½æ°åç¸åºçä¼åçº¦ææ¡ä»¶ï¼
+S30 is based on the tolerant hierarchical sequence optimization method, according to the preset importance ranking and the optimization model and constraints established in step S20, respectively establishes optimization objectives for the one-time investment cost and the full life cycle operating cost of the hybrid energy storage power source function and the corresponding optimization constraints;
+S40æ ¹æ®ä¼åç®æ å½æ°åä¼åçº¦ææ¡ä»¶çå»ºç«é¡ºåºï¼ä¾æ¬¡è¿è¡æ±è§£å¾å°æä¼åæ°ï¼å®ç°æ··åå¨è½çµæºå®¹ééç½®çä¼åã
+In S40, according to the establishment order of the optimization objective function and the optimization constraint conditions, the optimal parameters are obtained by solving successively, so as to realize the optimization of the capacity configuration of the hybrid energy storage power supply.
+å¨é£ååçµæºç»ä¸­ï¼é£éæ¯å³å®å¶åçµéæéè¦çå ç´ ï¼èé£éåå³äºè®¸å¤å ç´ ï¼å¦å¤©æ°ãå­£èç­ãä»¥é£ååçµæºç»ä¸­åæ¬å°åæ¶¡è½®åçµæºä¸ºä¾è¿è¡å»ºæ¨¡ï¼å¶è¾åºåçå¦å¼(1)ï¼
+In a wind turbine, wind speed is the most important factor in determining its power generation, and wind speed depends on many factors, such as weather, season, etc. Taking wind turbines including small turbine generators as an example to model, the output power is shown in formula (1):
+å¶ä¸­ï¼P
+r
+ä¸ºå°åæ¶¡è½®åçµæºçé¢å®åçï¼vä¸ºé£éï¼v
+c
+ä¸ºåå¥é£éï¼v
+r
+ä¸ºé¢å®é£éï¼v
+f
+ä¸ºååºé£éï¼k'ä¸ºå¨å¸å°åå¸çå½¢ç¶åæ°ã
+Among them, P
+r
+is the rated power of the small turbine generator, v is the wind speed,
+vc
+is the cut-in wind speed, v
+r
+is the rated wind speed, v
+f
+is the cut-out wind speed, and k' is the shape parameter of the Weibull distribution.
+ä»¥æ­¤ï¼å°åæ¶¡è½®åçµæºçå¹´åçµéE
+w
+å¦å¼(2)ï¼
+In this way, the annual power generation E
+w
+of the small turbine generator is shown in formula (2):
+å¶ä¸­ï¼t
+w1
+ä¸ºæ¯å¹´å°åæ¶¡è½®åçµæºå¨é£éå¤äºv
+c
+â¤v<v
+r
+åºé´çå·¥ä½æ¶é´ï¼t
+w2
+ä¸ºæ¯å¹´å°åæ¶¡è½®åçµæºå¨é£éå¤äºv
+r
+â¤vâ¤v
+f
+åºé´çå·¥ä½æ¶é´ã
+Among them, t
+w1
+is the annual working time of the small turbine generator when the wind speed is in the interval of v
+c
+â¤ v < v
+r
+, and t
+w2
+is the annual working time of the small turbine generator in the interval of v
+r
+â¤ v â¤ v
+f
+.
+å¨åä¼å¤ªé³è½åçµæºç»ä¸­ï¼åä¼éµåçè¾åºåçåå³äºè®¸å¤å ç´ ï¼å¶ä¸­æä¸»è¦çå ç´ ä¸ºè¾å°å¼ºåº¦åç¯å¢æ¸©åº¦ï¼å·ä½ï¼å¨è¾å°å¼ºåº¦S
+STC
+ï¼1000W/m
+2
+åç¯å¢æ¸©åº¦T
+STC
+ï¼25âçåèæ¡ä»¶ä¸ï¼åä¼éµåçè¾åºçµæµIå¦å¼(3)ï¼
+In the photovoltaic solar generator set, the output power of the photovoltaic array depends
+on
+many factors, the most important of which are the radiation intensity and the
+ambient
+temperature
+. Under the reference conditions, the output current I of the photovoltaic array is as formula (3):
+å¶ä¸­ï¼Vä¸ºå¨è¾å°å¼ºåº¦S
+STC
+ï¼1000W/m
+2
+åç¯å¢æ¸©åº¦T
+STC
+ï¼25âåèæ¡ä»¶ä¸åä¼éµåçè¾åºçµåï¼I
+SC
+ä¸ºåä¼éµåçç­è·¯çµæµï¼V
+oc
+ä¸ºåä¼éµåçå¼è·¯çµåï¼V
+m
+ä¸ºåä¼éµåæå¤§åçP
+max
+è¾åºæ¶ççµåï¼I
+m
+ä¸ºåä¼éµåæå¤§åçP
+max
+è¾åºæ¶ççµæµã
+Among them, V is the output voltage of the photovoltaic array under the reference conditions of radiation intensity S
+STC
+=1000W/m
+2
+and ambient temperature T
+STC
+=25â, I
+SC
+is the short-circuit current of the photovoltaic array, V
+oc
+is the open-circuit voltage of the photovoltaic array, V
+m
+is the voltage when the maximum power
+Pmax
+of the photovoltaic array is output, and
+Im
+is the current when the maximum power
+Pmax
+of the photovoltaic array is output.
+ç±äºè¾å°å¼ºåº¦åç¯å¢æ¸©åº¦æ¯ä¸æ­ååçï¼å æ­¤å¨ä»»æè¾å°å¼ºåº¦Såç¯å¢æ¸©åº¦Tçæ¡ä»¶ä¸å¯¹åä¼éµåè¿è¡æ°å­¦æ¨¡åï¼å¦å¼(4)ï¼
+Since the radiation intensity and the ambient temperature are constantly changing, the mathematical model of the photovoltaic array is carried out under the conditions of any radiation intensity S and ambient temperature T, as shown in formula (4):
+å¶ä¸­ï¼I(S,T)ä¸ºåä¼éµåçè¾åºçµæµï¼ÎI(S,T)ä¸ºåä¼éµåè¾åºçµæµçç«æ­£å å­ï¼V(S,T)ä¸ºåä¼éµåçè¾åºçµåï¼ÎV(S,T)ä¸ºåä¼éµåè¾åºçµåçç«æ­£å å­ï¼R
+S
+ä¸ºåä¼éµåçä¸²èçµé»ï¼Î±ä¸ºåä¼éµåçç­è·¯æ¸©åº¦ç³»æ°ï¼Î²ä¸ºåä¼éµåçå¼è·¯æ¸©åº¦ç³»æ°ï¼T
+NOR
+ä¸ºåä¼éµåçæ­£å¸¸å·¥ä½æ¸©åº¦ï¼ä¸è¬å40âã
+Among them, I(S,T) is the output current of the photovoltaic array, ÎI(S,T) is the correction factor of the output current of the photovoltaic array, V(S,T) is the output voltage of the photovoltaic array, and ÎV(S,T) is The correction factor of the output voltage of the photovoltaic array, R
+S
+is the series resistance of the photovoltaic array, Î± is the short-circuit temperature coefficient of the photovoltaic array, Î² is the open-circuit temperature coefficient of the photovoltaic array; T
+NOR
+is the normal operating temperature of the photovoltaic array, generally 40 â.
+å¨å¤äºå¤©æ°ä¸ï¼å°é¢æ¥æ¶å°çå¤ªé³è¾å°ä¸æ­£å¸¸æåµç¸æ¯ä¼ææä¸åï¼ä½¿ç¨äºæ¬¡å½æ°å¯¹å°é¢æ¥æ¶å°çå¤ªé³è¾å°è¿è¡ä¿®æ­£åï¼åä¼éµåçå®éè¾åºçµæµI
+real
+å¦å¼(5)ï¼
+In cloudy weather, the solar radiation received by the ground will be different from the normal situation. After using the quadratic function to correct the solar radiation received by the ground, the actual output current I
+real
+of the photovoltaic array is as formula (5):
+å¶ä¸­ï¼T
+C
+ä¸ºåå¼±ç³»æ°ï¼Nä¸ºäºçç³»æ°ï¼ä¸è¬å¨0-8ä¹é´åå¼ï¼0ä»£è¡¨æ äºï¼8ä»£è¡¨æ»¡äºï¼aãbåcåå«ä¸ºç»éªç³»æ°ï¼éå¸¸åaï¼0.0124ï¼bï¼0.2784åcï¼1.04ã
+Among them, T
+C
+is the weakening coefficient; N is the cloud cover coefficient, generally between 0 and 8, 0 means no cloud, 8 means full cloud; a, b and c are the empirical coefficients, usually a=0.0124, b=0.2784 and c=1.04.
+ä»¥æ­¤ï¼åä¼éµåçå¹´åçµéE
+s
+å¦å¼(6)ï¼
+In this way, the annual power generation E
+s
+of the photovoltaic array is as formula (6):
+E
+s
+ï¼Î·ÃI
+real
+ÃV(S,T)ÃN
+P
+ÃN
+S
+Ãt
+s
+(6)
+E
+s
+=Î·ÃI
+real
+ÃV(S,T)ÃN
+P
+ÃN
+S
+Ãt
+s
+(6)
+å¶ä¸­ï¼Î·ä¸ºåä¼éµåçæçï¼N
+S
+ä¸ºåä¼éµåçä¸²èæ°ç®ï¼N
+P
+ä¸ºä¼éµåçå¹¶èæ°ç®ï¼t
+s
+è¡¨ç¤ºåä¼éµåçå¹´å·¥ä½æ¶é´ã
+Among them, Î· is the efficiency of the photovoltaic array,
+NS
+is the number of series-connected photovoltaic arrays,
+NP
+is the number of parallel-connected photovoltaic arrays, and
+ts
+is the annual operating time of the photovoltaic array.
+éå¸¸ï¼èçµæ± çå®¹éç­çº§åçµåç­çº§éè¦éè¿èçµæ± åä½çä¸²å¹¶èè¿æ¥æ¥æé«ï¼ä»¥æ»¡è¶³è´è½½éæ±ãå½èçµæ± åä½çåçµçµæµåæ¾çµçµæµåä¸ºé¢å®åçµçµæµI
+c
+æ¶ï¼å¶å­å¨çåçµè½éQ
+b1
+åæ¾çµè½éQ
+b2
+å¦å¼(7)å(8)ï¼
+Usually, the capacity level and voltage level of the battery need to be increased by the series-parallel connection of the battery cells to meet the load demand. When the charging current and discharging current of the battery cell are both rated charging current I
+c
+, the stored charging energy Q
+b1
+and discharging energy Q
+b2
+are as shown in equations (7) and (8):
+Q
+b1
+ï¼UÃI
+c
+Ãt
+c
+(7)
+Q
+b1
+=UÃI
+c
+Ãt
+c
+(7)
+Q
+b2
+ï¼UÃI
+c
+Ãt
+d
+(8)
+Q
+b2
+=UÃI
+c
+Ãt
+d
+(8)
+å¶ä¸­ï¼t
+c
+ä¸ºèçµæ± åä½çåçµæ¶é´ï¼t
+d
+ä¸ºèçµæ± åä½çæ¾çµæ¶é´ï¼Uä¸ºèçµæ± åä½çåèçµåï¼ä¸è¬å12Vã
+Among them, t
+c
+is the charging time of the battery cell, t
+d
+is the discharging time of the battery cell; U is the reference voltage of the battery cell, generally 12V.
+ä»¥æ­¤ï¼èçµæ± çè½éQ
+BAT
+å¦å¼(9)ï¼
+In this way, the energy Q
+BAT
+of the battery is as formula (9):
+Q
+BAT
+ï¼(Q
+b1
++Q
+b2
+)ÃhÃl (9)
+Q
+BAT
+= (Q
+b1
++Q
+b2
+)ÃhÃl (9)
+å¶ä¸­ï¼hä¸ºèçµæ± ä¸­èçµæ± åä½çä¸²èæ°ç®ï¼lä¸ºèçµæ± ä¸­èçµæ± åä½çå¹¶èæ°ç®ã
+Among them, h is the serial number of battery cells in the battery, and l is the parallel number of battery cells in the battery.
+ç±äºè¶çº§çµå®¹å¨åä½ä»è½å­å¨æéçè½éï¼ä¸ä¸è½æ¿åé«çµåï¼å æ­¤è¶çº§çµå®¹å¨çå®¹éåçµååæ ·éè¦éè¿ä¸²å¹¶èè¶çº§çµå®¹å¨åä½æ¥æé«ãåå®è¶çº§çµå®¹å¨ä¸­ä¸²èè¶çº§çµå®¹å¨åä½çæ°éä¸ºmï¼å¹¶èè¶çº§çµå®¹å¨åä½çæ°éä¸ºnï¼åå¶ç­æå®¹éå¦å¼(10)ï¼
+Since supercapacitor cells can only store limited energy and cannot withstand high voltages, the capacity and voltage of supercapacitors also need to be improved by connecting supercapacitor cells in series and parallel. Assuming that the number of supercapacitor cells in series in the supercapacitor is m, and the number of supercapacitor cells in parallel is n, the equivalent capacity is shown in formula (10):
+å¶ä¸­ï¼C
+f
+ä¸ºè¶çº§çµå®¹å¨åä½çå®¹éã
+Among them, C
+f
+is the capacity of the supercapacitor cell.
+ä»¥æ­¤ï¼è¶çº§çµå®¹å¨å­å¨çè½éQ
+SC
+å¦å¼(11)ï¼
+In this way, the energy Q
+SC
+stored by the supercapacitor is as formula (11):
+å¶ä¸­ï¼U
+max
+ä¸ºè¶çº§çµå®¹å¨çæå¤§çµåï¼U
+min
+ä¸ºè¶çº§çµå®¹å¨çæå°çµåï¼U
+smax
+ä¸ºè¶çº§çµå®¹å¨åä½çæå¤§çµåï¼U
+smin
+ä¸ºè¶çº§çµå®¹å¨åä½çæå°çµåã
+Among them,
+Umax
+is the maximum voltage of the supercapacitor,
+Umin
+is the minimum voltage of the supercapacitor,
+Usmax
+is the maximum voltage of the supercapacitor cell, and
+Usmin
+is the minimum voltage of the supercapacitor cell.
+å¯¹äºæ··åå¨è½çµæºå®¹ééç½®çä¼åï¼å¶ç®æ æ¯å¨æ»¡è¶³é£ååçµç³»ç»æææ§è½åæ°åä¿è¯æ··åå¨è½çµæºç¨³å®è¿è¡çåæä¸ï¼æå°åæ··åå¨è½çµæºçä¸æ¬¡æ§æèµææ¬åå¨çå½å¨æè¿è¥ææ¬ï¼æ¯ä»¥ï¼åå®é£ååçµç³»ç»ççå½å¨æä¸ºk(éå¸¸ä¸º20)å¹´ï¼å»ºç«æ··åå¨è½çµæºå®¹ééç½®çä¼åæ¨¡åLå¦å¼(12)ï¼
+For the optimization of the capacity configuration of the hybrid energy storage power source, the goal is to minimize the one-time investment cost and the full life cycle operating cost of the hybrid energy storage power source on the premise of satisfying all the performance parameters of the wind and solar power generation system and ensuring the stable operation of the hybrid energy storage power source. , therefore, assuming that the life cycle of the wind and solar power generation system is k (usually 20) years, the optimal model L for the capacity configuration of the hybrid energy storage power source is established as in Equation (12):
+å¶ä¸­ï¼L
+1
+ä¸ºæ··åå¨è½çµæºçä¸æ¬¡æ§æèµææ¬ï¼ä¸L
+1
+ï¼p
+BAT
+ÃQ
+BAT
++p
+SC
+ÃQ
+SC
+ï¼L
+2
+ä¸ºæ··åå¨è½çµæºå¨çå½å¨æçè¿è¥ææ¬ï¼ä¸L
+2
+ï¼kÃÎ»
+BAT
+Ãp
+BAT
+ÃQ
+BAT
++kÃm
+BAT
+ÃQ
+BAT
++kÃÎ»
+SC
+Ãp
+SC
+ÃQ
+SC
++kÃm
+SC
+ÃQ
+SC
+ï¼p
+BAT
+ä¸ºæ¯åä½è½éçèçµæ± ä»·æ ¼ï¼p
+SC
+ä¸ºæ¯åä½è½éçè¶çº§çµå®¹å¨ä»·æ ¼ï¼Î»
+BAT
+ä¸ºèçµæ± æ¯åä½è½éçå¹´æç°çï¼Î»
+SC
+ä¸ºè¶çº§çµå®¹å¨æ¯åä½è½éçå¹´æç°çï¼m
+BAT
+ä¸ºèçµæ± æ¯åä½è½éçå¹´ç»´æ¤è´¹ï¼m
+SC
+ä¸ºè¶çº§çµå®¹å¨æ¯åä½è½éçå¹´ç»´æ¤è´¹ã
+Among them, L
+1
+is the one-time investment cost of the hybrid energy storage power supply, and L
+1
+=p
+BAT
+ÃQ
+BAT
++p
+SC
+ÃQ
+SC
+; L
+2
+is the operating cost of the hybrid energy storage power supply throughout its life cycle, and L
+2
+=k ÃÎ»
+BAT
+Ãp
+BAT
+ÃQ
+BAT
++kÃm
+BAT
+ÃQ
+BAT
++kÃÎ»
+SC
+Ãp
+SC
+ÃQ
+SC
++kÃm
+SC
+ÃQ
+SC
+; p
+BAT
+is the battery price per unit of energy, and p
+SC
+is Supercapacitor price per unit energy,
+Î»BAT
+is the annual discount rate per unit energy of the battery,
+Î»SC
+is the annual discount rate per unit energy of the supercapacitor,
+mBAT
+is the annual maintenance fee per unit energy of the battery,
+mSC
+is Annual maintenance fee per unit of energy for supercapacitors.
+å¦å¤ï¼å¨ä¼åèçµæ± åè¶çº§çµå®¹å¨æ··åå¨è½çµæºçå®¹ééç½®çè¿ç¨ä¸­ï¼éèèè¶çº§çµå®¹å¨åæ¾çµçµæµçº¦æåæå¤§å©ä½è½éçº¦æï¼å·ä½ï¼
+In addition, in the process of optimizing the capacity configuration of the battery and supercapacitor hybrid energy storage power supply, it is necessary to consider the supercapacitor charge and discharge current constraints and the maximum remaining energy constraints, specifically:
+ç±äºè¶çº§çµå®¹å¨ä¸»è¦ç¨äºæ··åå¨è½çµæºå¨è½éå¯åº¦è¾ä½æ¶çç¬æ¶æå¤§è´è·æ³¢å¨ï¼åå®è´è½½çæå¤§æ³¢å¨çµæµä¸º8I
+c
+ï¼é£ååçµç³»ç»çæå¤§åçµçµæµä¸º3I
+c
+ï¼åè¶çº§çµå®¹å¨çåæ¾çµçµæµçº¦æå¦(13)ï¼
+Since the supercapacitor is mainly used for the instantaneous maximum load fluctuation of the hybrid energy storage power supply when the energy density is low, assuming that the maximum fluctuation current of the load is 8I
+c
+and the maximum charging current of the wind and solar power generation system is 3I
+c
+, the charging and discharging current of the supercapacitor is Constraints such as (13):
+å¶ä¸­ï¼I
+s1
+ä¸ºè¶çº§çµå®¹å¨çåçµçµæµï¼I
+s2
+ä¸ºè¶çº§çµå®¹å¨çæ¾çµçµæµï¼I
+smax
+ä¸ºè¶çº§çµå®¹å¨çæå¤§åæ¾çµçµæµï¼
+Among them,
+Is1
+is the charging current of the supercapacitor,
+Is2
+is the discharging current of the supercapacitor, and
+Ismax
+is the maximum charging and discharging current of the supercapacitor;
+ä¸ºäºååå¸æ¶å¤ä½çè½éï¼æé«é£ååçµç³»ç»å¨å¼ºé£ååè¶³åç§æ¡ä»¶ä¸çå©ç¨çï¼æ··åå¨è½çµæºå¿é¡»ä»¥æå¤§å©ä½è½éè¿è¡æ»¡è´è·è¿è¡ï¼å æ­¤æå¤§å©ä½è½éçº¦æå¦(14)ï¼
+In order to fully absorb the excess energy and improve the utilization rate of the wind and solar power generation system under strong wind and sufficient light conditions, the hybrid energy storage power supply must operate at full load with the maximum residual energy, so the maximum residual energy constraint is as follows (14):
+E
+w
++E
+s
+-E
+l
+â¥Q
+BAT
++Q
+SC
+(14)
+E
+w
++E
+s
+-E
+l
+â¥Q
+BAT
++Q
+SC
+(14)
+å¶ä¸­ï¼E
+l
+ä¸ºè´è½½æ¶èçè½éã
+Among them, E
+l
+is the energy consumed by the load.
+æ··åå¨è½çµæºå®¹ééç½®çä¼åç®æ ä¸ºæå°åå¬å¼(12)ä¸­çæ»ææ¬Lï¼å³ä¸æ¬¡æ§æèµææ¬L
+1
+åå¨çå½å¨æçè¿è¥ææ¬L
+2
+åéè¦æå°åï¼å±äºå¤ç®æ ä¼åé®é¢ï¼æ¯ä»¥æ¬åæåºäºå®½å®¹åå±åºåä¼åæ¹æ³ï¼å¯¹ä¸æ¬¡æ§æèµææ¬L
+1
+åå¨çå½å¨æè¿è¥ææ¬L
+2
+çéè¦ç¨åº¦æååä¾æ¬¡è¿è¡æå°åï¼å®ç°æ··åå¨è½çµæºå®¹ééç½®çä¼åç®æ ã
+The optimization objective of the capacity configuration of the hybrid energy storage power supply is to minimize the total cost L in formula (12), that is, the one-time investment cost L
+1
+and the operating cost L
+2
+of the whole life cycle need to be minimized, which belongs to the multi-objective optimization problem and is Based on the tolerant hierarchical sequence optimization method of the present invention, the importance of the one-time investment cost L
+1
+and the full life cycle operating cost L
+2
+are ranked and minimized in turn, so as to achieve the optimization goal of the capacity configuration of the hybrid energy storage power supply.
+ç±äºä¸æ¬¡æ§æèµææ¬å¨å¨çå½å¨æçè¿è¥ææ¬ä¹åï¼å æ­¤ï¼ä¸ºäºä»æºå¤´å®ç°æ»ææ¬çæå°åï¼è®¾ç½®ä¸æ¬¡æ§æèµææ¬L
+1
+çæå°åä¸ºç¬¬ä¸ä¼åç®æ ï¼å¨çå½å¨æè¿è¥ææ¬L
+2
+çæå°åä¸ºç¬¬äºä¼åç®æ ï¼å³ä¸æ¬¡æ§æèµææ¬L
+1
+çéè¦åº¦æå¨å¨çå½å¨æçè¿è¥ææ¬L
+2
+çåé¢ï¼å·ä½ï¼
+Since the one-time investment cost is before the operating cost of the whole life cycle, in order to minimize the total cost from the source, the minimization of the one-time investment cost L
+1
+is set as the first optimization goal, and the whole life cycle operating cost L
+2
+Minimization is the second optimization objective, that is, the importance of the one-time investment cost L
+1
+is ranked in front of the operating cost L
+2
+of the whole life cycle, specifically:
+éå¯¹æ··åå¨è½çµæºçä¸æ¬¡æ§æèµææ¬å»ºç«çç¬¬ä¸ä¼åç®æ å½æ°f
+1
+å¦å¼(15)ï¼
+The first optimization objective function f
+1
+established for the one-time investment cost of the hybrid energy storage power source is as formula (15):
+f
+1
+ï¼min(L
+1
+)ï¼min(p
+BAT
+ÃQ
+BAT
++p
+SC
+ÃQ
+SC
+) (15)
+f
+1
+=min(L
+1
+)=min(p
+BAT
+ÃQ
+BAT
++p
+SC
+ÃQ
+SC
+) (15)
+ç¬¬ä¸ä¼åçº¦ææ¡ä»¶å¦å¼(16)ï¼
+The first optimization constraint is as in formula (16):
+éå¯¹æ··åå¨è½çµæºçå¨çå½å¨æçè¿è¥ææ¬å»ºç«çç¬¬äºä¼åç®æ å½æ°f
+2
+å¦å¼(17)ï¼
+The second optimization objective function f
+2
+established for the operating cost of the whole life cycle of the hybrid energy storage power source is as formula (17):
+ç¬¬äºä¼åçº¦ææ¡ä»¶å¦å¼(18)ï¼
+The second optimization constraint is shown in formula (18):
+å¶ä¸­ï¼Îµä¸ºå®½å®¹ç³»æ°ï¼ä¸Îµ>0ï¼
+ä¸ºä¸æ¬¡æ§æèµææ¬L
+1
+çæå°å¼ï¼
+ä¸ºç¬¬ä¸ä¼åç®æ å½æ°f
+1
+ä¼ååè¶çº§çµå®¹å¨åçµçµæµI
+s1
+çæä¼è§£ï¼
+ä¸ºç¬¬ä¸ä¼åç®æ å½æ°f
+1
+ä¼ååè¶çº§çµå®¹å¨æ¾çµçµæµI
+s2
+çæä¼è§£ãAmong them, Îµ is the tolerance coefficient, and Îµ>0,
+is the minimum one-time investment cost L
+1
+,
+is the optimal solution of the supercapacitor charging current I
+s1
+after optimization for the first optimization objective function f
+1
+,
+The optimal solution of the supercapacitor discharge current I
+s2
+after optimization for the first optimization objective function f
+1
+.
+å¨ä¼åè¿ç¨ä¸­ï¼é¦åï¼æ ¹æ®ç¬¬ä¸ä¼åçº¦ææ¡ä»¶ï¼éç¨å¾®åè¿åç®æ³å¯¹ç¬¬ä¸ä¼åç®æ å½æ°è¿è¡æ±è§£ï¼å¾å°è¶çº§çµå®¹å¨åçµçµæµI
+s1
+çæä¼è§£
+è¶çº§çµå®¹å¨æ¾çµçµæµI
+s2
+çæä¼è§£
+åä¸æ¬¡æ§æèµææ¬L
+1
+çæå°å¼
+ä¹åï¼æ ¹æ®ç¬¬äºä¼åçº¦ææ¡ä»¶åç¬¬ä¸æ¬¡ä¼åçç»æï¼éç¨å¾®åè¿åç®æ³å¯¹ç¬¬äºä¼åç®æ å½æ°è¿è¡æ±è§£ï¼å¾å°å¨çå½å¨æè¿è¥ææ¬L
+2
+çæå°å¼
+å³å¾å°äºæ»ææ¬Lçæå°å¼ï¼
+ä»èå®ç°æ··åå¨è½çµæºå®¹ééç½®çä¼åãIn the optimization process, first, according to the first optimization constraints, the differential evolution algorithm is used to solve the first optimization objective function, and the optimal solution of the supercapacitor charging current I
+s1
+is obtained.
+Optimal solution of supercapacitor discharge current I
+s2
+and the minimum one-time investment cost L
+1
+After that, according to the second optimization constraints and the results of the first optimization, the differential evolution algorithm is used to solve the second optimization objective function, and the minimum value of the full life cycle operating cost L
+2
+is obtained.
+That is, the minimum value of the total cost L is obtained:
+In this way, the optimization of the capacity configuration of the hybrid energy storage power supply can be realized.

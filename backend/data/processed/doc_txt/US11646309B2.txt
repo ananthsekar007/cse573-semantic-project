@@ -1,0 +1,13 @@
+3D semiconductor devices and structures with metal layers. A semiconductor device including: a first silicon level including a first single crystal silicon layer and a plurality of first transistors; a first metal layer disposed over the first silicon level; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, the second level disposed over the third metal layer; a fourth metal layer disposed over the second level; a fifth metal layer disposed over the fourth metal layer, where the fourth metal layer is aligned to the first metal layer with a less than 40 nm alignment error; a via disposed through the second level, where each of the second transistors includes a metal gate, where a typical thickness of the second metal layer is greater than a typical thickness of the third metal layer by at least 50%. 1. A semiconductor device, the semiconductor device comprising:
+a first silicon level comprising a first single crystal silicon layer and a plurality of first transistors;
+a first metal layer disposed over said first silicon level;
+a second metal layer disposed over said first metal layer;
+a third metal layer disposed over said second metal layer;
+a second level comprising a plurality of second transistors, said second level disposed over said third metal layer;
+a fourth metal layer disposed over said second level;
+a fifth metal layer disposed over said fourth metal layer,
+wherein said fourth metal layer is aligned to said first metal layer with a less than 40 nm alignment error; and
+
+a via disposed through said second level,
+wherein each of said plurality of second transistors comprises a metal gate, and
+wherein a typical thickness of said second metal layer is greater than a typical thickness of said third metal layer by at least 50%.

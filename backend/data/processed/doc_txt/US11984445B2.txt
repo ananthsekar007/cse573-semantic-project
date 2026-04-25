@@ -1,0 +1,17 @@
+3D semiconductor devices and structures with metal layers. A semiconductor device, the semiconductor device including: a first silicon level including a first single crystal silicon layer and a plurality of first transistors; a first metal layer disposed over the first silicon level; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, the second level disposed over the third metal layer; a fourth metal layer disposed over the second level; a fifth metal layer disposed over the fourth metal layer, where the fourth metal layer is aligned to the first metal layer with a less than 240 nm alignment error; where the fifth metal layer includes global power delivery; and a via disposed through the second level, where a typical thickness of the second metal layer is greater than a typical thickness of the third metal layer by at least 50%. 1. A semiconductor device, the semiconductor device comprising:
+a first silicon level comprising a first single crystal silicon layer and a plurality of first transistors;
+a first metal layer disposed over said first silicon level;
+a second metal layer disposed over said first metal layer;
+a third metal layer disposed over said second metal layer;
+a second level comprising a plurality of second transistors, said second level disposed over said third metal layer;
+a third level comprising a plurality of third transistors, said third level disposed over said second level;
+a fourth metal layer disposed over said third level;
+a fifth metal layer disposed over said fourth metal layer,
+wherein said fourth metal layer is aligned to said first metal layer with a less than 240 nm alignment error,
+wherein each of said plurality of second transistors comprises a metal gate,
+wherein said fifth metal layer comprises global power delivery; and
+
+a via disposed through said second level and through said third level,
+wherein said via has a diameter of less than 450 nm, and
+
+wherein a typical thickness of said second metal layer is greater than a typical thickness of said third metal layer by at least 50%.

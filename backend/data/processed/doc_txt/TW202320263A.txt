@@ -1,0 +1,14 @@
+Semiconductor package. A semiconductor package structure includes a first redistribution layer, a first semiconductor die, a second through via, a molding material, a second semiconductor die, and a second redistribution layer. The first semiconductor die is disposed over the first redistribution layer and includes a first through via having a first width. The second through via is adjacent to the first semiconductor die and has a second width. The second width is greater than the first width. The molding material surrounds the first semiconductor die and the second through via. The second semiconductor die is disposed over the molding material and is electrically coupled to the first through via and the second through via. The second redistribution layer is disposed over the second semiconductor die. 一種半導體封裝結構，包括：
+ 第一重分佈層；
+ 第一半導體晶粒，設置在該第一重分佈層上方並且包括具有第一寬度的第一通孔；
+ 第二通孔，與該第一半導體晶粒相鄰，並且具有大於該第一寬度的第二寬度；
+ 模塑材料，圍繞該第一半導體晶粒和該第二通孔；
+ 第二半導體晶粒，設置在該模塑材料上方，並電耦接到該第一通孔和該第二通孔；以及
+ 第二重分佈層，設置在該第二半導體晶粒上方。
+ A semiconductor packaging structure, comprising:
+ first redistribution layer;
+ a first semiconductor die disposed over the first redistribution layer and including a first via having a first width;
+ a second via, adjacent to the first semiconductor die, and having a second width greater than the first width;
+ a molding material surrounding the first semiconductor die and the second via;
+ a second semiconductor die disposed over the molding material and electrically coupled to the first via and the second via; and
+ The second redistribution layer is arranged on the second semiconductor crystal grain.

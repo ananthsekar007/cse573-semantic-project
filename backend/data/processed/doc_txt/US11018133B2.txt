@@ -1,0 +1,12 @@
+3D integrated circuit. A 3D integrated circuit, the circuit including: a first wafer including a first crystalline substrate, a plurality of first transistors, and first copper interconnecting layers, where the first copper interconnecting layers at least interconnect the plurality of first transistors; and a second wafer including a second crystalline substrate, a plurality of second transistors, and second copper interconnecting layers, where the second copper interconnecting layers at least interconnect the plurality of second transistors; where the second wafer is bonded face-to-face on top of the first wafer, where the bonded includes copper to copper bonding; and where the second crystalline substrate has been thinned to a thickness of less than 5 micro-meters. 1. A 3D integrated circuit, the circuit comprising:
+a first wafer comprising a first crystalline substrate, a plurality of first transistors, and first copper interconnecting layers,
+wherein said first copper interconnecting layers at least interconnect said plurality of first transistors; and
+
+a second wafer comprising a second crystalline substrate, a plurality of second transistors, and second copper interconnecting layers,
+wherein said second copper interconnecting layers at least interconnect said plurality of second transistors;
+wherein said second wafer is bonded face-to-face on top of said first wafer,
+wherein said bonded comprises copper to copper bonding; and
+wherein said second crystalline substrate has been thinned to a thickness of less than 5 micro-meters; and
+
+a via through said second crystalline substrate,
+wherein said via has a radius of less than 8 micro-meters.

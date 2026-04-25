@@ -1,0 +1,257 @@
+{
+  "0": {
+    "cluster_id": 0,
+    "num_patents": 10,
+    "label": "Second · Level · Semiconductor",
+    "keywords": [
+      "second",
+      "level",
+      "semiconductor",
+      "copper",
+      "said"
+    ],
+    "keyword_scores": {},
+    "tfidf_terms": [
+      "second",
+      "level",
+      "semiconductor",
+      "copper",
+      "said"
+    ],
+    "domain_breakdown": {
+      "semiconductor": 10
+    },
+    "dominant_domain": "semiconductor",
+    "sample_patents": [
+      {
+        "patent_id": "CN112530913B",
+        "title": "Packaging structure and manufacturing method thereof",
+        "domain_true": "semiconductor"
+      },
+      {
+        "patent_id": "TW202320263A",
+        "title": "Semiconductor package",
+        "domain_true": "semiconductor"
+      },
+      {
+        "patent_id": "US10910364B2",
+        "title": "3D semiconductor device",
+        "domain_true": "semiconductor"
+      },
+      {
+        "patent_id": "US11018133B2",
+        "title": "3D integrated circuit",
+        "domain_true": "semiconductor"
+      },
+      {
+        "patent_id": "US11101266B2",
+        "title": "3D device and devices with bonding",
+        "domain_true": "semiconductor"
+      }
+    ]
+  },
+  "1": {
+    "cluster_id": 1,
+    "num_patents": 10,
+    "label": "Crispr · Sequence · Guide",
+    "keywords": [
+      "crispr",
+      "sequence",
+      "guide",
+      "cas",
+      "sgrna"
+    ],
+    "keyword_scores": {},
+    "tfidf_terms": [
+      "crispr",
+      "sequence",
+      "guide",
+      "cas",
+      "sgrna"
+    ],
+    "domain_breakdown": {
+      "biotechnology": 10
+    },
+    "dominant_domain": "biotechnology",
+    "sample_patents": [
+      {
+        "patent_id": "AU2015101792A4",
+        "title": "Engineering of systems, methods and optimized enzyme and guide scaffolds for …",
+        "domain_true": "biotechnology"
+      },
+      {
+        "patent_id": "CN114015674A",
+        "title": "Novel CRISPR-Cas12i system",
+        "domain_true": "biotechnology"
+      },
+      {
+        "patent_id": "EP3080259B1",
+        "title": "Engineering of systems, methods and optimized guide compositions with new …",
+        "domain_true": "biotechnology"
+      },
+      {
+        "patent_id": "JP6712948B2",
+        "title": "Compositions and methods of using the CRISPR-cas system in nucleotide repeat …",
+        "domain_true": "biotechnology"
+      },
+      {
+        "patent_id": "US10689691B2",
+        "title": "Unbiased identification of double-strand breaks and genomic rearrangement by …",
+        "domain_true": "biotechnology"
+      }
+    ]
+  },
+  "2": {
+    "cluster_id": 2,
+    "num_patents": 10,
+    "label": "Wind · Energy · Battery",
+    "keywords": [
+      "wind",
+      "energy",
+      "battery",
+      "control",
+      "respectively"
+    ],
+    "keyword_scores": {},
+    "tfidf_terms": [
+      "wind",
+      "energy",
+      "battery",
+      "control",
+      "respectively"
+    ],
+    "domain_breakdown": {
+      "renewable_energy": 10
+    },
+    "dominant_domain": "renewable_energy",
+    "sample_patents": [
+      {
+        "patent_id": "CN101941519B",
+        "title": "Wind-light energy and shore-electricity charged storage-battery electric ship …",
+        "domain_true": "renewable_energy"
+      },
+      {
+        "patent_id": "CN102355006B",
+        "title": "Joint wind-solar-storage joint grid-connected power generation coordination …",
+        "domain_true": "renewable_energy"
+      },
+      {
+        "patent_id": "CN102384039B",
+        "title": "Mixed wind-light compensation water pumping and energy storing system and …",
+        "domain_true": "renewable_energy"
+      },
+      {
+        "patent_id": "CN104734195B",
+        "title": "A monitoring method for a wind-solar-storage integrated microgrid capable of …",
+        "domain_true": "renewable_energy"
+      },
+      {
+        "patent_id": "CN109194248A",
+        "title": "A kind of spherical integral type wind and solar hybrid generating system and …",
+        "domain_true": "renewable_energy"
+      }
+    ]
+  },
+  "3": {
+    "cluster_id": 3,
+    "num_patents": 10,
+    "label": "Feature · Video · Marker",
+    "keywords": [
+      "feature",
+      "video",
+      "marker",
+      "sequence",
+      "feature vector"
+    ],
+    "keyword_scores": {},
+    "tfidf_terms": [
+      "feature",
+      "video",
+      "marker",
+      "sequence",
+      "feature vector"
+    ],
+    "domain_breakdown": {
+      "ai_machine_learning": 10
+    },
+    "dominant_domain": "ai_machine_learning",
+    "sample_patents": [
+      {
+        "patent_id": "CN114419515B",
+        "title": "Video processing method, machine learning model training method and related …",
+        "domain_true": "ai_machine_learning"
+      },
+      {
+        "patent_id": "CN114464247B",
+        "title": "Binding affinity prediction method and device based on antigen and antibody …",
+        "domain_true": "ai_machine_learning"
+      },
+      {
+        "patent_id": "JP7514300B2",
+        "title": "Artificial Intelligence Coregistration and Marker Detection Including Machine …",
+        "domain_true": "ai_machine_learning"
+      },
+      {
+        "patent_id": "KR102579783B1",
+        "title": "Vision inspection system by using remote learning of product defects image",
+        "domain_true": "ai_machine_learning"
+      },
+      {
+        "patent_id": "US11232382B2",
+        "title": "Systems and methods for providing and managing proactive and intelligent …",
+        "domain_true": "ai_machine_learning"
+      }
+    ]
+  },
+  "4": {
+    "cluster_id": 4,
+    "num_patents": 10,
+    "label": "Network · Operator Network · Operator",
+    "keywords": [
+      "network",
+      "operator network",
+      "operator",
+      "wireless",
+      "networking"
+    ],
+    "keyword_scores": {},
+    "tfidf_terms": [
+      "network",
+      "operator network",
+      "operator",
+      "wireless",
+      "networking"
+    ],
+    "domain_breakdown": {
+      "telecommunications_5g": 10
+    },
+    "dominant_domain": "telecommunications_5g",
+    "sample_patents": [
+      {
+        "patent_id": "CN111934919B",
+        "title": "Network convergence and networking method, equipment and storage medium thereof",
+        "domain_true": "telecommunications_5g"
+      },
+      {
+        "patent_id": "CN113055887B",
+        "title": "Network channel safety protection system for electric power 5G application",
+        "domain_true": "telecommunications_5g"
+      },
+      {
+        "patent_id": "US10334446B2",
+        "title": "Private multefire network with SDR-based massive MIMO, multefire and network …",
+        "domain_true": "telecommunications_5g"
+      },
+      {
+        "patent_id": "US10694399B1",
+        "title": "Cellular system",
+        "domain_true": "telecommunications_5g"
+      },
+      {
+        "patent_id": "US10812992B1",
+        "title": "Cellular system",
+        "domain_true": "telecommunications_5g"
+      }
+    ]
+  }
+}

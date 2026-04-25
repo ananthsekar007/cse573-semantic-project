@@ -1,0 +1,2059 @@
+PATENT ID: US11984445B2
+TITLE: 3D semiconductor devices and structures with metal layers
+DOMAIN: semiconductor
+INVENTOR: Zvi Or-Bach
+ASSIGNEE: Monolithic 3D Inc.
+FILING DATE: 2023-03-30
+
+=== ABSTRACT ===
+A semiconductor device, the semiconductor device including: a first silicon level including a first single crystal silicon layer and a plurality of first transistors; a first metal layer disposed over the first silicon level; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, the second level disposed over the third metal layer; a fourth metal layer disposed over the second level; a fifth metal layer disposed over the fourth metal layer, where the fourth metal layer is aligned to the first metal layer with a less than 240 nm alignment error; where the fifth metal layer includes global power delivery; and a via disposed through the second level, where a typical thickness of the second metal layer is greater than a typical thickness of the third metal layer by at least 50%.
+
+=== CLAIMS ===
+  1. A semiconductor device, the semiconductor device comprising:
+a first silicon level comprising a first single crystal silicon layer and a plurality of first transistors;
+a first metal layer disposed over said first silicon level;
+a second metal layer disposed over said first metal layer;
+a third metal layer disposed over said second metal layer;
+a second level comprising a plurality of second transistors, said second level disposed over said third metal layer;
+a third level comprising a plurality of third transistors, said third level disposed over said second level;
+a fourth metal layer disposed over said third level;
+a fifth metal layer disposed over said fourth metal layer,
+wherein said fourth metal layer is aligned to said first metal layer with a less than 240 nm alignment error,
+wherein each of said plurality of second transistors comprises a metal gate,
+wherein said fifth metal layer comprises global power delivery; and
+
+a via disposed through said second level and through said third level,
+wherein said via has a diameter of less than 450 nm, and
+
+wherein a typical thickness of said second metal layer is greater than a typical thickness of said third metal layer by at least 50%.
+  2. The semiconductor device according to claim 1,
+wherein each of said plurality of third transistors comprises a metal gate.
+  3. The semiconductor device according to claim 1, further comprising:
+a power delivery path to at least one of said plurality of second transistors,
+wherein said power delivery path comprises at least a part of said second metal layer.
+  4. The semiconductor device according to claim 1,
+wherein each of said plurality of second transistors comprises a metal gate, and
+wherein at least one of said metal gates comprises tungsten.
+  5. The semiconductor device according to claim 1,
+wherein said semiconductor device comprises peripheral circuits, and
+wherein said peripheral circuits comprise a portion of said plurality of first transistors.
+  6. The semiconductor device according to claim 1,
+wherein said second metal layer comprises tungsten.
+  7. The semiconductor device according to claim 1, further comprising:
+a power delivery path to at least one of said plurality of second transistors,
+wherein said power delivery path comprises at least a part of said second metal layer.
+  8. A semiconductor device, the semiconductor device comprising:
+a first silicon level comprising a first single crystal silicon layer and a plurality of first transistors;
+a first metal layer disposed over said first silicon level;
+a second metal layer disposed over said first metal layer;
+a third metal layer disposed over said second metal layer;
+a second level comprising a plurality of second transistors, said second level disposed over said third metal layer;
+a third level comprising a plurality of third transistors, said third level disposed over said second level;
+a fourth metal layer disposed over said third level;
+a fifth metal layer disposed over said fourth metal layer,
+wherein said fourth metal layer is aligned to said first metal layer with a less than 240 nm alignment error, and
+
+a via disposed through said second level and through said third level as part of a connection path between said fourth metal layer to said second metal layer,
+wherein formation of said plurality of second transistors comprises a first lithography step, and
+wherein formation of said plurality of third transistors comprises a second lithography step.
+  9. The semiconductor device according to claim 8,
+wherein said via has a diameter of less than 450 nm.
+  10. The semiconductor device according to claim 8,
+wherein said second level thickness is less than two microns.
+  11. The semiconductor device according to claim 8,
+wherein each of said plurality of second transistors comprises a metal gate, and
+wherein at least one of said metal gates comprises tungsten.
+  12. The semiconductor device according to claim 8,
+wherein said semiconductor device comprises peripheral circuits, and
+wherein said peripheral circuits comprise a portion of said plurality of first transistors.
+  13. The semiconductor device according to claim 8,
+wherein each of said plurality of second transistors comprises a metal gate.
+  14. The semiconductor device according to claim 8, further comprising:
+a power delivery path to at least one of said plurality of second transistors,
+wherein said power delivery path comprises at least a part of said second metal layer.
+  15. A semiconductor device, the semiconductor device comprising:
+a first silicon level comprising a first single crystal silicon layer and a plurality of first transistors;
+a first metal layer disposed over said first silicon level;
+a second metal layer disposed over said first metal layer;
+a third metal layer disposed over said second metal layer;
+a second level comprising a plurality of second transistors, said second level disposed over said third metal layer;
+a third level comprising a plurality of third transistors, said third level disposed over said second level;
+a via disposed through said second level and through said third level;
+a fourth metal layer disposed over said third level; and
+a fifth metal layer disposed over said fourth metal layer,
+wherein said fourth metal layer is aligned to said first metal layer with a less than 240 nm alignment error,
+wherein each of said plurality of second transistors comprises a metal gate, and
+wherein said via has a diameter of less than 450 nm.
+  16. The semiconductor device according to claim 15,
+wherein said second level thickness is less than two microns.
+  17. The semiconductor device according to claim 15, further comprising:
+a power delivery path to at least one of said plurality of second transistors,
+wherein said power delivery path comprises at least a part of said second metal layer.
+  18. The semiconductor device according to claim 15,
+wherein each of said plurality of second transistors comprises a metal gate, and
+wherein at least one of said metal gates comprises tungsten.
+  19. The semiconductor device according to claim 15,
+wherein said semiconductor device comprises peripheral circuits, and
+wherein said peripheral circuits comprise a portion of said plurality of first transistors.
+  20. The semiconductor device according to claim 15,
+wherein formation of said plurality of second transistors comprises a first lithography step, and
+wherein formation of said plurality of third transistors comprises a second lithography step.
+
+=== DESCRIPTION ===
+CROSS-REFERENCE OF RELATED APPLICATIONS
+ S. patent application Ser. No. 17/827,705 filed May 28, 2022, (now issued as on May 9, 2023), which is a continuation-in-part of co-pending U.S. patent application Ser. No. 16/936,352 filed Jul. 22, 2020, (now issued as on Jun. 28, 2022), which is a continuation-in-part of U.S. patent application Ser. No. 16/242,300 filed Jan. 8, 2019, (now issued as on Feb. 2, 2021), which is a continuation-in-part of U.S. patent application Ser. No. 15/922,913 filed Mar. 16, 2018, (now issued as on Jul. 16, 2019), which is a continuation-in-part of U.S. patent application Ser. No. 15/409,740 filed Jan. 19, 2017, (now issued as on Apr. 10, 2018), which is a continuation-in-part of U.S. patent application Ser. No. 15/224,929 filed Aug. 1, 2016 (now issued as on Dec. 26, 2017), which is a continuation-in-part of U.S. Pat. application Ser. No. 14/514,386 filed Oct. 15, 2014 (now issued as on Aug. 2, 2016), which is a continuation of U.S. patent application Ser. No. 13/492,382 filed Jun. 8, 2012 (now issued as on Dec. 9, 2014), which is a continuation of U.S. Pat. application Ser. No. 13/246,384 filed Sep. 27, 2011(now issued as on Aug. 7, 2012), which is a continuation U.S. patent application Ser. No. 12/900,379 filed Oct. 7, 2010 (now issued as on Mar. 12, 2013), which is a continuation-in-part of U.S. patent application Ser. No. 12/859,665 filed Aug. 19, 2010 (now issued as on Mar. 26, 2013), which is a continuation-in-part of U.S. patent application Ser. No. 12/849,272 filed Aug. 3, 2010 (now issued as on Jul. 26, 2011) and U.S. patent application Ser. No. 12/847,911 filed Jul. 30, 2010 (now issued as on Jun. 14, 2011); U.S. patent application Ser. No. 12/847,911 is a continuation-in-part of U.S. patent application Ser. No. 12/792,673 filed Jun. 2, 2010 (now issued as on Jun. 21, 2011), U.S. patent application Ser. No. 12/797,493 filed Jun. 9, 2010 (now issued as on Feb. 14, 2012), and U.S. patent application Ser. No. 12/706,520 filed Feb. 16, 2010; both U.S. patent application Ser. No. 12/792,673 and U.S. patent application Ser. No. 12/797,493 are continuation-in-part applications of U.S. patent application Ser. No. 12/577,532 filed Oct. 12, 2009, the entire contents of all of the foregoing are incorporated by reference.
+The entire contents of U.S. application Ser. No. 13/273,712, which was filed on Oct. 14, 2011, and is now issued on Sep. 25, 2012, is incorporated by reference.
+BACKGROUND OF THE
+INVENTION
+1. Field of the Invention
+The present invention relates to the general field of Integrated Circuit (IC) devices and fabrication methods, and more particularly to multilayer or Three Dimensional Integrated Circuit (3D IC) devices and fabrication methods.
+2. Discussion of Background Art
+Semiconductor manufacturing is known to improve device density in an exponential manner over time, but such improvements come with a price. The mask set cost required for each new process technology has also been increasing exponentially. While 20 years ago a mask set cost less than $20,000, it is now quite common to be charged more than $1M for today's state of the art device mask set.
+These changes represent an increasing challenge primarily to custom products, which tend to target smaller volume and less diverse markets therefore making the increased cost of product development very hard to accommodate.
+Over the past 40 years, there has been a dramatic increase in functionality and performance of Integrated Circuits (ICs). This has largely been due to the phenomenon of scaling ; i.e., component sizes such as lateral and vertical dimensions within ICs have been reduced ( scaled ) with every successive generation of technology. There are two main classes of components in Complementary Metal Oxide Semiconductor (CMOS) ICs, namely transistors and wires. With scaling , transistor performance and density typically improve and this has contributed to the previously-mentioned increases in IC performance and functionality. However, wires (interconnects) that connect together transistors degrade in performance with scaling . The situation today is that wires dominate the performance, functionality and power consumption of ICs.
+3D stacking of semiconductor devices or chips is one avenue to tackle the wire issues. By arranging transistors in 3 dimensions instead of 2 dimensions (as was the case in the 1990s), the transistors in ICs can be placed closer to each other. This reduces wire lengths and keeps wiring delay low.
+There are many techniques to construct 3D stacked integrated circuits or chips including:
+Through-silicon via (TSV) technology: Multiple layers of transistors (with or without wiring levels) can be constructed separately. Following this, they can be bonded to each other and connected to each other with through-silicon vias (TSVs).
+Monolithic 3D technology: With this approach, multiple layers of transistors and wires can be monolithically constructed. Some monolithic 3D and 3DIC approaches are described in U.S. Pat. Nos. 8,273,610, 8,298,875, 8,362,482, 8,378,715, 8,379,458, 8,450,804, 8,557,632, 8,574,929, 8,581,349, 8,642,416, 8,669,778, 8,674,470, 8,687,399, 8,742,476, 8,803,206, 8,836,073, 8,902,663, 8,994,404, 9,023,688, 9,029,173, 9,030,858, 9,117,749, 9,142,553, 9,219,005, 9,385,058, 9,406,670, 9,460,978, 9,509,313, 9,640,531, 9,691,760, 9,711,407, 9,721,927, 9,799,761, 9,871,034, 9,953,870, 9,953,994, 10,014,292, 10,014,318, 10,515,981, 10,892,016, 10,991,675, 11,121,121, 11,502,095, 10,892,016, 11,270,988; and U.S. Pat. application Publications and applications, 14/642,724, 15/150,395, 15/173,686, 62/651,722; 62/681,249, 62/713,345, 62/770,751, 62/952,222, 62/824,288, 63/075,067, 63/091,307, 63/115,000, 63/220,443, 2021/0242189, 2020/0013791; and PCT Applications (and Publications): PCT/US2010/052093, PCT/US2011/042071 (WO2012/015550), PCT/US2016/52726 (WO2017053329), PCT/US2017/052359 (WO2018/071143), PCT/US2018/016759 (WO2018144957), PCT/US2018/52332(WO 2019/060798), PCT/US2021/44110, and PCT/US22/44165. The entire contents of all of the foregoing patents, publications, and applications are incorporated herein by reference.
+Electro-Optics: There is also work done for integrated monolithic 3D including layers of different crystals, such as U.S. Pat. Nos. 8,283,215, 8,163,581, 8,753,913, 8,823,122, 9,197,804, 9,419,031, 9,941,319, 10,679,977, 10,943,934, 10,998,374, 11,063,071, and 11,133,344. The entire contents of all of the foregoing patents, publications, and applications are incorporated herein by reference.
+In landmark papers at VLSI 2007 and IEDM 2007, Toshiba presented techniques to construct 3D memories which they called BiCS. Many of the memory vendors followed that work by variation and alternatives mostly for non-volatile memory applications, such as now being referred to as 3D-NAND. They provide an important manufacturing advantage of being able to utilize one, usually critical , lithography step for the patterning of multiple layers. The vast majority of these 3D Memory schemes use poly-silicon for the active memory cell channel which suffers from higher cell to cell performance variations and lower drive than a cell with a monocrystalline channel In at least our U.S. Pat. Nos. 8,026,521, 8,114,757, 8,687,399, 8,379,458, and 8,902,663, incorporated herein by reference, we presented multiple 3D memory structures generally constructed by successive layer transfers using ion cut techniques. In this work we are presenting methods and structures to construct 3D memory with monocrystalline channels constructed by successive layer transfers. This structure provides the benefit of multiple layers being processed by one lithography step with many of the benefits of a monocrystalline channel, and provides overall lower construction costs.
+Additionally some embodiments of the invention may provide innovative alternatives for
+multi layer
+3D IC technology. As on-chip interconnects are becoming the limiting factor for performance and power enhancement with device scaling, 3D IC may be an important technology for future generations of ICs. Currently the only viable technology for 3D IC is to finish the IC by the use of Through-Silicon-Via (TSV). The problem with TSVs is that they are relatively large (a few microns each in area) and therefore may lead to highly limited vertical connectivity. The current invention may provide multiple alternatives for 3D IC with at least an order of magnitude improvement in vertical connectivity.
+Other techniques could also be used such as employing Silicon On Insulator (SOI) technology. In U.S. Pat. Nos. 6,355,501 and 6,821,826, both assigned to IBM, a multilayer three-dimensional Complementary Metal-Oxide-Semiconductor (CMOS) Integrated Circuit is proposed. It suggests bonding an additional thin SOI wafer on top of another SOI wafer forming an integrated circuit on top of another integrated circuit and connecting them by the use of a through-silicon-via, or thru layer via (TLV). Substrate supplier Soitec SA, of Bernin, France is now offering a technology for stacking of a thin layer of a processed wafer on top of a base wafer.
+Integrating top layer transistors above an insulation layer is not common in an IC because the quality and density of prior art top layer transistors are inferior to those formed in the base (or substrate) layer. The substrate may be formed of mono-crystalline silicon and may be ideal for producing high density and high quality transistors, and hence preferable. There are some applications where it has been suggested to build memory cells using such transistors as in U.S. Pat. Nos. 6,815,781, 7,446,563 and a portion of an SRAM based FPGA such as in U.S. Pat. Nos. 6,515,511 and 7,265,421.
+Embodiments of the current invention seek to take advantage of the top layer transistor to provide a much higher density antifuse-based programmable logic. An additional advantage for such use will be the option to further reduce cost in high volume production by utilizing custom mask(s) to replace the antifuse function, thereby eliminating the top layer(s) anti-fuse programming logic altogether.
+Additionally some embodiments of the invention may provide innovative alternatives for
+multi layer
+3D IC technology. As on-chip interconnects are becoming the limiting factor for performance and power enhancement with device scaling, 3D IC may be an important technology for future generations of ICs. Currently the only viable technology for 3D IC is to finish the IC by the use of Through-Silicon-Via (TSV). The problem with TSVs is that they are relatively large (a few microns each in area) and therefore may lead to highly limited vertical connectivity. The current invention may provide multiple alternatives for 3D IC with an order of magnitude improvement in vertical connectivity.
+Constructing future 3D ICs will require new architectures and new ways of thinking In particular, yield and reliability of extremely complex three dimensional systems will have to be addressed, particularly given the yield and reliability difficulties encountered in building complex Application Specific Integrated Circuits (ASIC) of recent deep submicron process generations.
+Constructing future 3D ICs will require new architectures and new ways of thinking In particular, yield and reliability of extremely complex three dimensional systems will have to be addressed, particularly given the yield and reliability difficulties encountered in building complex Application Specific Integrated Circuits (ASIC) of recent deep submicron process generations.
+Additionally the 3D technology according to some embodiments of the current invention may enable some very innovative IC alternatives with reduced development costs, increased yield, and other important benefits.
+SUMMARY
+The invention relates to multilayer or Three Dimensional Integrated Circuit (3D IC) devices and fabrication methods.
+In one aspect, a 3D device, the device comprising: a first level comprising first single crystal transistors; overlaid by a second level comprising second single crystal transistors, wherein said first level is overlaid by said second level; a third level comprising third single crystal transistors, wherein said second level is overlaid by said third level; a fourth level comprising fourth single crystal transistors, wherein said third level is overlaid by said fourth level; first bond regions comprising first oxide to oxide bonds, wherein said first bond regions are disposed between said first level and said second level; second bond regions comprising second oxide to oxide bonds, wherein said second bond regions are disposed between said second level and said third level; and third bond regions comprising third oxide to oxide bonds, wherein said third bond regions are disposed between said third level and said fourth level, wherein said second level, said third level, and said fourth level each comprise at least one array of memory cells, and wherein said at least one array of memory cells is a DRAM type memory.
+In another aspect, a first 3D device, the device comprising: a first level comprising first single crystal transistors; a second level comprising second single crystal transistors, wherein said first level is overlaid by said second level; and a second 3D device comprising: a third level comprising third single crystal transistors; a fourth level comprising fourth single crystal transistors, wherein said third level is overlaid by said fourth level; and wherein said second level and said fourth level comprise at least a similar 20 levels of lithography based patterns, and wherein said first level and said third level comprise less than 4 similar levels of lithography based patterns.
+In another aspect, a 3D device, the device comprising: a first level comprising first single crystal transistors; a second level comprising second single crystal transistors, wherein said first level is overlaid by said second level; and bond regions comprising hybrid bonds, said bond regions are disposed between said first level and said second level, wherein at least one of said second transistors comprises at least two side gates, and wherein said second level comprises an array of SRAM memory cells.
+In another aspect, a 3D integrated circuit, the circuit comprising: a first level comprising a first wafer, said first wafer comprising a first crystalline substrate, a plurality of first transistors, and first copper interconnecting layers, wherein said first copper interconnecting layers at least interconnect said plurality of first transistors; a second level comprising a second wafer, said second wafer comprising a second crystalline substrate, a plurality of second transistors, and second copper interconnecting layers, wherein said second copper interconnecting layers at least interconnect said plurality of second transistors, wherein said second level is bonded to said first level, wherein said bonded comprises metal to metal bonding, wherein said bonded comprises oxide to oxide bonding; and a first metal layer, a second metal layer, and a third metal layer, wherein said first metal layer, said second metal layer, and said third metal layer are disposed between said first crystalline substrate and said second crystalline substrate, wherein said second metal layer is disposed between said first said metal layer and said third metal layer, wherein said second metal layer thickness is at least double that of said first metal thickness, and wherein said second metal layer thickness is at least double that of said third metal thickness.
+In another aspect, a 3D integrated circuit, the circuit comprising: a first level comprising a first wafer, said first wafer comprising a first crystalline substrate, a plurality of first transistors, and first copper interconnecting layers, wherein said first copper interconnecting layers at least interconnect said plurality of first transistors; and a second level comprising a second wafer, said second wafer comprising a second crystalline substrate, a plurality of second transistors, and second copper interconnecting layers, wherein said second copper interconnecting layers at least interconnect said plurality of second transistors, wherein said second level is bonded to said first level, wherein said bonded comprises metal to metal bonding, wherein said bonded comprises oxide to oxide bonding, and wherein at least one of said second transistors comprise a replacement gate.
+In another aspect, a 3D integrated circuit, the circuit comprising: a first level comprising a first wafer, said first wafer comprising a first crystalline substrate, a plurality of first transistors, and first copper interconnecting layers, wherein said first copper interconnecting layers at least interconnect said plurality of first transistors; and a second level comprising a second wafer, said second wafer comprising a second crystalline substrate, a plurality of second transistors, and second copper interconnecting layers, wherein said second copper interconnecting layers at least interconnect said plurality of second transistors, wherein said second level is bonded to said first level, wherein said bonded comprises metal to metal bonding, wherein said bonded comprises oxide to oxide bonding, and wherein said second level comprises DRAM memory.
+In another aspect, a semiconductor device, the device including: a first silicon layer including a first single crystal silicon and a plurality of first transistors; a first metal layer disposed over the first silicon layer; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, the second level disposed over the third metal layer; a fourth metal layer disposed over the second level; a fifth metal layer disposed over the fourth metal layer, where the fourth metal layer is aligned to the first metal layer with a less than 40 nm alignment error; and a via disposed through the second level, where each of the second transistors includes a metal gate, and where a typical thickness of the second metal layer is greater than a typical thickness of the third metal layer by at least 50%.
+In another aspect, a semiconductor device, the device including: a first silicon layer including a first single crystal silicon and a plurality of first transistors; a first metal layer disposed over the first silicon layer; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, the second level disposed over the third metal layer; a third level including a plurality of third transistors, the third level disposed over the second level; a fourth metal layer disposed over the third level; a fifth metal layer disposed over the fourth metal layer, where the fourth metal layer is aligned to the first metal layer with a less than 40 nm alignment error, where each of the second transistors includes a metal gate, where the second transistor formation includes a first lithography step, and where the third transistor formation includes a second lithography step.
+In another aspect, a semiconductor device, the device including: a first silicon layer including a first single crystal silicon and a plurality of first transistors; a first metal layer disposed over the first silicon layer; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, the second level disposed over the third metal layer; a third level including a plurality of third transistors, the third level disposed over the second level; a fourth metal layer disposed over the third level; a fifth metal layer disposed over the fourth metal layer, where the fourth metal layer is aligned to the first metal layer with a less than 40 nm alignment error, and where each of the second transistors includes a metal gate; and a power delivery path to at least one of the plurality of second transistors, where the power delivery path includes at least a part of the second metal layer.
+In another aspect, a semiconductor device, the device including: a first silicon level including a first single crystal silicon layer and a plurality of first transistors; a first metal layer disposed over the first silicon level; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, the second level disposed over the third metal layer; a fourth metal layer disposed over the second level; a fifth metal layer disposed over the fourth metal layer, where the fourth metal layer is aligned to the first metal layer with a less than 240 nm alignment error; where the fifth metal layer includes global power delivery; and a via disposed through the second level, where a typical thickness of the second metal layer is greater than a typical thickness of the third metal layer by at least 50%,
+In another aspect, a semiconductor device, the device including: a first silicon level including a first single crystal silicon layer and a plurality of first transistors; a first metal layer disposed over the first silicon level; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, the second level disposed over the third metal layer; a third level including a plurality of third transistors, the third level disposed over the second level; a fourth metal layer disposed over the third level; a fifth metal layer disposed over the fourth metal layer, where the fourth metal layer is aligned to the first metal layer with a less than 240 nm alignment error, and a via disposed through the second level and through the third level as part of a connection path between the fourth metal layer to the second metal layer, where the plurality of second transistors formation includes a first lithography step, and where the plurality of third transistors formation includes a second lithography step.
+In another aspect, a semiconductor device, the device including: a first silicon level including a first single crystal silicon layer and a plurality of first transistors; a first metal layer disposed over the first silicon level; a second metal layer disposed over the first metal layer; a third metal layer disposed over the second metal layer; a second level including a plurality of second transistors, the second level disposed over the third metal layer; a third level including a plurality of third transistors, the third level disposed over the second level; a via disposed through the second level and through the third level; fourth metal layer disposed over the third level; and a fifth metal layer disposed over the fourth metal layer, where the fourth metal layer is aligned to the first metal layer with a less than 240 nm alignment error, where each of the plurality of second transistors includes a metal gate; and where the via has a diameter of less than 450 nm.
+Additionally there is a growing need to reduce the impact of inter-chip interconnects. In fact, interconnects are now dominating IC performance and power. One solution to shorten interconnect may be to use a 3D IC. Currently, the only known way for
+general logic
+3D IC is to integrate finished device one on top of the other by utilizing Through-Silicon-Vias as now called TSVs. The problem with TSVs is that their large size, usually a few microns each, may severely limit the number of connections that can be made. Some embodiments of the current invention may provide multiple alternatives to constructing a 3D IC wherein many connections may be made less than one micron in size, thus enabling the use of 3D IC technology for most device applications.
+Additionally some embodiments of this invention may offer new device alternatives by utilizing the proposed 3D IC technology.
+BRIEF DESCRIPTION OF THE DRAWINGS
+Various embodiments of the present invention will be understood and appreciated more fully from the following detailed description, taken in conjunction with the drawings in which:
+ 
+is a drawing illustration of a layer transfer process flow;
+ 
+A,
+2
+B
+are device simulations of a junction-less transistor;
+ 
+A-
+3
+M
+are drawing illustrations of the formation of a resistive memory transistor;
+ 
+A-
+4
+M
+are drawing illustrations of the formation of a resistive memory transistor;
+ 
+A-
+5
+J
+are drawing illustrations of the formation of a resistive memory transistor with periphery on top;
+ 
+is a drawing illustration of a metal interconnect stack prior art;
+ 
+is a drawing illustration of a metal interconnect stack;
+ 
+is an exemplary illustration of some additional embodiments and combinations of devices, circuits, paths, and connections of a 3D device;
+ 
+is a drawing illustration of a programmable device layers structure;
+ 
+A
+is a drawing illustration of a programmable device layers structure;
+ 
+B-
+9
+I
+are drawing illustrations of the preprocessed wafers and layers and generalized layer transfer;
+ 
+A through
+10
+F
+are a drawing illustration of one reticle site on a wafer;
+ 
+A through
+11
+E
+are a drawing illustration of Configurable system;
+ 
+a drawing illustration of a flow chart for 3D logic partitioning;
+ 
+is a drawing illustration of a layer transfer process flow;
+ 
+is a drawing illustration of an underlying programming circuits;
+ 
+is a drawing illustration of an underlying isolation transistors circuits;
+ 
+A
+is a topology drawing illustration of underlying back bias circuitry;
+ 
+B
+is a drawing illustration of underlying back bias circuits;
+ 
+C
+is a drawing illustration of power control circuits
+ 
+D
+is a drawing illustration of probe circuits
+ 
+is a drawing illustration of an underlying SRAM;
+ 
+A
+is a drawing illustration of an underlying I/O;
+ 
+B
+is a drawing illustration of side cut ;
+ 
+C
+is a drawing illustration of a 3D IC system;
+ 
+D
+is a drawing illustration of a 3D IC processor and DRAM system;
+ 
+E
+is a drawing illustration of a 3D IC processor and DRAM system;
+ 
+F
+is a drawing illustration of a custom SOI wafer used to build through-silicon connections;
+ 
+G
+is a drawing illustration of a prior art method to make through-silicon vias;
+ 
+H
+is a drawing illustration of a process flow for making custom SOI wafers;
+ 
+I
+is a drawing illustration of a processor-DRAM stack;
+ 
+J
+is a drawing illustration of a process flow for making custom SOI wafers;
+ 
+A-
+19
+D
+are drawing illustrations of an advanced TSV flow; and
+ 
+A-
+20
+C
+are drawing illustrations of an advanced TSV multi-connections flow.
+DETAILED DESCRIPTION
+Embodiments of the present invention are now described with reference to the drawing figures. Persons of ordinary skill in the art will appreciate that the description and figures illustrate rather than limit the invention and that in general the figures are not drawn to scale for clarity of presentation. Such skilled persons will also realize that many more embodiments are possible by applying the inventive principles contained herein and that such embodiments fall within the scope of the invention which is not to be limited except by the appended claims.
+Some drawing figures may describe process flows for fabricating devices. The process flows, which may be a sequence of steps for fabricating a device, may have many structures, numerals and labels that may be common between two or more successive steps. In such cases, some labels, numerals and structures used for a certain step's figure may have been described in the previous steps' figures.
+A technology for creating layer stacks or overlying or underlying circuitry is to use the SmartCut  process. The SmartCut  process is a well understood technology used for fabrication of SOI wafers. The SmartCut  process, together with wafer bonding technology, enables a Layer Transfer  whereby a thin layer of a single or mono-crystalline silicon wafer is transferred from one wafer to another wafer. The Layer Transfer  could be done at less than 400 C. and the resultant transferred layer could be even less than 100 nm thick. The process with some variations and under different names is commercially available by two companies, namely, Soitec (Crolles, France) and SiGen Silicon Genesis Corporation (San Jose, CA). A room temperature wafer bonding process utilizing ion-beam preparation of the wafer surfaces in a vacuum has been recently demonstrated by Mitsubishi Heavy Industries Ltd., Tokyo, Japan. This process allows room temperature layer transfer.
+Alternatively, other technology may be used. For example, other technologies may be utilized for layer transfer as described in, for example, IBM's layer transfer method shown at IEDM 2005 by A. W. Topol, et. al. The IBM's layer transfer method employs a SOI technology and utilizes glass handle wafers. The donor circuit may be high-temperature processed on an SOI wafer, temporarily bonded to a borosilicate glass handle wafer, backside thinned by chemical mechanical polishing of the silicon and then the Buried Oxide (BOX) is selectively etched off. The now thinned donor wafer is subsequently aligned and low-temperature oxide-to-oxide bonded to the acceptor wafer topside. A low temperature release of the glass handle wafer from the thinned donor wafer is performed, and then thru bond via connections are made. Additionally, epitaxial liftoff (ELO) technology as shown by P. Demeester, et. al, of IMEC in Semiconductor Science Technology 1993 may be utilized for layer transfer. ELO makes use of the selective removal of a very thin sacrificial layer between the substrate and the layer structure to be transferred. The to-be-transferred layer of GaAs or silicon may be adhesively rolled  up on a cylinder or removed from the substrate by utilizing a flexible carrier, such as, for example, black wax, to bow up the to-be-transferred layer structure when the selective etch, such as, for example, diluted Hydrofluoric (HF) Acid, etches the exposed release layer, such as, for example, silicon oxide in SOI or AlAs. After liftoff, the transferred layer is then aligned and bonded to the desired acceptor substrate or wafer. The manufacturability of the ELO process for multilayer layer transfer use was recently improved by J. Yoon, et. al., of the University of Illinois at Urbana-Champaign as described in Nature May 20, 2010.
+Canon developed a layer transfer technology called ELTRAN Epitaxial Layer TRANsfer from porous silicon. ELTRAN may be utilized. The Electrochemical Society Meeting abstract No. 438 from year 2000 and the JSAP International July 2001 paper show a seed wafer being anodized in an HF/ethanol solution to create pores in the top layer of silicon, the pores are treated with a low temperature oxidation and then high temperature hydrogen annealed to seal the pores. Epitaxial silicon may then be deposited on top of the porous silicon and then oxidized to form the SOI BOX. The seed wafer may be bonded to a handle wafer and the seed wafer may be split off by high pressure water directed at the porous silicon layer. The porous silicon may then be selectively etched off leaving a uniform silicon layer.
+ 
+is a drawing illustration of a layer transfer process flow. In another alternative of the invention, Layer-Transfer  is used for construction of the underlying circuitry
+814
+.
+102
+is a wafer that was processed to construct the underlying circuitry. The
+wafer
+102
+could be of the most advanced process or more likely a few generations behind. It could comprise the programming circuits
+814
+and other useful structures and may be a preprocessed CMOS silicon wafer, or a partially processed CMOS, or other prepared silicon or semiconductor substrate.
+Wafer
+102
+may also be called an acceptor substrate or a target wafer. An
+oxide layer
+112
+is then deposited on top of the
+wafer
+102
+and then is polished for better planarization and surface preparation. A
+donor wafer
+106
+is then brought in to be bonded to
+102
+. The surfaces of both
+donor wafer
+106
+and
+wafer
+102
+may be pre-processed for low temperature bonding by various surface treatments, such as an RCA pre-clean that may comprise dilute ammonium hydroxide or hydrochloric acid, and may include plasma surface preparations to lower the bonding energy and enhance the wafer to wafer bond strength. The
+donor wafer
+106
+is pre-prepared for SmartCut  by an ion implant of an atomic species, such as H+ ions, at the desired depth to prepare the
+SmartCut line
+108
+.
+SmartCut line
+108
+may also be called a layer transfer demarcation plane, shown as a dashed line. The
+SmartCut line
+108
+or layer transfer demarcation plane may be formed before or after other processing on the
+donor wafer
+106
+.
+Donor wafer
+106
+may be bonded to
+wafer
+102
+by bringing the
+donor wafer
+106
+surface in physical contact with the
+wafer
+102
+surface, and then applying mechanical force and/or thermal annealing to strengthen the oxide to oxide bond. Alignment of the
+donor wafer
+106
+with the
+wafer
+102
+may be performed immediately prior to the wafer bonding. Acceptable bond strengths may be obtained with bonding thermal cycles that do not exceed approximately 400 C. After bonding the two wafers a SmartCut step is performed to cleave and remove the
+top portion
+114
+of the
+donor wafer
+106
+along the
+cut layer
+108
+. The cleaving may be accomplished by various applications of energy to the
+SmartCut line
+108
+, or layer transfer demarcation plane, such as a mechanical strike by a knife or jet of liquid or jet of air, or by local laser heating, or other suitable methods. The result is a
+3D wafer
+110
+which comprises
+wafer
+102
+with an added
+layer
+104
+of mono-crystalline silicon, or multiple layers of materials.
+Layer
+104
+may be polished chemically and mechanically to provide a suitable surface for further processing.
+Layer
+104
+could be quite thin at the range of 50-200 nm as desired. The described flow is called layer transfer . Layer transfer is commonly utilized in the fabrication of SOI Silicon On Insulator wafers. For SOI wafers the upper surface is oxidized so that after layer transfer  a buried oxide BOX provides isolation between the top thin mono-crystalline silicon layer and the bulk of the wafer. The use of an implanted atomic species, such as Hydrogen or Helium or a combination, to create a cleaving plane as described above may be referred to in this document as ion-cut  and is the preferred and illustrated layer transfer method utilized.
+Persons of ordinary skill in the art will appreciate that the illustrations in
+ 
+are exemplary only and are not drawn to scale. Such skilled persons will further appreciate that many variations are possible such as, for example, a heavily doped (greater than 1e20 atoms/cm3) boron layer or silicon germanium (SiGe) layer may be utilized as an etch stop either within the ion-cut process flow, wherein the layer transfer demarcation plane may be placed within the etch stop layer or into the substrate material below, or the etch stop layers may be utilized without a implant cleave process and the donor wafer may be preferentially etched away until the etch stop layer is reached. Such skilled persons will further appreciate that the oxide layer within an SOI or GeOI donor wafer may serve as the etch stop layer. Many other modifications within the scope of the invention will suggest themselves to such skilled persons after reading this specification. Thus the invention is to be limited only by the appended claims.
+One alternative method is to have a thin layer transfer of single crystal silicon which will be used for epitaxial Ge crystal growth using the transferred layer as the seed for the germanium. Another alternative method is to use the thin layer transfer of mono-crystalline silicon for epitaxial growth of GexSi 1-x. The percent Ge in Silicon of such layer would be determined by the transistor specifications of the circuitry. Prior art have presented approaches whereby the base silicon is used to crystallize the germanium on top of the oxide by using holes in the oxide to drive crystal or lattice seeding from the underlying silicon crystal. However, it is very hard to do such on top of multiple interconnection layers. By using layer transfer we can have a mono-crystalline layer of silicon crystal on top and make it relatively easy to seed and crystallize an overlying germanium layer. Amorphous germanium could be conformally deposited by CVD at 300 C. and pattern aligned to the underlying layer, such as a pre-processed wafer or layer, and then encapsulated by a low temperature oxide. A short microsecond-duration heat pulse melts the Ge layer while keeping the underlying structure below 400 C. The Ge/Si interface will start the crystal or lattice epitaxial growth to crystallize the germanium or GexSi1-x layer. Then implants are made to form Ge transistors and activated by laser pulses without damaging the underlying structure taking advantage of the low activation temperature of dopants in germanium.
+Another class of devices that may be constructed partly at high temperature before layer transfer to a substrate with metal interconnects and then completed at low temperature after layer transfer is a junction-less transistor (JLT). For example, in deep sub micron processes copper metallization is utilized, so a high temperature would be above approximately 400 C., whereby a low temperature would be approximately 400 C. and below. The junction-less transistor structure avoids the sharply graded junctions needed as silicon technology scales, and provides the ability to have a thicker gate oxide for an equivalent performance when compared to a traditional MOSFET transistor. The junction-less transistor is also known as a nanowire transistor without junctions, or gated resistor, or nanowire transistor as described in a paper by Jean-Pierre Colinge, et. al., published in Nature Nanotechnology on Feb. 21, 2010. The junction-less transistors may be constructed whereby the transistor channel is a thin solid piece of evenly and heavily doped single crystal silicon. The doping concentration of the channel may be identical to that of the source and drain. The considerations may include the nanowire channel must be thin and narrow enough to allow for full depletion of the carriers when the device is turned off, and the channel doping must be high enough to allow a reasonable current to flow when the device is on. These considerations may lead to tight process variation boundaries for channel thickness, width, and doping for a reasonably obtainable gate work function and gate oxide thickness.
+One of the challenges of a junction-less transistor device is turning the channel off with minimal leakage at a zero gate bias. To enhance gate control over the transistor channel, the channel may be doped unevenly; whereby the heaviest doping is closest to the gate or gates and the channel doping is lighter the farther away from the gate electrode. One example would be where the center of a 2, 3, or 4 gate sided junction-less transistor channel is more lightly doped than the edges. This may enable much lower off currents for the same gate work function and control.
+ 
+A and
+52
+B
+show, on logarithmic and linear scales respectively, simulated drain to source current Ids as a function of the gate voltage Vg for various junction-less transistor channel dopings where the total thickness of the n-channel is 20 nm. Two of the four curves in each figure correspond to evenly doping the 20 nm channel thickness to 1E17 and 1E18 atoms/cm3, respectively. The remaining two curves show simulation results where the 20 nm channel has two layers of 10 nm thickness each. In the legend denotations for the remaining two curves, the first number corresponds to the 10 nm portion of the channel that is the closest to the gate electrode. For example, the curve D=1E18/1E17 shows the simulated results where the 10 nm channel portion doped at 1E18 is closest to the gate electrode while the 10 nm channel portion doped at 1E17 is farthest away from the gate electrode. In
+ 
+A
+, curves
+202
+and
+204
+correspond to doping patterns of D=1E18/1E17 and D=1E17/1E18, respectively. According to
+ 
+A
+, at a Vg of 0 volts, the off current for the doping pattern of D=1E18/1E17 is approximately 50 times lower than that of the reversed doping pattern of D=1E17/1E18. Likewise, in
+ 
+B
+,
+curves
+206
+and
+208
+correspond to doping patterns of D=1E18/1E17 and D=1E17/1E18, respectively.
+ 
+B
+shows that at a Vg of 1 volt, the Ids of both doping patterns are within a few percent of each other.
+The junction-less transistor channel may be constructed with even, graded, or discrete layers of doping. The channel may be constructed with materials other than doped mono-crystalline silicon, such as poly-crystalline silicon, or other semi-conducting, insulating, or conducting material, such as graphene or other graphitic material, and may be in combination with other layers of similar or different material. For example, the center of the channel may comprise a layer of oxide, or of lightly doped silicon, and the edges more heavily doped single crystal silicon. This may enhance the gate control effectiveness for the off state of the resistor, and may also increase the on-current due to strain effects on the other layer or layers in the channel Strain techniques may also be employed from covering and insulator material above, below, and surrounding the transistor channel and gate. Lattice modifiers may also be employed to strain the silicon, such as an embedded SiGe implantation and anneal. The cross section of the transistor channel may be rectangular, circular, or oval shaped, to enhance the gate control of the channel. Alternatively, to optimize the mobility of the P-channel junction-less transistor in the 3D layer transfer method, the donor wafer may be rotated 90 degrees with respect to the acceptor wafer prior to bonding to facilitate the creation of the P-channel in the silicon plane direction.
+Novel monolithic 3D memory technologies utilizing material resistance changes may be constructed in a similar manner. There are many types of resistance-based memories including phase change memory, Metal Oxide memory, resistive RAM (RRAM), memristors, solid-electrolyte memory, ferroelectric RAM, MRAM, etc. Background information on these resistive-memory types is given in Overview of candidate device technologies for storage-class memory, 
+IBM Journal of Research and Development
+, vol. 52, no. 4.5, pp. 449-464, July 2008 by Burr, G. W., et. al. The contents of this document are incorporated in this specification by reference.
+The monolithic 3D integration concepts described in this patent application can lead to novel embodiments of poly-crystalline silicon based memory architectures. While the below concepts in
+ 
+and
+4
+are explained by using resistive memory architectures as an example, it will be clear to one skilled in the art that similar concepts can be applied to the NAND flash, charge trap, and DRAM memory architectures and process flows described previously in this patent application's parent (U.S. application Ser. No. 12/900,379, issued as 8,395,191) or other of the incorporated by reference documents.
+As illustrated in
+ 
+A to
+3
+K
+, a resistance-based zero additional masking steps per
+memory layer
+3D memory may be constructed that is suitable for 3D IC manufacturing. This 3D memory utilizes junction-less transistors and has a resistance-based memory element in series with a select or access transistor.
+As illustrated in
+ 
+A
+, a silicon substrate with
+peripheral circuitry
+302
+may be constructed with high temperature (greater than approximately 400 C.) resistant wiring, such as, for example, Tungsten. The
+peripheral circuitry substrate
+302
+may include memory control circuits as well as circuitry for other purposes and of various types, such as, for example, analog, digital, RF, or memory. The
+peripheral circuitry substrate
+302
+may include peripheral circuits that can withstand an additional rapid-thermal-anneal (RTA) and still remain operational and retain good performance. For this purpose, the peripheral circuits may be formed such that they have had a weak RTA or no RTA for activating dopants. The top surface of the
+peripheral circuitry substrate
+302
+may be prepared for oxide wafer bonding with a deposition of a
+silicon oxide
+304
+, thus forming
+acceptor wafer
+314
+.
+As illustrated in
+ 
+B
+, a mono-crystalline
+silicon donor wafer
+312
+may be optionally processed to include a wafer sized layer of N+ doping (not shown) which may have a different dopant concentration than the
+N+ substrate
+306
+. The N+ doping layer may be formed by ion implantation and thermal anneal. A
+screen oxide
+308
+may be grown or deposited prior to the implant to protect the silicon from implant contamination and to provide an oxide surface for later wafer to wafer bonding. A layer transfer demarcation plane
+310
+(shown as a dashed line) may be formed in
+donor wafer
+312
+within the
+N+ substrate
+306
+or the N+ doping layer (not shown) by hydrogen implantation or other methods as previously described. Both the
+donor wafer
+312
+and
+acceptor wafer
+314
+may be prepared for wafer bonding as previously described and then bonded at the surfaces of
+oxide layer
+304
+and
+oxide layer
+308
+, at a low temperature (less than approximately 400 C.) preferred for lowest stresses, or a moderate temperature (less than approximately 900 C.).
+As illustrated in
+ 
+C
+, the portion of the N+ layer (not shown) and the
+N+ wafer substrate
+306
+that are above the layer
+transfer demarcation plane
+310
+may be removed by cleaving and polishing, or other processes as previously described, such as, for example, ion-cut or other methods, thus forming the remaining mono-crystalline
+silicon N+ layer
+306
+ ². Remaining
+N+ layer
+306
+ ² and
+oxide layer
+308
+have been layer transferred to
+acceptor wafer
+314
+. The top surface of
+N+ layer
+306
+ ² may be chemically or mechanically polished smooth and flat. Now transistors or portions of transistors may be formed and aligned to the
+acceptor wafer
+314
+alignment marks (not shown).
+Oxide layer
+320
+may be deposited to prepare the surface for later oxide to oxide bonding, leading to the formation of the first Si/
+SiO2 layer
+323
+that includes
+silicon oxide layer
+320
+,
+N+ silicon layer
+306
+ ², and
+oxide layer
+308
+.
+As illustrated in
+ 
+D
+, additional Si/SiO2 layers, such as, for example, second Si/
+SiO2 layer
+325
+and third Si/
+SiO2 layer
+327
+, may each be formed as described in
+ 
+A to
+3
+C
+.
+Oxide layer
+329
+may be deposited to electrically isolate the top N+ silicon layer.
+As illustrated in
+ 
+E
+,
+oxide
+329
+, third Si/
+SiO2 layer
+327
+, second Si/
+SiO2 layer
+325
+and first Si/
+SiO2 layer
+323
+may be lithographically defined and plasma/RIE etched to form a portion of the memory cell structure, which now includes regions of
+N+ silicon
+326
+and
+oxide
+322
+.
+As illustrated in
+ 
+F
+, a gate dielectric and gate electrode material may be deposited, planarized with a chemical mechanical polish (CMP), and then lithographically defined and plasma/RIE etched to form gate
+dielectric regions
+328
+which may either be self aligned to and covered by gate electrodes
+330
+(shown), or cover the
+entire N+ silicon
+326
+and
+oxide
+322
+multi-layer structure. The gate stack including
+gate electrode
+330
+and
+gate dielectric
+328
+may be formed with a gate dielectric, such as, for example, thermal oxide, and a gate electrode material, such as, for example, poly-crystalline silicon. Alternatively, the gate dielectric may be an atomic layer deposited (ALD) material that is paired with a work function specific gate metal according to an industry standard of high k metal gate process schemes described previously. Moreover, the gate dielectric may be formed with a rapid thermal oxidation (RTO), a low temperature oxide deposition or low temperature microwave plasma oxidation of the silicon surfaces and then a gate electrode such as, for example, tungsten or aluminum may be deposited.
+As illustrated in
+ 
+G
+, the entire structure may be covered with a
+gap fill oxide
+332
+, which may be planarized with chemical mechanical polishing. The
+oxide
+332
+is shown transparent in the figure for clarity, along with word-line regions (WL)
+350
+, coupled with and composed of
+gate electrodes
+330
+, and source-line regions (SL)
+352
+, composed of
+N+ silicon regions
+326
+.
+As illustrated in
+ 
+H
+, bit-line (BL)
+contacts
+334
+may be lithographically defined, etched along with plasma/RIE through
+oxide
+332
+, the three
+N+ silicon regions
+326
+, and associated oxide vertical isolation regions to connect all memory layers vertically.
+BL contacts
+334
+may then be processed by a photoresist removal. Resistance
+change memory material
+338
+, such as, for example, hafnium oxide, may then be deposited, preferably with atomic layer deposition (ALD). The electrode for the resistance change memory element may then be deposited by ALD to form the electrode/
+BL contact
+334
+. The excess deposited material may be polished to planarity at or below the top of
+oxide
+332
+. Each
+BL contact
+334
+with
+resistive change material
+338
+may be shared among substantially all layers of memory, shown as three layers of memory in
+ 
+H
+.
+As illustrated in
+ 
+I
+,
+BL metal lines
+336
+may be formed and connect to the associated
+BL contacts
+334
+with
+resistive change material
+338
+. Contacts and associated metal interconnect lines (not shown) may be formed for the WL and SL at the memory array edges. A thru layer via
+360
+(not shown) may be formed to electrically couple the BL, SL, and WL metallization to the
+acceptor substrate
+314
+peripheral circuitry via an acceptor wafer metal connect pad
+380
+(not shown).
+ 
+K
+shows a cross sectional cut II of
+ 
+J
+, while
+ 
+L
+shows a cross-sectional cut III of
+ 
+J
+.
+ 
+K
+shows
+BL metal line
+336
+,
+oxide
+332
+, BL contact/
+electrode
+334
+,
+resistive change material
+338
+,
+WL regions
+350
+,
+gate dielectric
+328
+,
+N+ silicon regions
+326
+, and
+peripheral circuits substrate
+302
+. The BL contact/
+electrode
+334
+couples to one side of the three levels of
+resistive change material
+338
+. The other side of the
+resistive change material
+338
+is coupled to
+N+ regions
+326
+.
+ 
+L
+shows
+BL metal lines
+336
+,
+oxide
+332
+,
+gate electrode
+330
+,
+gate dielectric
+328
+,
+N+ silicon regions
+326
+, interlayer oxide region ( ox ), and
+peripheral circuits substrate
+302
+. The
+gate electrode
+330
+is common to substantially all six
+N+ silicon regions
+326
+and forms six two-sided gated junction-less transistors as memory select transistors.
+As illustrated in
+ 
+M
+, a single exemplary two-sided gate junction-less transistor on the first Si/
+SiO2 layer
+323
+may include N+ silicon region
+326
+(functioning as the source, drain, and transistor channel), and two
+gate electrodes
+330
+with associated
+gate dielectrics
+328
+. The transistor is electrically isolated from beneath by
+oxide layer
+308
+.
+This flow may enable the formation of a resistance-based multi-layer or 3D memory array with zero additional masking steps per memory layer, which utilizes junction-less transistors and has a resistance-based memory element in series with a select transistor, and is constructed by layer transfers of wafer sized doped mono-crystalline silicon layers, and this 3D memory array may be connected to an underlying multi-metal layer semiconductor device.
+Persons of ordinary skill in the art will appreciate that the illustrations in
+ 
+A through
+3
+M
+are exemplary only and are not drawn to scale. Such skilled persons will further appreciate that many variations are possible such as, for example, the transistors may be of another type such as RCATs. Additionally, doping of each N+ layer may be slightly different to compensate for interconnect resistances. Moreover, the stacked memory layer may be connected to a periphery circuit that is above the memory stack. Further, each gate of the
+double gate
+3D resistance based memory can be independently controlled for better control of the memory cell. Many other modifications within the scope of the invention will suggest themselves to such skilled persons after reading this specification. Thus the invention is to be limited only by the appended claims.
+The monolithic 3D integration concepts described in this patent application can lead to novel embodiments of poly-crystalline silicon based memory architectures. While the below concepts in
+ 
+and
+5
+are explained by using resistive memory architectures as an example, it will be clear to one skilled in the art that similar concepts can be applied to the NAND flash, charge trap, and DRAM memory architectures and process flows described previously in this patent application.
+As illustrated in
+ 
+A to
+4
+K
+, a resistance-based 3D memory with zero additional masking steps per memory layer may be constructed with methods that are suitable for 3D IC manufacturing. This 3D memory utilizes poly-crystalline silicon junction-less transistors that may have either a positive or a negative threshold voltage and has a resistance-based memory element in series with a select or access transistor.
+As illustrated in
+ 
+A
+, a silicon substrate with
+peripheral circuitry
+402
+may be constructed with high temperature (greater than approximately 400 C.) resistant wiring, such as, for example, Tungsten. The
+peripheral circuitry substrate
+402
+may include memory control circuits as well as circuitry for other purposes and of various types, such as, for example, analog, digital, RF, or memory. The
+peripheral circuitry substrate
+402
+may include peripheral circuits that can withstand an additional rapid-thermal-anneal (RTA) and still remain operational and retain good performance. For this purpose, the peripheral circuits may be formed such that they have been subject to a partial or weak RTA or no RTA for activating dopants.
+Silicon oxide layer
+404
+is deposited on the top surface of the peripheral circuitry substrate.
+As illustrated in
+ 
+B
+, a layer of N+ doped poly-crystalline or
+amorphous silicon
+406
+may be deposited. The amorphous silicon or poly-
+crystalline silicon layer
+406
+may be deposited using a chemical vapor deposition process, such as LPCVD or PECVD, or other process methods, and may be deposited doped with N+ dopants, such as Arsenic or Phosphorous, or may be deposited un-doped and subsequently doped with, such as, ion implantation or PLAD (PLasma Assisted Doping) techniques.
+Silicon Oxide
+420
+may then be deposited or grown. This now forms the first Si/SiO
+2
+layer
+423
+which includes N+ doped poly-crystalline or
+amorphous silicon layer
+406
+and
+silicon oxide layer
+420
+.
+As illustrated in
+ 
+C
+, additional Si/SiO
+2
+layers, such as, for example, second Si/SiO
+2
+layer
+425
+and third Si/SiO
+2
+layer
+427
+, may each be formed as described in
+ 
+B
+.
+Oxide layer
+429
+may be deposited to electrically isolate the top N+ doped poly-crystalline or amorphous silicon layer.
+As illustrated in
+ 
+D
+, a Rapid Thermal Anneal (RTA) is conducted to crystallize the N+ doped poly-crystalline silicon or amorphous silicon layers
+406
+of first Si/SiO
+2
+layer
+423
+, second Si/SiO
+2
+layer
+425
+, and third Si/SiO
+2
+layer
+427
+, forming crystallized N+ silicon layers
+416
+. Temperatures during this RTA may be as high as approximately 800 C. Alternatively, an optical anneal, such as, for example, a laser anneal, could be performed alone or in combination with the RTA or other annealing processes.
+As illustrated in
+ 
+E
+,
+oxide
+429
+, third Si/
+SiO2 layer
+427
+, second Si/
+SiO2 layer
+425
+and first Si/
+SiO2 layer
+423
+may be lithographically defined and plasma/RIE etched to form a portion of the memory cell structure, which now includes multiple layers of regions of crystallized N+ silicon
+426
+(previously crystallized N+ silicon layers
+416
+) and
+oxide
+422
+.
+As illustrated in
+ 
+F
+, a gate dielectric and gate electrode material may be deposited, planarized with a chemical mechanical polish (CMP), and then lithographically defined and plasma/RIE etched to form gate
+dielectric regions
+428
+which may either be self aligned to and covered by gate electrodes
+430
+(shown), or cover the entire crystallized
+N+ silicon regions
+426
+and
+oxide regions
+422
+multi-layer structure. The gate stack including
+gate electrode
+430
+and
+gate dielectric
+428
+may be formed with a gate dielectric, such as thermal oxide, and a gate electrode material, such as poly-crystalline silicon. Alternatively, the gate dielectric may be an atomic layer deposited (ALD) material that is paired with a work function specific gate metal according to an industry standard of high k metal gate process schemes described previously. Furthermore, the gate dielectric may be formed with a rapid thermal oxidation (RTO), a low temperature oxide deposition or low temperature microwave plasma oxidation of the silicon surfaces and then a gate electrode such as tungsten or aluminum may be deposited.
+As illustrated in
+ 
+G
+, the entire structure may be covered with a
+gap fill oxide
+432
+, which may be planarized with chemical mechanical polishing. The
+oxide
+432
+is shown transparently in the figure for clarity, along with word-line regions (WL)
+450
+, coupled with and composed of
+gate electrodes
+430
+, and source-line regions (SL)
+452
+, composed of crystallized
+N+ silicon regions
+426
+.
+As illustrated in
+ 
+H
+, bit-line (BL)
+contacts
+434
+may be lithographically defined, etched with plasma/RIE through
+oxide
+432
+, the three crystallized
+N+ silicon regions
+426
+, and associated oxide vertical isolation regions to connect substantially all memory layers vertically, and photoresist removed. Resistance
+change memory material
+438
+, such as, for example, hafnium oxides or titanium oxides, may then be deposited, preferably with atomic layer deposition (ALD). The electrode for the resistance change memory element may then be deposited by ALD to form the electrode/
+BL contact
+434
+. The excess deposited material may be polished to planarity at or below the top of
+oxide
+432
+. Each
+BL contact
+434
+with
+resistive change material
+438
+may be shared among substantially all layers of memory, shown as three layers of memory in
+ 
+H
+.
+As illustrated in
+ 
+I
+,
+BL metal lines
+436
+may be formed and connected to the associated
+BL contacts
+434
+with
+resistive change material
+438
+. Contacts and associated metal interconnect lines (not shown) may be formed for the WL and SL at the memory array edges. A thru layer via
+460
+(not shown) may be formed to electrically couple the BL, SL, and WL metallization to the acceptor substrate peripheral circuitry via an acceptor wafer metal connect pad
+480
+(not shown).
+ 
+K
+is a cross sectional cut II view of
+ 
+J
+, while
+ 
+L
+is a cross sectional cut III view of
+ 
+J
+.
+ 
+K
+shows
+BL metal line
+436
+,
+oxide
+432
+, BL contact/
+electrode
+434
+,
+resistive change material
+438
+,
+WL regions
+450
+,
+gate dielectric
+428
+, crystallized
+N+ silicon regions
+426
+, and
+peripheral circuits substrate
+402
+. The BL contact/
+electrode
+434
+couples to one side of the three levels of
+resistive change material
+438
+. The other side of the
+resistive change material
+438
+is coupled to crystallized
+N+ regions
+426
+.
+ 
+L
+shows
+BL metal lines
+436
+,
+oxide
+432
+,
+gate electrode
+430
+,
+gate dielectric
+428
+, crystallized
+N+ silicon regions
+426
+, interlayer oxide region ( ox ), and
+peripheral circuits substrate
+402
+. The
+gate electrode
+430
+is common to substantially all six crystallized
+N+ silicon regions
+426
+and forms six two-sided gated junction-less transistors as memory select transistors.
+As illustrated in
+ 
+M
+, a single exemplary two-sided gated junction-less transistor on the first Si/
+SiO2 layer
+423
+may include crystallized N+ silicon region
+426
+(functioning as the source, drain, and transistor channel), and two
+gate electrodes
+430
+with associated
+gate dielectrics
+428
+. The transistor is electrically isolated from beneath by
+oxide layer
+408
+.
+This flow may enable the formation of a resistance-based multi-layer or 3D memory array with zero additional masking steps per memory layer, which utilizes poly-crystalline silicon junction-less transistors and has a resistance-based memory element in series with a select transistor, and is constructed by layer transfers of wafer sized doped poly-crystalline silicon layers, and this 3D memory array may be connected to an underlying multi-metal layer semiconductor device.
+Persons of ordinary skill in the art will appreciate that the illustrations in
+ 
+A through
+4
+M
+are exemplary only and are not drawn to scale. Such skilled persons will further appreciate that many variations are possible such as, for example, the RTAs and/or optical anneals of the N+ doped poly-crystalline or amorphous silicon layers
+406
+as described for
+ 
+D
+may be performed after each Si/SiO
+2
+layer is formed in
+ 
+C
+. Additionally, N+ doped poly-crystalline or
+amorphous silicon layer
+406
+may be doped P+, or with a combination of dopants and other polysilicon network modifiers to enhance the RTA or optical annealing and subsequent crystallization and lower the
+N+ silicon layer
+416
+resistivity. Moreover, doping of each crystallized N+ layer may be slightly different to compensate for interconnect resistances. Furthermore, each gate of the double gated 3D resistance based memory can be independently controlled for better control of the memory cell. Many other modifications within the scope of the invention will suggest themselves to such skilled persons after reading this specification. Thus the invention is to be limited only by the appended claims.
+As illustrated in
+ 
+A to
+5
+J
+, an alternative embodiment of a resistance-based 3D memory with zero additional masking steps per memory layer may be constructed with methods that are suitable for 3D IC manufacturing. This 3D memory utilizes poly-crystalline silicon junction-less transistors that may have either a positive or a negative threshold voltage, a resistance-based memory element in series with a select or access transistor, and may have the periphery circuitry layer formed or layer transferred on top of the 3D memory array.
+As illustrated in
+ 
+A
+, a
+silicon oxide layer
+504
+may be deposited or grown on top of
+silicon substrate
+502
+.
+As illustrated in
+ 
+B
+, a layer of N+ doped poly-crystalline or
+amorphous silicon
+506
+may be deposited. The amorphous silicon or poly-
+crystalline silicon layer
+506
+may be deposited using a chemical vapor deposition process, such as LPCVD or PECVD, or other process methods, and may be deposited doped with N+ dopants, such as, for example, Arsenic or Phosphorous, or may be deposited un-doped and subsequently doped with, such as, for example, ion implantation or PLAD (PLasma Assisted Doping) techniques.
+Silicon Oxide
+520
+may then be deposited or grown. This now forms the first Si/SiO
+2
+layer
+523
+comprised of N+ doped poly-crystalline or
+amorphous silicon layer
+506
+and
+silicon oxide layer
+520
+.
+As illustrated in
+ 
+C
+, additional Si/SiO
+2
+layers, such as, for example, second Si/SiO
+2
+layer
+525
+and third Si/SiO
+2
+layer
+527
+, may each be formed as described in
+ 
+B
+.
+Oxide layer
+529
+may be deposited to electrically isolate the top N+ doped poly-crystalline or amorphous silicon layer.
+As illustrated in
+ 
+D
+, a Rapid Thermal Anneal (RTA) is conducted to crystallize the N+ doped poly-crystalline silicon or amorphous silicon layers
+506
+of first Si/SiO
+2
+layer
+523
+, second Si/SiO
+2
+layer
+525
+, and third Si/SiO
+2
+layer
+527
+, forming crystallized N+ silicon layers
+516
+. Alternatively, an optical anneal, such as, for example, a laser anneal, could be performed alone or in combination with the RTA or other annealing processes. Temperatures during this step could be as high as approximately 700 C., and could even be as high as, for example, 1400 C. Since there are no circuits or metallization underlying these layers of crystallized N+ silicon, very high temperatures (such as, for example, 1400 C.) can be used for the anneal process, leading to very good quality poly-crystalline silicon with few grain boundaries and very high carrier mobilities approaching those of mono-crystalline crystal silicon.
+As illustrated in
+ 
+E
+,
+oxide
+529
+, third Si/SiO
+2
+layer
+527
+, second Si/SiO
+2
+layer
+525
+and first Si/SiO
+2
+layer
+523
+may be lithographically defined and plasma/RIE etched to form a portion of the memory cell structure, which now includes multiple layers of regions of crystallized N+ silicon
+526
+(previously crystallized N+ silicon layers
+516
+) and
+oxide
+522
+.
+As illustrated in
+ 
+F
+, a gate dielectric and gate electrode material may be deposited, planarized with a chemical mechanical polish (CMP), and then lithographically defined and plasma/RIE etched to form gate
+dielectric regions
+528
+which may either be self aligned to and covered by gate electrodes
+530
+(shown), or cover the entire crystallized
+N+ silicon regions
+526
+and
+oxide regions
+522
+multi-layer structure. The gate stack including
+gate electrode
+530
+and
+gate dielectric
+528
+may be formed with a gate dielectric, such as thermal oxide, and a gate electrode material, such as poly-crystalline silicon. Alternatively, the gate dielectric may be an atomic layer deposited (ALD) material that is paired with a work function specific gate metal according to an industry standard of high k metal gate process schemes described previously. Additionally, the gate dielectric may be formed with a rapid thermal oxidation (RTO), a low temperature oxide deposition or low temperature microwave plasma oxidation of the silicon surfaces and then a gate electrode such as tungsten or aluminum may be deposited.
+As illustrated in
+ 
+G
+, the entire structure may be covered with a
+gap fill oxide
+532
+, which may be planarized with chemical mechanical polishing. The
+oxide
+532
+is shown transparently in the figure for clarity, along with word-line regions (WL)
+550
+, coupled with and composed of
+gate electrodes
+530
+, and source-line regions (SL)
+552
+, composed of crystallized
+N+ silicon regions
+526
+.
+As illustrated in
+ 
+H
+, bit-line (BL)
+contacts
+534
+may be lithographically defined, etched along with plasma/RIE through
+oxide
+532
+, the three crystallized
+N+ silicon regions
+526
+, and the associated oxide vertical isolation regions to connect substantially all memory layers vertically.
+BL contacts
+534
+may then be processed by a photoresist removal. Resistance
+change memory material
+538
+, such as hafnium oxides or titanium oxides, may then be deposited, preferably with atomic layer deposition (ALD). The electrode for the resistance change memory element may then be deposited by ALD to form the electrode/
+BL contact
+534
+. The excess deposited material may be polished to planarity at or below the top of
+oxide
+532
+. Each
+BL contact
+534
+with
+resistive change material
+538
+may be shared among substantially all layers of memory, shown as three layers of memory in
+ 
+H
+.
+As illustrated in
+ 
+I
+,
+BL metal lines
+536
+may be formed and connected to the associated
+BL contacts
+534
+with
+resistive change material
+538
+. Contacts and associated metal interconnect lines (not shown) may be formed for the WL and SL at the memory array edges.
+As illustrated in
+ 
+J
+,
+peripheral circuits
+578
+may be constructed and then layer transferred, using methods described previously such as, for example, ion-cut with replacement gates, to the memory array, and then thru layer vias (not shown) may be formed to electrically couple the periphery circuitry to the memory array BL, WL, SL and other connections such as, for example, power and ground. Alternatively, the periphery circuitry may be formed and directly aligned to the memory array and
+silicon substrate
+502
+utilizing the layer transfer of wafer sized doped layers and subsequent processing, such as, for example, the junction-less, RCAT, V-groove, or bipolar transistor formation flows as previously described.
+This flow may enable the formation of a resistance-based multi-layer or 3D memory array with zero additional masking steps per memory layer, which utilizes poly-crystalline silicon junction-less transistors and has a resistance-based memory element in series with a select transistor, and is constructed by layer transfers of wafer sized doped poly-crystalline silicon layers, and this 3D memory array may be connected to an overlying multi-metal layer semiconductor device or periphery circuitry.
+Persons of ordinary skill in the art will appreciate that the illustrations in
+ 
+A through
+5
+J
+are exemplary only and are not drawn to scale. Such skilled persons will further appreciate that many variations are possible such as, for example, the RTAs and/or optical anneals of the N+ doped poly-crystalline or amorphous silicon layers
+506
+as described for
+ 
+D
+may be performed after each Si/SiO
+2
+layer is formed in
+ 
+C
+. Additionally, N+ doped poly-crystalline or
+amorphous silicon layer
+506
+may be doped P+, or with a combination of dopants and other polysilicon network modifiers to enhance the RTA or optical annealing crystallization and subsequent crystallization, and lower the
+N+ silicon layer
+516
+resistivity. Moreover, doping of each crystallized N+ layer may be slightly different to compensate for interconnect resistances. Besides, each gate of the double gated 3D resistance based memory can be independently controlled for better control of the memory cell. Furthermore, by proper choice of materials for memory layer transistors and memory layer wires (e.g., by using tungsten and other materials that withstand high temperature processing for wiring), standard CMOS transistors may be processed at high temperatures (e.g., >700 C.) to form the
+periphery circuitry
+578
+. Many other modifications within the scope of the invention will suggest themselves to such skilled persons after reading this specification. Thus the invention is to be limited only by the appended claims.
+Constructing 3D ICs utilizing multiple layers of different function may combine 3D layers using the layer transfer techniques according to some embodiments of the current invention, with fully prefabricated device connected by industry standard TSV technique.
+An additional function that would fit well for 3D systems using TSVs, as described, is a power control function. In many cases it is desired to shut down power at times to a portion of the IC that is not currently operational. Using controlled power distribution by an external die connected by TSVs is advantageous as the power supply voltage to this external die could be higher because it is using an older process. Having a higher supply voltage allows easier and better control of power distribution to the controlled die.
+Those components of configurable systems could be built by one vendor, or by multiple vendors, who agree on a standard physical interface to allow mix-and-match of various dies from various vendors.
+Another advantage of some embodiments of this invention may be an ability to mix and match various processes. It might be advantageous to use memory from a leading edge process, while the I/O, and maybe an analog function die, could be used from an older process of mature technology (e.g., as discussed above)
+Additionally, when circuit cells are built on two or more layers of thin silicon as shown above, and enjoy the dense vertical thru silicon via interconnections, the metallization layer scheme to take advantage of this dense 3D technology may be improved as follows.
+ 
+illustrates the prior art of silicon integrated circuit metallization schemes. The conventional
+transistor silicon layer
+602
+is connected to the
+first metal layer
+610
+thru the
+contact
+604
+. The dimensions of this interconnect pair of contact and metal lines generally are at the minimum line resolution of the lithography and etch capability for that technology process node. Traditionally, this is called a 1x ² design rule metal layer. Usually, the next metal layer is also at the 1X ² design rule, the
+metal line
+612
+and via below 605 and via above 606 that connects
+metals
+612
+with
+610
+or with
+614
+where desired. Then the next few layers are often constructed at twice the minimum lithographic and etch capability and called 2X  metal layers, and have thicker metal for higher current carrying capability. These are illustrated with
+metal line
+614
+paired with via
+607
+and
+metal line
+616
+paired with via
+608
+in
+ 
+. Accordingly, the metal via pairs of
+618
+with
+609
+, and
+620
+with bond pad opening
+622
+, represent the 4X  metallization layers where the planar and thickness dimensions are again larger and thicker than the 2X and 1X layers. The precise number of 1X or 2X or 4X layers may vary depending on interconnection needs and other requirements; however, the general flow is that of increasingly larger metal line, metal space, and via dimensions as the metal layers are farther from the silicon transistors and closer to the bond pads.
+The metallization layer scheme may be improved for 3D circuits as illustrated in
+ 
+. The first mono- or poly-crystalline
+silicon device layer
+724
+is illustrated as the NMOS silicon transistor layer from the above 3D library cells, but may also be a conventional logic transistor silicon substrate or layer. The 1X 
+metal layers
+720
+and
+719
+are connected with
+contact
+710
+to the silicon transistors and
+vias
+708
+and
+709
+to each other or
+metal line
+718
+. The 2X layer pairs
+metal
+718
+with via
+707
+and
+metal
+717
+with via
+706
+. The
+4X metal layer
+716
+is paired with via
+705
+and
+metal
+715
+, also at 4X. However, now via
+704
+is constructed in 2X design rules to enable
+metal line
+714
+to be at 2X.
+Metal line
+713
+and via
+703
+are also at 2X design rules and thicknesses.
+Vias
+702
+and
+701
+are paired with
+metal lines
+712
+and
+711
+at the 1X minimum design rule dimensions and thickness. The thru silicon via
+700
+of the illustrated PMOS layer transferred
+silicon
+722
+may then be constructed at the 1X minimum design rules and provide for maximum density of the top layer. The precise numbers of 1X or 2X or 4X layers may vary depending on circuit area and current carrying metallization design rules and tradeoffs. The layer transferred
+top transistor layer
+722
+may be any of the low temperature devices illustrated herein.
+The various layers of a 3D device may include many types of circuitry, which may be formed by regions of transistors and other semiconductor device elements within that layer or in combination with other layers of the 3D device, and connections between the transistors within the same region, region to region and vertically (layer to layer) may be provided by layers of interconnect metallization and vertical connections such as TLVs and TSVs. In addition, power routing within the 3D device may utilize thicker and more conductive interconnect metallization on some layer rather than another layer, especially if the layer is closest to the source of external power and/or has a greater current load/supply requirement. Many individual device and interconnect embodiments for 3D devices have been described herein and in the incorporated patent references. As illustrated in
+ 
+, some additional embodiments and combinations (further embodiments) of devices, circuits, paths, and connections are described and may utilize similar materials, constructions and methods as the incorporated references or discussed herein. With reference to embodiments described herein, for example with respect to at least of and in others of the incorporated patent references, a substrate layer, which may have a thicker body than other semiconductor layers above or within the 3D device, such as
+acceptor
+810
+may be formed and may include
+heat sink
+897
+,
+acceptor substrate
+895
+, acceptor wafer transistors and
+circuits
+893
+, first (acceptor)
+layer metal interconnect
+881
+which may include
+first layer contacts
+891
+,
+first layer vias
+883
+, at least one shield layer/region
+888
+(two layers and many regions, such as lower level
+shield layer region
+885
+, shown),
+interconnect insulator regions
+896
+and
+ESD diode structures
+807
+. A second semiconductor layer may be transferred and constructed on top of the first layer with
+isolation layer
+880
+in-between and vertical layer to layer interconnections may be provided by TLV/TSV
+835
+, only one is shown. A layer of transistors and
+circuits
+822
+may include second layer
+input device structures
+876
+,
+FD ESD structures
+817
+, Phase Lock
+Loop circuits PLL
+818
+,
+SERDES circuitry
+819
+, and
+output device structure
+851
+.
+Second interconnections layer
+830
+may include at least one layer/regions of metallization and associated contacts and via, for example, second layer
+metallization M1 segments
+828
+,
+821
+,
+823
+,
+825
+,
+second layer contacts
+826
+,
+second layer vias
+852
+, and
+conductive pads
+890
+. The 3D device may be connected to external devices utilizing many structures known to those skilled in the art, for example,
+bond wires
+899
+.
+Input device structures
+876
+and
+output device structure
+851
+may be connected to external devices through, for example,
+second layer contacts
+826
+, second layer
+metallization M1 segments
+828
+,
+second layer vias
+852
+,
+conductive pads
+890
+, and
+bond wires
+899
+. A portion of the transistors within
+input device structures
+876
+and
+output device structure
+851
+may be larger in either or both width and length than most transistors within acceptor wafer transistors and
+circuits
+893
+. Input device structures
+876
+(and output device structure
+851
+) may be subjected to voltage and/or current transients from external devices or generated externally and traveling to the 3D device along
+bond wires
+899
+. Input device structures
+876
+(and output device structure
+851
+) may be protected by dissipating the transient energy in diode structures, such as
+ESD diode structures
+807
+on the relatively thicker (than for example, the second semiconductor layer)
+acceptor substrate
+895
+, which may be connected by a multiplicity of connection stacks such as first (acceptor)
+layer metal interconnect
+881
+which may include
+first layer contacts
+891
+,
+first layer vias
+883
+, at least one shield layer/
+region
+888
+, TLV/TSV
+835
+, and second layer
+metallization M1 segments
+828
+. Input device structures
+876
+(and output device structure
+851
+) may be protected by dissipating the transient energy in a transient filtering circuitry such as for example,
+FD ESD structures
+817
+, which may reside on a relatively thin semiconductor layer in the 3D device and may effectively utilize fully depleted transistors in the filter circuitry.
+FD ESD structures
+817
+may be coupled to input device structures
+876
+(and output device structure
+851
+) by second layer interconnections (not shown).
+Input device structures
+876
+may be connected to
+PLL
+818
+, for example, thru second layer
+metallization M1 segment
+821
+and
+second layer contacts
+826
+.
+Input device structures
+876
+may be connected to
+SERDES circuitry
+819
+, for example, thru second layer metallization (not shown).
+Output device structures
+851
+may be connected to
+SERDES circuitry
+819
+, for example, thru second layer
+metallization M1 segment
+823
+and
+second layer contacts
+826
+.
+Output device structures
+851
+may drive signals thru the connection to
+conductive pads
+890
+and then out to external devices thru
+bond wires
+899
+. Transistors within a lower layer, for example within acceptor wafer transistors and
+circuits
+893
+, may be connected (not shown) to the
+output device structure
+851
+and drive a signal to the
+output device structure
+851
+, and a portion of the transistors of
+output device structure
+851
+may have a larger width and/or length than the transistors within acceptor wafer transistors and
+circuits
+893
+. Power from external sources may be routed thru
+bond wires
+899
+to
+conductive pads
+890
+to the 3D device, wherein at least a portion of the
+second interconnections layer
+830
+may be constructed with thicker and/or wider metallization wiring (for example 4X wiring as described in incorporated patent references) so to provide the higher current carrying capability required for the second layer power distribution grid/network than that of the lower layer, in this example, first layer metallization wiring (for example 1X or 2X wiring as described in incorporated patent references). The width and/or length of the transistors of the second layer of transistors and
+circuits
+822
+, for example a portion of those in second layer
+input device structures
+876
+and/or
+FD ESD structures
+817
+and/or
+output device structures
+851
+, may be substantially larger than the width and/or length of transistors in acceptor wafer transistors and
+circuits
+893
+.
+Persons of ordinary skill in the art will appreciate that the illustrations in
+ 
+are exemplary and are not drawn to scale. Such skilled persons will further appreciate that many variations may be possible such as, for example, a thick enough semiconductor layer to enable ESD diode style protection circuitry to be constructed need not only be on the base or substrate layer, but may reside elsewhere in the 3D device stack. Moreover, the output circuitry including
+output device structures
+851
+may wholly or partially reside on a semiconductor transistor layer that is not on top, and vertical connections including TLVs/TSV may be utilized to connect the
+output device structures
+851
+to
+conductive pads
+890
+. Furthermore, the input circuitry including
+input device structures
+876
+may wholly or partially reside on a semiconductor transistor layer that is not on top, and vertical connections including TLVs/TSV may be utilized to connect the
+input device structures
+876
+to
+conductive pads
+890
+. Similarly, SERDES circuitry and
+819
+PLL
+818
+may wholly or partially reside on a semiconductor transistor layer that is not on top, thee choices being one of design choice and device characteristics driven. Furthermore, connection to external devices (signal and/or power supply) may be made on the backside of
+acceptor substrate
+895
+. Moreover, connection to external devices form the 3D device may utilize many types of structures other than
+bond wires
+899
+shown in the illustration, for example, flipchip and bumps, wireless circuitry, TSV, etc. Thus the invention is to be limited only by the appended claims.
+ 
+is a drawing illustration of a programmable device layers structure according to an alternative of the current invention. In this alternative there are two layers comprising antifuses. The first is designated to configure the logic terrain and, in some cases, to also configure the logic clock distribution. The first antifuse layer could also be used to manage some of the power distribution to save power by not providing power to unused circuits. This layer could also be used to connect some of the long routing tracks and/or connections to the inputs and outputs of the logic cells.
+The device fabrication of the example shown in
+ 
+starts with the
+semiconductor substrate
+902
+comprising the transistors used for the logic cells and also the first antifuse layer programming transistors. Then comes
+layers
+904
+comprising
+Metal
+1
+, dielectric,
+Metal
+2
+, and sometimes
+Metal
+3
+. These layers are used to construct the logic cells and often I/O and other analog cells. In this alternative of the current invention a plurality of first antifuses are incorporated in the isolation layer between
+metal
+1
+and
+metal
+2
+or in the isolation layer between
+metal
+2
+and
+metal
+3
+and their programming transistors could be embedded in the
+silicon substrate
+902
+being underneath the first antifuses. These first antifuses could be used to program logic cells such as
+520
+,
+600
+and
+700
+and to connect individual cells to construct larger logic functions. These first antifuses could also be used to configure the logic clock distribution. The first antifuse layer could also be used to manage some of the power distribution to save power by not providing power to unused circuits. This layer could also be used to connect some of the long routing tracks and/or one or more connections to the inputs and outputs of the cells.
+The following
+few layers
+906
+could comprise long interconnection tracks for power distribution and clock networks, or a portion of these, in addition to what was fabricated in the first
+few layers
+904
+.
+The following
+few layers
+907
+could comprise the antifuse configurable interconnection fabric. It might be called the short interconnection fabric, too. If metal
+6
+and metal
+7
+are used for the strips of this configurable interconnection fabric then the second antifuse may be embedded in the dielectric layer between metal
+6
+and metal
+7
+.
+The programming transistors and the other parts of the programming circuit could be fabricated afterward and be on top of the
+configurable interconnection fabric
+910
+. The programming element could be a thin film transistor or other alternatives for over oxide transistors as was mentioned previously. In such case the antifuse programming transistors are placed over the antifuse layer, which may thereby enable the
+configurable interconnect
+908
+or
+904
+. It should be noted that in some cases it might be useful to construct part of the control logic for the second antifuse programming circuits, in the base layers
+902
+and
+904
+.
+The final step is the connection to the outside
+912
+. These could be pads for wire bonding, soldering balls for flip chip, optical, or other connection structures such as those for TSV.
+In another alternative of the current invention the antifuse programmable interconnect structure could be designed for multiple use. The same structure could be used as a part of the interconnection fabric, or as a part of the PLA logic cell, or as part of a Read Only Memory (ROM) function. In an FPGA product it might be desirable to have an element that could be used for multiple purposes. Having resources that could be used for multiple functions could increase the utility of the FPGA device.
+ 
+A
+is a drawing illustration of a programmable device layers structure according to another alternative of the current invention. In this alternative there is
+additional circuit
+914
+connected by
+contact connection
+916
+to the
+first antifuse layer
+904
+. This underlying device is providing the programming transistor for the
+first antifuse layer
+904
+. In this way, the programmable device
+substrate diffusion layer
+916
+does not suffer the cost penalty of the programming transistors for the
+first antifuse layer
+904
+. Accordingly the programming connection of the
+first antifuse layer
+904
+will be directed downward to connect to the
+underlying programming device
+914
+while the programming connection to the
+second antifuse layer
+907
+will be directed upward to connect to the
+programming circuits
+910
+. This could provide less congestion of the circuit internal interconnection routes.
+The
+reference
+908
+in subsequent figures can be any one of a vast number of combinations of possible preprocessed wafers or layers containing many combinations of transfer layers that fall within the scope of the invention. The term preprocessed wafer or layer  may be generic and
+reference number
+908
+when used in a drawing figure to illustrate an embodiment of the current invention may represent many different preprocessed wafer or layer types including but not limited to underlying prefabricated layers, a lower layer interconnect wiring, a base layer, a substrate layer, a processed house wafer, an acceptor wafer, a logic house wafer, an acceptor wafer house, an acceptor substrate, target wafer, preprocessed circuitry, a preprocessed circuitry acceptor wafer, a base wafer layer, a lower layer, an underlying main wafer, a foundation layer, an attic layer, or a house wafer.
+ 
+B
+is a drawing illustration of a generalized preprocessed wafer or
+layer
+908
+. The wafer or
+layer
+908
+may have preprocessed circuitry, such as, for example, logic circuitry, microprocessors, circuitry comprising transistors of various types, and other types of digital or analog circuitry including, but not limited to, the various embodiments described herein. Preprocessed wafer or
+layer
+908
+may have preprocessed metal interconnects and may be comprised of copper or aluminum. The preprocessed metal interconnects may be designed and prepared for layer transfer and electrical coupling from preprocessed wafer or
+layer
+908
+to the layer or layers to be transferred.
+ 
+C
+is a drawing illustration of a
+generalized transfer layer
+909
+prior to being attached to preprocessed wafer or
+layer
+908
+.
+Transfer layer
+909
+may be attached to a carrier wafer or substrate during layer transfer. Preprocessed wafer or
+layer
+908
+may be called a target wafer, acceptor substrate, or acceptor wafer. The acceptor wafer may have acceptor wafer metal connect pads or strips designed and prepared for electrical coupling to transfer
+layer
+909
+.
+Transfer layer
+909
+may be attached to a carrier wafer or substrate during layer transfer.
+Transfer layer
+909
+may have metal interconnects designed and prepared for layer transfer and electrical coupling to preprocessed wafer or
+layer
+908
+. Electrical coupling from transferred
+layer
+909
+to preprocessed wafer or
+layer
+908
+may utilize thru layer vias (TLVs).
+Transfer layer
+909
+may be comprised of single crystal silicon, or mono-crystalline silicon, or doped mono-crystalline layer or layers, or other semiconductor, metal, and insulator materials, layers; or multiple regions of single crystal silicon, or mono-crystalline silicon, or dope mono-crystalline silicon, or other semiconductor, metal, or insulator materials.
+ 
+D
+is a drawing illustration of a preprocessed wafer or
+layer
+908
+A created by the layer transfer of
+transfer layer
+909
+on top of preprocessed wafer or
+layer
+908
+. The top of preprocessed wafer or
+layer
+908
+A may be further processed with metal interconnects designed and prepared for layer transfer and electrical coupling from preprocessed wafer or
+layer
+908
+A to the next layer or layers to be transferred.
+ 
+E
+is a drawing illustration of a
+generalized transfer layer
+909
+A prior to being attached to preprocessed wafer or
+layer
+908
+A.
+Transfer layer
+909
+A may be attached to a carrier wafer or substrate during layer transfer.
+Transfer layer
+909
+A may have metal interconnects designed and prepared for layer transfer and electrical coupling to preprocessed wafer or
+layer
+908
+A.
+ 
+F
+is a drawing illustration of a preprocessed wafer or
+layer
+908
+B created by the layer transfer of
+transfer layer
+909
+A on top of preprocessed wafer or
+layer
+908
+A. The top of preprocessed wafer or
+layer
+908
+B may be further processed with metal interconnects designed and prepared for layer transfer and electrical coupling from preprocessed wafer or
+layer
+908
+B to the next layer or layers to be transferred.
+ 
+G
+is a drawing illustration of a
+generalized transfer layer
+909
+B prior to being attached to preprocessed wafer or
+layer
+908
+B.
+Transfer layer
+909
+B may be attached to a carrier wafer or substrate during layer transfer.
+Transfer layer
+909
+B may have metal interconnects designed and prepared for layer transfer and electrical coupling to preprocessed wafer or
+layer
+908
+B.
+ 
+H
+is a drawing illustration of preprocessed
+wafer layer
+908
+C created by the layer transfer of
+transfer layer
+909
+B on top of preprocessed wafer or
+layer
+908
+B. The top of preprocessed wafer or
+layer
+908
+C may be further processed with metal interconnect designed and prepared for layer transfer and electrical coupling from preprocessed wafer or
+layer
+908
+C to the next layer or layers to be transferred.
+ 
+I
+is a drawing illustration of preprocessed wafer or
+layer
+908
+C, a 3D IC stack, which may comprise transferred
+layers
+909
+A and
+909
+B on top of the original preprocessed wafer or
+layer
+908
+. Transferred
+layers
+909
+A and
+909
+B and the original preprocessed wafer or
+layer
+908
+may comprise transistors of one or more types in one or more layers, metallization such as, for example, copper or aluminum in one or more layers, interconnections to and between layers above and below, and interconnections within the layer. The transistors may be of various types that may be different from layer to layer or within the same layer. The transistors may be in various organized patterns. The transistors may be in various pattern repeats or bands. The transistors may be in multiple layers involved in the transfer layer. The transistors may be junction-less transistors or recessed channel transistors. Transferred
+layers
+909
+A and
+909
+B and the original preprocessed wafer or
+layer
+908
+may further comprise semiconductor devices such as resistors and capacitors and inductors, one or more programmable interconnects, memory structures and devices, sensors, radio frequency devices, or optical interconnect with associated transceivers. The terms carrier wafer or carrier substrate may also be called holder wafer or holder substrate.
+This layer transfer process can be repeated many times, thereby creating preprocessed wafers comprising many different transferred layers which, when combined, can then become preprocessed wafers or layers for future transfers. This layer transfer process may be sufficiently flexible that preprocessed wafers and transfer layers, if properly prepared, can be flipped over and processed on either side with further transfers in either direction as a matter of design choice.
+Persons of ordinary skill in the art will appreciate that the illustrations in
+ 
+through
+9
+I
+are exemplary only and are not drawn to scale. Such skilled persons will further appreciate that many variations are possible such as, for example, the preprocessed wafer or
+layer
+908
+may act as a base or substrate layer in a wafer transfer flow, or as a preprocessed or partially preprocessed circuitry acceptor wafer in a wafer transfer process flow. Many other modifications within the scope of the invention will suggest themselves to such skilled persons after reading this specification. Thus the invention is to be limited only by the appended claims.
+In general logic devices comprise varying quantities of logic elements, varying amounts of memories, and varying amounts of I/O. The continuous array of the prior art allows defining various die sizes out of the same wafers and accordingly varying amounts of logic, but it is far more difficult to vary the three-way ratio between logic, I/O, and memory. In addition, there exists different types of memories such as SRAM, DRAM, Flash, and others, and there exist different types of I/O such as SerDes. Some applications might need still other functions like processor, DSP, analog functions, and others.
+Embodiments of the current invention may enable a different approach. Instead of trying to put substantially all of these different functions onto one programmable die, which will need a large number of very expensive mask sets, it uses Through Silicon Via to construct configurable systems. The technology of Package of integrated circuits and vertical integration  has been described in issued to Oleg Siniaguine and Sergey Savastiouk on Nov. 27, 2001.
+Accordingly embodiments of the current invention may suggest the use of a continuous array of tiles focusing each one on a single, or very few types of, function. Then, it constructs the end-system by integrating the desired amount from each type of tiles, in a 3D IC system.
+ 
+A
+is a drawing illustration of one reticle site on a wafer comprising tiles of
+programmable logic
+1000
+A denoted FPGA. Such wafer is a continuous array of programmable logic.
+1002
+are potential dicing lines to support various die sizes and the amount of logic to be constructed from one mask set. This die could be used as a
+base
+1102
+A,
+1102
+B,
+1102
+C or
+1102
+D of the 3D system as in
+ 
+. In one alternative of this invention these dies may carry mostly logic, and the desired memory and I/O may be provided on other dies, which may be connected by means of Through Silicon Via. It should be noted that in some cases it will be desired not to have metal lines, even if unused, in the dicing
+streets
+108
+. In such case, at least for the logic dies, one may use dedicated masks to allow connection over the unused potential dicing lines to connect the individual tiles according to the desire die size. The actual dicing lines are also called streets.
+It should be noted that in general the lithography over the wafer is done by repeatedly projecting what is named reticle over the wafer in a step-and-repeat  manner. In some cases it might be preferable to consider differently the separation between repeating
+tile
+102
+within a reticle image vs. tiles that relate to two projections. For simplicity this description will use the term wafer but in some cases it will apply only to tiles with one reticle.
+The repeating
+tile
+102
+could be of various sizes. For FPGA applications it may be reasonable to assume
+tile
+1001
+to have an edge size between 0.5 mm to 1 mm which allows good balance between the end-device size and acceptable relative area loss due to the unused
+potential dice lines
+1002
+.
+ 
+B
+is a drawing illustration of an alternative reticle site on a wafer comprising tiles of Structured ASIC
+1000
+B. Such wafer may be, for example, a continuous array of configurable logic.
+1002
+are potential dicing lines to support various die sizes and the amount of logic to be constructed. This die could be used as a
+base
+1102
+A,
+1102
+B,
+1102
+C or
+1102
+D of the 3D system as in
+ 
+.
+ 
+C
+is a drawing illustration of another reticle site on a wafer comprising tiles of
+RAM
+1000
+C. Such wafer may be a continuous array of memories. The die diced out of such wafer may be a memory die component of the 3D integrated system. It might include an antifuse layer or other form of configuration technique to function as a configurable memory die. Yet it might be constructed as a multiplicity of memories connected by a multiplicity of Through Silicon Vias to the configurable die, which may also be used to configure the raw memories of the memory die to the desired function in the configurable system.
+ 
+D
+is a drawing illustration of another reticle site on a wafer comprising tiles of
+DRAM
+1000
+D. Such wafer may be a continuous array of DRAM memories.
+ 
+E
+is a drawing illustration of another reticle site on a wafer comprising tiles of microprocessor or
+microcontroller cores
+1000
+E. Such wafer may be a continuous array of Processors.
+ 
+F
+is a drawing illustration of another reticle site on a wafer comprising tiles of I/
+Os
+1000
+F. This could include groups of SerDes. Such a wafer may be a continuous tile of I/Os. The die diced out of such wafer may be an I/O die component of a 3D integrated system. It c
+
+[TRUNCATED]

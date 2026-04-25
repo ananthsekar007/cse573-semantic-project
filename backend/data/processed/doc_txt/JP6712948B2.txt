@@ -1,0 +1,19 @@
+Compositions and methods of using the CRISPR-cas system in nucleotide repeat …. A composition for treating a disease or disorder caused by trinucleotide repeat elongation: One or more vectors, including : I. A regulatory element operably linked to a nucleotide sequence encoding a first CRISPR-CAS chimeric RNA (chiRNA), wherein the first CRISPR-CAS chiRNA comprises: (A) トリヌクレオチドリピート伸長によって引き起こされる疾患または障害を処置するための組成物であって：
+ 以下を含む１つ以上のベクター：
+Ｉ．第１のＣＲＩＳＰＲ−ＣＡＳ系キメラＲＮＡ（ｃｈｉＲＮＡ）をコードするヌクレオチド配列に機能的に連結された調節エレメントであって、前記第１のＣＲＩＳＰＲ−ＣＡＳ系ｃｈｉＲＮＡは、 
+ （ａ）トリヌクレオチドリピート伸長を有する細胞内で第１の標的ＤＮＡ配列にハイブリダイズ可能であり、第１のＣＲＩＳＰＲ複合体の前記第１の標的ＤＮＡ配列への配列特異的結合を誘導可能である、第１のガイド配列、
+ （ｂ）第１のｔｒａｃｒ ｍａｔｅ配列、及び
+ （ｃ）第１のｔｒａｃｒ配列、を含み、
+ （ａ）、（ｂ）、及び（ｃ）が５’から３’の方向に配列されている、調節エレメント、および、
+ 第２のＣＲＩＳＰＲ−ＣＡＳ系ｃｈｉＲＮＡをコードするヌクレオチド配列に機能的に連結された調節エレメントあって、前記第２のＣＲＩＳＰＲ−ＣＡＳ系ｃｈｉＲＮＡは、 
+ （ｄ）前記細胞内で第２の標的ＤＮＡ配列にハイブリダイズ可能であり、第２のＣＲＩＳＰＲ複合体の前記第２の標的ＤＮＡ配列への配列特異的結合を誘導可能である、第２のガイド配列、
+ （ｅ）第２のｔｒａｃｒ ｍａｔｅ配列、及び
+ （ｆ）第２のｔｒａｃｒ配列、を含み、
+ （ｄ）、（ｅ）、及び（ｆ）が５’から３’の方向に配列されている、調節エレメント、および 
+ＩＩ．ＣＲＩＳＰＲ酵素をコードするヌクレオチド配列に機能的に連結された調節エレメント、ここで、前記ＣＲＩＳＰＲ酵素はＣａｓ９である、 
+ ここで、前記第１および第２の標的ＤＮＡ配列は、共に、ＣＴＧ、ＣＡＧ、ＣＧＧ、ＧＣＧ、または、ＧＡＡトリヌクレオチドリピート伸長を含むヌクレオチド配列に隣接し、
+ ここで、前記第１のＣＲＩＳＰＲ複合体は、（１）前記第１の標的配列にハイブリダイズ可能な第１のガイド配列、及び（２）前記第１のｔｒａｃｒ配列にハイブリダイズ可能な前記第１のｔｒａｃｒ ｍａｔｅ配列、と複合した前記ＣＲＩＳＰＲ酵素を含み、 
+ ここで、前記第２のＣＲＩＳＰＲ複合体は、（１）前記第２の標的配列にハイブリダイズ可能な第２のガイド配列、及び（２）前記第２のｔｒａｃｒ配列にハイブリダイズ可能な前記第２のｔｒａｃｒ ｍａｔｅ配列、と複合した前記ＣＲＩＳＰＲ酵素を含む；
+を含む、
+組成物。
+ A composition for treating a disease or disorder caused by trinucleotide repeat elongation: One or more vectors, including : I. A regulatory element operably linked to a nucleotide sequence encoding a first CRISPR-CAS chimeric RNA (chiRNA), wherein the first CRISPR-CAS chiRNA comprises: (A) capable of hybridizing to a first target DNA sequence in a cell having trinucleotide repeat extension and inducing sequence-specific binding of the first CRISPR complex to the first target DNA sequence , The first guide arrangement, (B) a first tracr mate sequence, and (c) a first tracr sequence, Regulatory elements , wherein (a), (b) and (c) are arranged in the 5'to 3'direction , and A regulatory element operably linked to a nucleotide sequence encoding a second CRISPR-CAS chiRNA , wherein the second CRISPR-CAS chiRNA comprises (D) A second guide capable of hybridizing to the second target DNA sequence in the cell and inducing sequence-specific binding of a second CRISPR complex to the second target DNA sequence. Array, (E) a second tracr mate array, and (f) a second tracr array, A regulatory element, wherein (d), (e), and (f) are arranged in the 5'to 3'direction, and II. A regulatory element operably linked to a nucleotide sequence encoding a CRISPR enzyme, wherein the CRISPR enzyme is Cas9, Wherein the first and second target DNA sequences are both adjacent to a nucleotide sequence comprising CTG, CAG, CGG, GCG, or GAA trinucleotide repeat extension, Here, the first CRISPR complex comprises (1) a first guide sequence hybridizable to the first target sequence, and (2) the first guide sequence hybridizable to the first tracr sequence. The CRISPR enzyme complexed with the tracr mate sequence of Here, the second CRISPR complex comprises (1) a second guide sequence hybridizable to the second target sequence, and (2) a second guide sequence hybridizable to the second tracr sequence. The CRISPR enzyme complexed with the tracr mate sequence of including, Composition.

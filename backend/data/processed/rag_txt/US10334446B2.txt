@@ -1,0 +1,2050 @@
+PATENT ID: US10334446B2
+TITLE: Private multefire network with SDR-based massive MIMO, multefire and network …
+DOMAIN: telecommunications_5g
+INVENTOR: Solyman Ashrafi
+ASSIGNEE: Nxgen Partners Ip, Llc
+FILING DATE: 2018-08-02
+
+=== ABSTRACT ===
+A private wireless network for providing connections between a public wireless network and wireless devices includes a first interface to the public wireless network and at least one second interface to the wireless devices. A wireless communications network interconnecting the first interface and the second interface implementing a MulteFire wireless communications standard includes a first plurality of control layers. The wireless communications network further comprises a plurality of nodes within a mesh network. A plurality of transceivers is associated with each of the plurality of nodes within the mesh network. Each of the transceivers implement a software defined radio that may be configured within a plurality of transceiving configurations. At least one server implements at least a portion of the wireless communications network within the at least one server. The at least one server is configured to select a first slice portion of the first plurality of control layers of the wireless communications network and a first slice portion of at least a portion of the plurality transceivers in a first transceiving configuration to support operation of a first application or service and to select a second slice portion of the first plurality of control layers of the wireless communications network and a second slice portion of at least the portion of the plurality transceivers in a second transceiving configuration to support operation of a second application or service.
+
+=== CLAIMS ===
+  1. A private wireless network for providing connections between a public wireless network and wireless devices, comprising:
+a first interface to the public wireless network;
+at least one second interface to the wireless devices;
+a wireless communications network interconnecting the first interface and the second interface implementing a MulteFire wireless communications standard including a first plurality of control layers, the wireless communications network further comprising a plurality of nodes within a mesh network;
+a plurality of transceivers associated with each of the plurality of nodes within the mesh network, each of the transceivers implementing a software defined radio that may be configured within a plurality of transceiving configurations;
+at least one server for implementing at least a portion of the wireless communications network within the at least one server; and
+wherein the at least one server is configured to select a first slice portion of the first plurality of control layers of the wireless communications network and a first slice portion of at least a portion of the plurality of transceivers in a first transceiving configuration to support operation of a first application or service and to select a second slice portion of the first plurality of control layers of the wireless communications network and a second slice portion of at least the portion of the plurality of transceivers in a second transceiving configuration to support operation of a second application or service.
+  2. The private wireless network of claim 1, wherein the wireless communications network implements the MulteFire wireless communications in both licensed and unlicensed frequency bands.
+  3. The private wireless network of claim 1, wherein a portion of the plurality of transceivers implement a coordinated multipoint massive MIMO system, further wherein the coordinated multipoint massive MIMO system is implemented in a first configuration responsive to selection of the first slice portion and a second configuration responsive to selection of the second slice portion.
+  4. The private wireless network of claim 1, wherein the wireless communications network comprises a software defined network.
+  5. The private wireless network of claim 1, wherein the wireless communications network comprises a software optimized network.
+  6. The private wireless network of claim 1, wherein the plurality of transceivers transmit in a CBRS band.
+  7. The private wireless network of claim 1, wherein the selected first slice enables a first configuration of uplinks and downlinks, usage policy and a radio access network comprised of a first portion of the plurality of transceivers and the selected second slice enables a second configuration of uplinks and downlinks, usage policy and a radio access network comprised of a second portion of the plurality of transceivers responsive to capacity demands, performance requirements and latency requirements.
+  8. The private wireless network of claim 1, wherein the wireless communications network further includes a passive distributed antenna system for connecting the wireless devices to the private wireless network, further wherein the passive distributed antenna system includes a bidirectional amplifier.
+  9. The private wireless network of claim 1, wherein the wireless communications network further includes an active distributed antenna system for connecting the wireless devices to the private wireless network, further wherein the active distributed antenna system includes RF/Optical converters.
+  10. A method for providing connections between a public wireless network and wireless devices using a private wireless network, comprising:
+providing a first interface to the public wireless network;
+providing at least one second interface to the wireless devices;
+interconnecting the first interface and the second interface through a wireless communications network comprising a plurality of nodes within a mesh network;
+implementing a MulteFire wireless communications standard including a first plurality of control layers through the wireless communications network;
+implementing a software defined radio at each of the plurality of nodes of the mesh network that may be configured within a plurality of transceiving configurations;
+implementing at least a portion of the wireless communications network within at least one server;
+selecting a first application or service for operation within the private wireless network;
+configuring the at least one server to select a first slice portion of the first plurality of control layers of the wireless communications network and a first slice portion of at least a portion of a plurality of transceivers in a first transceiving configuration to support operation of the first application or service;
+selecting a second application or service for operation within the private wireless network; and
+configuring the at least one server to select a second slice portion of the first plurality of control layers of the wireless communications network and a second slice portion of at least the portion of the plurality of transceivers in a second transceiving configuration to support operation of the second application or service.
+  11. The method of claim 10, wherein the step of implementing further comprises implementing the MulteFire wireless communications standard in both licensed and unlicensed frequency bands.
+  12. The method of claim 10 further including:
+implementing a coordinated multipoint massive MIMO system within a portion of the plurality of transceivers in a first configuration responsive to selection of the first slice portion; and
+implementing the coordinated multipoint massive MIMO system within the portion of the plurality of transceivers in a second configuration responsive to selection of the second slice portion.
+  13. The method of claim 10, wherein the wireless communications network comprises a software defined network.
+  14. The method of claim 10, wherein the wireless communications network comprises a software optimized network.
+  15. The method of claim 10 further including transmitting in a CBRS band from the plurality of transceivers.
+  16. The method of claim 10, wherein configuring the at least one server to select the first slice portion further comprises configuring the at least one server to enable a first configuration of uplinks and downlinks, usage policy and a radio access network comprised of a first portion of the plurality of transceivers, further wherein configuring the at least one server to select the second slice portion further comprises configuring the at least one server to enable a second configuration of uplinks and downlinks, usage policy and a radio access network comprised of a second portion of the plurality of transceivers responsive to capacity demands, performance requirements and latency requirements.
+  17. The method of claim 10 further comprising connecting the wireless devices to the private wireless network using a passive distributed antenna system including a bidirectional amplifier.
+  18. The method of claim 10 further comprising connecting the wireless devices to the private wireless network using an active distributed antenna system including RF/Optical converters.
+  19. A private wireless network for providing connections between a public wireless network and wireless devices, comprising:
+a first interface to the public wireless network;
+at least one second interface to the wireless devices;
+a wireless communications network interconnecting the first interface and the second interface implementing a MulteFire wireless communications standard using both licensed and unlicensed frequency bands including a first plurality of control layers, the wireless communications network further comprising a plurality of nodes within a mesh network, wherein the wireless communications network comprises a software defined network and a software optimized network;
+a plurality of transceivers associated with each of the plurality of nodes within the mesh network, each of the transceivers implementing a software defined radio that may be configured within a plurality of transceiving configurations;
+at least one server for implementing at least a portion of the wireless communications network within the at least one server; and
+wherein the at least one server is configured to select a first slice portion of the first plurality of control layers of the wireless communications network and a first slice portion of at least a portion of the plurality of transceivers in a first transceiving configuration to support operation of a first application or service and to select a second slice portion of the first plurality of control layers of the wireless communications network and a second slice portion of at least the portion of the plurality of transceivers in a second transceiving configuration to support operation of a second application or service.
+  20. The private wireless network of claim 19, wherein a portion of the plurality of transceivers implement a coordinated multipoint massive MIMO system, further wherein the coordinated multipoint massive MIMO system is implemented in a first configuration responsive to selection of the first slice portion and a second configuration responsive to selection of the second slice portion.
+  21. The private wireless network of claim 19, wherein the plurality of transceivers transmit in a CBRS band.
+  22. The private wireless network of claim 19, wherein the selected first slice portion enables a first configuration of uplinks and downlinks, usage policy and a radio access network comprised of a first portion of the plurality of transceivers and the selected second slice enables a second configuration of uplinks and downlinks, usage policy and a radio access network comprised of a second portion of the plurality of transceivers responsive to capacity demands, performance requirements and latency requirements.
+  23. The private wireless network of claim 19, wherein the wireless communications network further includes a passive distributed antenna system for connecting the wireless devices to the private wireless network, further wherein the passive distributed antenna system includes a bidirectional amplifier.
+  24. The private wireless network of claim 19, wherein the wireless communications network further includes an active distributed antenna system for connecting the wireless devices to the private wireless network, further wherein the active distributed antenna system includes RF/Optical converters.
+
+=== DESCRIPTION ===
+CROSS-REFERENCE TO RELATED APPLICATIONS
+This application claims the benefit of U.S. Provisional Application No. 62/540,331, filed Aug. 2, 2017 and entitled PRIVATE MULTEFIRE NETWORK WITH SDR-BASED MASSIVE MIMO AND MULTEFIRE AND NETWORK SLICING, the specification of which is incorporated herein by reference in its entirety. This application is also a Continuation-in-Part of U.S. patent application Ser. No. 15/954,967 filed Apr. 17, 2018 and entitled ULTRA-BROADBAND VIRTUALIZED TELECOM AND INTERNET, which is a continuation of U.S. application Ser. No. 15/664,764 filed on Jul. 31, 2017 and entitled ULTRA-BROADBAND VIRTUALIZED TELECOM AND INTERNET, now issued Apr. 17, 2018, which claims the benefit of U.S. Provisional Application No. 62/371,279 filed Aug. 5, 2016 and entitled ULTRA-BROADBAND VIRTUALIZED TELECOM AND INTERNET, each of which is incorporated herein by reference in their entirety. This application is also a Continuation-in-Part of U.S. patent application Ser. No. 15/847,353, filed Dec. 19, 2017 and entitled POINT-TO-MULTIPOINT OR MULTIPOINT-TO-MULTIPOINT MESH SELF-ORGANIZED NETWORK OVER WIGIG STANDARDS WITH NEW MAC LAYER, which claims the benefit of U.S. Provisional Application No. 62/443,958, filed Jan. 9, 2017 and entitled POINT-TO-MULTIPOINT OR MULTIPOINT-TO-MULTIPOINT MESH SELF-ORGANIZED NETWORK OVER WIGIG STANDARDS WITH NEW MAC LAYER, each of which is incorporated herein by reference in its entirety.
+TECHNICAL FIELD
+The present invention relates to private wireless networks, and more particularly to private wireless networks utilizing a combination of SDR-based massive MIMO, MulteFire and network slicing.
+BACKGROUND
+The increased use of wireless devices such as smart phones, tablets, computers etc. have greatly increased the number of areas connecting to the Internet through wireless networks. As the use of wireless devices becomes more ubiquitous within society, users began to assume that their wireless connection will be available no matter where they are located. However, existing wireless network providers have established networks that cover many areas, but there are locations where wireless network services are either not available or service can be spotty. Additionally, when data intensive applications are being utilized such as video streaming, users often desire to connect to private wireless networks in order to limit the amount of wireless data being utilized within existing data plans.
+There is a need for the ability for private entities and individuals to provide private wireless networks that can meet a variety of potential user needs. Existing systems often utilize Wi-Fi technologies for providing this type of private network. However, some limitations exist with Wi-Fi networks that cannot meet the often changing needs of wireless servers' users. Thus, a more flexible and reliable private network configuration for providing variable user service needs would be of great benefit to a private network provider.
+SUMMARY
+The present invention, as disclosed and described herein, in one aspect thereof comprises a private wireless network for providing connections between a public wireless network and wireless devices includes a first interface to the public wireless network and at least one second interface to the wireless devices. A wireless communications network interconnecting the first interface and the second interface implementing a MulteFire wireless communications standard includes a first plurality of control layers. The wireless communications network further comprises a plurality of nodes within a mesh network. A plurality of transceivers are associated with each of the plurality of nodes within the mesh network. Each of the transceivers implement a software defined radio that may be configured within a plurality of transceiving configurations. At least one server implements at least a portion of the wireless communications network within the at least one server. The at least one server is configured to select a first slice portion of the first plurality of control layers of the wireless communications network and a first slice portion of at least a portion of the plurality transceivers in a first transceiving configuration to support operation of a first application or service and to select a second slice portion of the first plurality of control layers of the wireless communications network and a second slice portion of at least the portion of the plurality transceivers in a second transceiving configuration to support operation of a second application or service.
+BRIEF DESCRIPTION OF THE DRAWINGS
+For a more complete understanding, reference is now made to the following description taken in conjunction with the accompanying Drawings in which:
+ 
+illustrates the manner in which a private network interconnects with an edge network and a core network;
+ 
+illustrates a network set up as a configurable private network;
+ 
+illustrates a private network and its various implementational functionalities;
+ 
+more particularly illustrates the interconnection between an edge network and a private network;
+ 
+illustrates a general functional block diagram of a software defined radio;
+ 
+illustrates a configurable wide area network interconnecting various resources through the cloud;
+ 
+illustrates one manner for implementation of the configurable network;
+ 
+illustrates a functional block diagram of a system implementing a configurable private network;
+ 
+illustrates a manner in which a configurable private network controls interactions between applications and infrastructure;
+ 
+illustrates a virtualization and slicing process under software control within a cloud radio access network;
+ 
+illustrates a traditional network configuration;
+ 
+illustrates a virtual radio access network;
+ 
+illustrates a massive MIMO neutral host network;
+ 
+illustrates a virtualized base station and backhaul network;
+ 
+illustrates the manner in which a central office may be converted to a data center;
+ 
+illustrates a single network infrastructure supporting different services and applications;
+ 
+illustrates a three layer cloud data center;
+ 
+illustrates the virtualization of the central office to the data center;
+ 
+illustrates the manner in which traditional mobile services are provided to a user device;
+ 
+illustrates a mobile edge computing services system;
+ 
+illustrates the manner for creating a virtualized cloud architecture for telecom and Internet;
+ 
+illustrates a network function virtualization;
+ 
+illustrates a network function virtualization architectural framework;
+ 
+illustrates software defined network architecture;
+ 
+illustrates a software defined network function virtualization system;
+ 
+illustrates a flow diagram describing a process for provisioning functions;
+ 
+illustrates an example of a service chaining process;
+ 
+illustrates a wired private network;
+ 
+illustrates a wireless private network;
+ 
+illustrates a manner for using an SDN-based system for creating connections with the small cell network;
+ 
+illustrates a heterogeneous network;
+ 
+illustrates communications between an SDN controller and a small cell using OpenFlow messages;
+ 
+illustrates a block diagram of a Backhaul Network Key Performance Indicator;
+ 
+is a flow diagram illustrating the process for link repair;
+ 
+illustrates a small cell private network;
+ 
+illustrates a small cell node having a primary link and one or more backup links;
+ 
+illustrates a small cell node including means for multiplexing between multiple transceiver types;
+ 
+illustrates an SDN-based architecture for link generation;
+ 
+illustrates a small cell node implementing fast local restoration within its data plane layer;
+ 
+illustrates a flow diagram describing the process for implementing SDN-based local repair;
+ 
+illustrates a flow diagram describing the process for detecting link state and for the transmission on primary and backup links;
+ 
+illustrates a private network wirelessly connecting to users to provide a connection to the network core;
+ 
+illustrates a mesh network for interconnecting an edge network with users;
+ 
+illustrates the components of a self-organized network for access;
+ 
+illustrates a number of mesh network nodes;
+ 
+illustrates a mesh network with interfering structure;
+ 
+illustrates a mesh network of access sites connected to multiple users;
+ 
+illustrates the wireless connections between an optimally located access site and an associated network site and resident are enterprise users;
+ 
+illustrates a network of a plurality of optimally located access sites and network sites using both licensed and unlicensed data bands;
+ 
+illustrates the software components of a 60 GHz last drop system;
+ 
+illustrates the manner in which a central controller and mesh client operate on top of a WiGig baseband layer;
+ 
+illustrates the various mesh software functions for the mesh controller and mesh node;
+ 
+illustrates the mesh software components;
+ 
+illustrates a flow diagram describing the process for detecting link state and transmitting on primary and backup links within a mesh network;
+ 
+illustrates a diagram of the various mesh software components used within the system;
+ 
+illustrates a distributed antenna system;
+ 
+illustrates a single transmitting antenna;
+ 
+illustrates an in-building distributed antenna system and Wi-Fi network;
+ 
+illustrates a passive distributed antenna system;
+ 
+illustrates an active distributed antenna system;
+ 
+illustrates a small cell indoor network; and
+ 
+illustrates an active distributed antenna system having a neutral host with C-RAN.
+DETAILED DESCRIPTION
+Referring now to the drawings, wherein like reference numbers are used herein to designate like elements throughout, the various views and embodiments of a private network with SDR-based massive MIMO, MulteFire and network slicing are illustrated and described, and other possible embodiments are described. The figures are not necessarily drawn to scale, and in some instances the drawings have been exaggerated and/or simplified in places for illustrative purposes only. One of ordinary skill in the art will appreciate the many possible applications and variations based on the following examples of possible embodiments.
+Referring now to
+ 
+, there is illustrated the manner in which a
+private network
+101
+may be established at a local indoor or outdoor location. A
+backhaul network
+102
+is used for interconnecting an
+edge network
+104
+with a
+core network
+106
+. In a hierarchical network the
+backhaul network
+102
+comprises the intermediate link between the core network
+106
+(backbone network) and the small subnetworks at the edge of the entire hierarchical network. The
+backhaul network
+102
+carries packets/data to and from the
+core network
+106
+. For example, in a telecommunications network cell phones communicating with a cell tower constitute a local subnetwork. The connection between the cell tower and the rest of the world begins with a backhaul links to the core of the Internet service provider network.
+Backhaul networks
+102
+may be used to describe the entire wired part of the network, although some networks have wireless instead of wired backhaul, in whole or in part, for example using microwave bands, mesh networks and edge network topologies. The
+backhaul network
+102
+may use high-capacity wireless channels to get packets to the microwave or fiber links. The
+private network
+101
+may use any number of other types of communications protocol to enable communications between a user and the
+edge network
+104
+. Existing
+private networks
+101
+often comprise WiFi networks. However, the present implementation envisions using a version of a MulteFire network as will be more fully described herein below.
+Private networks
+101
+may use a variety of technologies. The choice of technology must take into account parameters such as capacity, cost, reach and the need for such resources as frequency spectrum, optical fiber, wiring or rights-of-way. Generally, solutions can largely be categorized into wired (copper/fiber) or wireless (point-to-point, point to multipoint over high-capacity radio links). Wired solutions are usually very expensive and often more difficult to deploy. This makes wireless a more suitable and/or viable option. Multi-hop wireless architecture can overcome the hurdles of wired solutions by creating efficient large coverage areas. Wireless solutions are able to offer carrier grade services which are not easily feasible with wired connectivity. Technologies include free space optics, point-to-point microwave radio relay transmission (terrestrial or by satellite), point to multipoint microwave access technologies, such as LMDS, Wi-Fi, WiMAX, DSL variants such as ADSL and SHDSL, PDH and SDH Lasse Esso and ET interfaces, such as (fractional) E1/T1, E3, T3, STM-1/OC-3, etc. and ethernet. The system such as that more fully herein below may also be used within the systems such as that describe in U.S. patent application Ser. No. 14/882,085 entitled APPLICATION OF ORBITAL ANGULAR MOMENTUM TO FIBER, FSO AND RF filed on Oct. 15, 2015, which published as U.S. Patent Publication No. US 2016-0127073 on May 5, 2016, which is incorporated herein by reference in its entirety to transmit information.
+In addition to the plane wave embodiments that are disclosed in the described system for SDN-based channel estimation for multiplexing between LOS mmWaves, NLOS sub-6 GHz and FSO described herein, a system for implementing the twisted waves generated by the application of orthogonal functions to a plane wave may also be utilized. For example, the various embodiments disclosed in U.S. patent application Ser. No. 15/216,474 entitled SYSTEM AND METHOD FOR COMBINING MIMO AND MODE-DIVISION MULTIPLEXING filed on Jul. 21, 2016, now issued Jun. 12, 2018, and U.S. patent application Ser. No. 15/144,297 entitled SYSTEM AND METHOD FOR COMMUNICATION USING ORBITAL ANGULAR MOMENTUM WITH MULTIPLE LAYER OVERLAY MODULATION filed on May 2, 2016, now issued Nov. 22, 2016, each of which is incorporated herein by reference in their entirety, may be used.
+Hybrid (Heterogeneous) networks consist of networks including devices wherein in the components providing the transmission of data are all the same but may each be configured using the included operating software to provide different types of transmissions including but not limited to point-to-point (P2P); point-to-multipoint (P2MP); multipoint-to-multipoint (MP2MP); etc. The described system supports complex heterogeneous networks (HetNet) incorporating multiple services, standards and sites.
+Architecture relates to the various system layers and their application to the system from the application layer to the hardware layer such as that described in U.S. patent application Ser. No. 15/664,764, filed on Jul. 31, 2017 and entitled ULTRA-BROADBAND VIRTUALIZED TELECOM AND INTERNET, now issued Apr. 17, 2018.
+Topology for systems implementing the described components may configure the nodes in a tree topology or a ring topology. The tree topology comprises a number of nodes interconnected in a tree structure beginning with a single node that expands to multiple second nodes and each of the second nodes expanding to further multiple third nodes or the single node interconnected to each of the other nodes of a network. Each of the other nodes communicates through the single central node. A ring topology includes a ring connection of all nodes with each node connected only to two adjacent nodes.
+A multilayer private network provides for communications using each of copper wire, fiber and RF transmissions. RF may use line of sight and non-line of sight transmissions. Copper may comprise vector bundled (VDSL2) and other types of transmissions. Fiber may use GPON or other types of transmissions.
+When providing a variety of services over a private network the private network can become overburden causing it to become clogged with traffic and have greatly increased latency. Existing mobile and data networks can provide business-to-client (B2C) services such as commerce, music downloads, video streaming, gaming or social media access. The networks can also provide business-to-business (B2B) services such as IT services, finance, compliance, sales and marketing and customer services. These services are provided over fronthaul and backhaul networks using wired and wireless connections. If a large volume of voice or data services are being used at any particular time, the private network can be overburdened and provide unacceptable services to the customers due to increased latency and delay.
+Operators of the private network face a number of challenges. These include increased demand for video and cloud services creating an explosion of carried traffic. Additionally, reductions in core equipment cost do not follow Moore's law. Network heterogeneity requires multiple specialized solutions/teams. Automation for configuration and provisioning of network resources increase the network costs. Additional network problems for network providers arise from the low return on investment due to the fact that networks are built for peak usage times and are over provisioned most of the time. Additionally, the current mode of operation for network providers results in slow service innovations due to the lack of network automation and service integration that results in long provisioning delays. The infrastructure is built using closed proprietary boxes. This results in inefficient utilization of radio resources, the inability to provide customization, a slowing in the creation of innovative services and the inability to support industry specific Internet of things scenarios. Thus, there is a need for an architecture for providing a private network that provides more flexibility and enables better use of new protocols such as 5G.
+In order to provide a more flexible network, a private network may be set up as a configurable
+wide area network
+202
+as illustrated in
+ 
+. The configurable
+wide area network
+202
+provides a bridge between cloud-based
+services
+204
+and
+various connection protocols
+206
+. The configurable
+wide area network
+202
+provides a number of benefits including economies of scale that provides an infrastructure built with a few commodity building blocks using OpenSource SDN/NFV software and white boxes and providing agility through software platforms that enable the rapid creation of new services. This provides a UltraBroadband on demand network on both RF and fiber that uses virtual radio access network (VRAN), mobile edge computing (MEC), caching of content at the edge of the network and APIs. The system would also use CORD since it is cloud native. The system will provide SDR based massive MIMO that is used in combination with SDN based network slicing and SDN based fronthaul and backhaul networks on the network architecture.
+The
+private network
+101
+may be implemented in one embodiment as shown in
+ 
+. The
+private network
+101
+may comprise any private indoor/
+outdoor network
+302
+may be located in an area not currently served by a public wireless network or that has sporadic or spotty public wireless network coverage. The private indoor/
+outdoor network
+302
+will include a number of components enabling provision of wireless services. These include
+multi-fire network coverage
+304
+, software defined radios (SDR)
+306
+, software optimize network of (SON)
+308
+, software defined network (SDN)
+310
+,
+mesh network
+312
+coverage,
+massive MIMO
+314
+, and the use of shared
+bands
+316
+in
+unlicensed bands
+318
+.
+Future enterprises (in all industries) will need their own indoor and outdoor private MulteFire SDR-based, SON-based, SDN-based, mesh-based, and coordinated multipoint (COMP) Massive MIMO-based systems over shared and unlicensed bands (i.e. 3.5 GHz shared and 5 GHz unlicensed) while leveraging network slicing for different applications as well as the other technologies from both standardized telco industry and Internet industry. SDR-based systems use analytics, automation and machine communications to improve productivity. These
+private networks
+302
+have scalable control and reliability in very dense, machine-oriented environments. From industry factory-floor automation, to control of autonomous trucks in open mines, to electricity distribution grids, to logistics and warehousing, to oil & gas operations, to venue services, and many more applications and industries.
+Since LTE is now a proven, preferred and mature technology with huge eco-system, it can easily be built for a
+private network
+302
+in many different verticals. Enterprises that control their own network can modify the technology and optimize it for their own use and objectives. For example, they can build a network with fast recovery from failure, extended coverage, or specific set prioritization and reliability approaches. The availability of open access spectrum (i.e. shared 3.5 GHz access and 5 GHz unlicensed band globally) now make it possible for almost any enterprise to deploy and operate a private MulteFire network. There are many opportunities to deploy
+private networks
+302
+in licensed spectrum, to offer private LTE as a managed service, or to extend private Local Area Networks across the wide-area public network to create enterprise-specific VPNs.
+There are many applications for enterprises that have specific benefits from their
+private network
+302
+which may not simply be supported on public networks. The reasons to deploy a
+private network
+302
+include improved coverage, capability and control. Enterprises can guarantee coverage at their facility or location by deploying their own
+private network
+302
+. This is necessary where public networks do not exist or are not robust, but can also apply to indoor and campus locations, factories, warehouses, power plants, etc. Enterprises can deploy a private indoor and outdoor MulteFire network for better capacity that can configure uplink and downlink, set usage policy and engineer their RAN network based on their specific capacity demands (i.e. support HD video streaming and analysis for, say, a security application) and performance and latency requirements. A private indoor and
+outdoor MulteFire network
+302
+provides better control over which users connect, how network resources are used and how traffic is prioritized. If needed, parameters in the LTE radio can be customized to optimize reliability and latency in challenging physical environments (e.g., warehouse or oil/gas facilities). This is unthinkable on the public network. Companies can also control their own security to ensure that sensitive information doesn't leave the premises. This is an essential application for many types of high-tech businesses.
+A private network on LTE, such as a
+MulteFire network
+304
+, provides a number of advantages. Most private wireless networks today use WiFi. WiFi is fast and easy to deploy. There is a competitive market for equipment, and a feature-rich roadmap. In many cases, WiFi will remain a good solution. Private LTE is based on technologies developed for wide-area mobility and scaled down to be deployable by private organizations. This background gives LTE some advantages over WiFi, particularly as relates to radio performance and mobility. This can help meet more demanding use cases. The advantages of LTE include range/link budget; spectral efficiency/capacity; configurable QoS; mobility; ecosystem and interoperability; high to low rate scaling; spectrum options; security and provides a roadmap to 5G.
+With respect to range/link budgets LTE systems are generally developed and deployed using RF equipment with more robust specification, which extends the link budget considerably. As LTE is a cellular technology, it has been designed to operate well under fading channel conditions, providing good cell edge performance. As a very approximate rule of thumb, one LTE small cell will cover about the same area as two to three WiFi access points at more or less equivalent power output. If CBRS (Citizens Broadband Radio Service) 3.5 GHz spectrum and Category-B small cells are used, range can even be significantly greater. Thus, a private indoor and outdoor full dimension COMP (Coordinated Multi-point transmission/reception) massive MIMO network may be built using the CBRS band with increased throughput. COMP is a technology that sends and receives signals from multiple sectors or cells to a given UE. By coordinating transmission among multiple cells, interference from other cells can be reduced and the power of the desired signal can be increased. MIMO is a signal transmission technology that uses multiple antennas at both the transmitter and the receiver to perform spatial multiplexing and improve communication quality and spectral efficiency.
+Many of the concepts that improve range and reliability also increase spectral efficiency and system capacity. LTE is more spectrally efficient than WiFi (perhaps more than double) because of higher efficiencies at both link and MAC levels. These efficiencies of LTE (versus WiFi) come from concepts such as hybrid automatic repeat request (HARQ), channel state information, more advanced modulation, more advanced coding, more advanced schedulers, more advanced security, more advanced mobility and handoff, more advanced method to combat channel fading, more advanced method to combat channel interference, and more advanced method to combat delay spread using cyclic prefix insertion.
+MulteFire network
+304
+is a form of LTE deployment in unlicensed frequency bands. MulteFire is an extension of the ideas in LAA/LTE-U. LAA/LTE-U leverage both licensed and unlicensed spectrum. MulteFire exclusively uses the unlicensed spectrum. This allows MulteFire to be deployed by anyone in a variety of locations similar to Wi-Fi hotspots. As shown in
+ 
+, the
+MulteFire network
+402
+comprises a private network that interacts with the
+edge network
+104
+to provide wireless data communications capability within a predetermined location. The
+MulteFire network
+402
+operates within the 3.5 GHz-5 GHz unlicensed spectrum. MulteFire allows the standalone use of LTE within unlicensed spectrum. MulteFire can be used to deploy mobile broadband data services and support voice over LTE. MulteFire supports handovers among cells in a small cell deployment and is capable of interworking with external mobile networks for service continuity. MulteFire provides an LTE based technology for small cells operating solely within the unlicensed spectrum. This enables the provision of enhanced data and voice services to local area deployments. MulteFire is suitable for any band that needs over the air contention for fair sharing.
+Private
+MulteFire networks
+402
+can also be designed with machine communications as an application using LTE protocol to support a multiservice capability with low-bit-rate Internet of Things (IoT), control signaling and human smartphone users on a unified common infrastructure with proper reliability and performance. Examples of use cases of
+MulteFire networks
+402
+include the automation and industry, mission critical services, primary industries and venue services.
+Automation and industry applications include factory-floor robotics wherein wireless robots currently used on factory floors may be used to reconfigure production lines, logistics and warehousing using pick-and-pack machines. The automation and industry applications typically focus on very dense deployments with low latency requirements. Mission critical services include the ability to monitor and control critical infrastructure such and electricity distribution grids, power plants, etc.; public safety agencies who need to create closed user groups or ad hoc networks at the scene of an emergency; and government & military agencies want dedicated, highly available networks at their facilities.
+Primary industries include locations often not covered by public wireless infrastructure, very diverse sectors from mining to agriculture, using automated machinery and hardened equipment with good link budget for low-density long-range coverage. Venue services comprises public venues such as airports, stadiums, hospitals, ports, venues that have many users (internal, contractor, public), some further having requirements for fast, highly secure access and private network that can be sliced  (configured) for different user groups.
+Software defined radio (SDR)
+306
+comprises a radio in which some or all of the physical layer functions are software defined. A basic SDR system may consist of a processor, an analog to digital converter proceeded by some form of RF front end. Significant amounts of signal processing are handled over to the general-purpose processor rather than being done in a special purpose hard (electronic circuits). This provides a radio system which can receive and transmit widely different radio protocols based solely upon the software used for providing a great deal of flexibility.
+Referring now to
+ 
+, there is illustrated a functional block diagram of one example of a software defined radio
+401
+. The RF/IF portion
+403
+for converting between RF and IF have signals comprises a smart antenna
+406
+for transmitting and receiving signals responsive to a control input
+408
+and flexible RF hardware
+410
+for converting between RF and IF signals. Most transceivers use a variable-frequency oscillator, mixer and filter to tune a desired signal to a common intermediate frequency or baseband signal. However, in some applications it is not necessary to tune the signal to an intermediate frequency and the radiofrequency signal may be directly sampled by the analog-to-digital converter
+416
+. The flexible RF hardware
+410
+provides an IF output to an analog to digital converter
+412
+and receives IF inputs from a digital to analog converter
+414
+. The ADC
+412
+and DAC
+414
+comprise the CA/D, D/A conversion portion
+416
+.
+The digital front end
+418
+consist of a channelization and channel rate conversion functionality
+420
+. Baseband processing
+422
+is performed by processing components
+423
+comprising hardware components including, for example, a field programmable gate arrays (FPGAs), digital signal processors (DSPs) and application-specific integrated circuits (ASICs). These processing components would implement software algorithms, middleware, CORBA (common object request broker architecture) and a virtual radio machine. The channelization and sample rate conversion functionality
+420
+and baseband processing
+422
+comprise software implemented components that are implemented within software within the SDR for performing functions such as network routing GUI, encryption, modem error correction and portions of the A/D and D/A conversions. The SDR radio provides a great deal of flexibility in dealing with different in changing transmission conditions and can change transmitting and receiving of signals on the fly based upon its programming.
+This is more particularly illustrated in
+ 
+. The configurable/programmable
+wide area network
+202
+varies its utilized resources based upon the particular applications or services that are being utilized. A private network may be configured in a similar manner. The various cloud-based
+services
+204
+include the
+public cloud
+502
+which interconnects to the wide area network through an
+Internet Edge
+504
+.
+Internet Edge
+504
+is a data network to cell phones. A
+public cloud
+506
+requiring a particular quality of service may utilize the
+cloud interconnect edge
+508
+. The
+cloud interconnect edge
+508
+is an optimized network that ensures accelerated access to applications hosted in public, private and hybrid clouds.
+A
+private cloud
+510
+may connect to the wide area network through Hyper-
+V
+312
+and a programmable
+generic service infrastructure
+514
+. Hyper-
+V
+312
+is a native hypervisor that creates virtual machines on systems running Windows. It acts as a hardware virtualization component for the client editions of Windows NT server computer running Hyper-
+V
+312
+can be configured to expose individual virtual machines to one or more networks. The programmable
+generic service infrastructure
+514
+comprises a generic hardware component program to provide a particular service infrastructure. An Internet IT OSS/
+BSS
+516
+communicates through
+VM hardware
+518
+and the programmable
+generic service infrastructure
+514
+with the programmable
+wide area network
+202
+. The
+VMware
+518
+comprises virtualization and cloud computing software. Virtual network functions (VNF)
+520
+interact with the network through
+OpenStack
+522
+and the programmable
+generic service infrastructure
+514
+.
+OpenStack
+522
+is a set of software tools for building and managing a cloud computing platform for public and private clouds. Finally,
+data center services
+524
+may provide data services through the wide area network using traditional Telco specials. 
+Referring now to
+ 
+, there is illustrated one manner in which the configurable network (such as a 3.5-5 GHz private network) may be implemented in order to provide flexible network resources based upon an application's or service's particular needs using network slicing. Various telco, enterprise and
+consumer applications
+602
+utilize various photonic and
+radio resources
+604
+through a number of control layers
+606
+. The control layers
+606
+include the
+programming frameworks layer
+608
+;
+application platforms layer
+610
+; VM/
+VIM managers layer
+612
+;
+containers layer
+614
+; operating
+systems layer
+616
+;
+virtual machines layer
+618
+; management and
+orchestration layer
+620
+;
+carrier network layer
+622
+;
+network controller layer
+724
+; programmable data plane layer
+726
+and
+hardware layer
+628
+. Various portions of each of the
+layers
+606
+are needed to provide interconnection between the telco, enterprise and
+consumer applications
+602
+and the photonic and
+radio resources
+604
+.
+As described previously, current network topologies configure the layers to support peak periods. This requires the network to be over configured for all but a small percentage of its operating time. Each of the control layers
+606
+provide differing amounts of control depending upon the
+applications
+602
+and
+network resources
+604
+that are being utilized by the system. Thus, various slices of the control layers
+606
+are utilized when providing
+particular applications
+602
+using
+particular resources
+604
+. Thus,
+slice
+630
+,
+slice
+632
+and slice
+634
+each utilize various, differing and adaptable portions of the control layers
+606
+in order to operate a particular application using particular resources. These slices
+630
+-
+634
+can be dynamically adjusted within the system applications and resources depending upon changing system needs. Thus, a
+slice
+630
+,
+632
+,
+634
+can be uniquely and adaptively configured to utilize only those network control layers
+606
+and only those portions of the network control layers that are necessary in order to have the application function in a desired fashion. Thus, the availability of the network control layers
+606
+can vary depending upon the
+particular slices
+630
+,
+632
+,
+634
+that are being currently utilized by the network.
+Referring now to
+ 
+, there is illustrated a functional block diagram of a system implementing the configurable network (such as a 3.5-5 GHz private network) operating in the manner described hereinabove. A remote access unit (RAU)
+702
+communicates with a
+radio antenna
+704
+. The
+radio access unit
+702
+includes
+RF circuitry
+706
+for communicating with the radio tower and
+access DP hardware
+708
+for communicating over the
+fronthaul
+710
+. A
+hardware infrastructure
+712
+associated with the
+mobile edge
+713
+includes
+access DP hardware
+714
+for communicating with the
+radio access unit
+702
+. The
+hardware infrastructure
+712
+further includes open and
+programmable hardware
+716
+for providing a backhaul communications link
+718
+with
+additional hardware infrastructure
+720
+associated with the
+network core
+721
+. The
+hardware infrastructure
+720
+associated with the
+network core
+721
+includes open and
+programmable hardware
+722
+enabling communications over the
+backhaul
+718
+.
+Additional hardware infrastructure
+724
+is utilize for a transport layer
+726
+. The
+hardware infrastructure
+724
+includes transport
+open hardware
+728
+and a POTN (packet optical transport network)
+730
+.
+Each of the
+mobile edge network
+713
+and
+core cloud network
+721
+include a
+virtualization layer
+732
+on top of the
+hardware infrastructures
+712
+,
+720
+, respectively. On top of the
+virtualization layer
+732
+associated with the
+mobile edge network
+713
+, a number of virtualized network functions
+734
+reside. These virtualized network functions
+734
+include access CP functions
+736
+, distributive core functions
+738
+and
+management analytics
+740
+. Another group of virtualized network functions
+742
+exist upon the
+virtualization layer
+732
+within the
+core cloud network
+721
+. These functions include packet core functions
+744
+and
+management analytics
+746
+.
+On top of the virtualized network functions
+734
+, edge
+cloud orchestration functionalities
+748
+are implemented within the
+core cloud network
+721
+.
+Cloud orchestration functionalities
+750
+are implemented on top of the virtualized network functions
+742
+. Additionally, within the transport layer
+726
+, a transport software defined
+network
+752
+enables control of transport between the
+mobile edge
+713
+and
+core cloud
+721
+. The use of software defined networks will be more fully discussed herein below.
+On top of each of the orchestration and SDN layers is an intelligent E2E orchestration and service exposure (open API)
+754
+. Through this
+open API
+754
+, the virtualized network slices
+756
+-
+760
+may be utilized to implement only those network functionalities that are necessary to carry out particular applications using specific hardware resources. Examples of these type of network slices include Telco (telecommunication)
+services
+756
+;
+media services
+758
+, such as various types of video streaming; and various types of
+low latency services
+760
+that do not require a high latency level in order to perform their functionalities. Each of the slices
+756
+-
+760
+would only utilize as much of the network services within the
+mobile edge
+713
+,
+core cloud
+721
+and transport layer
+726
+in order to achieve the operations virtualized by each network slice.
+As shown generally at
+780
+, the system can provide a 3.5 Hz private network providing a number of functionalities. These functionalities include virtualization
+782
+, open hardware
+784
+, open software and API
+786
+, disaggregation
+788
+, mobile edge services
+790
+and an analytical framework
+792
+. Each of these functionalities provide for a robust private network providing greater benefits than those in existing private network such as Wi-Fi.
+Referring now to
+ 
+, there is illustrated the manner in which the configurable
+wide area network
+202
+controls interactions between applications and
+services
+802
+and the
+physical infrastructure
+804
+. The applications and
+services
+802
+are located within an application layer and have various requirements that differ depending upon the bandwidth needs of the application or service. The
+physical infrastructure
+804
+is included within the physical layer hardware and comprises computation and
+storage resources
+806
+including items such as user equipment and
+devices
+808
+and
+data centers
+810
+storing information and accessible resources. The user equipment and
+devices
+808
+represent handsets, mobile terminals, sensors, actuators, etc. The
+physical infrastructure
+804
+further includes
+network resources
+812
+such as radio access towers
+814
+, the
+mobile fronthaul
+816
+, the
+mobile backhaul
+818
+and the
+transport network
+820
+.
+The configurable
+wide area network
+202
+comprises the network layer where network functions are implemented in software and includes
+slice control
+822
+for selecting the network resources that are required in order to implement a particular application or service that is currently being utilized. The
+slice control
+822
+utilizes a number of factors and domain specific orchestration controls in order to establish a
+particular slice
+824
+. These include user equipment/
+device control
+826
+, radio
+access network control
+828
+, mobile
+packet core control
+830
+and
+cloud control
+832
+. The domain specific orchestration controls may exist individually and for each network provider. The
+slice control
+822
+communicates with the various applications and services through an
+application program interface
+836
+. The network resource controllers
+826
+-
+832
+communicate with the applications and services through an app driven API. Network management and
+orchestration
+834
+works with the
+slice control
+822
+and the various network resource controls
+826
+-
+832
+in order to establish the
+various slices
+824
+. Network management and
+orchestration
+834
+consolidates management of inter-slice, slice lifecycle and resource management over multiple network domains in end-to-end connections. Within
+individual slices
+824
+, virtual network functionalities (VNFs) and virtual transport paths are mapped on the sliced network topologies. The
+slices
+824
+encompass capabilities of transport control and network functionalities.
+Referring now to
+ 
+, there is illustrated a virtualization and slicing process under software control within a cloud radio access network (C-RAN). First and second user devices
+902
+each implement first and
+second applications
+904
+,
+906
+in the case of
+device
+902
+A and second and
+third applications
+906
+,
+908
+in the case of
+device
+902
+B. The user devices
+902
+are in wireless communication with
+antennas
+910
+and
+912
+.
+Antenna
+910
+is associated with the digital radio network while
+antennas
+912
+are associated with an analog, digital or packet radio network. Each of the
+antennas
+910
+,
+912
+are connected to a dense
+wavelength division multiplexer
+914
+. The
+multiplexer
+914
+implements an optical multiplexing technology that combines and transmits multiple signals simultaneously on different links over the same fiber. The
+multiplexer
+914
+establishes a connection through a TSDN hybrid slice
+fronthaul IDC backhaul
+916
+link
+918
+is associated with
+application
+906
+.
+Link
+920
+is associated with
+application
+904
+, and link
+922
+is associated with
+application
+908
+.
+A number of GE
+400
+links
+924
+-
+928
+are provided from an Inter C-RAN/DC network to a CORE/vEPC network through the TSDN hybrid slice
+fronthaul IDC backhaul
+916
+to the C-
+RANs
+930
+.
+Link
+924
+is associated with
+application
+906
+.
+Link
+926
+is associated with
+application
+904
+, and link
+928
+is associated with
+application
+908
+.
+The cloud
+radio access network
+930
+consist of a number of resources including radio access terminals (RATs), CORE network (CN), mobile edge computing (MEC) and other types of server/core functions. In the example of
+ 
+, a number of RAT/
+CN servers
+932
+,
+934
+and
+940
+are used along with CN/EC (edge computing)
+server
+936
+,
+RAT server
+938
+, RAT/
+EC server
+942
+and an idol/off
+server
+944
+. The cloud
+radio access network
+930
+is controlled through a C-
+RAN controller
+945
+.
+Any resource may be part of any slice. In the example of
+ 
+, a first slice is associated with
+application
+904
+and consists of
+links
+920
+,
+926
+and
+resources
+938
+and
+940
+. The first slice provides ultra-reliable, low bandwidth, long rang and high mobility connection. A second slice is associated with
+application
+906
+and consist of
+links
+918
+,
+924
+and
+resources
+932
+,
+934
+and
+936
+. The second slice provides the highest bandwidth for short range connections. A final slice is associated with
+application
+908
+and consist of
+links
+922
+,
+928
+and
+resources
+940
+and
+942
+. The final slice provides the lowest delay to be used for low signaling connections. Idle resources such as
+resource
+944
+may be moved from one slice to another depending upon the needs of the particular slice. Additionally, presently assigned links and resources may be dynamically adjusted depending upon the needs of a particular slice. Resources include virtual machine servers, intra/inter C-RAN B/W, C-RAN to radio configurations of base station and UE devices.
+Referring now to
+ 
+, there is illustrated a network configuration for a massive MIMO neutral host network for user in a private network. A
+user device
+1002
+establishes a wire connection with an
+antenna
+1004
+of the radio access network.
+Antenna
+1004
+communicates with the
+base station
+1006
+. The
+base station
+1006
+includes a number of remote radio heads (RRHs)
+1008
+. The
+RRHs
+1008
+contains the base stations RF circuitry plus analog-to-digital/digital-to-analog converters and up/down converters.
+RRHs
+1008
+have operation and management processing capabilities and a standardized optical interface to connect to the remainder of the
+base station
+1006
+. The baseband unit (BBU)
+1010
+processes baseband within the radio link for signals to/from the
+RRH
+1008
+. The channel state report (CSR)
+1012
+generates channel state information for the communications link. The
+base station
+1006
+is associated with other base stations within a
+cluster
+1014
+. The
+cluster
+1014
+comprises a cluster of cells.
+The
+base station
+1006
+communications are transmitted from the
+various clusters
+1014
+over a
+backhaul network
+1016
+. The
+backhaul network
+1016
+connects to various markets
+1018
+(particular areas having cell networks) to the optical data network (ODNET)
+1020
+. The
+optical data network
+1020
+connects to the core
+central office
+1022
+. The core
+central office
+1022
+communicates with the
+Internet
+1024
+or public switched telephone network (PSTN)
+1026
+in order to download data information or provide voice communications.
+Referring now to
+ 
+, a virtual
+radio access network
+1100
+is illustrated. Within the virtual
+radio access network
+1100
+, the configuration from the
+backhaul network
+1016
+to the core
+central office
+1022
+, and the core central offices connections to the
+Internet
+1024
+and the
+PSTN
+1026
+are the same as that described with respect to the
+traditional network
+1000
+of
+ 
+. The
+user device
+1002
+communicates with and
+antenna
+1102
+over wireless communication links. The
+remote radio heads
+1104
+are located at the
+antenna
+1102
+rather than a base station. The remote radio heads are in communication with a
+virtual base station
+1106
+virtualized within the cloud that implements a
+baseband unit
+1108
+and
+channel state report
+1110
+within the
+network cloud
+1112
+. Virtualized functions are implemented using NFV as will be more fully discussed herein below. Virtualized functions may also use SDN wherein the control functions are taken out of the hardware and implemented within software as will be more fully described. The BBUs communicate with the RRHs over a fronthaul which may be fiber or wireless. The
+virtual base stations
+1106
+are associated with
+other clusters
+1114
+that communicate through the
+backhaul network
+1016
+as described previously.
+As systems evolve towards RAN2020, CloudRAN architecture is used to implement RAN real time functions, on-demand deployment of non-real-time resources, component-based functions, flexible coordination, and RAN slicing. With Mobile Cloud Engine (MCE), CloudRAN can support orchestration for RAN real time and non-real-time functions based on different service requirements and transmission resource to perform cloudification (and virtualization) of the RAN.
+The RAN real time functions include access network scheduling, link adaptation, power control, interference coordination, retransmission, modulation, and coding. These functions require high real-time performance and computing load. The deployment of sites must include dedicated hardware with high accelerator processing and be located in close to services. The RAN non-real-time functions include inter-cell handover, cell selection and reselection, user-plane encryption, and multiple connection convergence. These functions need low real-time performance and latency requirements and fit for centralized deployment. MCE can support management and coordinating multiple processing capabilities based on regional time, frequency bands, and space. This architecture allows CloudRAN to support 4G, 4.5G, 5G (different bands), and Wi-Fi, and coordination of macro, micro, pico and massive MIMO sites. Network functions are deployed on radio, backbone, or core nodes to maximize network efficiency.
+Multi-connectivity is fundamental to the future network architecture. Multi-connectivity with carrier aggregation can support the usage of licensed, shared and unlicensed bands to provide bandwidth hungry applications used by power users that leverage small cells or massive MIMO. CloudRAN can be deployed in an unified network architecture. In current fragmented networks, increasing speed and reducing latency can improve user experience. Reliable high-speed data cannot depend on a single frequency band or standard connections. In heterogeneous networks, multi-connectivity helps provide an optimal user experience based on LTE and 5G capabilities, such as high bandwidth and rates of high frequency, network coverage and reliable mobility of low frequency, and accessible Wi-Fi. This could mean a combined coordination of licensed, shared and unlicensed bands to support power users that use high-bandwidth applications. In scenarios that require high bandwidth or continuity, a user requires multiple concurrent connections. For example, data aggregation from multiple subscriptions to 5G, LTE, and Wi-Fi (licensed, shared and unlicensed bands) to aggregate and produce high bandwidth. An LTE network access has to maintain continuity after a user has accessed a 5G high-frequency small cell.
+In scenarios that have multiple technologies, CloudRAN can be an anchor for data connection which reduces alternative transmission. In the traditional architecture integrating base stations as an anchor for data connection, LTE, 5G, and Wi-Fi data is aggregated into a non-real time processing module of a specific standard to be forwarded to each access point. In this CloudRAN architecture, non-real time processing functions in access points of different modes are integrated into the MCE, which is as an anchor for data connection. Data flows are transmitted to each access point over the MCE, which prevents alternative transmission and reduces transmission investment.
+Referring now to
+ 
+, a virtual
+radio access network
+1200
+is illustrated. The virtual
+radio access network
+1200
+may be utilized for a private 3.5-5 GHz network. Within the virtual
+radio access network
+1200
+, the configuration from the backhaul network
+1216
+to the core central office
+1222
+and the core central offices connections to the Internet
+1224
+and the PSTN
+1226
+are the same as that described with respect to the
+traditional network
+1100
+of
+ 
+. The
+user device
+1202
+communicates with and
+antenna
+1202
+over wireless communication links. The
+antenna
+1202
+includes a number of massive
+MIMO antenna configurations
+1204
+providing multiple input multiple output transceiver capabilities such as those disclosed in U.S. patent application Ser. No. 15/216,474, entitled SYSTEM AND METHOD FOR COMBINING MIMO AND MODE-DIVISION MULTIPLEXING, filed on Jul. 21, 2016, which is incorporated herein by reference in its entirety. The
+MIMO transceivers
+1204
+are located at the
+antenna
+1202
+rather than a base station. The
+MIMO transceivers
+1204
+are in communication with a
+virtual base station
+1206
+that implements a plurality of
+baseband units
+1208
+that are each associated with
+different MIMO transceivers
+1204
+, different network providers and
+channel state report
+1210
+within the
+network cloud
+1212
+. A
+neural host interface
+1214
+controls the interactions between the
+MIMO transceivers
+1204
+and the
+base band units
+1208
+. The
+virtual base stations
+1206
+are associated with
+other clusters
+1114
+that communicate through the backhaul network
+1216
+as described previously.
+Referring now to
+ 
+, there is more particularly illustrated the
+virtualized base station
+1206
+and backhaul
+1216
+portions of the networks that may be virtualized for a private 3.5-5 GHz network. The
+virtualized portion
+1302
+consists of the
+backhaul network
+1304
+and the
+access network
+1306
+. The
+access network
+1306
+enables a
+user device
+1308
+to communicate with an
+antenna
+1310
+via an RF link. The
+antennas
+1310
+communicate with
+various LTE eNodeBs
+1312
+. The
+various LTE eNodeBs
+1312
+and
+backhaul network
+1304
+are implemented in software using, for example, software defined networking (SDN) and network function virtualization (NFV) as will be more fully described herein below. The
+virtualized backhaul network
+1304
+communicates with the
+core network
+1314
+through a converged packet gateway (CPG)
+1320
+and a mobility management entity (MME)
+1322
+to provide access to the
+Internet
+1316
+and
+telco services
+1318
+. The
+core network
+1314
+provides access to the Internet multimedia subset (IMS)
+1324
+to provide access to VOIP/RCS/
+VoLTE
+1326
+,
+SS7 network
+1328
+and the public switched telephone network (PSTN)
+1330
+.
+Referring now to
+ 
+, there is illustrated the manner in which a
+central office
+1402
+may be converted to a data center
+1404
+(CORD). The conversion from
+central office functionalities
+1402
+to
+data center functionalities
+1404
+are carried out using a combination of network function virtualization (NFV)
+1406
+, software defined networks (SDN)
+1408
+and the
+cloud
+1410
+. The operation of
+NFV
+1406
+and
+SDN
+1408
+will be discussed more fully herein below. This reconfiguration of the
+central office
+1402
+to a
+data center
+1404
+provides for rapid innovation, re-personalizable hardware, agile dev-op models, low cost operating expenses, application network awareness, service programmability, customer control and quick deployment options.
+The cloud adaptation of networks, operation systems, and services is the core for an all cloud  approach to the network (hardware resources, distributed software architecture, and automatic deployment). Operators transform networks using a network architecture based on data center (DC)
+1404
+in which all functions and applications are running on the cloud data center (cloud-native architecture).
+As shown in
+ 
+, in this architecture, a single network infrastructure can support different services and applications. This Cloud-Native
+E2E network architecture
+1450
+has the following attributes. The
+architecture
+1450
+provides logically independent network slicing
+1452
+on a single network infrastructure for different service requirements and provides DC-based
+cloud architecture
+1454
+to support various application scenarios. The
+architecture
+1450
+further uses Cloud RAN and
+RAN Slicing
+1456
+to reconstruct radio access networks (RAN) to support massive connections of multiple standards and implement on-demand deployment of RAN functions. The
+architecture
+1450
+also simplifies
+core network architecture
+1458
+to support on-demand network functions through control and user plane separation and unified database management. Finally, the
+architecture
+1450
+supports automatic network slicing service generation, maintenance, and termination for
+different services
+1460
+to reduce operating expenses.
+New communication requirements for different services are difficult on existing networks in terms of technologies and business models. The next-generation mobile network must support different demands from different applications in different industries on a single network. The international telecommunications union (ITU) has classified 5G mobile network services into three categories: Enhanced Mobile Broadband (eMBB), Ultra-reliable and Low-Latency Communications (uRLLC), and Massive Machine Type Communications (mMTC). The eMBB service targets people's demand for a digital lifestyle and focuses on services that have high requirements for bandwidth, such as high definition (HD) videos, virtual reality (VR), and augmented reality (AR). The high bandwidth requirements are supported by using SDR-based massive MIMO. The uRLLC service focuses on latency-sensitive services, such as assisted and automated driving, and remote management. The mMTC service focuses on services that include high requirements for connection density, such as smart city and smart agriculture. However, a network is needed where all of these different types of networks are possible on one infrastructure and allow network slicing E2E. The described system enables enhanced mobile broadband (eMBB), ultra-reliable low latency communications (URLLC) and massive machine type communication (mMTC) to each be provided on a single infrastructure using end-to-end network slicing.
+A number of traditional industries, such as automotive, healthcare, energy, and municipal systems participate in the construction of this ecosystem. 5G allows digitalization process from personal entertainment to society interconnection. The driving forces behind the network architecture transformation include the following aspects. A first factor involves complex networks incorporating multiple services, standards and sites. 5G networks must be able to provide diversified services of different KPIs, support co-existent accesses of multiple standards (5G, LTE, and Wi-Fi), and coordinate different site types (macro, micro, pico base stations as well as massive MIMO). The design challenge to create a network architecture capable of supporting such flexibility while meeting differentiated access demands is very complex to optimize. Another factor involves coordination of multi-connectivity technologies. 5G is expected to co-exist with LTE and Wi-Fi for a long time incorporating multi-connectivity technologies and the new 5G air interface. Multi-connectivity technologies must be coordinated based on traffic and mobility requirements of user equipment to provide sufficient transmission throughput and mobile continuity.
+The network must also provide on-demand deployment of services on the site or on the access cloud side. 5G network architecture will be designed based on access sites and three-layer DCs. According to different service requirements, fiber/optic cable availability and network resource allocations, RAN real time and non-real time resources can be deployed on the site or on the access cloud side. This requires that the service gateway location may also be deployed on the access cloud or on the core network side. The network must also provide for flexible orchestration of network functions. Service requirements vary with different network functions. A eMBB service requires a large throughput for scheduling. A uRLLC service requires ultra-low latency and high reliability. Networks must flexibly orchestrate network capabilities considering service characteristics, which significantly simplify network functions and increase network efficiency. Finally, a network must provide a shorter period of service deployment. Different services have expanded the mobile network ecosystem and increased network deployment complexity. Rapidly deploying new services requires better lifecycle management processes involving network design, service deployment, and O&M to rapidly deploy new services.
+The service-driven 5G network architecture has to be flexible and efficiently support diversified mobile service requirements. This is achieved using a combination of
+SDN
+1408
+and
+NFV
+1406
+. With software-defined networking (SDN)
+1408
+and Network Functions Virtualization (NFV)
+1406
+supporting the underlying physical infrastructure, 5G comprehensively cloudifies and can further virtualize access, transport, and core networks.
+Cloud solutions
+1410
+can better support diversified 5G services, and enables the key technologies of E2E network slicing, on-demand deployment of services, and component-based network functions.
+CloudRAN
+1456
+would include sites and mobile cloud engines. This
+architecture
+1450
+coordinates multiple services, operating on different standards, in various site types for RAN real time resources that require many computing resources. Networks implement policy control using dynamic policy in the unified database on the core network side. Component-based control planes and programmable user planes allow for network function orchestration to ensure that networks can select control-plane or user-plane functions according to different service requirements. The transport network consists of SDN controllers and underlying forwarding nodes. SDN controllers generate a series of specific data forwarding paths based on network topology and service requirements to implement network optimization or open network capabilities in the API. The top layer of the network architecture implements E2E automatic slicing and
+network resource management
+1460
+.
+E2E network slicing
+1452
+,
+1460
+is a foundation to support diversified 5G services and is key to 5G network architecture evolution. Based on
+NFV
+1406
+and
+SDN
+1410
+, physical infrastructure of the future network architecture would include sites and three-layer DCs. Sites support multiple modes (such as 5G, LTE, and Wi-Fi) in the form of macro, micro, and pico base stations and corresponding massive MIMO at different bands to implement the RAN real time function. These functions have high requirements for computing and real-time performance and require dedicated hardware. As shown in
+ 
+, three-layer cloud DC includes computing and storage resources. The
+bottom layer
+1462
+is the central office DC, which is closest in relative proximity to the base station side. The
+second layer
+1464
+is the local DC, and the
+third layer
+1465
+is the regional DC, with each layer of arranged DCs connected through
+transport networks
+1466
+.
+As discussed previously based on this architecture to diversify services, networks have topologies and a series of network function (network slices
+1468
+) for each corresponding service
+type using NFV
+1406
+on a unified physical infrastructure. Each
+network slice
+1468
+is derived from one unified physical network infrastructure, which reduces operators' network costs.
+Network slices
+1468
+feature a logical arrangement and are separated as individual structures, which support customizable service functions and independent O&M.
+As indicated, eMBB, uRLLC, and mMTC are independently supported on a single physical infrastructure. The eMBB slicing has high bandwidth requirements and has to cache in the mobile cloud engine of a
+local DC
+1464
+, which supports high-speed services located close to users, reducing bandwidth requirements of the backbone network. The uRLLC slicing has strict latency needs in application of self-driving, assistant driving, and remote management and must be deployed in the mobile cloud engine of the central office DC
+1462
+(closer to the end user). V2X Server and service gateways must be deployed in the mobile cloud engine of the
+central office DC
+1462
+, with only control-plane functions deployed in the local
+1464
+and
+regional DCs
+1465
+. The mMTC slicing has low network data interaction and a low frequency of signaling interaction in most mMTC applications and the mobile cloud engine can be located in the local DC, with other functions. Therefore, mobile cloud engine can be in the
+local DC
+1464
+, and other functions and application servers can be deployed in the
+regional DC
+1465
+, which releases
+central office
+1462
+resources and reduces operating expenses.
+ 
+more particularly illustrates the virtualization of the
+central office
+1402
+to the
+data center
+1404
+using the combination of
+NSV
+1406
+,
+SDN
+1408
+and the
+cloud
+1410
+. The process uses a number of commodity servers, switches and
+network access devices
+1502
+that may be used in combination with
+SDN control
+1504
+and
+NFV orchestration
+1506
+. An inter connection of services and processes are implemented within a
+leaf spine fabric
+1508
+using a network of
+white boxes
+1510
+that comprise various types of generic network components that are interconnected via an SDN enabled
+fabric
+1512
+. In SDN and FNV, the defined control structure enables the
+white boxes
+1510
+to be utilized in a desired manner or even repurposed in order to provide the virtualized network.
+Virtualization of the central office enables the use of mobile edge services. Referring now to
+ 
+, there is illustrated the manner in which traditional mobile services are provided to a
+user device
+1602
+. In this case, a
+centralized core
+1604
+transmits all traffic over a
+network
+1606
+connecting the
+centralized core
+1604
+to the
+user device
+1602
+. Within traditional mobile service architecture all services are processed at the
+central core
+1604
+. This requires overloading of the backhaul transport and core EPC. This provides for an inefficient use of network resources and causes a deterioration of the quality of experience of users. This type of implementation can also lead to over provisioning in order to handle peak traffic hours.
+ 
+illustrates a mobile edge computing services system wherein the
+centralized core
+1702
+communicates only
+nonlocal traffic
+1704
+with the
+user device
+1706
+. With respect to
+local traffic
+1708
+, a
+mobile edge network
+1710
+is used for calculations and determinations in order to locate the processing and communications locally and more closely to the
+user device
+1706
+. Services that can be processed at the
+edge network
+1710
+use M-CORD (mobile central office to data center) systems. Mobile edge services provide the advantage of being proximately located to end users. Mobile edge services provides for innovative and customized services that target customers (Internet of things, smart cities, education, industrial M2M, etc.) mobile edge services provide better efficiencies and new revenue opportunities for system operators.
+Thus, CORD has emerged as an important service provider solution platform that brings the economy of the data center and the agility of a cloud. M-CORD integrates disaggregated/virtualized RIN and EPC with mobile edge services into CORD. M-CORD includes the integration of disaggregated eNB and provides connectionless service for Internet of things use cases.
+MPEG-DASH is an ISO open standard for the adaptive delivery of segmented control (dynamic adaptive streaming over HTTP). MPEG-DASH-based compression in the mobile edge provides for bit rate trimming, bandwidth minimization, low latency options, HTTP delivery and improve throughput. The key differentiator of DASH, as opposed to any of the other HTTP streaming formats, is its open standard configuration.
+Thus, referring now to
+ 
+, by using a cloud native architecture (for example 5G architecture) various combinations of one or more of virtual radio access networks (VRAN)
+1802
+, mobile edge computing (MEC)
+services
+1804
+,
+CORD
+1806
+, Dash-based
+compression
+1808
+, SDN-based
+massive MIMO
+1810
+, SDN-based end-to-end network slicing with
+massive MIMO
+1812
+to optimize the quality of experience for a given application on a same infrastructure, and SDN-based backhaul/
+fronthaul
+1814
+ultrabroadband virtualized telecom and
+internet services
+1816
+may be provided.
+Software-Defined Networks and Network Function Virtualization
+Diverse proprietary network hardware boxes increase both the capital and operational expense of service providers while causing problems of network management. Network function virtualization (NFV) addresses these issues by implementing network functions as pure software on commodity and generic hardware. Thus, as shown in
+ 
+, a generic off-the-
+shelf hardware
+1902
+may be used to generate a variety of
+system applications
+1904
+that are programmed into the hardware. NFV allows flexible provisioning, deployment, and centralized management of virtual network functions. Integrated with Software Defined Networks (SDN), the software-defined NFV architecture further offers agile traffic steering and joint optimization of network functions and resources. This architecture benefits a wide range of applications (e.g., service chaining) and is becoming the dominant form of NFV. Herein below, we introduce development of NFV under the software-defined NFV architecture, with an emphasis on service chaining as its application to Backhaul, Fronthaul and last mile wireless Internet Access. The software-defined NFV architecture is introduced as the state of the art of NFV and presents relationships between NFV and SDN. Finally, significant challenges and relevant solutions of NFV are described and its application domains (i.e. BH/FH/Access) are discussed.
+Current network services rely on proprietary boxes and different network devices that are diverse and purpose-built. This situation induces network management problem, which prevents the operation of service additions and network upgrades (ossification). To address this issue and reduce capital expenditures (CapEx) and operating expenditures (OpEx), virtualization has emerged as an approach to decouple the software from the supported hardware and allow network services to be implemented as software. ETSI proposed Network Functions Virtualization (NFV) to virtualize the network functions that were previously carried out by some proprietary dedicated hardware. By decoupling the network functions from the proprietary hardware boxes, NFV provides flexible provisioning of software-based network functionalities on top of an optimally shared physical infrastructure. It addresses the problems of operational costs of managing and controlling these closed and proprietary boxes by leveraging low cost commodity servers.
+On the other hand, with the development of Software Defined Networking (SDN), the trend is to integrate SDN with NFV to achieve various network control and management goals (i.e. dynamic resource management and intelligent service orchestration). Through NFV, SDN is able to create a virtual service environment dynamically for a specific type of service chain, consequently the dedicated hardware and complex labor work to provide a new coming service request is avoided. In conjunction with the use of SDN, NFV further enables real-time and dynamic function provisioning along with flexible traffic forwarding.
+Software-defined NFV leverages network virtualization and logically centralized intelligence to minimize the service providing cost and maximize the utilization of network resources. In this case, the obtained higher resource utilization will introduce less investigation on the hardware equipment, which on the other hand simplifies networking operations. Moreover, by automating current manually intensive network configuration, provisioning, and management, the time and operational complexity are significantly reduced and manual errors are dramatically decreased, which offers better scalability. On the other hand, especially in large scale networks, deploying and providing a new kind of service usually results in a long and repeated process that requires long cycles of validation and testing. By automating the control, management and orchestration, the deployment time and operation cost will be significantly reduced.
+Service chaining is the main area of software-defined NFV. In current networks, a service chain includes a set of hardware dedicated network boxes offering services such as load balancers, firewall, Deep Packet Inspection (DPI), Intrusion Detection System (IDS), etc., to support a dedicated application. When a new service requirement is added, new hardware devices must be deployed, installed and connected, which is extremely time-consuming, complex, high-cost and error-prone. This kind of networking service requires a dedicate plan of networking changes and outages, which requires high OpEx. On the other hand, the architecture of software-defined NFV is able to simplify the service chain deployment and provisioning. It enables easier and cheaper service provisioning in the local area networks, enterprise networks, data center and Internet service provider networks, wireless operator networks and their backhaul, fronthaul and last mile access networks.
+The following introduces the state-of-the-art of NFV and its main challenges within the software-defined NFV architecture. Service chaining is highlighted and discussed as a core application of NFV in different contexts. Guidelines are provided for developments of NFV in various applications to backhaul, fronthaul and last mile access.
+Software-Defined Network Function Virtualization
+To reduce CapEx and OpEx introduced by diverse proprietary hardware boxes, NFV exploits and takes advantage of the virtualization technology. NFV allows network operators and service providers to implement network functions in software, leveraging standard servers and virtualization technologies, instead of purpose-built hardware. Recent trends of increased user information demands, explosion of traffic and diverse service requirements further drive NFV to be integrated with SDN, forming the software-defined NFV architecture. This architecture offers great flexibility, programmability and automation to the operators in service provisioning and service modeling.
+Diverse and fixed proprietary boxes make the service, deployment and testing of new systems increasingly difficult. NFV is a key technology to benefit IT virtualization evolution by separating the hardware network functions from the underlying hardware boxes by transferring network functions from dedicated hardware to general software running on commercial off-the-shelf (COTS) equipment, i.e., virtual machines (VMS). These software applications are running on standard IT platforms like high-performance switches, service, and storage. Using NFV, the different network functions can be deployed in different locations of the networks such as data centers, network nodes, and end-nodes of a network edge as required. Currently, the market of NFV includes switching elements, network elements, network services and applications. A summary of these include:
+Network switching elements, i.e., Broadband Network Gateway (BNG), carrier grade NAT, Broadband remote access server (BRAS), and routers.
+Mobile network devices, i.e., Home Location Register/Home Subscriber Server (HLR/HSS), Serving GPRS Support NodeMobility Management Entity (SGSNMME), Gateway support node/Packet Data Network Gateway (GGSN/PDN-GW), RNC, NodeB and Evolved Node B (eNodeB) such as that disclosed in T. Wu, L. Rui, A. Xiong, and S. Guo, An automation PCI allocation method for eNodeB and home eNodeB cell,  in
+Proc. IEEE
+6
+th Int. Conf. Wireless Commun. Netw. Mobile Comput
+. (
+WiCOM
+), September 2010, pp. 1-4, which is incorporated herein by reference in its entirety.
+Virtualized home environments as described in A. Berl, H. de Meer, H. Hlavacs, and T. Treutner, Virtualization in energy-efficient future home environments, 
+IEEE Commun. Mag
+., vol. 47, no. 12, pp. 62-67, December 2009 and R. Mortier et al., Control and understanding: Owning your home net-work,  in
+Proc. IEEE
+4
+th Int. Conf. Commun. Syst. Netw
+. (
+COMSNETS
+), January 2012, pp. 1-10, each of which are incorporated herein by reference in its entirety.
+Tunneling gateway devices, i.e., IPSec/SSL virtual private network gateways.
+Traffic analysis elements, i.e., Deep Packet Inspection (DPI), Quality of Experience (QoE) measurement.
+Service Assurance, Service Level Agreement (SLA) monitoring, Test and Diagnostics such as that described in H. Ludwig et al., Web service level agreement (WSLA) language specification,  IBM Corp., New York, N.Y., USA, Tech. Rep., 2003, pp. 815-824, which is incorporated herein by reference.
+Next-Generation Networks (NGN) signaling such as Session Border Controller (SBCs), IP Multimedia Sub-system (IMS).
+Application-level optimization devices, i.e., Content Delivery Network (CDNs), load balancers, cache nodes, and application accelerators such as that described in F. T. Leighton and D. M. Lewin, Content delivery network using edge-of-network servers for providing content delivery to a set of participating content providers,  Apr. 22, 2003, which is incorporated herein by reference in its entirety.
+Network security devices, i.e., Firewalls, intrusion detection systems, DOS attack detector, virus scanners, spam protection, etc. such as that described in E. D. Zwicky, S. Cooper, and D. B. Chapman,
+Building Internet Firewalls
+, Sebastopol, Calif., USA: O'Reilly Media, 2000, which is incorporated herein by reference in its entirety.
+The major advantage of using NFV is to reduce middle dedicated hardware boxes deployed in the traditional networks to take the advantages of cost savings and bring flexibility. On the other side, NFV technology also supports the co-existence of multi-tenancy of network and service functions, through allowing the usage of one physical platform for different services, applications and tenants.
+NFV Framework
+ETSI defines the NFV
+architectural framework
+2002
+as illustrated in
+ 
+enabling virtualized network functions (VNF)
+2004
+to be deployed and executed on a Network Functions Virtualization Infrastructure (NFVI)
+2006
+, which consists of
+commodity servers
+2007
+to provide computing, storage and network functionalities wrapped with a software layer that logically partitions them. Above the hypervisor layer, a
+VNF
+2004
+is typically mapped to one VM (virtual machine)
+2009
+in the NFVI. The deployment, execution and operation of
+VNFs
+2004
+on the
+NFVI
+2006
+are steered by a Management and Orchestration (M&O)
+system
+2008
+, whose behavior is driven by a set of metadata describing the characteristics of the network services and their constituent VNFs. The M&O system includes an
+NFV Orchestrator
+2010
+in charge of the lifecycle of network services, a set of
+VNF managers
+2012
+in charge of the life cycle of the VNFs and a
+virtualized infrastructure manager
+2014
+, which can be viewed as an extended cloud management system responsible for controlling and managing NFVI resources.
+Software-Defined Networks
+A Software-Defined Network (SDN) is an important and recently emerging network architecture to decouple the network control from the data forwarding. With its inherent decoupling of the control plane from the data plane, SDN offers a greater control of a network through programming. This combined feature would bring potential benefits of enhanced configuration, improved performance, and encourages innovation in network architecture and operations. Especially, SDN offers a promising alternative for traffic steering by programmatically configuring forwarding rules as described in N. Handigol, S. Seetharaman, M. Flajslik, N. McKeown, and R. Johari, Plug-n-serve: Load-balancing Web traffic using OpenFlow,  in Proc. ACM SIGCOMM Demo, 2009, pp. 1-2, which is incorporated herein by reference in its entirety.
+ 
+depicts the SDN architecture. There are three different layers. The
+application layer
+2102
+covers an array of
+applications
+2104
+focusing on network services, and they are mainly software applications communicating with the
+control layer
+2106
+. As the core of SDN, the
+control layer
+2106
+consists of a
+centralized controller
+2108
+, which logically maintains a global and dynamic network view, takes requests from the
+application layer
+2102
+, and manages the network devices via
+standard protocols
+2109
+using
+control policies
+2110
+. Communications between the
+applications layer
+2102
+and the
+control layer
+2106
+occur through application program interfaces
+2112
+. The data-
+plane layer
+2114
+provides infrastructure including switches, routers and network appliances through
+physical switches
+2116
+,
+virtual switches
+2118
+and
+network devices
+2120
+. In an SDN context, these devices are programmable and support standard interfaces. Communications between the
+control layer
+2106
+and the
+data plane layer
+2114
+occur via application program interfaces
+2122
+.
+The
+application layer
+2102
+utilizes the
+northbound APIs
+2112
+to communicate with the SDN controller
+2106
+(Control Plane Layer), which enable different control mechanisms for the networks. The
+southbound APIs
+2122
+define the communication interface between the
+controller layer
+2106
+and data plane devices within the
+data plane layer
+2114
+, which enable the application to control the forwarding device is a flexible and programmable manner.
+NFV Versus SDN
+NFV and SDN are closely related and highly complementary to each other. NFV can serve SDN by virtualizing the SDN controller
+2106
+(which can be regarded as a network function) to run on the cloud, thus allows dynamic migration of the controllers to the optimal locations. In turn, SDN serves NFV by providing programmable network connectivity between virtual network functions (VNFs) to achieve optimized traffic engineering and steering. However, NFV and SDN are completely different from the concepts to the system architecture and functions, which are summarized by the following aspects.
+NFV is a concept of implementing network functions in software manner, while SDN is concept of achieving centrally controlled and programmable network architecture to provide better connectivity. NFV aims at reducing CapEx, OpEx, and space and power consumption, while SDN aims at providing network abstractions to enable flexible network control, configuration and fast innovation. NFV decouples the network functions from the proprietary hardware to achieve agile provisioning and deployment, while SDN decouples the network control plane from the data
+Software-Defined NFV Architecture
+The software-defined NFV system is illustrated in
+ 
+. The system consists of a
+control module
+2202
+, forwarding
+devices
+2204
+and
+NFV platform
+2406
+at the edge of the network. The logic of packet forwarding is determined by the
+SDN controller
+2408
+and is implemented in the
+forwarding devices
+2204
+through forwarding tables. Efficient protocols, e.g., OpenFlow, can be utilized as standardized interfaces in communicating between the
+centralized controller
+2202
+and distributed
+forwarding devices
+2204
+. The
+NFV platform
+2206
+leverages
+commodity servers
+2210
+to implement high bandwidth NFs (network functions) at low cost. Hypervisors
+2212
+run on the
+servers
+2210
+to support the
+VMs
+2213
+that implement the NFs. This
+platform
+2206
+allows customizable and programmable data plane processing functions such as middle box of firewalls, IDSs, proxies, which are running as software within virtual machines, where NFs are delivered to the network operator as pieces of pure software.
+The
+SDN controller
+2208
+and the
+NFV orchestration system
+2214
+compose the
+logical control module
+2202
+. The
+NFV orchestration system
+2214
+is in charge of provisioning for virtualized network functions
+2216
+, and is controlled by the
+SDN controller
+2208
+through
+standard interfaces
+2218
+. Referring now to
+ 
+, there is illustrated a process for provisioning functions. After obtaining the network topology and policy requirements at
+step
+2302
+, the
+control module
+2208
+computes the optimal function assignments (assigning network functions to certain VMs) at
+step
+2304
+and translates at
+step
+2306
+the logic policy specifications into optimized routing paths. The function assignments are enforced at
+step
+2308
+by the
+NFV orchestration system
+2214
+, and the
+controller
+2208
+steers the traffic traveling through the required and appropriate sequence of VMs
+2413
+and
+forwarding devices
+2204
+by installing forwarding rules into them at
+step
+2310
+.
+From Middle Box to NFV
+Though NFV is not limited to virtualizing middle boxes, the concept of NFV was initiated in the context of middle box. The present disclosure introduces the evolution from a traditional purpose-built middle box to NFV, during which consolidated middle box and software-defined middle box act as transitional paradigms.
+Middlebox Overview
+A middle box is a networking forwarding or processing device that transmits, transforms, filters, inspects or controls network traffic for purposes of network control and management. A middle box service or function is a method or operation performed by a network device that needs specific intelligence about the applications. Typical examples of middle boxes include network address translators (NATs) that modify packet's destination and source addresses, and firewalls that filter unwanted or malicious traffic. The following are commonly deployed middle boxes:
+1) Network Address Translator (NAT)
+2) Firewall (FW)
+3) Intrusion Detection System (IDS)
+4) Load Balancer (LB)
+5) WAN Optimizer
+6) Flow Monitor (FM)
+Consolidated Middlebox
+Here, an overview for the efforts on consolidating middle boxes is provided, which are precursors to the current NFV paradigm.
+1) CoMb
+2) APLOMB
+3) Integrate Middle Boxes into Network
+Software-Defined Middlebox
+As SDN evolves, the principles of abstracting the architecture layer of network from the control plane
+1906
+and data plane
+1914
+have been investigated in various contexts. This idea introduces some unique opportunities for the development of middle boxes. Inspired by the idea of SDN, some researchers proposed a software-defined middle box and corresponding networking architecture, with the aim of providing fine-grained and programmable control over the middle box state and network forwarding.
+Service Chaining
+Service chaining is an important model for network service providers, in which NFV plays an important role. It is utilized to organize the service function deployment, where the ability of specifying an ordered list of service processing for the service's traffic flows is provided. A service chain defines the required processing or functions and the corresponding order that should be applied to the data flow. These chains require the integration of service policy and the above applications to achieve optimal resource utilization.
+Traditional service chaining mainly relies on manual configuration which is tedious, error-prone and clumsy. SDN provides new capabilities to steer traffic dynamically based on user requirements. However, hardware-based middle boxes limit the benefit of SDN due to their fixed functionalities and deployment. NFV is a good enabler for SDN. With the ability of dynamic function provisioning offered by NFV and the centralized control of SDN, new opportunities emerged in service chaining. Better performance and resource utilization can be achieved with the software-defined NFV architecture.
+SDN & Middle Box Based Service Chaining
+SDN offers the flexible control approach and enables dynamic traffic forwarding, and this style of traffic control for middle box-specific flow can realize flexible and efficient service chaining with no need to generate any placement or introduce some constraints on middle boxes, which are on the other hand easily supported by current SDN standards. The following are some of the important functions:
+1) Symple
+2) Steering
+3) Flowtag
+Service Chaining in the Software-Defined NFV Architecture
+SDN and NFV together have the potential to benefit service operators, satisfy user service level agreements and accurately monitor and control network traffic, which further reduces and minimizes the operating cost. On one hand, NFV moves network functions out of dedicated hardware boxes to the software based on general hardware platform. SDN moves control functions out of the hardware and places it in the software controller. Therefore, the service deployment and service chains can be provided and reconfigured in the controller. In this way, not only flexible and dynamic operations are allowed, the chance for operation error and events will be much smaller because the network controller has an overall view, which reduces the probability of inconsistent configurations.
+Moving the required network functions into software means that deploying the service chain no longer requires acquiring a dedicated middle box. In this case, the network functions execute as the software running on virtual machines with the control of a
+hypervisor
+2412
+, which enable flexible computational and networking resource provisioning. Thus, since the computational capacity can be increased when required, there's no need to over-provision. On the other hand, software-defined NFV service chaining also helps the network upgrade process. For geographically distributed networks, upgrading network devices is costly. Moreover, the errors in the network updates and re-configuration can bring down the entire network. However, with the software-defined NFV, service providers are able to create new chains without radically changing hardware. Finally, service operator can utilize these service chaining techniques by themselves, instead of using third party providers. With intelligent service chaining, complexity of resource provisioning is significantly reduced. Thus, service providers can deliver services on demand without the help of third parties.
+ 
+illustrates an example of the service chaining process. Within a software-defined NFV architecture, a unified control and orchestration framework is required to integrate the
+SDN controller
+2208
+, forwarding
+elements
+2402
+and virtual network functions
+2004
+. Moreover, due to the existence of dynamic function and resource provisioning, this framework should also provide coordinated control of both network forwarding state and network functions states. Taking
+user policies
+2404
+as inputs, the
+control module
+2402
+assigns the
+NFs
+2206
+fulfilling these services in an optimal way and meanwhile the
+optimal routing paths
+2408
+of all policies are selected taking account of the resource constraints. The service functions
+2410
+are then chained by the centralized controller and the traffic flows
+2412
+are steered according to the service chains.
+Challenges and Problems of Network Function Virtualization
+NFV is an important innovation and a promising approach for the service operators and providers. However, it also faces several challenges. Here the corresponding challenges, open problems, and related solutions are summarized with the classifications organized in Table 1.
+Function Virtualization
+The virtualized functions should meet performance requirements to support packet processing at line-rate for multiple tenants. First, since neither the
+hypervisors
+2212
+nor the
+virtual machines
+2213
+have been optimized for the processing of the middle box, obtaining high performance, i.e., high I/O speed, fast packet processing, short transmission delays, etc. from standard servers is the main challenge for function virtualization. Further, as a server may implement a large amount of functionality, their platforms should host a wide range of
+virtual machine
+2213
+and software packages. Finally, NFV hardware and software platforms should support multi-tenancy, because they are concurrently run by software belonging to the different operators. These
+co-located VNFs
+2004
+should be isolated not only from a security but also a performance point of view. Here is a summary of some important related works on function virtualization.
+1) DPDK is a set of libraries and drivers for fast packet processing for the network functions. DPDK can be run on a wide range of processors. However, the DPDK system has some limitation to support virtualization as it cannot support flexible, high performance functionality in the NFV environment.
+2) NetVM is a software platform for running diversity network functionality at line-speed based on the general commodity hardware. It takes advantage of DPDK's high throughput packet processing capabilities, and further enables flexible traffic steering and overcomes the performance limitations of hardware switching. Thus, NetVM provides the capability to support network function chains by flexible, high-performance network elements.
+3) ClickOS is a high-performance, virtualized software network function platform. It provides small, quickly booting, and little delay virtual machines, and over one hundred of them can be concurrently run while guaranteeing performance on a general commodity server. To achieve high performance, ClickOS relies an extensive overhaul of Xen's I/O subsystem to speed up the networking process in middle boxes. ClickOS is proof that software solutions alone are enough to significantly speed up virtual machine processing, to the point where the remaining overheads are dwarfed by the ability to safely consolidate heterogeneous middle box processing onto the same hardware.
+Portability
+The NFV framework is expected to support the loading, executing and moving of
+VNFs
+2004
+across different but standard servers in multi-vendor environments. This capability is known as portability. These
+virtualized network functions
+2004
+defeat the portability goal and key benefits of NFV, namely the capability of multi-tenancy and resource isolation. The portability challenge is how to achieve high performance leveraging hardware accelerators and at the same time have hardware independent NFs. This approach ensures that the
+VNFs
+2004
+are OS-independent and resource isolation is also guaranteed since the
+VNFs
+2004
+are executed on independent VMs and are decoupled from the underlying OS by the hypervisor layer.
+Standard Interfaces
+NFV relies on existing infrastructure to touch the customer. In this case, it is also highly unlikely that an upgrade of the physical network or entire operational support systems will be feasible. This is a management software integration challenge with the interfaces between NFV and underlying infrastructure. On the other hand, the interfaces between the centralized controller and VNFs
+2204
+should also be standardized. To smoothly bridge NFV with upper and lower layers, the
+VNFs
+2204
+and the underlying computing platform should be described by standard templates that enable flexible control and management. Thus, north- and south-bound
+interface APIs
+2112
+,
+2122
+need to be developed. North-bound
+interface
+2112
+interactions are used to control and manage functions to different types of instances, e.g., physical servers, VM
+2013
+and
+VNFs
+2004
+. Since network functions need service-oriented APIs to be controlled directly or indirectly, each network service has a specific operation policy and SLA. Moreover,
+VNFs
+2004
+could use the north-bound
+API
+2112
+for the requests. On the other hand, the south-bound
+APIs
+2122
+are utilized to communicate with the
+NFVI
+2006
+and request information from other framework entities. Thus, how to design a flexible and efficient API for both the north-bound and south-bound communications are important problems in the research and development of NFV technologies.
+Function Deployment
+Fine-grained deployment, control and management of network functions are needed in the context of NFV-enabled network nodes, for various optimization purposes. Thus, many challenges are related to algorithm and system design of function deployment.
+One of these challenges is to automatically provide network and function process resources according to the usage of the resources involved. A similar and probably even more important challenge is to achieve automatic placement and allocation of the
+VNFs
+2004
+, since the placement and assignment of the
+VNFs
+2004
+significantly impact the performance of service chaining. Both automated provisioning and placement require a global view of the resources and a unified control and optimization system with various optimization engines running in it. Another issue is to translate higher-level policies, which are generated from the resource allocation and optimization mechanisms, into lower level configurations. Templates and standards should be developed to guarantee automated and consistent translation. For example, when there is a need to achieve a high-level goal of reducing the networking transmission delay, the optimization engine may require an algorithm to provision and place virtual functions ensuring that the least overall transmission delay is achieved. Conversely, when it is required to achieve the minimum or maximum link utilization, it would need a different optimization engine with a different algorithm. For more effective operation and control, the optimization approach should support real-time swap to make provisioning and placements that dynamically match the high-level policies from the operator and application.
+Traffic Steering
+SDN offers the new agility of traffic steering by allowing the network operators and service providers to specify a logical control policy, and then automatically translates this into
+data plane
+2114
+forwarding rules. Prior to this, the routing paths are carefully selected by the optimization framework taking into account the physical topology, link capacities, and network resource constraints. Solid work has been done on traffic steering in hardware based middle box systems. However, in the software-defined NFV architecture, traffic steering is jointly optimized with NFV deployment that can achieve better composition. However, the unified optimization paradigm also makes the optimization problem difficult to solve since more variables are introduced. To achieve online computing of traffic steering, heuristic algorithms should be designed to reduce the computing complexity.
+TABLE 1
+Challenges
+Description
+Solution
+Function Virtualization
+Virtualized functions should meet certain
+Important related works:
+requirements to support packet processing at
+(1) DPDK, a set of libraries for fast packet
+line-rate:
+  processing.
+(1) High performance (high I/O speed, fast
+(2) NetVM, a system for running network
+  packet processing, short transmission
+  functionality and middlebox at line-speed in
+  delays, etc.)
+  general commodity hardware.
+(2) Support multi-tenancy
+(3) ClickOS, a small, quick-boot, low-delay,
+(3) OS-independent
+  virtualized software middlebox platform.
+Portability
+The NFV framework is expected to load,
+Deploying network functions via a virtual
+execute and move VNFs across different but
+software environment enhances the portability.
+standard servers in multi-vendor
+This approach ensures that the VNFs are OS-
+environments. This capability is known as
+independent and resource isolation is also
+portability.
+guaranteed.
+Standard Interfaces
+Standardized API should be developed to
+Both VNFs and computing resources are
+enable NFV to reach the customers via
+described via standard templates. Normalized
+underlying infrastructure and to be centrally
+north- and south-bound should be developed
+controlled and managed.
+between these layers.
+Function Deployment
+Fine-grained deployment, control and
+A monitoring system collecting and reporting on
+management of network functions, are
+the behavior of the resources, and a unified
+needed in the context of NFV-enabled
+control and optimization system with various
+network nodes, for various optimization
+optimization engines should be developed.
+purposes.
+Traffic Steering
+In the software-defind NFV architecture,
+To achieve online computing of traffic steering,
+traffic steering should be jointly optimized
+heuristic algorithms should be designed to reduce
+with function deployment, making the
+the computing complexity.
+optimization problem difficult to solve.
+Applications
+Software-defined NFV technology is used for delivering significant benefits in niche applications today, while its full scale use and benefits have yet to be achieved. The following describes the major domains of the software-defined NFV scenario.
+Cloud-Computing
+Cloud computing enables globally distributed services and enterprises to quickly deploy, manage and optimize their computing infrastructure dynamically. Part
+
+[TRUNCATED]

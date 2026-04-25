@@ -1,0 +1,21 @@
+3D device and devices with bonding. A 3D device including: a first level including first single crystal transistors overlaid by a second level including second single crystal transistors; a third level including third single crystal transistors, the second level is overlaid by the third level; a fourth level including fourth single crystal transistors, the third level is overlaid by the fourth level; first bond regions including first oxide to oxide bonds, where the first bond regions are between the first level and the second level; second bond regions including second oxide to oxide bonds, where the second bond regions are between the second level and the third level; and third bond regions including third oxide to oxide bonds, where the third bond regions are between the third level and the fourth level, where the second level, third level, and fourth level each include one array of memory cells, and where the one array of memory cells is a DRAM type memory. 1. A 3D device, the device comprising:
+a first level comprising first single crystal transistors; overlaid by
+a second level comprising second single crystal transistors,
+wherein said first level is overlaid by said second level;
+
+a third level comprising third single crystal transistors,
+wherein said second level is overlaid by said third level;
+
+a fourth level comprising fourth single crystal transistors,
+wherein said third level is overlaid by said fourth level;
+
+first bond regions comprising first oxide to oxide bonds,
+wherein said first bond regions are disposed between said first level and said second level;
+
+second bond regions comprising second oxide to oxide bonds,
+wherein said second bond regions are disposed between said second level and said third level; and
+
+third bond regions comprising third oxide to oxide bonds,
+wherein said third bond regions are disposed between said third level and said fourth level,
+wherein said second level, said third level, and said fourth level each comprise at least one array of memory cells, and
+wherein said at least one array of memory cells is a DRAM type memory.

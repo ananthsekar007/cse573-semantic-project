@@ -1,0 +1,3495 @@
+PATENT ID: CN102355006B
+TITLE: Joint wind-solar-storage joint grid-connected power generation coordination …
+DOMAIN: renewable_energy
+INVENTOR: 蔡国伟
+ASSIGNEE: 东北电力大学
+FILING DATE: 2011-09-28
+GRANT DATE: 2013-06-26
+
+=== ABSTRACT ===
+The invention provides a wind-solar-storage joint grid-connected power generation coordination control method. The control method is characterized by comprising the following steps: establishing a wind energy conversion unit mathematical model which comprises a wind energy conversion unit aerodynamic mathematical model, a two-block shafting mathematical model equation for a wind turbine and a generator and a voltage equation for a doubly-fed induction motor under a synchronous rotation coordinate system; establishing a solar energy PV power generation unit mathematical model; establishing an energy storage unit mathematical model; and carrying out joint grid-connected power generation coordination control including active power coordination control and reactive power coordination control. In the invention, on the basis of scientific and reasonable establishment and characteristics analysis of the wind energy conversion unit mathematical model, the solar energy PV power generation unit mathematical model and the energy storage unit mathematical model, space-time complementarity of wind and solar resource is fully considered so as to improve the capability of a power grid in new energy absorption. Therefore, the wind-solar-storage joint grid-connected power generation coordination control method provided by the invention has the advantages of strong adaptability, high actual application value, capability of efficiently utilizing renewable energy and the like.
+
+=== CLAIMS ===
+  1. a joint wind-solar-storage joint grid-connected power generation coordination control method, is characterized in that, it comprises the following steps:
+      1) set up wind energy converting unit Mathematical Modeling
+      (1.1) wind energy converting unit aerodynamics Mathematical Modeling is:
+      
+        
+          
+            
+              
+                P
+                M
+              
+              =
+              
+                &rho;
+                air
+              
+              
+                C
+                p
+              
+              
+                (
+                &lambda;
+                ,
+                &beta;
+                )
+              
+              
+                &pi;R
+                2
+              
+              
+                V
+                w
+                3
+              
+              /
+              2
+              .
+              -
+              -
+              -
+              
+                (
+                1
+                )
+              
+            
+          
+        
+      
+      Wherein: P
+          MThe wind-powered electricity generation unit mechanical output that the energy that catches from wind for the wind energy converting unit changes into,
+        
+      ρ
+          airBe atmospheric density,
+        
+      R is the wind turbine impeller radius,
+      λ is tip speed ratio,
+      β is propeller pitch angle,
+      C
+          pFor the wind energy conversion efficiency coefficient of blade, be the function of λ and β,
+        
+      V
+          wBe wind speed;
+        
+      (1.2) two matter piece axle coefficients model equations of wind turbine and generator are:
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      2
+                      
+                        H
+                        T
+                      
+                      d
+                      
+                        &omega;
+                        T
+                      
+                      /
+                      dt
+                      =
+                      
+                        T
+                        M
+                      
+                      -
+                      
+                        K
+                        S
+                      
+                      
+                        &theta;
+                        S
+                      
+                      -
+                      
+                        D
+                        T
+                      
+                      
+                        &omega;
+                        T
+                      
+                    
+                  
+                  
+                    
+                      2
+                      
+                        H
+                        G
+                      
+                      d
+                      
+                        &omega;
+                        G
+                      
+                      /
+                      dt
+                      =
+                      
+                        K
+                        S
+                      
+                      
+                        &theta;
+                        S
+                      
+                      -
+                      
+                        T
+                        E
+                      
+                      -
+                      
+                        D
+                        G
+                      
+                      
+                        &omega;
+                        G
+                      
+                    
+                  
+                  
+                    
+                      d
+                      
+                        &theta;
+                        S
+                      
+                      /
+                      dt
+                      =
+                      
+                        &omega;
+                        0
+                      
+                      
+                        (
+                        
+                          &omega;
+                          T
+                        
+                        -
+                        
+                          &omega;
+                          G
+                        
+                        )
+                      
+                    
+                  
+                
+              
+              .
+              -
+              -
+              -
+              
+                (
+                2
+                )
+              
+            
+          
+        
+      
+      Wherein: H
+          T, H
+          GBe respectively wind turbine and generator inertia constant,
+        
+      K
+          SBe the shaft rigidity coefficient,
+        
+      D
+          T, D
+          GBe respectively the damping coefficient of wind turbine rotor and generator amature,
+        
+      θ
+          SBe relative angular displacement between two matter pieces,
+        
+      T
+          M, T
+          EBe respectively wind turbine machine torque and generator electromagnetic torque,
+        
+      ω
+          T, ω
+          GBe respectively wind turbine and generator amature rotating speed,
+        
+      ω
+          0Be synchronous speed;
+        
+      (1.3) under synchronous rotating frame, the voltage equation of doubly fed induction generator is
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        u
+                        sd
+                      
+                      =
+                      d
+                      
+                        &psi;
+                        sd
+                      
+                      /
+                      dt
+                      -
+                      
+                        &omega;
+                        s
+                      
+                      
+                        &psi;
+                        sq
+                      
+                      +
+                      
+                        R
+                        s
+                      
+                      
+                        i
+                        sd
+                      
+                    
+                  
+                  
+                    
+                      
+                        u
+                        sq
+                      
+                      =
+                      d
+                      
+                        &psi;
+                        sq
+                      
+                      /
+                      dt
+                      -
+                      
+                        &omega;
+                        s
+                      
+                      
+                        &psi;
+                        sd
+                      
+                      +
+                      
+                        R
+                        s
+                      
+                      
+                        i
+                        sq
+                      
+                    
+                  
+                  
+                    
+                      
+                        i
+                        rd
+                      
+                      =
+                      d
+                      
+                        &psi;
+                        rd
+                      
+                      /
+                      dt
+                      -
+                      s
+                      
+                        &omega;
+                        s
+                      
+                      
+                        &psi;
+                        rq
+                      
+                      +
+                      
+                        R
+                        r
+                      
+                      
+                        i
+                        rd
+                      
+                    
+                  
+                  
+                    
+                      
+                        u
+                        rq
+                      
+                      =
+                      d
+                      
+                        &psi;
+                        rq
+                      
+                      /
+                      dt
+                      -
+                      s
+                      
+                        &omega;
+                        s
+                      
+                      
+                        &psi;
+                        rd
+                      
+                      +
+                      
+                        R
+                        r
+                      
+                      
+                        i
+                        rq
+                      
+                    
+                  
+                
+              
+              .
+              -
+              -
+              -
+              
+                (
+                3
+                )
+              
+            
+          
+        
+      
+      The magnetic linkage equation is
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      
+                        &psi;
+                        sd
+                      
+                      =
+                      
+                        L
+                        s
+                      
+                      
+                        i
+                        sd
+                      
+                      +
+                      
+                        L
+                        m
+                      
+                      
+                        i
+                        rd
+                      
+                    
+                  
+                  
+                    
+                      
+                        &psi;
+                        sq
+                      
+                      =
+                      
+                        L
+                        s
+                      
+                      
+                        i
+                        sq
+                      
+                      +
+                      
+                        L
+                        m
+                      
+                      
+                        i
+                        rq
+                      
+                    
+                  
+                  
+                    
+                      
+                        &psi;
+                        rd
+                      
+                      =
+                      
+                        L
+                        r
+                      
+                      
+                        i
+                        rd
+                      
+                      +
+                      
+                        L
+                        m
+                      
+                      
+                        i
+                        sd
+                      
+                    
+                  
+                  
+                    
+                      
+                        &psi;
+                        rq
+                      
+                      =
+                      
+                        L
+                        r
+                      
+                      
+                        i
+                        rq
+                      
+                      +
+                      
+                        L
+                        m
+                      
+                      
+                        i
+                        sq
+                      
+                    
+                  
+                
+              
+              .
+              -
+              -
+              -
+              
+                (
+                4
+                )
+              
+            
+          
+        
+      
+      Wherein: ω
+          sBe coordinate system rotation angular speed,
+        
+      U, i, ψ are respectively voltage, electric current and the magnetic linkage of winding,
+      R is the resistance of winding,
+      L
+          s, L
+          rBe respectively the self-induction of stator winding and rotor winding,
+        
+      L
+          mBe the mutual inductance between the stator and rotor winding,
+        
+      Subscript s, r represent respectively stator and the rotor of motor,
+      Subscript d, q represent respectively d, the q axle winding of motor,
+      S is the revolutional slip of motor;
+      2) set up solar energy power generating unit Mathematical Modeling
+      Under reference conditions, consider that the photovoltaic array V-I equation of intensity of solar radiation and variation of ambient temperature is
+      
+        
+          
+            
+              I
+              =
+              
+                N
+                p
+                PV
+              
+              
+                I
+                sc
+              
+              &CenterDot;
+              {
+              1
+              -
+              
+                C
+                1
+              
+              [
+              exp
+              
+                (
+                
+                  
+                    V
+                    -
+                    dV
+                  
+                  
+                    
+                      C
+                      2
+                    
+                    
+                      N
+                      s
+                      PV
+                    
+                    
+                      V
+                      &Proportional;
+                    
+                  
+                
+                )
+              
+              -
+              1
+              ]
+              }
+              +
+              dI
+              .
+              -
+              -
+              -
+              
+                (
+                5
+                )
+              
+            
+          
+        
+      
+      In formula
+                 C 1  =  ( 1 -  I m  /  I sc  )  &CenterDot; exp  ( -  V m  /  C 2   V &Proportional;  )       C 2  =  (  V m  /  V oc  - 1 )  /  ( ln  ( 1 -  I m  /  I sc  )  )      dI = - &alpha; &CenterDot; G /  G ref  &CenterDot;  (  T C  -  T ref  )  +  ( G /  G ref  - 1 )  &CenterDot;  N p PV   I sc      dV = &beta; &CenterDot; dT -  R s  &CenterDot; dI       
+      Wherein: V, I are respectively photovoltaic array terminal voltage and end electric current,
+      V
+          oc, I
+          scBe respectively open circuit voltage and short circuit current that photovoltaic module producer provides,
+        
+      V
+          m, I
+          mBe respectively maximum power point voltage and electric current,
+        
+      α, β are respectively under reference radiation intensity, current temperature variation coefficient and voltage temperature variation coefficient,
+      R
+          sBe the series resistance of assembly,
+        
+      NPV p, NPV s are respectively number in parallel and the serial number of assembly in photovoltaic array;
+      3) set up the energy-storage units Mathematical Modeling
+      The batteries Mathematical Modeling is
+      
+        
+          
+            
+              
+                V
+                B
+              
+              =
+              
+                N
+                
+                  B
+                  -
+                  s
+                
+              
+              
+                E
+                0
+              
+              -
+              
+                KSOC
+                
+                  SOC
+                  -
+                  
+                    N
+                    
+                      B
+                      -
+                      s
+                    
+                  
+                  
+                    Q
+                    n
+                  
+                  
+                    &Integral;
+                    0
+                    t
+                  
+                  
+                    i
+                    B
+                  
+                  
+                    (
+                    &tau;
+                    )
+                  
+                  d&tau;
+                
+              
+              +
+              Aexp
+              
+                (
+                -
+                B
+                
+                  &Integral;
+                  0
+                  t
+                
+                
+                  i
+                  B
+                
+                
+                  (
+                  &tau;
+                  )
+                
+                d&tau;
+                +
+                
+                  C
+                  p
+                
+                )
+              
+              -
+              
+                
+                  Ri
+                  B
+                
+                
+                  N
+                  
+                    B
+                    -
+                    s
+                  
+                
+              
+              .
+              -
+              -
+              -
+              
+                (
+                6
+                )
+              
+            
+          
+        
+      
+      In formula:
+                 C p  =  C t   (  T b  - 25 )       C R  = 1 - 0.025  (  T b  - 25 )      R =  N  B - s    V n   ( 1 - &eta; )   C R  /  ( 0.2  N  B - p    Q n  )      SOC =    N  B - s    N  B - p    Q n  -  &Integral; 0 t   i B   ( &tau; )  d&tau;    N  B - s    N  B - p    Q n    &times; 100 %       
+      Wherein: SOC is the state-of-charge of batteries,
+      A, B are respectively change in voltage coefficient and volume change coefficient,
+      K is the polarizing voltage constant,
+      C
+          pBe polarization reaction temperature compensation factor,
+        
+      C
+          RBe the resistance temperature compensation factor,
+        
+      T
+          bBe battery temp,
+        
+      C
+          tBe the polarization reaction constant,
+        
+      Q
+          nBe battery rating,
+        
+      V
+          nBe the battery rated voltage,
+        
+      E
+          0Be the storage battery initial potential,
+        
+      V is accumulator voltage,
+      η is battery efficiency,
+      N
+          B-sWith N
+          B-pBe respectively storage battery series and parallel connections number;
+        
+      The fuel cell Mathematical Modeling is
+      
+        
+          
+            
+              
+                V
+                FC
+              
+              =
+              
+                N
+                cell
+              
+              [
+              E
+              -
+              ln
+              
+                (
+                
+                  
+                    
+                      I
+                      FC
+                    
+                    +
+                    
+                      A
+                      cell
+                    
+                    
+                      i
+                      n
+                    
+                  
+                  
+                    
+                      A
+                      cell
+                    
+                    
+                      i
+                      o
+                    
+                  
+                
+                )
+              
+              -
+              r
+              
+                (
+                
+                  
+                    I
+                    FC
+                  
+                  
+                    A
+                    cell
+                  
+                
+                )
+              
+              -
+              mexp
+              
+                (
+                n
+                
+                  
+                    I
+                    FC
+                  
+                  
+                    A
+                    cell
+                  
+                
+                )
+              
+              ]
+              .
+              -
+              -
+              -
+              
+                (
+                7
+                )
+              
+            
+          
+        
+      
+      Wherein: V
+          FCBe the fuel cell terminal voltage,
+        
+      I
+          FCBe fuel cell end electric current,
+        
+      N
+          CellBe fuel cell series quantity,
+        
+      A
+          CellBe the fuel cell electrode area,
+        
+      R is sheet resistance,
+      i
+          nBe the internal operation current density,
+        
+      i
+          oBe inner nominal current density,
+        
+      M and n are the junction loss constants;
+      4) hybrid grid-connected power generation is coordinated to control
+      (4.1) active power is coordinated to control
+      Meritorious expression formula between wind light generation unit and network load demand is
+      
+        
+          
+            
+              
+                P
+                net
+              
+              =
+              
+                P
+                wind
+              
+              +
+              
+                P
+                PV
+              
+              -
+              
+                P
+                load
+              
+              -
+              
+                P
+                sc
+              
+              .
+              -
+              -
+              -
+              
+                (
+                8
+                )
+              
+            
+          
+        
+      
+      Wherein: P
+          netBe the active power amount of unbalance,
+        
+      P
+          WindExert oneself for the wind energy converting unit is meritorious,
+        
+      P
+          PVExert oneself for solar power generation unit is meritorious,
+        
+      P
+          LoadBe the burden with power demand of dispatching of power netwoks appointment,
+        
+      P
+          scFor the wind-solar-storage joint system from electricity consumption, less because accounting for the generating ratio, can ignore;
+        
+      The superfluous P of wind light generation unit active power
+          net0 o'clock, the power balance equation formula is
+        
+      
+        
+          
+            
+              
+                P
+                wind
+              
+              +
+              
+                P
+                PV
+              
+              =
+              
+                P
+                load
+              
+              +
+              
+                P
+                
+                  ES
+                  -
+                  in
+                
+              
+              -
+              -
+              -
+              
+                (
+                9
+                )
+              
+            
+          
+        
+      
+      Wherein: P
+          ES-inFor energy-storage units absorbs active power, namely storage battery absorbs active-power P
+          Battery-in 
+      Wind light generation cell power vacancy P
+          net＜0 o'clock, the power balance equation formula was
+        
+      
+        
+          
+            
+              
+                P
+                wind
+              
+              +
+              
+                P
+                PV
+              
+              +
+              
+                P
+                
+                  ES
+                  -
+                  out
+                
+              
+              =
+              
+                P
+                load
+              
+              .
+              -
+              -
+              -
+              
+                (
+                10
+                )
+              
+            
+          
+        
+      
+      In formula:
+              P  ES - out   =  P  battery _ out   +  P FC     
+      Wherein: P
+          ES-outThe active power of sending for energy-storage units,
+        
+      P
+          Battery_outThe active power of sending for storage battery,
+        
+      P
+          FCThe active power of sending for fuel cell, when storage battery charge state SOC＜25%, the starting fluid battery unit;
+        
+      (4.2) reactive power is coordinated to control
+      Wind light generation cell power factor range of operation is 0.85 to lag behind 0.85 in advance, is 0.98 to lag behind when normally moving, and the idle expression formula between wind light generation unit and network load demand is
+      
+        
+          
+            
+              
+                Q
+                net
+              
+              =
+              
+                Q
+                
+                  Wind
+                  -
+                  out
+                
+              
+              +
+              
+                Q
+                
+                  PV
+                  -
+                  out
+                
+              
+              -
+              
+                Q
+                load
+              
+              .
+              -
+              -
+              -
+              
+                (
+                11
+                )
+              
+            
+          
+        
+      
+      Wherein: Q
+          netBe the reactive power amount of unbalance,
+        
+      Q
+          Wind_outExert oneself for the wind energy converting unit is idle,
+        
+      Q
+          PV_outExert oneself for solar power generation unit is idle,
+        
+      Q
+          LoadLoad or burden without work demand for the dispatching of power netwoks appointment;
+        
+      The superfluous Q of wind light generation unit reactive power
+          net0 and the point voltage that is incorporated into the power networks higher than its rated voltage V V
+          refThe time, the power balance equation formula is
+        
+      
+        
+          
+            
+              
+                Q
+                
+                  Wind
+                  -
+                  out
+                
+              
+              +
+              
+                Q
+                
+                  PV
+                  -
+                  out
+                
+              
+              =
+              
+                Q
+                load
+              
+              +
+              
+                Q
+                
+                  ES
+                  -
+                  in
+                
+              
+              +
+              
+                Q
+                
+                  STATCOM
+                  -
+                  in
+                
+              
+              -
+              -
+              -
+              
+                (
+                12
+                )
+              
+            
+          
+        
+      
+      Wherein: Q
+          ES-inBe the reactive power of energy-storage units absorption,
+        
+      Q
+          STATCOM-inReactive power for STATCOM STATCOM absorption;
+        
+      Wind light generation cell power vacancy Q
+          net＜0 o'clock, the power balance equation formula was
+        
+      
+        
+          
+            
+              
+                Q
+                load
+              
+              =
+              
+                Q
+                
+                  Wind
+                  -
+                  out
+                
+              
+              +
+              
+                Q
+                
+                  PV
+                  -
+                  out
+                
+              
+              +
+              
+                Q
+                
+                  ES
+                  -
+                  out
+                
+              
+              +
+              
+                Q
+                
+                  STATCOM
+                  -
+                  out
+                
+              
+              .
+              V
+              <
+              
+                V
+                ref
+              
+              .
+              -
+              -
+              -
+              
+                (
+                13
+                )
+              
+            
+          
+        
+      
+      Or
+      
+        
+          
+            
+              
+                Q
+                load
+              
+              +
+              
+                Q
+                
+                  STATCOM
+                  -
+                  in
+                
+              
+              =
+              
+                Q
+                
+                  Wind
+                  -
+                  out
+                
+              
+              +
+              
+                Q
+                
+                  PV
+                  -
+                  out
+                
+              
+              +
+              
+                Q
+                
+                  ES
+                  -
+                  out
+                
+              
+              ,
+              V
+              >
+              
+                V
+                ref
+              
+              -
+              -
+              -
+              
+                (
+                14
+                )
+              
+            
+          
+        
+      
+      Wherein: Q
+          ES-outThe reactive power of sending for energy-storage units,
+        
+      Q
+          STATCOM-outThe reactive power of sending for STATCOM STATCOM;
+        
+      When honourable unit runs on power factor 0.98 when leading, i.e. Q
+          net＜0, the reactive power equilibrium equation
+        
+      
+        
+          
+            
+              
+                Q
+                
+                  Wind
+                  -
+                  in
+                
+              
+              +
+              
+                Q
+                
+                  PV
+                  -
+                  in
+                
+              
+              +
+              
+                Q
+                load
+              
+              =
+              
+                Q
+                
+                  ES
+                  -
+                  out
+                
+              
+              +
+              
+                Q
+                
+                  STATCOM
+                  -
+                  out
+                
+              
+              ,
+              V
+              <
+              
+                V
+                ref
+              
+              -
+              -
+              -
+              
+                (
+                15
+                )
+              
+            
+          
+        
+      
+      Or
+      
+        
+          
+            
+              
+                Q
+                
+                  Wind
+                  -
+                  in
+                
+              
+              +
+              
+                Q
+                
+                  PV
+                  -
+                  in
+                
+              
+              +
+              
+                Q
+                load
+              
+              +
+              
+                Q
+                
+                  STATCOM
+                  -
+                  in
+                
+              
+              =
+              
+                Q
+                
+                  ES
+                  -
+                  out
+                
+              
+              ,
+              V
+              >
+              
+                V
+                ref
+              
+              -
+              -
+              -
+              
+                (
+                16
+                )
+
+=== DESCRIPTION ===
+A kind of joint wind-solar-storage joint grid-connected power generation coordination control method
+Technical field
+The present invention relates to power system operation and control, is a kind of joint wind-solar-storage joint grid-connected power generation coordination control method, is applied to wind-solar-storage joint generating modeling and simulating, the specificity analysis that is incorporated into the power networks, studies and the optimal economic capacity ratio with the electrical network interaction mechanism.
+Background technology
+In recent years, along with socioeconomic fast development, energy demand is growing.The carbon emission that a large amount of fossil fuels produce causes global warming, severe contamination mankind's environment of depending on for existence.Adopt environmentally friendly new forms of energy and clean reproducible energy to replace traditional fossil fuel, people-oriented, walk continuable scientific development strategic thought to meet country's proposition.Abundant, widely distributed in China's wind energy and solar energy resources, be easy to the exploitation, be desirable green alternative energy source.Therefore, wind-photovoltaic-storage hybrid grid-connected power generation is coordinated to control to wind energy and the utilization of solar energy resources Efficient Development and is had important practical significance with the research of electrical network interaction mechanism.
+Traditional joint wind-solar-storage joint grid-connected power generation coordination control method: be on the one hand that the wind-light storage unit collects the energy by direct current (DC) bus that public inverter connects, its shortcoming is to be not suitable for system's scale in long term Expansion Planning; Be to coordinate to control by regulating DC side voltage of converter and power on the other hand, its shortcoming is, is unfavorable for extensive wind-light storage sporadic development utilization, limited the efficient utilization of regenerative resource.
+Summary of the invention
+The objective of the invention is, providing a kind of is analyzing on wind energy converting unit, solar energy power generating unit and energy-storage units Mathematical Modeling characteristic basis, consider that honourable resource has the space-time complementarity, improve electrical network to the new forms of energy ability to arrange jobs, strong adaptability, the joint wind-solar-storage joint grid-connected power generation coordination control method with higher actual application value.
+The objective of the invention is to be realized by following technical scheme:
+A kind of joint wind-solar-storage joint grid-connected power generation coordination control method is characterized in that, it comprises the following steps:
+1) set up wind energy converting unit Mathematical Modeling
+(1.1) wind energy converting unit aerodynamics Mathematical Modeling is:
+P
+M
+=
+&rho;
+air
+C
+p
+(
+&lambda;
+,
+&beta;
+)
+&pi;R
+2
+V
+w
+3
+/
+2
+.
+-
+-
+-
+(
+1
+)
+Wherein: P
+M
+The wind-powered electricity generation unit mechanical output that the energy that catches from wind for the wind energy converting unit changes into,
+Ï
+air
+Be atmospheric density,
+R is the wind turbine impeller radius,
+Î» is tip speed ratio,
+Î² is propeller pitch angle,
+C
+p
+For the wind energy conversion efficiency coefficient of blade, be the function of Î» and Î²,
+V
+w
+Be wind speed;
+(1.2) two matter piece axle coefficients model equations of wind turbine and generator are:
+2
+H
+T
+d
+&omega;
+T
+/
+dt
+=
+T
+M
+-
+K
+S
+&theta;
+S
+-
+D
+T
+&omega;
+T
+2
+H
+G
+d
+&omega;
+G
+/
+dt
+=
+K
+S
+&theta;
+S
+-
+T
+E
+-
+D
+G
+&omega;
+G
+d
+&theta;
+S
+/
+dt
+=
+&omega;
+0
+(
+&omega;
+T
+-
+&omega;
+G
+)
+.
+-
+-
+-
+(
+2
+)
+Wherein: H
+T
+, H
+G
+Be respectively wind turbine and generator inertia constant,
+K
+S
+Be the shaft rigidity coefficient,
+D
+T
+, D
+G
+Be respectively the damping coefficient of wind turbine rotor and generator amature,
+Î¸
+S
+Be relative angular displacement between two matter pieces,
+T
+M
+, T
+E
+Be respectively wind turbine machine torque and generator electromagnetic torque,
+Ï
+T
+, Ï
+G
+Be respectively wind turbine and generator amature rotating speed,
+Ï
+0
+Be synchronous speed;
+(1.3) under synchronous rotating frame, the voltage equation of doubly fed induction generator is
+u
+sd
+=
+d
+&psi;
+sd
+/
+dt
+-
+&omega;
+s
+&psi;
+sq
++
+R
+s
+i
+sd
+u
+sq
+=
+d
+&psi;
+sq
+/
+dt
+-
+&omega;
+s
+&psi;
+sd
++
+R
+s
+i
+sq
+i
+rd
+=
+d
+&psi;
+rd
+/
+dt
+-
+s
+&omega;
+s
+&psi;
+rq
++
+R
+r
+i
+rd
+u
+rq
+=
+d
+&psi;
+rq
+/
+dt
+-
+s
+&omega;
+s
+&psi;
+rd
++
+R
+r
+i
+rq
+.
+-
+-
+-
+(
+3
+)
+The magnetic linkage equation is
+&psi;
+sd
+=
+L
+s
+i
+sd
++
+L
+m
+i
+rd
+&psi;
+sq
+=
+L
+s
+i
+sq
++
+L
+m
+i
+rq
+&psi;
+rd
+=
+L
+r
+i
+rd
++
+L
+m
+i
+sd
+&psi;
+rq
+=
+L
+r
+i
+rq
++
+L
+m
+i
+sq
+.
+-
+-
+-
+(
+4
+)
+Wherein: Ï
+s
+Be coordinate system rotation angular speed,
+U, i, Ï are respectively voltage, electric current and the magnetic linkage of winding,
+R is the resistance of winding,
+L
+s
+, L
+r
+Be respectively the self-induction of stator winding and rotor winding,
+L
+m
+Be the mutual inductance between the stator and rotor winding,
+Subscript s, r represent respectively stator and the rotor of motor,
+Subscript d, q represent respectively d, the q axle winding of motor,
+S is the revolutional slip of motor;
+2) set up solar energy power generating unit Mathematical Modeling
+Under reference conditions, consider that the photovoltaic array V-I equation of intensity of solar radiation and variation of ambient temperature is
+I
+=
+N
+p
+PV
+I
+sc
+&CenterDot;
+{
+1
+-
+C
+1
+[
+exp
+(
+V
+-
+dV
+C
+2
+N
+s
+PV
+V
+&Proportional;
+)
+-
+1
+]
+}
++
+dI
+.
+-
+-
+-
+(
+5
+)
+In
+formula
+C
+1
+=
+(
+1
+-
+I
+m
+/
+I
+sc
+)
+&CenterDot;
+exp
+(
+-
+V
+m
+/
+C
+2
+V
+&Proportional;
+)
+C
+2
+=
+(
+V
+m
+/
+V
+oc
+-
+1
+)
+/
+(
+ln
+(
+1
+-
+I
+m
+/
+I
+sc
+)
+)
+dI
+=
+-
+&alpha;
+&CenterDot;
+G
+/
+G
+ref
+&CenterDot;
+(
+T
+C
+-
+T
+ref
+)
++
+(
+G
+/
+G
+ref
+-
+1
+)
+&CenterDot;
+N
+p
+PV
+I
+sc
+dV
+=
+&beta;
+&CenterDot;
+dT
+-
+R
+s
+&CenterDot;
+dI
+Wherein: V, I are respectively photovoltaic array terminal voltage and end electric current,
+V
+oc
+, I
+sc
+Be respectively open circuit voltage and short circuit current that photovoltaic module producer provides,
+V
+m
+, I
+m
+Be respectively maximum power point voltage and electric current,
+Î±, Î² are respectively under reference radiation intensity, current temperature variation coefficient and voltage temperature variation coefficient,
+R
+s
+Be the series resistance of assembly,
+NPV p, NPV s are respectively number in parallel and the serial number of assembly in photovoltaic array;
+3) set up the energy-storage units Mathematical Modeling
+The batteries Mathematical Modeling is
+V
+B
+=
+N
+B
+-
+s
+E
+0
+-
+KSOC
+SOC
+-
+N
+B
+-
+s
+Q
+n
+&Integral;
+0
+t
+i
+B
+(
+&tau;
+)
+d&tau;
++
+Aexp
+(
+-
+B
+&Integral;
+0
+t
+i
+B
+(
+&tau;
+)
+d&tau;
++
+C
+p
+)
+-
+Ri
+B
+N
+B
+-
+s
+.
+-
+-
+-
+(
+6
+)
+In formula:
+C
+p
+=
+C
+t
+(
+T
+b
+-
+25
+)
+C
+R
+=
+1
+-
+0.025
+(
+T
+b
+-
+25
+)
+R
+=
+N
+B
+-
+s
+V
+n
+(
+1
+-
+&eta;
+)
+C
+R
+/
+(
+0.2
+N
+B
+-
+p
+Q
+n
+)
+SOC
+=
+N
+B
+-
+s
+N
+B
+-
+p
+Q
+n
+-
+&Integral;
+0
+t
+i
+B
+(
+&tau;
+)
+d&tau;
+N
+B
+-
+s
+N
+B
+-
+p
+Q
+n
+&times;
+100
+%
+Wherein: SOC is the state-of-charge of batteries,
+A, B are respectively change in voltage coefficient and volume change coefficient,
+K is the polarizing voltage constant,
+C
+p
+Be polarization reaction temperature compensation factor,
+C
+R
+Be the resistance temperature compensation factor,
+T
+b
+Be battery temp,
+C
+t
+Be the polarization reaction constant,
+Q
+n
+Be battery rating,
+V
+n
+Be the battery rated voltage,
+E
+0
+Be the storage battery initial potential,
+V is accumulator voltage,
+Î· is battery efficiency,
+N
+B-s
+With N
+B-p
+Be respectively storage battery series and parallel connections number;
+The fuel cell Mathematical Modeling is
+V
+FC
+=
+N
+cell
+[
+E
+-
+ln
+(
+I
+FC
++
+A
+cell
+i
+n
+A
+cell
+i
+o
+)
+-
+r
+(
+I
+FC
+A
+cell
+)
+-
+mexp
+(
+n
+I
+FC
+A
+cell
+)
+]
+.
+-
+-
+-
+(
+7
+)
+Wherein: V
+FC
+Be the fuel cell terminal voltage,
+I
+FC
+Be fuel cell end electric current,
+N
+Cell
+Be fuel cell series quantity,
+A
+Cell
+Be the fuel cell electrode area,
+R is sheet resistance,
+i
+n
+Be the internal operation current density,
+i
+o
+Be inner nominal current density,
+M and n are the junction loss constants;
+4) hybrid grid-connected power generation is coordinated to control
+(4.1) active power is coordinated to control
+Meritorious expression formula between wind light generation unit and network load demand is
+P
+net
+=
+P
+wind
++
+P
+PV
+-
+P
+load
+-
+P
+sc
+.
+-
+-
+-
+(
+8
+)
+Wherein: P
+net
+Be the active power amount of unbalance,
+P
+Wind
+Exert oneself for the wind energy converting unit is meritorious,
+P
+PV
+Exert oneself for solar power generation unit is meritorious,
+P
+Load
+Be the burden with power demand of dispatching of power netwoks appointment,
+P
+sc
+For the wind-solar-storage joint system from electricity consumption, less because accounting for the generating ratio, can ignore;
+The superfluous P of wind light generation unit active power
+net
+0 o'clock, the power balance equation formula is
+P
+wind
++
+P
+PV
+=
+P
+load
++
+P
+ES
+-
+in
+-
+-
+-
+(
+9
+)
+Wherein: P
+ES-in
+For energy-storage units absorbs active power, namely storage battery absorbs active-power P
+Battery-in
+Wind light generation cell power vacancy P
+net
+ï¼0 o'clock, the power balance equation formula was
+P
+wind
++
+P
+PV
++
+P
+ES
+-
+out
+=
+P
+load
+.
+-
+-
+-
+(
+10
+)
+In formula:
+P
+ES
+-
+out
+=
+P
+battery
+_
+out
++
+P
+FC
+Wherein: P
+ES-out
+The active power of sending for energy-storage units,
+P
+Battery_out
+The active power of sending for storage battery,
+P
+FC
+The active power of sending for fuel cell, when storage battery charge state SOCï¼25%, the starting fluid battery unit;
+(4.2) reactive power is coordinated to control
+Wind light generation cell power factor range of operation is 0.85 to lag behind 0.85 in advance, is 0.98 to lag behind when normally moving, and the idle expression formula between wind light generation unit and network load demand is
+Q
+net
+=
+Q
+Wind
+-
+out
++
+Q
+PV
+-
+out
+-
+Q
+load
+.
+-
+-
+-
+(
+11
+)
+Wherein: Q
+net
+Be the reactive power amount of unbalance,
+Q
+Wind_out
+Exert oneself for the wind energy converting unit is idle,
+Q
+PV_out
+Exert oneself for solar power generation unit is idle,
+Q
+Load
+Load or burden without work demand for the dispatching of power netwoks appointment;
+The superfluous Q of wind light generation unit reactive power
+net
+0 and the point voltage that is incorporated into the power networks higher than its rated voltage V V
+ref
+The time, the power balance equation formula is
+Q
+Wind
+-
+out
++
+Q
+PV
+-
+out
+=
+Q
+load
++
+Q
+ES
+-
+in
++
+Q
+STATCOM
+-
+in
+-
+-
+-
+(
+12
+)
+Wherein: Q
+ES-in
+Be the reactive power of energy-storage units absorption,
+Q
+STATCOM-in
+Reactive power for STATCOM STATCOM absorption;
+Wind light generation cell power vacancy Q
+net
+ï¼0 o'clock, the power balance equation formula was
+Q
+load
+=
+Q
+Wind
+-
+out
++
+Q
+PV
+-
+out
++
+Q
+ES
+-
+out
++
+Q
+STATCOM
+-
+out
+.
+V
+<
+V
+ref
+.
+-
+-
+-
+(
+13
+)
+Or
+Q
+load
++
+Q
+STATCOM
+-
+in
+=
+Q
+Wind
+-
+out
++
+Q
+PV
+-
+out
++
+Q
+ES
+-
+out
+,
+V
+>
+V
+ref
+-
+-
+-
+(
+14
+)
+Wherein: Q
+ES-out
+The reactive power of sending for energy-storage units,
+Q
+STATCOM-out
+The reactive power of sending for STATCOM STATCOM;
+When honourable unit runs on power factor 0.98 when leading, i.e. Q
+net
+ï¼0, the reactive power equilibrium equation
+Q
+Wind
+-
+in
++
+Q
+PV
+-
+in
++
+Q
+load
+=
+Q
+ES
+-
+out
++
+Q
+STATCOM
+-
+out
+,
+V
+<
+V
+ref
+-
+-
+-
+(
+15
+)
+Or
+Q
+Wind
+-
+in
++
+Q
+PV
+-
+in
++
+Q
+load
++
+Q
+STATCOM
+-
+in
+=
+Q
+ES
+-
+out
+,
+V
+>
+V
+ref
+-
+-
+-
+(
+16
+)
+.
+A kind of joint wind-solar-storage joint grid-connected power generation coordination control method of the present invention, analyze in scientific and reasonable foundation on the basis of wind energy converting unit, solar energy power generating unit and energy-storage units Mathematical Modeling characteristic, taken into full account the space-time complementarity that honourable resource has, and then improved electrical network to the new forms of energy ability to arrange jobs, has strong adaptability, actual application value is high, can make the renewable energy resources obtain the advantages such as efficient utilization.
+Description of drawings
+Fig. 1 is based on the sample calculation analysis single line schematic diagram of
+IEEE
+3 machine 1-9 node test systems.
+Fig. 2 is somewhere typical case's day actual daily load demand curve schematic diagram.
+Fig. 3 is the wind speed schematic diagram of actual monitoring.
+Fig. 4 is the intensity of solar radiation schematic diagram of actual acquisition.
+Fig. 5 is wind energy converting unit power power curve schematic diagram.
+Fig. 6 is solar energy power generating cell power power curve schematic diagram.
+Fig. 7 is meritorious, the reactive power schematic diagram that batteries absorbs and sends.
+Fig. 8 is that cell of fuel cell is meritorious, the idle schematic diagram of exerting oneself.
+Embodiment
+A kind of joint wind-solar-storage joint grid-connected power generation coordination control method of the present invention comprises the following steps:
+1) set up wind energy converting unit Mathematical Modeling
+(1.1) wind energy converting unit aerodynamics Mathematical Modeling is:
+P
+M
+=
+&rho;
+air
+C
+p
+(
+&lambda;
+,
+&beta;
+)
+&pi;R
+2
+V
+w
+3
+/
+2
+.
+-
+-
+-
+(
+1
+)
+Wherein: P
+M
+The wind-powered electricity generation unit mechanical output that the energy that catches from wind for the wind energy converting unit changes into,
+Ï
+air
+Be atmospheric density,
+R is the wind turbine impeller radius,
+Î» is tip speed ratio,
+Î² is propeller pitch angle,
+C
+p
+For the wind energy conversion efficiency coefficient of blade, be the function of Î» and Î²,
+V
+w
+Be wind speed;
+(1.2) two matter piece axle coefficients model equations of wind turbine and generator are:
+2
+H
+T
+d
+&omega;
+T
+/
+dt
+=
+T
+M
+-
+K
+S
+&theta;
+S
+-
+D
+T
+&omega;
+T
+2
+H
+G
+d
+&omega;
+G
+/
+dt
+=
+K
+S
+&theta;
+S
+-
+T
+E
+-
+D
+G
+&omega;
+G
+d
+&theta;
+S
+/
+dt
+=
+&omega;
+0
+(
+&omega;
+T
+-
+&omega;
+G
+)
+.
+-
+-
+-
+(
+2
+)
+Wherein: H
+T
+, H
+G
+Be respectively wind turbine and generator inertia constant,
+K
+S
+Be the shaft rigidity coefficient,
+D
+T
+, D
+G
+Be respectively the damping coefficient of wind turbine rotor and generator amature,
+Î¸
+S
+Be relative angular displacement between two matter pieces,
+T
+M
+, T
+E
+Be respectively wind turbine machine torque and generator electromagnetic torque,
+Ï
+T
+, Ï
+G
+Be respectively wind turbine and generator amature rotating speed,
+Ï
+0
+Be synchronous speed;
+(1.3) under synchronous rotating frame, the voltage equation of doubly fed induction generator is
+u
+sd
+=
+d
+&psi;
+sd
+/
+dt
+-
+&omega;
+s
+&psi;
+sq
++
+R
+s
+i
+sd
+u
+sq
+=
+d
+&psi;
+sq
+/
+dt
+-
+&omega;
+s
+&psi;
+sd
++
+R
+s
+i
+sq
+i
+rd
+=
+d
+&psi;
+rd
+/
+dt
+-
+s
+&omega;
+s
+&psi;
+rq
++
+R
+r
+i
+rd
+u
+rq
+=
+d
+&psi;
+rq
+/
+dt
+-
+s
+&omega;
+s
+&psi;
+rd
++
+R
+r
+i
+rq
+.
+-
+-
+-
+(
+3
+)
+The magnetic linkage equation is
+&psi;
+sd
+=
+L
+s
+i
+sd
++
+L
+m
+i
+rd
+&psi;
+sq
+=
+L
+s
+i
+sq
++
+L
+m
+i
+rq
+&psi;
+rd
+=
+L
+r
+i
+rd
++
+L
+m
+i
+sd
+&psi;
+rq
+=
+L
+r
+i
+rq
++
+L
+m
+i
+sq
+.
+-
+-
+-
+(
+4
+)
+Wherein: Ï
+s
+Be coordinate system rotation angular speed,
+U, i, Ï are respectively voltage, electric current and the magnetic linkage of winding,
+R is the resistance of winding,
+L
+s
+, L
+r
+Be respectively the self-induction of stator winding and rotor winding,
+L
+m
+Be the mutual inductance between the stator and rotor winding,
+Subscript s, r represent respectively stator and the rotor of motor,
+Subscript d, q represent respectively d, the q axle winding of motor,
+S is the revolutional slip of motor;
+2) set up solar energy power generating unit Mathematical Modeling
+Under reference conditions, consider that the photovoltaic array V-I equation of intensity of solar radiation and variation of ambient temperature is
+I
+=
+N
+p
+PV
+I
+sc
+&CenterDot;
+{
+1
+-
+C
+1
+[
+exp
+(
+V
+-
+dV
+C
+2
+N
+s
+PV
+V
+&Proportional;
+)
+-
+1
+]
+}
++
+dI
+.
+-
+-
+-
+(
+5
+)
+In
+formula
+C
+1
+=
+(
+1
+-
+I
+m
+/
+I
+sc
+)
+&CenterDot;
+exp
+(
+-
+V
+m
+/
+C
+2
+V
+&Proportional;
+)
+C
+2
+=
+(
+V
+m
+/
+V
+oc
+-
+1
+)
+/
+(
+ln
+(
+1
+-
+I
+m
+/
+I
+sc
+)
+)
+dI
+=
+-
+&alpha;
+&CenterDot;
+G
+/
+G
+ref
+&CenterDot;
+(
+T
+C
+-
+T
+ref
+)
++
+(
+G
+/
+G
+ref
+-
+1
+)
+&CenterDot;
+N
+p
+PV
+I
+sc
+dV
+=
+&beta;
+&CenterDot;
+dT
+-
+R
+s
+&CenterDot;
+dI
+Wherein: V, I are respectively photovoltaic array terminal voltage and end electric current,
+V
+oc
+, I
+sc
+Be respectively open circuit voltage and short circuit current that photovoltaic module producer provides,
+V
+m
+, I
+m
+Be respectively maximum power point voltage and electric current,
+Î±, Î² are respectively under reference radiation intensity, current temperature variation coefficient and voltage temperature variation coefficient,
+R
+s
+Be the series resistance of assembly,
+NPV p, NPV s are respectively number in parallel and the serial number of assembly in photovoltaic array;
+3) set up the energy-storage units Mathematical Modeling
+The batteries Mathematical Modeling is
+V
+B
+=
+N
+B
+-
+s
+E
+0
+-
+KSOC
+SOC
+-
+N
+B
+-
+s
+Q
+n
+&Integral;
+0
+t
+i
+B
+(
+&tau;
+)
+d&tau;
++
+Aexp
+(
+-
+B
+&Integral;
+0
+t
+i
+B
+(
+&tau;
+)
+d&tau;
++
+C
+p
+)
+-
+Ri
+B
+N
+B
+-
+s
+.
+-
+-
+-
+(
+6
+)
+In formula:
+C
+p
+=
+C
+t
+(
+T
+b
+-
+25
+)
+C
+R
+=
+1
+-
+0.025
+(
+T
+b
+-
+25
+)
+R
+=
+N
+B
+-
+s
+V
+n
+(
+1
+-
+&eta;
+)
+C
+R
+/
+(
+0.2
+N
+B
+-
+p
+Q
+n
+)
+SOC
+=
+N
+B
+-
+s
+N
+B
+-
+p
+Q
+n
+-
+&Integral;
+0
+t
+i
+B
+(
+&tau;
+)
+d&tau;
+N
+B
+-
+s
+N
+B
+-
+p
+Q
+n
+&times;
+100
+%
+Wherein: SOC is the state-of-charge of batteries,
+B, B are respectively change in voltage coefficient and volume change coefficient,
+K is the polarizing voltage constant,
+C
+p
+Be polarization reaction temperature compensation factor,
+C
+R
+Be the resistance temperature compensation factor,
+T
+b
+Be battery temp,
+C
+t
+Be the polarization reaction constant,
+Q
+n
+Be battery rating,
+V
+n
+Be the battery rated voltage,
+E
+0
+Be the storage battery initial potential,
+V is accumulator voltage,
+Î· is battery efficiency,
+N
+B-s
+With N
+B-p
+Be respectively storage battery series and parallel connections number;
+The fuel cell Mathematical Modeling is
+V
+FC
+=
+N
+cell
+[
+E
+-
+ln
+(
+I
+FC
++
+A
+cell
+i
+n
+A
+cell
+i
+o
+)
+-
+r
+(
+I
+FC
+A
+cell
+)
+-
+mexp
+(
+n
+I
+FC
+A
+cell
+)
+]
+.
+-
+-
+-
+(
+7
+)
+Wherein: V
+FC
+Be the fuel cell terminal voltage,
+I
+FC
+Be fuel cell end electric current,
+N
+Cell
+Be fuel cell series quantity,
+A
+Cell
+Be the fuel cell electrode area,
+R is sheet resistance,
+i
+n
+Be the internal operation current density,
+i
+o
+Be inner nominal current density,
+M and n are the junction loss constants;
+4) hybrid grid-connected power generation is coordinated to control
+(4.1) active power is coordinated to control
+Meritorious expression formula between wind light generation unit and network load demand is
+P
+net
+=
+P
+wind
++
+P
+PV
+-
+P
+load
+-
+P
+sc
+.
+-
+-
+-
+(
+8
+)
+Wherein: P
+net
+Be the active power amount of unbalance,
+P
+Wind
+Exert oneself for the wind energy converting unit is meritorious,
+P
+PV
+Exert oneself for solar power generation unit is meritorious,
+P
+Load
+Be the burden with power demand of dispatching of power netwoks appointment,
+P
+sc
+For the wind-solar-storage joint system from electricity consumption, less because accounting for the generating ratio, can ignore;
+The superfluous P of wind light generation unit active power
+net
+0 o'clock, the power balance equation formula is
+P
+wind
++
+P
+PV
+=
+P
+load
++
+P
+ES
+-
+in
+-
+-
+-
+(
+9
+)
+Wherein: P
+ES-in
+For energy-storage units absorbs active power, namely storage battery absorbs active-power P
+Battery-in
+Wind light generation cell power vacancy P
+net
+ï¼0 o'clock, the power balance equation formula was
+P
+wind
++
+P
+PV
++
+P
+ES
+-
+out
+=
+P
+load
+.
+-
+-
+-
+(
+10
+)
+In formula:
+P
+ES
+-
+out
+=
+P
+battery
+_
+out
++
+P
+FC
+Wherein: P
+ES-out
+The active power of sending for energy-storage units,
+P
+Battery_out
+The active power of sending for storage battery,
+P
+FC
+The active power of sending for fuel cell, when storage battery charge state SOCï¼25%, the starting fluid battery unit;
+(4.2) reactive power is coordinated to control
+Wind light generation cell power factor range of operation is 0.85 to lag behind 0.85 in advance, is 0.98 to lag behind when normally moving, and the idle expression formula between wind light generation unit and network load demand is
+Q
+net
+=
+Q
+Wind
+-
+out
++
+Q
+PV
+-
+out
+-
+Q
+load
+.
+-
+-
+-
+(
+11
+)
+Wherein: Q
+net
+Be the reactive power amount of unbalance,
+Q
+Wind_out
+Exert oneself for the wind energy converting unit is idle,
+Q
+PV_out
+Exert oneself for solar power generation unit is idle,
+Q
+Load
+Load or burden without work demand for the dispatching of power netwoks appointment;
+The superfluous Q of wind light generation unit reactive power
+net
+0 and the point voltage that is incorporated into the power networks higher than its rated voltage V V
+ref
+The time, the power balance equation formula is
+Q
+Wind
+-
+out
++
+Q
+PV
+-
+out
+=
+Q
+load
++
+Q
+ES
+-
+in
++
+Q
+STATCOM
+-
+in
+-
+-
+-
+(
+12
+)
+Wherein: Q
+ES-in
+Be the reactive power of energy-storage units absorption,
+Q
+STATCOM-in
+Reactive power for STATCOM STATCOM absorption;
+Wind light generation cell power vacancy Q
+net
+ï¼0 o'clock, the power balance equation formula was
+Q
+load
+=
+Q
+Wind
+-
+out
++
+Q
+PV
+-
+out
++
+Q
+ES
+-
+out
++
+Q
+STATCOM
+-
+out
+.
+V
+<
+V
+ref
+.
+-
+-
+-
+(
+13
+)
+Or
+Q
+load
++
+Q
+STATCOM
+-
+in
+=
+Q
+Wind
+-
+out
++
+Q
+PV
+-
+out
++
+Q
+ES
+-
+out
+,
+V
+>
+V
+ref
+-
+-
+-
+(
+14
+)
+Wherein: Q
+ES-out
+The reactive power of sending for energy-storage units,
+Q
+STATCOM-out
+The reactive power of sending for STATCOM STATCOM;
+When honourable unit runs on power factor 0.98 when leading, i.e. Q
+net
+ï¼0, the reactive power equilibrium equation
+Q
+Wind
+-
+in
++
+Q
+PV
+-
+in
++
+Q
+load
+=
+Q
+ES
+-
+out
++
+Q
+STATCOM
+-
+out
+,
+V
+<
+V
+ref
+-
+-
+-
+(
+15
+)
+Or
+Q
+Wind
+-
+in
++
+Q
+PV
+-
+in
++
+Q
+load
++
+Q
+STATCOM
+-
+in
+=
+Q
+ES
+-
+out
+,
+V
+>
+V
+ref
+-
+-
+-
+(
+16
+)
+.
+Instantiation:
+Survey load curve and Practical Meteorological Requirements condition take the somewhere and be the basis, wind-solar-storage joint generating control method for coordinating is analyzed.Fig. 1 is the sample calculation analysis single line schematic diagram based on IEEE 3 machine 1-9 node test systems, wind energy converting unit, solar energy power generating unit, energy-storage units exchange collection bus with STATCOM (STATCOM) by 20kV electric energy are pooled together, and incorporate high-voltage fence through step-up transformer at 6 nodes.Fig. 2 is typical case's day actual load demand curve in somewhere, northeast summer, summer typical case's day wind speed data and intensity of solar radiation data as shown in Figure 3 and Figure 4.On this basis wind-solar-storage joint generating control method for coordinating is carried out simulation analysis, Fig. 5 is under wind friction velocity shown in Figure 3, meritorious, the idle situation of exerting oneself (power factor is 0.98, lags behind) of wind energy converting unit.As seen from the figure, the wind energy converting unit is exerted oneself consistent with the wind speed variation tendency, and realizes its maximum power tracing under the conciliation of propeller pitch angle controller.Fig. 6 is under solar radiation condition shown in Figure 4, meritorious, the idle change curve (power factor is 0.98, and is leading) of solar energy power generating unit.The analysis showed that, intensity of solar radiation is the major influence factors of solar energy power generating cell power output, and the photovoltaic cell ambient temperature is less on its impact, and the photovoltaic power curve is almost identical with the solar radiation variation trends.Fig. 7 and Fig. 8 are respectively storage battery and the fuel battery power change curve on wind-solar-storage joint generating control method basis.As shown in Figure 7, during greater than the energy-storage units capacity, energy-storage units is exerted oneself by its maximum capacity plan that allows when control method for coordinating required balance power, and when the batteries state-of-charge during lower than certain value 25%, the starting fluid battery unit substitutes storage battery.Fig. 8 has shown the batteries state-of-charge lower than 25% the time, and cell of fuel cell is meritorious, the idle situation of exerting oneself.Show through simulating, verifying, joint wind-solar-storage joint grid-connected power generation coordination control method is efficient and practical.

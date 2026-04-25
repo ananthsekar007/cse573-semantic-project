@@ -1,0 +1,2480 @@
+PATENT ID: US11481652B2
+TITLE: System and method for recommendations in ubiquituous computing environments
+DOMAIN: ai_machine_learning
+INVENTOR: Gregory Knox
+ASSIGNEE: Gregory Knox
+FILING DATE: 2020-07-15
+
+=== ABSTRACT ===
+Systems and methods for creating an ad hoc pervasive computing environment comprised of an inference recommendation engine coupled to commodity devices and sensors that passively collect human activity and behavioral data. Methods include machine learning and deep learning applications that analyze data to generate preference based recommendations to assist, inform, and guide subjects interacting with a connected living space and their connected social network.
+
+=== CLAIMS ===
+  1. A method of personalizing recommendations by calculating behavioral measurement data of at least one human from at least two ubicomp devices each positioned apart from each other for spatial diversity, the method comprising the steps of:
+generating independent behavioral measurement data from each of the at least two ubicomp devices;
+collecting each of the independent behavioral measurement data into at least one responsive device;
+conglomerating each of the independent behavioral measurement data in the at least one responsive device;
+converting the conglomerated independent behavioral measurement data into at least one standardized data format for the at least one responsive device;
+classifying the converted conglomerated independent behavioral measurement data into interaction preferences associated with the at least one human in the at least one responsive device; and
+transmitting personalized recommendations responsive to the interaction preferences associated with the at least one human by the at least one responsive device based on the classified converted conglomerated independent behavioral measurement data.
+  2. The method of claim 1, further comprising pairing the at least two ubicomp devices.
+  3. The method of claim 2, wherein the at least two ubicomp devices comprise at least one of a smart meter, a smart thermostat, a smart temperature sensor, a smart humidity sensor, a smart barometric sensor, a smart pressure sensor, a smart motion sensor, a smart frequency sensor, a smart radiation sensor, a smart light sensor, an IoT device, a smartphone, a smart watch, a smart microwave, a smart oven, a smart toaster, a smart coffee maker, a smart dishwasher, a smart refrigerator, a smart water faucet, a smart vacuum, a smart toy, a smart tracker, a smart door locks, a smart irrigation system, a smart energy monitoring, and a smart voice activated service.
+  4. The method of claim 3, wherein the step of transmitting recommendations comprises:
+using an inference recommendation engine system to generate interaction recommendations to the at least one human.
+  5. The method of claim 4, wherein the generated tracking data comprise activity and behavioral data from the at least one human, and the method further comprises:
+analyzing the activity and the behavioral data from the each of the generated tracking data.
+  6. The method of claim 5, wherein the method further comprises:
+generating the interaction recommendations of the at least one human in response to analyzing the activity and the behavioral data.
+  7. The method of claim 6, wherein the interaction recommendations comprises at least one of time, location, frequency, duration and sentiments.
+  8. The method of claim 7, further comprising:
+updating the interaction recommendations on at least one of a time frequency basis, a motion level basis, a temperature level basis, a humidity level basis, a barometric level basis, a light level basis, a frequency level basis and a radiation level basis.
+  9. The method of claim 8, wherein the step of transmitting recommended interactions comprises:
+generating a feedback to the paired at least two ubicomp devices.
+  10. The method of claim 9, further comprising the step of:
+storing the generated tracking data in at least one cloud computing network.
+
+=== DESCRIPTION ===
+PRIORITY DATA
+This utility application claims the benefit of priority to provisional application No. 62/874,506, filed on Jul. 16, 2019, and is a continuation-in-part of U.S. patent application Ser. No. 15/843,342, filed on Dec. 15, 2017, which is a continuation-in-part of U.S. patent application Ser. No. 15/188,997, filed on Jun. 22, 2016, now which claims the benefit of priority to provisional application No. 62/183,605, filed Jun. 23, 2015.
+COPYRIGHT NOTICE
+A portion of the disclosure of this patent application contains material which is subject to copyright protection. While the copyright owner has no objection to the reproduction by anyone as the copyrighted material appears in the United States Patent and Trademark Office patent files or records, all rights are otherwise reserved.
+BACKGROUND
+Field of Disclosure
+The present application relates generally to computerized artificial intelligence applications in pervasive computing environments, and more particularly, to systems and methods for providing inference recommendations that promote optimal user interactions with connected technologies and associated users.
+Description of Related Art
+Ubiquitous computing technologies, as one component of intelligent systems designed for technology enabled human experiences, can enhance user experiences in many aspects of connected lifestyles. The concept of ubiquitous or seamlessly continuous computing translates to user interaction(s) with any device or sensor, in any location, and in any format.
+On a singular basis, today's ubiquitous computing configurations may generate data in the realm of Ambient Intelligence. These hardware and software configurations are designed to assist human decision making using real-time and historical data. Commodity sensors are embedded in connected consumer appliances, Internet of Things ( IoT ) devices, and smart devices at such levels that ad-hoc ubiquitous computing (hereinafter ubicomp ) environments can be established by pairing basic connected devices with neural network applications that interpret collected data. Measuring available device/sensor data to reliably and accurate measure and predict user preference is technologically feasible considering the volume of lifestyle data that can be collected with common devices such as human physiology and biometric information using wearable sensors, facial expressions and moods detectable with computer vision, location with GPS, movement and activity that can be labeled and measured with cameras, accelerometers and gyroscopes.
+Generally, this commodity device and sensor evolution has driven their cost down and increased their ubiquitous presence in everyday life. Most applications may operate to deliver a defined user experience through a single or a few data signals, where the performance promised is consistently delivered. However, a narrowly focused user experience limits the ability to extract user insights and leverage collected data. Further, the existence of multiple device and sensor data channels that denote interactions does not equate to insights  where there is little means of learning or contextualizing user experiences.
+Overall, there is sufficient data, hardware, software and computing capacity to approach limited forms of evaluating and predicting human behavior at a consumer level. Passive preference data or inference intelligence  may be achieved in pervasive environments, especially considering edge computing architectures where data science methods such as customized machine learning, deep learning and artificial intelligence applications are deployed on devices to parse, analyze and interpret data. With adequate reference information, in certain lifestyle settings it is plausible to elevate understanding of the user's subjective mind before, during, and after engagement experiences.
+SUMMARY
+In one aspect of the present disclosure, a method of tracking the activity of at least one human from at least two ubicomp devices is disclosed. The method may include the steps of generating tracking data from each of the at least two ubicomp devices, collecting each of the generated tracking data, conglomerating each of the generated tracking data, converting the conglomerated tracking data into at least one standardized data format, classifying the converted conglomerated generated tracking data by interaction preference insights, and transmitting recommendations for the at least one human based on the classified converted conglomerated generated tracking data.
+In another aspect of the present disclosure, the method of tracking the activity may also include pairing the two or more ubicomp devices. The ubicomp devices may include a smart meter, a smart thermostat, a smart temperature sensor, a smart humidity sensor, a smart barometric sensor, a smart pressure sensor, a smart motion sensor, a smart frequency sensor, a smart radiation sensor, a smart light sensor, an IoT device, a smartphone, a smart watch, a smart window shade, a smart garage door, a smart outlet, a smart switch, a smart tablet, smart audio system, a smart TV, a smart mirror, a smart monitor screen, a smart camera, a smart pet feeder, a smart dishwasher, a smart washer/dryer, a smart microwave, a smart oven, a smart toaster, a smart coffee maker, a smart dishwasher, a smart refrigerator, a smart water faucet, a smart vacuum, a smart toy, a smart tracker, a smart door locks, a smart irrigation system, a smart energy monitoring, and/or a smart voice activated service.
+In another aspect of the present disclosure, the step of transmitting recommendations may include using an inference recommendation engine system to generate interaction recommendations to the human.
+In another aspect of the present disclosure, the generated tracking data may include activity and behavioral data from the human, and the method of tracking the activity may also include analyzing the activity and the behavioral data from the each of the generated tracking data.
+In another aspect of the present disclosure, the method of tracking the activity may also include generating the interaction recommendations of the at least one human in response to analyzing the activity and the behavioral data.
+In another aspect of the present disclosure, the interaction recommendations may include time, location, frequency, duration and/or sentiments.
+In another aspect of the present disclosure, the method of tracking the activity may also include updating the interaction recommendations on at least one of a time frequency basis, a biometric level basis, an emotion level basis, a sentiment level basis, a motion level basis, a temperature level basis, a humidity level basis, a barometric level basis, a light level basis, a frequency level basis and a radiation level basis.
+In another aspect of the present disclosure, the step of transmitting recommended interactions may include generating a feedback to the paired at least two ubicomp devices.
+In another aspect of the present disclosure, the method of tracking the activity may also include storing the generated tracking data in at least one cloud computing network.
+In another aspect of the present disclosure, a network for tracking the activity of at least one human from two or more paired ubicomp devices is disclosed. The network may include a first and a second track computing device for generating tracking data from each of the at least two paired ubicomp devices, a collect computing device for collecting each of the generated tracking data, a conglomerate computing device for conglomerating each of the generated tracking data, a convert computing device for converting the conglomerated tracking data into at least one standardized data format, a classify computing device for classifying the converted conglomerated generated tracking data by interaction preference insights, and a transmitting device for transmitting recommendations for the at least one human based on the classified converted conglomerated generated tracking data.
+In another aspect of the present disclosure, the ubicomp devices may include a smart meter, a smart thermostat, a smart temperature sensor, a smart humidity sensor, a smart barometric sensor, a smart pressure sensor, a smart motion sensor, a smart frequency sensor, a smart radiation sensor, a smart light sensor, an IoT device, a smartphone, a smart watch, a smart window shade, a smart garage door, a smart outlet, a smart switch, a smart tablet, smart audio system, a smart TV, a smart mirror, a smart monitor screen, a smart camera, a smart pet feeder, a smart dishwasher, a smart washer/dryer, a smart microwave, a smart oven, a smart toaster, a smart coffee maker, a smart dishwasher, a smart refrigerator, a smart water faucet, a smart vacuum, a smart toy, a smart tracker, a smart door lock, a smart irrigation system, a smart energy monitoring, or a smart voice activated service.
+In another aspect of the present disclosure, the transmitting device may include an inference recommendation engine system to generate interaction recommendations to the at least one human.
+In another aspect of the present disclosure, the first and a second track computing devices may include an analyzing computing device for analyzing activity and behavioral data from the tracking data of the at least one human.
+In another aspect of the present disclosure, the network may include an interactive computing device for generating the interaction recommendations in response to the analyzing computing device analyzing the activity and the behavioral data.
+In another aspect of the present disclosure, the interaction recommendations may include time, location, frequency, duration or sentiments.
+In another aspect of the present disclosure, the network may also include an updating computing device for updating the interaction recommendations on the basis of time, a motion level, a temperature level, a humidity level, a barometric level, a light level, a frequency level and a radiation level.
+In another aspect of the present disclosure, the transmitting device may generate a feedback signal to the paired ubicomp devices.
+In another aspect of the present disclosure, the network also may include a cloud computing network coupled with the first and the second track computing devices for storing the generated tracking data from the two paired ubicomp devices.
+BRIEF DESCRIPTION OF THE DRAWINGS
+The present disclosure and its various features and advantages can be understood by referring to the accompanying drawings by those skilled in the art relevant to this disclosure. Reference numerals and/or symbols are used in the drawings. The use of the same reference in different drawings indicates similar or identical components, devices or systems. Various other aspects of this disclosure, its benefits and advantages may be better understood from the present disclosure herein and the accompanying drawings described as follows:
+ 
+illustrates a network block diagram depicting an engagement platform system including a ubiquitous computing environment, network, server, recommendation engine, inference intelligence, blockchain, application program interface, computing device, and external systems according to an aspect of the present disclosure;
+ 
+illustrates a system block diagram of a ubiquitous computing environment including computerized neural network application generated data according to an aspect of the present disclosure;
+ 
+illustrates exemplary engagement data categories generated from a subject's activity and experiences within a ubiquitous computing environment and with remote associated users according to an aspect of the present disclosure;
+ 
+illustrates an exemplary engagement data neural node generated from ubiquitous computing environment user activity according to an aspect of the present disclosure;
+ 
+illustrates an exemplary neural network model for generating engagement data and training data from ubiquitous computing environment user activity according to an aspect of the present disclosure;
+ 
+illustrates exemplary data elements including customized user engagement models according to an aspect of the present disclosure;
+ 
+illustrates a block diagram of a process for delivering interaction recommendations to engagement platform users according to an aspect of the present disclosure;
+ 
+illustrates a flow diagram for determining an interaction opportunity with a subject within a ubiquitous computing environment according to an aspect of the present disclosure;
+ 
+illustrates a flow diagram for determining interaction contextual information for a subject associated with a ubiquitous computing environment according to an aspect of the present disclosure;
+ 
+illustrates a flow diagram for generating interaction recommendations using preference related data associated with a ubiquitous computing environment according to an aspect of the present disclosure;
+ 
+illustrates a flow diagram for managing interaction recommendations using interaction data associated with a ubiquitous computing environment according to an aspect of the present disclosure;
+ 
+illustrates a flow diagram for optimizing interaction recommendations using interaction data associated with a ubiquitous computing environment according to an aspect of the present disclosure;
+ 
+illustrates a block diagram of an exemplary a blockchain-based engagement platform according to an aspect of the present disclosure;
+ 
+illustrates a block diagram of an exemplary sub-science computing system for implementing a blockchain-based transactions on an engagement platform according to an aspect of the present disclosure;
+ 
+illustrates a system diagram illustrating exemplary components of an engagement platform for interaction recommendations according to an aspect of the present disclosure;
+ 
+illustrates a block diagram of an exemplary user profile manager application operating on an engagement platform for interaction recommendations according to an aspect of the present disclosure; and
+ 
+illustrates a user experience preference map generated from user interaction recommendation survey information presented on an engagement platform according to an aspect of the present disclosure.
+DETAILED DESCRIPTION
+The benefits of augmenting lifestyle experiences with neural network solutions may be known. An economically viable system using basic devices and sensors to generate reliable intelligence regarding a person's lifestyle preferences is useful to the subject, families, friends, medical support and any remotely connected social network or service provider. Further, a method of presenting interaction recommendations based on known behaviors, learned engagement preferences and intended outcomes creates new channels of communication for user lifestyle insights. And, accuracy and efficiencies in response time, anticipating needs, and assistance requirements become more informed with sensor level and machine learning reliability. Lastly, the proposed applications require secure collection, storage and exchange of the aforementioned data. Ideally, incorporating an immutable technology such as blockchain encryption would deter and prevent modification of such data, reducing the risk of theft or misuse and ensuring that only authorized users will have access to personal data.
+Systems and methods, in accordance with various examples of the disclosure, may address one or more of the aforementioned deficiencies experienced in generating comprehensive interaction recommendations using commodity sensors that accurately reflect the intent and desired outcome for users. In particular, various aspects of the disclosures enable the capture, analysis and presentation of behavioral, sentiment, biometric and lifestyle activity data of a subject that associated users may wish to acknowledge and respond to in a timely manner. Generally, an interaction recommendation system can provide recommendations for an unlimited set of user engagement instances or events, where optimal performance assumes the availability of adequate sensor data, computing capacity, and reference information.
+In addition to personal device lifestyle integrations, the connected lifestyle  has moved far beyond configurations for traditional networked systems such as lighting controls, heating and cooling, audio and video, and security cameras. With the growth of IoT innovations, data driven applications that measure specific and comprehensive interactions is plausible given the wide range of consumer products that are available embedded with network applications such as microwaves, ovens, toasters, coffee makers, dishwashers, refrigerator, water faucets, vacuums, toys, smart trackers, smart door locks, irrigation systems, energy monitoring, and voice activated services and computers.
+A ubiquitous computing environment or ubicomp can be created on an ad-hoc or permanent basis using a few or several connected consumer products common in dwellings that operate on LAN and WIFI networks: cameras, motion sensors, smart phones, thermostats, door entry/exit sensors, wearable devices, tablets, and smart TVs. Software applications on basic cameras in devices now identify faces, interpret facial expressions, identify objects, recognize gestures and can measure a series of physical movements to catalog specific activity types. As mentioned previously, most of the information generated by these devices and sensor signals offer singular channels of data insights. Yet, given the networked environment they operate within, there is tremendous potential gain using methods that conglomerate these information sources and leverage their singular data channels into more robust and contextualized insights.
+There may be noticeable aspects to adding context and customized information to interactions involving connected devices and sensors that improve upon current technology. First, inference intelligence can elevate basic engagements with connected technologies. Most connected devices require human input-physical controls for settings, remote control via mobile application, or voice commands delivered from a voice enabled computer. These actions, and the decision points that lead up to them, can be anticipated with current software applications. However, predictions for singular actions are predicted based on user repetition, this level of engagement is largely devoid of context and does not provide much insight regarding intent, motive, desired outcome, special conditions and etc. For example, if a coffee maker is set to make coffee every day at 6 AM, but the subject chooses to sleep in until 8 AM, how would the coffee maker adjust to the circumstance without human intervention? The present disclosure herein, for example, details a system for identifying sleep conditions, which may include use camera motion sensors or sleep app data from a mobile phone to determine the waking phase of a subject, which then triggers the coffee maker operation based on real-time inference data that adjusts to different waking times each day.
+Second, inference intelligence can elevate engagement insights for interactions between users. With current technologies, human activities and experiences in a living space can be identified, tracked, measured and ultimately cataloged and labeled as routines and habits. While lifestyle routines and habits themselves are suggestive of preference, inference data can be used to understand contextualized exceptions to a daily scheduled activity. For remotely connected users, inference intelligence offers greater accuracy and efficiency to engagement decision points. Using the previous example, if the subject in the ubicomp is connected to a social network with access to inference intelligence, they then have the ability to adjust to the real-time circumstances based on notification updates. In context, if the subject sleeping has an appointment schedule or visitor set to arrive at a particular time, inference intelligence could deliver automated updates to the third parties as to the optimal times to engage with the individual once they reach a waking state, or after the coffee maker has been activated for more than 15 minutes.
+Third, inference intelligence applications can leverage natural language processing for rich contextual information. For an unlimited number of theoretical scenarios, acquiring sentiment, desire and intent before, during and after an engagement efficiently aid machine learning applications that perform predictive analytics and offer customized recommendations for each unique individual. Obtaining a user's subjective thoughts and preferences in real-time will dramatically improve artificial intelligence solutions in pervasive environments that connect many distinct devices and sensors.
+Fourth, improving efficiency and accuracy for human engagements yields significant intangible benefits. Especially for remote relationships, the opportunity to interact with another person, where timing and context are mutually understood beforehand, deliver a wealth of collateral benefits regarding mental health, emotion support, and intellectual stimulation. Deep learning applications increase insight data with continuous interactions and improve recommendation quality for all parties regarding optimal engagement conditions, timing, best practices, contingencies for unforeseen circumstances and the like.
+According to an aspect of the present disclosure, an inference recommendation engine system and method for generating interaction recommendations informed by user centric activity and behavioral data collected from commercial devices and commodity sensors in a pervasive computing environment are detailed. The present teaching does not represent the entirety of the disclosure herein in either scope or implementation. Although the disclosed aspects described herein in sufficient detail to enable one skilled in the art to practice the implementations, it is to be understood that these examples are not limiting. Consequently, other implementations, aspects, arrangements and/or configurations may be derived from the disclosure herein without departing from their spirit and scope.
+The present discloses teaches a software solution for improving human interactions by using data provided by disparate networked devices and sensors operating in a subject's dwelling to identify interactions and the subject's preferences (time, location, frequency, duration, sentiments) for each interaction. This preference data can be used guide, assist and inform users within a dwelling or to others via connected devices.
+An enterprise solution can be deployed via cloud or edge architecture whereby a networked client device (smart phone) can connect to a network hosting devices and sensors that identify and/or measure human activity and behaviors. Data from these connected devices and sensors can be collected via an API and processed via cloud computing into usable formats where analytic applications can determine a subject's interactions as well as interaction preferences, recommendations and predictive analytics for interactions for other connected users.
+In one aspect of the present disclosure, systems and methods are taught for conglomerating information and converting it into a standardized data format. This may be applied in commodity sensors and consumer devices that may operate on standard networks (e.g., Wi-Fi, Bluetooth, etc.), providing information regarding human activity and behaviors. These interactions may be classified and interaction preference insights more clearly identified-information that can inform and guide interaction recommendations for the subject and their associated users.
+This approach is now technically feasible due to specific changes in the consumer technology landscape. First, the cost of sensors and devices that provide activity and behavior data have dropped dramatically, while their functional utility and data quality has increased. Second, commodity sensors (cameras, wearables, wireless chipsets) are now deployed at a ubiquitous level and are actively capturing user information of all sorts (sleep, activity level, activity types, gestures, diet, physiological biometrics, location, media consumption, sentiments, social connectivity). Third, major competitors (e.g., Apple, Google, Microsoft) and smaller companies are developing these technologies at a fast pace, offering open source platforms for integrating disparate hardware and software technologies on a single platform. Growing artificial intelligence software chipsets markets, edge computing solutions for low latency as well as improved network capacity and speed lend support for the viability of the proposed technology.
+In one aspect of the present disclosure, systems and methods are taught for conglomerating information and converting it into a standardized data format. This may be applied in commodity sensors and consumer devices that may operate on standard networks (e.g., Wi-Fi, Bluetooth, etc.), providing information regarding human activity and behaviors. These interactions may be classified and interaction preference insights more clearly identified-information that can inform and guide interaction recommendations for the subject and their associated users.
+The present disclosure, in one aspect, may use a multichannel or multimodal solution more efficiently to enable a subject's unique set of lifestyle experiences to be captured in a digital profile (within the limitations of accessible devices and sensors). Personalized data may be ubiquitously available due to lifestyle preferences for convenience, fear or missing out ( FOMO ), and surreptitious device privacy settings.
+The present disclosure teaches a data agnostic system for capturing device and sensor data from connected technologies in a dwelling inhabited or occupied by a subject or subjects, converting information to a usable format, applying pattern and preference recognition neural network applications, and providing instructions for recommendation or predictive analysis models that guide and inform users inside and outside the dwelling. This information is customized based on a unique subject's lifestyle habits, routine and experiential preferences, and with machine learning becomes increasingly refined as empirical data is generated to improve insight analytics.
+In one aspect of the disclosure, a software application for an enterprise level architecture is taught. The enterprise level architecture may include a cloud computing network and storage resources, which could be deployed in a hybrid edge computing configuration for efficiency and energy priorities. A downloadable mobile software or lite client version can operate on a smart device that connects to a local network and identifies available devices and sensors as engagement data resources. This may be the basis for a ubiquitous computing environment. Captured data can be converted in the cloud to a usable format where bulk processing and analytics operate. Once sufficient data is captured to define an interaction by the system, user settings can be created based on the user's preferences for the interaction. The preference data or inference intelligence  can be input from directly from a user or learned by the system over repeated interactions. For known interaction associates of a human subject, recommendation and predictive analytic information is sent via an API to the user of smart device, and this information can be incorporated into automated operation commands for networked devices and sensors.
+Referring to
+ 
+, a network diagram of an engagement platform system for
+interaction recommendations
+10
+in which broad implementations of the disclosure may be used.
+System
+10
+includes
+ubiquitous computing environment
+12
+,
+network
+14
+,
+server
+16
+,
+recommendation engine
+18
+,
+inference intelligence
+20
+,
+blockchain module
+22
+,
+application program interface
+24
+,
+computing device
+26
+, and
+external system
+28
+. For purposes of illustration, the aspect of
+system
+10
+, shown by
+ 
+, includes single components of the
+system
+10
+, however, in other aspects,
+system
+10
+may include more than one
+ubiquitous computing environments
+12
+,
+networks
+14
+,
+servers
+16
+,
+recommendation engines
+18
+,
+inference intelligences
+20
+,
+blockchain modules
+22
+, application program interfaces
+24
+,
+computing devices
+26
+, and
+external systems
+28
+.
+System
+10
+provides a platform to improve methods of engagement and interaction for subjects within and associated users outside of
+ubiquitous computing environment
+12
+based on data collected and interpreted from the
+system
+10
+. Though the central focus of
+system
+10
+is the subject(s) observed activities, moods, physiological measurements, biometric data and behaviors within
+ubiquitous computing environment
+12
+,
+system
+10
+may also acquire information about associated outside
+users using APIs
+24
+operating computing devices
+26
+to better understand engagement and interaction related data that may elevate interaction recommendation quality, efficiency, and reliability.
+Generally, ubiquitous computing environment (hereinafter ubicomp )
+12
+is comprised of software and hardware components including portable and fixed networked devices, sensors and appliances. In some examples,
+ubicomp
+12
+may be comprised by a few or collection of networked devices and sensors detailed in
+ 
+. In some aspects,
+ubicomp
+12
+may be represented by common components of a home automation system such as networked lighting controls, audio controls, video controls, temperature sensors, alarm sensors, smoke and fire sensors, internet enabled devices, IoT devices and sensors, and other consumer peripherals. In some aspects,
+ubicomp
+12
+may be represented by a smart phone and a wearable sensor device, such as a smart watch. Overall, ubicomp
+12
+operation and utility is defined by the composition of available device and sensor resources that may function to capture human activity and behavioral data signals, regardless to the original commercial applications created by the respective manufacturers. For example, if a security camera was installed with motion detection software by the manufacturer to detect movement, then the present innovation may use the same data signal to measure emotions, identify gestures, label objects, and the like. In some aspects,
+system
+10
+collects available data signals generated by
+ubicomp
+12
+devices and sensors to reformat, index and catalog for use by
+recommendation engine
+18
+and
+inference intelligence
+20
+.
+System
+10
+can be implemented according to
+ubicomp
+12
+configurations that vary based on device and sensor inputs and the raw and processed data generated accordingly. In some aspects of the present disclosure,
+ubicomp
+12
+comprises a Body Area Network (BAN) where one or more sensors are carried by a subject. In some aspects ubicomp
+12
+comprises a Personal Area Network (PAN) where one or more sensors are deployed in a physical environment. In some aspects, by example,
+ubicomp
+12
+devices and sensors can execute programming and operations, including but not limited to, detect physical movement, classify and label a set of actions as activity (sleeping, walking, cooking, grooming, etc.), recognize physical objects and their status, measure cognitive levels, identify emotions, learn personal patterns and lifestyle habits, signal and message remote users regarding activity events or data related benchmarks.
+In some aspects,
+system
+10
+,
+ubicomp
+12
+,
+server
+16
+,
+recommendation engine
+18
+,
+inference intelligence
+20
+,
+blockchain module
+22
+,
+application program interface
+24
+,
+computing device
+26
+, and external system communicate, operate and transfer data thru
+network
+14
+with implementations that may use standard communications technologies including the Internet, wired and wireless, intranets, local area network (LAN), wide area network (WAN), Ethernet, 802.11, worldwide interoperability for microwave access (WiMAX), 3G, 4G, CDMA, GSM, LTE, digital subscriber line (DSL), broadcast network, and the like. In one aspect,
+network
+14
+may use networking protocols in some aspects that include simple mail transfer protocol (SMTP), file transfer protocol (FTP), multiprotocol label switching (MPLS), transmission control protocol/Internet protocol (TCP/IP), User Datagram Protocol (UDP), hypertext transport protocol (HTTP), and the like. The data exchanged over
+network
+14
+can be encrypted using conventional encryption technologies such as secure sockets layer (SSL), transport layer security (TLS), and Internet Protocol security (IPsec) and formatted using technologies including hypertext markup language (HTML), extensible markup language (XML), and the like. In some aspects,
+network
+14
+is a data center, edge computing or cloud based computing system architecture, or combination therein, connected via the Internet using a set of computing systems, computing resources, storage hardware, security applications and networking equipment.
+One or
+more servers
+16
+may be coupled to
+ubicomp
+12
+and
+network
+14
+in addition to providing selected data and information access to
+computing device
+26
+and
+external system
+28
+. In some aspects,
+server
+16
+is a comprised of a server network. In some aspects,
+server
+16
+is an independent host, gateway and network access within
+system
+10
+for
+recommendation engine
+18
+,
+inference intelligence
+20
+,
+blockchain module
+22
+, and
+application program interface
+24
+, respectively.
+Generally,
+recommendation engine
+18
+collects
+ubicomp
+12
+data for processing, analysis, indexing, labeling, and cataloging human activity and behavioral data. In some aspects,
+recommendation engine
+18
+manages artificial intelligence, machine learning, deep learning and other neural network applications to process, analyze, convert and interpret
+ubicomp
+12
+information into human activity and behavioral data for use by
+system
+10
+components and
+inference intelligence
+20
+. In some aspects,
+recommendation engine
+18
+correlates
+inference intelligence
+20
+with human activity and behavioral data.
+Inference intelligence
+20
+is
+system
+10
+network agent of
+recommendation engine
+18
+. In some aspects,
+inference intelligence
+20
+is neural network application including but not limited to artificial intelligence, machine learning, and deep learning applications. In some aspects,
+inference intelligence
+20
+collects and conglomerates data from
+system
+10
+components including subjects within
+ubicomp
+12
+, devices and sensors within
+ubicomp
+12
+,
+recommendation engine
+18
+processed data,
+computing device
+26
+data and generic reference data provided by
+external systems
+28
+for use with neural network models. In some examples, neural network models determine contextual data related to conditions, circumstances, triggers, indicators, and variables that reliably and accurately correlate user preference, expectation desired outcome with the collected and referenced human activity and behavioral data for a specific engagement or interaction type.
+Blockchain module
+22
+architecture serves to protect data generated by
+system
+10
+processes and user activity. In some aspects,
+blockchain module
+22
+is comprised of cryptographically secure process steps including but not limited to user activity data record generation, data record validation, data transaction history, audience feedback data, and user profile data with immutable blockchain techniques. In some aspects,
+blockchain module
+22
+may include a private blockchain, public blockchain, blockchain database, blockchain processor, data anonymizer and crypto wallet.
+Application program interface (API)
+24
+applications enable
+ubicomp
+12
+subjects and
+computing device
+26
+user access to
+system
+10
+components. In some aspects,
+API
+24
+is coupled to
+ubicomp
+12
+devices and sensors. In some aspects,
+API
+24
+is a software program operated with user interface application on
+computing device
+26
+. In some aspects,
+API
+24
+is a host,
+network
+14
+gateway, and programmatic interface for computing
+device
+26
+which facilitate and manage communications with
+system
+10
+components,
+other system
+10
+users remotely operating
+computing devices
+26
+,
+recommendation engine
+18
+data exchanges, and
+external systems
+28
+. In one example,
+API
+24
+may be operated by users to create user accounts with profile information detailing engagement types and interaction preferences. In another example,
+API
+24
+may be operated by users to identify and configure
+ubicomp
+10
+devices and sensors for access, data exchange, and operation by
+system
+10
+components.
+Computing device
+26
+is comprised of components such as network communications, data processing, interface controls, camera, display screen, microphone, speaker and the like such that a user can interact with
+system
+10
+components and
+other computing device
+26
+users. In some aspects, a
+computing device
+26
+aspects include smart devices, smart phones, portable computers, smart televisions and the like.
+Computing device
+26
+or a plurality of
+computing device
+26
+can send and receive input from users and transmit and receive data via
+network
+14
+using protocols that may comprise any combination of local area and/or wide area networks, using wired and/or wireless communication systems. In some aspects,
+computing device
+26
+executes operations using an operating system such as a Microsoft Windows compatible operating system (OS), Apple OS X, Linux, iOS, Tizen and/or ANDROID. In some aspects,
+computing device
+26
+executes a browser application to access server services on
+network
+14
+such as video services, audio services, email services, instant messaging, Web services, third-party services, (IM) services, SMS services, MMS services, FTP services, voice or IP (VOIP) services, calendaring services, phone services, advertising services, etc. In one example,
+computing device
+26
+may interact through an
+API
+24
+with an
+external system
+28
+such as website, server, an electronic data file, electronic messaging service, data server, blockchain server, IP telephony platform, media server, third-party social network, or automated e-commerce service. In some aspects,
+computing device
+26
+may display content by processing a markup language that describes instructions for formatting or presentation of content such as (XML) data, extensible hypertext markup language (XHTML) data, JavaScript Object Notation (JSON) data, JSON with padding (JSONP), and JavaScript data or other markup language data. In some aspects,
+computing device
+26
+includes one or more data cookies indicating
+such system
+10
+operations as log in, location, interactions with
+ubicomp
+12
+related data, communications with
+other computing device
+26
+, log of physical time within
+ubicomp
+12
+, and current computing programs and operating systems. In some aspects, a single or
+multiple computing devices
+26
+are operating as components of
+ubicomp
+12
+. In one example, a
+computing device
+26
+may operate within
+ubicomp
+12
+in aspects including but not limited to wearable device, camera, laptop computer, tablet computer, smart television, networked appliance, home automation control apparatus, networked sensors and other hardware detailed further in
+ 
+.
+ 
+is a diagram illustrating an exemplary
+ubiquitous computing architecture
+50
+including components and associated data configured for recommending interactions between users of
+system
+10
+related to human activity and behavioral data captured by devices and sensors. The basic purpose of a ubiquitous computing environment or ubicomp , also referred to as pervasive computing,  is user interaction with any device, in any location, and in any format. In the present disclosure,
+ubicomp
+12
+includes networked hardware and software components coupled to
+recommendation engine
+18
+that are configured and programmed (per system
+10
+) to execute computerized processes that, amongst other functions, generate engagement data 
+80
+derived from user initiated, user controlled and automated device, appliance and sensor operations within
+ubicomp
+12
+that detect, track, identity and measure human activity and behaviors.
+For discussion purposes, human activity and behavioral data collected from
+engagement data
+80
+extracted from
+ubicomp
+12
+, and related
+components including API
+24
+and
+computing device
+26
+, may be identified, indexed, labeled, formatted and stored according to processing and analytics requirements and specifications of
+respective recommendation engine
+18
+and
+inference intelligence
+20
+applications. Where recommendation engine(s)
+18
+operate to identify and name activities, habits, routines and behaviors derived from processing and analyzing
+engagement data
+80
+associated with a subject in
+ubicomp
+12
+,
+inference intelligence
+20
+applications operate to correlate activity, habit, routine, and behavior data identified by
+recommendation engine
+18
+with measurable data indicating user intent, preference, context, desired outcome, unique conditions and etc., such as facial expressions, emotions, moods, biometrics, event frequency, and natural language data generated by
+system
+10
+usage.
+Ubicomp
+12
+can be established for
+system
+10
+applications with at least
+network
+14
+,
+server
+16
+,
+API
+24
+where
+network
+14
+hosts and
+server
+16
+stores data transfers and exchanges between
+API
+24
+and
+ubicomp
+12
+networked components and software.
+Ubicomp
+12
+hardware, devices, peripherals, appliances, firmware and software applications may be represented in an unlimited variety of configurations and the descriptions of aspects are not limited to those presented in this disclosure. For example, in one aspect an
+exemplary ubicomp
+12
+arrangement may include 30-50 networked components (sensors, cameras, wearables, appliances, home automation controls, etc.) delivering data to recommendation engine(s)
+18
+to practice the disclosed innovations while in another
+aspect ubicomp
+12
+configuration requires only a few networked components, such as a smart phone and a coffee maker to deliver the inventive advantages described herein.
+In some aspects,
+ubicomp
+12
+may include a subsystem of
+audio peripherals
+54
+including networked microphones capable of capturing audio signals including human speech, voice, audible commands, tones, sounds and radio frequencies. A
+microphone
+54
+may be a stationary in a fixed location as a stand-alone device, or may be a component of a
+device
+26
+or appliance that is stationary or portable. In some aspects,
+ubicomp
+12
+may include a subsystem of
+networked cameras
+56
+include devices capable of capturing, detecting and identifying data activities associated with everyday lifestyle including but not limited to an image of an object, brand, brand label, physical object, person, animal, face, face of person linked to a user profile account, facial expression reflecting an emotion, physical gesture, gesture combination, eye gaze, eye movement and similar representing them in the form of digital data.
+Cameras
+56
+may be sensitive across the visible spectrum or a confined wave such as infrared (IR) or ultraviolet bands and, in some aspects, are capable of capturing video images at least 30 frames per second and 1920 pixels per line.
+Camera
+56
+may be a stationary in a fixed location as a stand-alone device, or may be a component of a
+device
+26
+or appliance that is stationary or portable. In some aspects,
+ubicomp
+12
+may include a subsystem of networked device-based
+sensors
+58
+including inertial sensors (such as accelerometer, vibration or magnetic fields) for measuring activity related signals; bio-sensors capable of measuring physiological signs such as electrocardiogram (ECG), electromyogram (EMG), heart rate (HR), body temperature, electrodermal activity (EDA), surface electromyography (sEMG), arterial oxygen saturation (SpO2), blood pressure (BP) and respiration rate (RR) for monitor physical states including heart rate, heart rate variability, respiratory rate, number of steps, distance traveled, pace, maximal oxygen consumption, sleep stages (REM, light and deep), sleep quality, food and liquid intake; Internet of Things sensors (IoT) for physical devices, vehicles, home appliances and other items embedded with sensors which enable these objects to connect and exchange data; radio frequency sensors such as Wi-Fi, Wi-Fi Mesh, and WiMAX 3G, 4G, 5G, GSM, ZigBee, Bluetooth, Bluetooth LE, ANT, Near Field Communication (NFC), and terrestrial digital broadcasts of television and radio signals (HF radio, UHF TV, DAB, DVB, GSM). Device-based
+sensors
+58
+may be a stationary in a fixed location as a stand-alone device, or may be a component of a
+device
+26
+or appliance that is stationary or portable. In some aspects, the device-based
+sensors
+58
+are coupled to one or more actuators associated with complex mechanisms operating within
+ubicomp
+12
+. In some aspects,
+ubicomp
+12
+may include a subsystem of networked device free sensors that monitor and capture structural or
+environmental data
+60
+that may be stationary in a fixed location as a stand-alone device or may be a component of a
+device
+26
+or appliance that is stationary or portable, including but not limited to pressure or force sensors to track weight change, footsteps and location; ultrasound to indicate relative location of devices; infrastructure-mediated such as resistance to detect inductive electrical load changes; luminosity sensors to detect light levels; electromagnetic interference to detect proximity; water pressure to detect change in water-pressure within the pipe system; gas flow to detect gas consumption; electromagnetic noise to detect electrostatic discharges from humans touching and gestures; and passive radar that detects and tracks objects.
+In some aspects,
+ubicomp
+12
+has a
+device subsystem
+62
+to access control protocols that manage devices, device features, network configuration, network communications, power consumption and transmission power output. In some aspects,
+ubicomp
+12
+has a wired and/or
+wireless subsystem
+64
+to control access protocols for devices operating within
+ubicomp
+12
+that are mobile and require multi-hop wireless connectivity schemes. In some aspects,
+ubicomp
+12
+has a
+gateway subsystem
+66
+to control sensor and device subsystem access to other network systems such as Wide Area Networks (WANs), the Internet, cellular or satellite. In some aspects,
+ubicomp
+12
+has a
+security subsystem
+68
+to control user access, encryption identity verification, and defeat gateway attacks. In some aspects,
+security subsystem
+68
+is coupled to a
+blockchain system
+26
+and related components. In some aspects,
+ubicomp
+12
+may include
+user interface device
+70
+that is coupled to
+application program interface
+24
+. In some aspects,
+ubicomp
+12
+may include
+system interface device
+72
+that coupled to
+application program interface
+24
+. In some examples,
+user interface device
+70
+and
+system interface device
+72
+communicate and exchange data via
+networked ubicomp
+12
+devices and components that operate
+API
+24
+such as a mobile phone, wearable device, television, computer, home appliance, audio system, tablet an electronic keypad, and the like. In some examples,
+user interface
+70
+and
+system interface
+72
+via
+API
+24
+may enable operation of networked controls, sensors, devices, and systems within
+ubicomp
+12
+such as an appliance, camera system, audio system, television, computerized device, light, interior/exterior dwelling mobile robot or aerial drone. In some examples,
+user interface
+70
+and
+system interface
+72
+via
+API
+24
+manage administrative functions including but not limited to user access authority; user and device access levels, information access permissions, communication access, passwords, content filters, and security parameters for devices and users within
+ubicomp
+12
+and remote access to
+ubicomp
+12
+including networked systems, users and user groups, and
+computing devices
+26
+. In some examples,
+system interface
+72
+via
+API
+24
+may communicate with
+computing device
+26
+to enable remote operation of networked controls, sensors, devices, and systems within
+ubicomp
+12
+. In some aspects,
+ubicomp
+12
+may communicate with a
+server network
+74
+, and
+operating system
+76
+. In some aspects,
+server network
+74
+is
+server
+14
+in
+ 
+. In some aspects,
+operating system
+76
+executes computerized operations using a Microsoft Windows compatible operating system (OS), Apple OS X, Linux, iOS, Tizen, ANDROID, and the like.
+In some aspects,
+ubicomp
+12
+applications are stored and managed on
+server
+74
+. In some aspects,
+data server
+74
+is
+server
+16
+. In some examples,
+server
+74
+is a cloud based and/or edge computing server architecture. In some aspects,
+computer applications
+78
+are coupled to
+server
+74
+and are connected to ubicomp
+12
+components via
+API
+24
+. In some aspects,
+ubicomp
+12
+may operate with one or
+more computer applications
+78
+for processing, storing, analyzing, interpreting and converting
+ubicomp
+12
+and
+system
+10
+data into the
+aforementioned engagement data
+80
+. In some aspects,
+engagement data
+80
+is stored in a
+dataset repository
+84
+. In some aspects,
+dataset repository
+84
+is stored on
+computing device
+26
+. In some
+aspects computer application
+78
+may refer to a single computer program or combination of multiple programs configured for a specific task, function, process or operation. In some
+aspects computer application
+78
+may refer to a neural network program in a specific configuration including but not limited to artificial intelligence, machine learning, or deep learning and the like. In some examples,
+computer application
+78
+is
+recommendation engine
+18
+. In other examples,
+computer application
+78
+is
+inference intelligence
+20
+. In further examples,
+engagement data
+80
+is formatted with blockchain encryption techniques by
+blockchain module
+22
+. In some aspects,
+computer applications
+78
+may execute programs such as data analysis, data feature attribute computations, assign data classifications, and determine a value metric for an
+engagement data
+80
+record with applications such as linear classifiers, support vector machines, decision trees, Hidden Markov Model, Gaussian Mixture Model, Deep Neural Networks, Convolutional Network, Recursive Neural Network and the like.
+In some aspects,
+computer applications
+78
+may parse or
+separate engagement data
+80
+into various categories of
+training data
+82
+for reference, comparison, labeling, assigning classifications, features, attributes, and etc. In some aspects,
+training data
+82
+is stored on
+data repository
+84
+.
+Training data
+82
+features and attributes may include labels, names, metadata identifiers, standards, values, scores, formats, categories and subcategories presented, as individual and interrelated data and/or datasets, by example and not limited to, data classes named in
+ 
+. Notwithstanding the innovation design and performance objectives of
+system
+10
+and related components,
+engagement data
+80
+can be generated for an unlimited number of activity related scenarios such as identifying unique users, user preferences for activities, data activity conditions, schedule related activities, activity thresholds, precursors or triggers for executing operations, ranking and rating activity interests, anticipating activity outcomes, and predicting activities. To reduce the scope and focus of required data and computation efficiency,
+computer applications
+78
+may generate customized data profiles for
+engagement data
+80
+and
+training data
+82
+associated with specific users, including generic and anonymized user activity data from
+ubicomp
+12
+. Where data feature attributes have been calculated for
+respective engagement datasets
+80
+,
+computer application
+78
+may create customized
+engagement data
+80
+profiles by applying combinatorial equations for neural network applications that assign a weight or bias parameters to feature attributes, with values that either promote or demote the weight or bias assigned to the
+respective feature attribute
+86
+as represented in
+ 
+. These feature attributes and values represent
+inference intelligence
+20
+used by
+system
+10
+and related components. With attribute values or inference  calculated to identify, measure and compare user preference data associated with
+engagement data
+80
+events,
+computer application
+78
+comparative and predictive analysis programs may rate and rank experiences that may be alike or dissimilar. Using weights and biases,
+various computer applications
+78
+may apply computational analytics programming including but not limited to artificial intelligence, machine learning and deep learning, to newly presented
+system
+10
+activity data to determine correlations with and relevancy to an assigned
+engagement data
+80
+and
+training data
+82
+class that reduces calculation errors and computational requirements while improving overall data integrity, validity, reliability, and usability. In some aspects,
+computer application
+78
+may format
+engagement data
+80
+and
+training data
+82
+based on a file type, operating system, label, variable, value, feature, attribute, database type, and the like. In some aspects,
+computer application
+78
+may clean 
+engagement data
+80
+and
+training data
+82
+by removing, correcting or adding data such as modifications based the desired solution focus, information sensitivity, filtering high frequency noise, data anonymization, and the like. In one example,
+computer application
+78
+may select a representative sample of collected data in efforts to more efficiently analyze a larger dataset.
+ 
+illustrates
+interaction recommendation engine
+100
+, in accordance with some aspects of the present disclosure. Interaction recommendation engine or
+recommendation engine
+100
+operates to manage the physical and logical elements of
+system
+10
+by interpreting actions and rules that govern engagements and interactions between
+system
+10
+components and users of the system. For reference,
+recommendation engine
+100
+is disclosed herein for the purposes of presenting interaction recommendations based on
+identifiable engagement data
+110
+input from systems and methods that capture and present relevant data, including but not limited to, inputs such as human modalities, human actions and activities, physical environments, behavior, sentiments, lifestyle preferences, biometrics, user devices, networked communication devices, networked appliances, media content, external systems, platform systems, unique user profiles, and the like. Generally,
+recommendation engine
+100
+collects
+engagement data
+110
+from
+ubicomp
+12
+including hardware and software,
+API
+24
+,
+system
+10
+components, and
+users operating API
+24
+on
+computing device
+26
+. In some aspects,
+recommendation engine
+100
+generates two key datasets. First, from collected
+engagement data
+110
+,
+recommendation engine
+100
+implements computerized process and analysis steps to determine a dataset of information or
+interaction data
+130
+that represents a known or desired human activity or behavior. For clarification,
+interaction data
+130
+is parsed from
+engagement data
+110
+assigned to user profile accounts for each unique subject and/or associated
+system
+10
+user based on their respective interactions. Second, from collected
+engagement data
+110
+,
+recommendation engine
+100
+implements computerized process and analysis steps to determine a dataset of information or
+inference intelligence
+132
+that correlates preference or contextual information to
+interaction datasets
+130
+assigned to basic user activity within
+ubicomp
+12
+, user interactions with
+specific ubicomp
+12
+components, interactions between users, and interactions between users and external services. For example,
+recommendation engine
+100
+detects and identifies a set of human actions and gestures that are assigned an
+interaction data
+130
+labeled late night beverage  where the subject is observed with a networked camera in a kitchen opening a refrigerator and pouring a beverage in a glass during certain hours of the evening. A camera observing this interaction repeatedly may use object and label recognition to determine the type of drink and brand most often chosen by the subject and
+extract inference intelligence
+132
+associated with this specific
+user interaction dataset
+130
+. In some aspects,
+inference intelligence
+132
+is
+inference intelligence
+20
+. Using networked smart refrigerator inventory management technology, the
+recommendation engine
+100
+can alert the subject, other users, automated grocery list applications, and relevant external services to replenish the subject's preferred choice of late night beverages.
+In some aspects,
+recommendation engine
+100
+may include
+network
+102
+,
+API
+104
+,
+database server
+106
+database
+108
+,
+processor server
+116
+,
+data processor
+118
+, and
+computer application
+128
+.
+Network
+102
+facilitates data transfers, exchanges and communication connections between
+recommendation engine
+100
+,
+API
+104
+and
+system
+10
+components. In some aspects,
+network
+102
+is
+network
+74
+and
+network
+14
+.
+Database server
+106
+may be coupled to
+network
+102
+,
+API
+104
+, and
+processor server
+116
+and in addition to providing selected data, communications and information access to
+ubicomp
+12
+,
+computing device
+26
+and
+external system
+28
+. In some aspects,
+server
+106
+is a comprised of a server network. In other aspects,
+server
+106
+is a comprised of an edge computing server architecture network. In some aspects,
+server
+106
+is an independent host, gateway and network access within
+system
+10
+for
+recommendation engine
+100
+. In some aspects,
+server
+106
+is
+server
+16
+.
+Database
+108
+may provide storage for data generated and supplied to
+system
+10
+components. In some aspects,
+database
+108
+is a comprised of a database network. In some aspects,
+database
+108
+is
+data repository
+84
+. In some aspects,
+database
+108
+is a decentralized blockchain database. In some aspects,
+database
+108
+stores engagement data
+110
+. In some aspects,
+engagement data
+110
+is
+engagement data
+80
+. In some aspects,
+database
+108
+stores training data
+112
+. In some aspects,
+training data
+112
+is training
+data
+82
+. In some aspects,
+data processor
+118
+separates or parses information from
+engagement data inputs
+110
+or imports data via
+network
+102
+to be used as
+training data
+112
+with
+computer applications
+128
+perform algorithmic functions such as reference, comparison, recommendation, predictive, statistical analytics and the like. In some aspects,
+recommendation engine
+100
+may use a set of
+training data
+112
+for reference of or comparison to
+engagement data
+110
+class samples. In some examples,
+training data
+112
+may include descriptive information that defines the class sample features and attributes including labels, contextual data, preferences, data origin, and the like. In some aspects,
+database
+108
+stores
+user profile data
+114
+.
+User profile data
+114
+may include a unique user identifier, user name, e-mail address, password, gender, age, race, address, occupation, publisher/consumer status, media device types, media device IP addresses, business information payment information, bank account information, shipping address, and contact information.
+User profile data
+114
+may also include user experience and historical user activity data such as lifestyle engagement routines,
+inference intelligence
+132
+, platform activity, device activity, user interaction relationships and the like.
+Data processor server
+116
+hosts computerized applications for
+recommendation engine
+100
+and provides gateway access to
+system
+10
+and related components. In some aspects,
+data processor server
+116
+is a comprised of a process server network. In other aspects,
+data processor server
+116
+is a comprised of an edge computing server architecture network. In some aspects,
+data processor server
+116
+is an independent host, gateway and network access within
+system
+10
+for
+recommendation engine
+100
+.
+Data processor
+118
+may assign or use assigned labels, descriptors, data summaries, origination information, features, attributes and the like to process and identify the
+engagement data
+110
+. In one example,
+data processor
+118
+collects, cleans, and prepares
+engagement data
+110
+in accordance with the various processing, formatting, indexing, labeling and related requirements that comprise
+recommendation engine
+100
+applications for generating
+interaction data
+130
+and
+inference intelligence
+132
+. In some aspects,
+data processor
+118
+includes
+filtering application
+120
+,
+segmentation application
+122
+,
+extraction application
+124
+and
+classification application
+126
+.
+In some aspects,
+data processor
+118
+may use filtering
+application
+120
+to manage, import, and transfer
+engagement data
+110
+. In some examples,
+filtering application
+120
+operations include sampling data, test data, creating training datasets, windowing, reducing high frequency noise and processing data for use by various computational applications that receive information from
+engagement data
+110
+inputs. In some examples,
+filtering application
+120
+executes operations such as Split Data, Clean Missing Data, Partition and Sample, Apply SQL Transformation, Clip Values, and the like. In some aspects,
+data processor
+118
+may use
+segmentation application
+122
+to separate
+engagement data
+110
+into distinct groups for artificial intelligence, machine learning and other analytic applications, data processes, signal mapping, and system related programs.
+Segmentation application
+122
+can create data segments using algorithmic clustering methods consisting of unsupervised, semi-supervised, and supervised categories with applied domain expertise. In some aspects,
+data processor
+118
+may use
+extraction application
+124
+to identify and characteristics of specific features and attributes related information from
+engagement data
+110
+inputs including but not limited to video signals, networked camera feeds, image recognition, facial recognition, emotion recognition, object recognition, label recognition, gesture identification, activity labeling, natural language, speech to text, audible sounds, text, images, language, dates, and the like. To create a more informative dataset or representation of relevant features,
+extraction application
+124
+may transform and reclassify data input using descriptive and discriminatory feature sets.
+Extraction application
+124
+may include calculations for statistical and morphological characteristics of represented data. In some aspects,
+training data
+112
+may be imported by
+recommendation engine
+100
+into
+database
+108
+from
+network
+102
+source, such as generic information for comparison data usage, or generated by
+computer application
+128
+programs configured to extract and store training data from existing
+engagement data
+110
+.
+Classification application
+126
+can compare newly introduced
+engagement data
+110
+to existing
+training data
+112
+using unsupervised, semi-supervised, and supervised methods to determine information that newly presented data should have to represent
+engagement data
+110
+,
+training data
+112
+, and
+interaction data
+130
+. In some examples,
+classification application
+126
+executes algorithmic techniques and operations such as k-Nearest Neighbors, Linear Discriminant Analysis, Naive Bayes Classifier, Logistic Regression, Support Vector Machines, Decision Trees, Boosted Trees, Random Forest, Neural Networks, Nearest Neighbor and the like. In some aspects,
+data processor
+118
+may use
+multiple classification applications
+126
+to improve classification accuracy.
+Classification application
+126
+may make classifications that include but are not limited to engagement instances and outcomes measured by data values, data parameters and conditions; identifying optimal and non-optical engagement measured by data values, data parameters and conditions; predicting qualitative and qualitative engagement measured by data values, data parameters, and conditions; and optimal interaction conditions and or parameters associated with respective user and system activities; identifying inference intelligence from event conditions, participants, moods, biometrics, emotions, sentiment, gestures, language, cognitive information, modality, activity frequency and similar value or scored information that can be compared, ranked and rated. The measured values, unique engagement conditions, qualitative and qualitative aspects of an interaction will vary based on the subjective experiences of subjects with the system, system components, and other users. At a given instance of engagement conditions or parameters, defined by
+interaction data
+130
+, a user may be the focal point or subject  where engagement
+recommendation inference intelligence
+132
+qualifies the nature or value of the interaction based on that individual's preferences, empirical profile data, contextual data, and the like.
+Inference intelligence
+132
+is reference information, unique to each user, and is refined with each additional interaction that can be used to compare and validate the measurements attributed to individual users from empirical data as well as predictions of future engagement opportunities, whether objectively favorable or not based on known information. For reference purposes,
+engagement data
+110
+and datasets are captured, processed and stored by
+system
+10
+components in anticipation of the innovations described herein applying various computational, artificial intelligence, machine learning, deep learning and predictive analytical techniques to identify obvious and non-obvious aspects of measurable human activity and behavior that qualify as
+interaction data
+130
+based on the subjective experiences and desires of users.
+Collected engagement data
+110
+may have value upon initial introduction to
+recommendation engine
+100
+, a cumulative impact as addition information and context is applied, or more relevance as archived data that assists various applications which utilize time based information.
+In some aspects, one or
+more computer application
+128
+are components of
+recommendation engine
+100
+. In some examples,
+recommendation engine
+100
+executes machine learning programs with algorithms and neural network architectures to improve classification and prediction accuracy using analytic and learning model configurations. In some aspects,
+computer application
+128
+is
+computer applications
+78
+. In one example,
+computer application
+128
+is configured as a learning module where software is programmed to associate, correlate, analyze, compare, extrapolate and validate
+engagement data
+110
+with
+training data
+112
+. In one example, this learning
+module computer application
+128
+may use a multimodal mathematical model to execute operations including, but not limited to, statistics, probabilities, correlations, data maps, model deployment, testing, fine tuning, training, visual recognition, rectification, and pooling using deep learning frameworks such as OverFeat, Theano/Pylearn, Torch7, Dec, cuda-covnet, Caffe and the like. In some aspects,
+engagement data
+110
+is collected and labeled from inputs based on each class of user and system activities that needs to be recognized and matched with
+engagement data
+110
+for one of a plurality of pre-defined classes of user and system activities and events associated with
+corresponding engagement data
+110
+. In some aspects, where
+engagement data
+110
+associated with activity or events are previously unknown,
+recommendation engine
+100
+may use learning
+module computer application
+128
+to compare features and attributes of unknown user and
+system engagement data
+110
+with features and attributes of stored
+training data
+112
+. Learning
+module computer application
+128
+, where applicable to user interactions with other users or the system, may adapt existing
+training data
+112
+to establish
+inference intelligence
+132
+that is recorded and stored as
+user profile data
+114
+, creating a
+unique engagement data
+110
+model for a
+specific interaction dataset
+130
+. As depicted in
+ 
+, a model may be used by
+recommendation engine
+100
+to efficiently identify
+engagement data
+110
+conditions and
+user profile data
+114
+preferences for a given
+interaction dataset
+130
+, based on inference intelligence
+132
+(i.e.; favorable or optimal desired outcomes) and provide appropriate parties with accurate and timely notifications if desired.
+Recommendation engine
+100
+may use learning
+module computer application
+128
+to test an engagement model by comparing similar user data empirical data generated that may be reliable predictor of future interaction outcomes of a similar nature.
+In another example,
+computer application
+128
+is configured as a contextual agent where software is programmed to identify, associate, analyze, compare, extrapolate and interpret
+inference intelligence
+132
+generated
+form engagement data
+110
+and
+interaction data
+130
+. In some aspects, contextual
+agent computer application
+128
+may be configured to assign weights and biases, describe previously in
+ 
+, associated with
+engagement data
+110
+and interaction data to that are applied to
+various computer application
+128
+processes and calculations (neural networks, algorithms, programs) that produce reliable and
+accurate inference intelligence
+132
+for use by
+recommendation engine
+100
+. In some aspects, contextual
+agent computer application
+128
+may identify factors, variables, conditions or circumstances evidenced with analysis of
+engagement data
+110
+,
+user profile data
+114
+and
+interaction data
+130
+that influence various user activities, intentions, expectations, and interaction outcomes that can be introduced by
+recommendation engine
+100
+to improve interpretability of
+engagement data
+110
+,
+interaction data
+130
+, and ultimately optimize performance of algorithmic, computational, and predictive analytics programs by storing data insights as empirical user data or
+training data
+112
+for reference. Based on the data presented to
+recommendation engine
+100
+, contextual
+agent computer application
+128
+may add to, delete, modify, or enhance
+engagement data
+110
+and
+interaction data
+130
+features and attributes using weights and biases for each data class, respectively, and create new data classes for
+inference intelligence
+132
+as needed. In some aspects, contextual
+agent computer application
+128
+solicits feedback from a
+user operating API
+24
+on computing device
+36
+. Feedback may include but is not limited to device information such as location, text messaging, data exchanges, camera data,
+API
+24
+activity, and the like.
+In some aspects, contextual
+agent computer application
+128
+may operate in conjunction with learning
+module computer application
+128
+to train data analysis models, fine-tune models for optimal performance, reduce analytic errors, identify bias, generalization, and the like. In some aspects, where previously unknown data input is presented, the contextual
+agent computer application
+128
+and learning
+module computer application
+128
+may operate to solicit feedback from
+system
+10
+users to confirm and validate newly presented
+engagement data
+110
+,
+interaction data
+130
+or
+training data
+112
+from unknown data using reference information from external sources such as the internet,
+external services
+28
+, the subject(s) of the data being compared, and associated users of said subject(s) via automated notification, requests for information, surveys, and the like.
+In a further example,
+computer application
+128
+is configured as a recommendation module where software is programmed to compile, process, and analyze
+interaction data
+130
+and
+inference intelligence
+132
+to interpret, evaluate and anticipate outcomes that guide recommendation selections for favorable, unfavorable or neutral user interactions. An interaction recommendation selection can be defined as a single or collection of user choices of actions and decisions, based on analyzed
+interaction data
+130
+and
+inference intelligence
+132
+, that may be presented as ranked and/or rated lists based on favorable outcome, user intentions, circumstantial actions based on a data instance, scheduled or time based decisions, and responses to direct communications between user devices such as an electronic request for information on a smart device. With each opportunity for user engagement, recommendation
+module computer application
+128
+may define
+engagement data
+110
+classes for each unique user, adding greater context and refinements that improve predictive analysis of interaction outcomes and subsequent recommendations to users. For example, if a subject is presented a specific media content type with varying engagement measurements for each respective media exposure event, recommendation
+module computer application
+128
+may use
+training
+114
+and
+engagement data
+110
+to provide a more accurate understanding of the variance in engagement measurements (defined by rules, weights and biases) that enable more concise ranking and rating of interaction recommendations of, for example, user preference priority for media genre or artist, who should present the media, when to present the media, what environmental conditions are ideal, what technical means is optimal, how long the media presentation should last, how often should the media be presented, what alternative media choices are comparable, and etc. More specific, if a subject enjoys viewing images of yellow roses on a tablet device at noon while eating lunch alone on weekdays (and not weekends), the recommendation module will identify
+interaction data
+130
+including all measurable user data, environmental conditions, preferences, and etc. by class such as, in the present example (frequency: once a day; subject: yellow roses; method: tablet device; activity: lunch; behavior: alone; schedule; only weekdays at noon) to create recommendations for interactions that are presented to the subject and/or the subject's associated users to guide their decisions and actions. Electronically, with a push notification of the aforementioned interaction description, either by designated schedule settings or an impromptu instance when the components of the optimal conditions are detected by
+recommendation engine
+100
+, the subject's associated users can have reminders of each respective interaction element that comprises an optimal engagement which in turn empowers them to create the prescribed conditions for the subject, i.e. order delivery of lunch at the designated time, find suitable images based on the subject's tastes, deliver images to the subject's tablet device, and send a reminder to other users to respect the subject's privacy during the activity. Interaction recommendations can be created for the subject where, based on scheduled or impromptu detection of optimal conditions, recommendation
+module computer application
+128
+can deliver interaction recommendations via
+API
+24
+to a subject's
+computing device
+26
+or
+ubicomp user interface
+70
+within
+ubicomp
+12
+and associated
+user devices
+26
+located outside
+ubicomp
+12
+. For example, based on empirical and training data,
+system
+10
+can identify voice commands, physical gestures and actions, behaviors, habits and patterns that anticipate a subject's lifestyle preferences with recommendations such as suggestions of favorite television program viewing times; availability of favorite user associates via
+networked devices
+26
+; schedule for house cleaning, building maintenance, personal caregiving, interactions with an object or networked appliance; transportation or meals from
+external services
+28
+; advanced lead time for personal grooming routines; social visitation schedule, meal delivery lead time, transport schedule and etc. In some aspects, recommendation
+module computer application
+128
+may use a data identifier that recognizes patterns, trends, routines and habits associated with
+interaction datasets
+130
+to be used by
+recommendation engine
+100
+as benchmarks, thresholds, precursor, triggers and the like that predict or anticipate user activity or behaviors that precede or follow an interaction with
+ubicomp
+12
+,
+system
+10
+components,
+API
+24
+, or users operating
+computing device
+26
+.
+Referring to
+ 
+, a flow diagram is depicted illustrating an example of a
+process
+200
+for one or more aspects of delivering interaction recommendations to users according to some implementations of the disclosure. In some aspects, the process begins at
+step
+202
+with engagement related activity associated with interactions in a
+ubiquitous computing environment
+12
+. Engagement may include activity of a subject within a ubicomp; activity between a subject and ubicomp components; activity between a subject and associated users either within a ubicomp or remotely located; and activity between associated users of a subject and ubicomp components, either located within the ubicomp or remotely located.
+In some aspects, activity in
+step
+202
+may be represented in various forms of
+engagement data
+110
+including but not limited to physical movement, gestures, walking, audible sounds, speech, voice commands, haptic control motion, facial expressions, moods, biometrics; automated or remotely controlled operations by
+system
+10
+,
+network
+14
+,
+external systems
+28
+and/or remotely networked
+devices
+26
+; and user engagement via
+API
+22
+,
+ubicomp
+12
+components,
+network
+14
+, or
+external systems
+28
+. At
+step
+204
+,
+process
+200
+detects activity using a trigger comprised of a computational model for capturing, measuring, analyzing, and interpreting
+engagement data
+110
+information related to an event, sequence, threshold, benchmark, user action, user profile, or operations associated with a device, program, network, system and labels the associated data as
+interaction data
+130
+. At
+step
+206
+,
+process
+200
+associates the detected activity with a subject (or subjects) then, in
+step
+208
+,
+process
+200
+identifies and audience of prospective associated
+users
+208
+. A prospective audience member may be identified with automated operations using specific thresholds of or predetermined
+user profile information
+114
+, current or previous status, communication with
+API
+24
+or
+networked device
+26
+. Members of
+audience
+208
+may be included or excluded in
+process
+200
+based on filters such as activity category, authority level, permissions, subject matter relevancy, interaction availability, correlations or comparisons of user profile data of the subject and the respective associated users, or similar parameters.
+At
+step
+210
+,
+process
+200
+collects
+inference intelligence
+132
+from
+recommendation engine
+100
+and
+computer application
+128
+.
+Inference intelligence
+132
+may be indicative of current activities and historical activities associated with the subject, audience, or
+unique engagement data
+110
+conditions recognized by
+trigger
+204
+. In some aspects, a benchmark or threshold level reference file is established, labeled, and stored with
+user profile data
+114
+based on the available, triggered, extrapolated and interpreted data conditions, for future use by
+system
+10
+and
+recommendation engine
+100
+. At
+step
+212
+,
+process
+200
+generates a computational model using
+activity data
+202
+,
+trigger data
+204
+,
+user profile information
+206
+,
+audience data
+208
+, and
+inference intelligence
+210
+. In
+step
+214
+,
+process
+200
+, using the model, determines possible interactions for the subject and audience members. In
+step
+216
+,
+process
+200
+, using the model, calculates and assigns a data value to user intentions and possible interaction outcomes by integrating
+activity data
+202
+, subject/audience
+user profile information
+206
+and
+inference intelligence
+132
+with
+computational model
+212
+. In
+step
+218
+,
+process
+200
+, using the model, calculates outcome scores and values based on the probability of anticipated outcomes and intentions for each participant of the possible interactions and ranks the possible outcomes to determine plausible interaction recommendations in favorable, unfavorable and neutral categories. In
+step
+220
+,
+process
+200
+, using the model, applies subject and audience member interaction rules and filters that may include or exclude interaction recommendation distribution based on preset parameters from the
+identification step
+208
+or newly established conditions based on calculations of inclusion or exclusion based on activity category, authority level, permissions, subject matter relevancy, interaction availability, and the like. In
+step
+222
+,
+process
+200
+, using the model, creates a record of the engagement conditions including calendar time stamp, category, type, unique identifier labels, related scores and values of possible interaction recommendations, interaction instructions for respective participants, reminder schedule, and user distribution list.
+Process
+200
+, using the model, compiles the engagement information and interaction recommendations data records for distribution to respective users in the form of communication language such as alphanumeric characters, symbols, audible signals, or other executable commands. In
+step
+224
+, based on the preset methods of communication associated with a user's
+profile information
+206
+,
+process
+200
+prepares engagement information and interaction recommendations for distribution to
+system peripherals
+10
+,
+API
+24
+,
+computing devices
+26
+,
+external networks
+28
+, and
+other ubicomp
+12
+components in forms and styles consistent with the recipients preferred method. Similarly, in step
+226
+,
+process
+200
+delivers engagement information and interaction recommendations to
+system peripherals
+10
+,
+user devices
+26
+,
+external networks
+28
+, and
+other ubicomp
+12
+components on a schedule and sequence with the recipients preferred method of receiving information. In some examples, a recipient may reject one or all presented interaction recommendations, thus creating new rule and filter information and
+new inference intelligence
+132
+, upon which
+process
+200
+returns to step
+210
+. In
+step
+228
+, upon a user executable function or automated command control,
+process
+200
+may provide additional information about the current engagement or interaction recommendations such as engagement and outcome historical data for the current subject and engagement matter, graphs and charts of interaction data analytics of the subject, rated and ranked recommendations based on aggregated data from related local, national, anonymized and/or demographic statistical data. In
+step
+230
+,
+process
+200
+, upon a user executable function or automated command control, will generate a computational model to track, analyze and compare expected engagement conditions with anticipated interaction outcomes based on known data (
+202
+,
+204
+,
+206
+,
+208
+,
+210
+) using probability calculations that, based on changes in benchmark or threshold values for the known data, will cause
+process
+200
+to recalculate the interaction recommendations starting with
+step
+202
+. In this step,
+process
+200
+, upon a user executable function or automated command control, creates a new
+contextual data record
+210
+to be used by
+process
+200
+and associated with a
+user profile information
+206
+and
+unique engagement conditions
+204
+.
+In
+step
+232
+,
+process
+200
+, based on the time assigned for the desired interaction, will solicit feedback data from participants to confirm both the interaction and outcome status. Feedback may be solicited in various formats using automated programs or notifications to user devices to communicate directly with the subject and/or associated users regarding the engagement subject matter. Response data verification may be initiated with a user executable function or automated command control, where a user is presented with various methods of communicating interaction outcome responses such as voice-enabled questions presented on a communications device, electronic questions delivered to a communications device, audible sounds, haptic gestures, facial expressions, eye movements, and the like.
+Referring to
+ 
+, a flow diagram is depicted illustrating a system or
+method
+300
+for determining an interaction opportunity for a subject within a ubiquitous computing environment, according to an implementation of the disclosure. System or
+method
+300
+may be performed by processing logic that comprises hardware, software, or a combination thereof. In some aspects, system or
+method
+300
+may be performed by
+recommendation engine
+100
+coupled to
+ubicomp
+12
+. In some aspects, a subject and/or associated users interact with
+ubicomp
+12
+remotely via
+API
+24
+. At
+block
+302
+, processing logic determines that engagement activity has been detected within
+ubicomp
+12
+from a user,
+networked device
+26
+, system operation or from a remote source, such as a
+networked device
+26
+, program stored on
+network
+14
+,
+server
+16
+, or
+external system
+28
+. To further the example, an
+engagement data
+110
+event may be identified, labeled and cataloged where a pre-defined threshold, benchmark, or parameter is reached based on detected data and associated reference data from user profile information, training data, and the like to define an
+interaction dataset
+130
+. In some aspects, an
+engagement data
+110
+event or a combination of sequence or series of
+engagement data
+110
+events may comprise a single interaction or multiple interactions. In some aspects, an interaction may be identified with a label, unique identifier, category, name, and the like with an automated means or by user input.
+At
+block
+304
+, processing logic uses the
+ubicomp engagement data
+110
+to train a neural network computational model to determine possible interaction opportunities involving the subject, associated users, system program applications, system devices, or combination therein. In some aspects, the possible interactions are determined using algorithms that calculate available and/or referenced
+engagement datasets
+110
+. In some aspects, available and referenced datasets may include, but not be limited to, interaction type, method, rules, access permissions, schedule, privacy settings, user preferences, user status, contextual data and the like. In some aspects,
+inference intelligence
+132
+for respective datasets may determine applicability, bias, or weighted value used by the algorithm applications. At
+block
+306
+, processing logic calculates scores for indicators of positive or negative interaction outcomes. In some aspects, indicators are calculated using user profile data,
+historical interaction
+130
+reference data, generic training data, user preference data, and inference related information. At
+block
+308
+, processing logic originates a list of recommendations for interactions. In some aspects, the list is ranked where recommendations are associated with a score or value based on user preferences, user status, schedule, or other interaction related dataset in ranked or rated lists according to favorability, unfavourability or neutrality. In some aspects, the recommendations are associated with interaction conditions or standards that clarify or qualify terms and/or requirements of a prospective interaction that identifies a single or range that may be considered optimal or acceptable based on available data. To further the example above, a recommendation to visit a subject by associated users may include conditions of day, time, permitted or non-permitted individuals, and the like. At
+block
+310
+, processing logic receives an interaction confirmation from relevant parties including subject matter, method, schedule, location, terms or requirements, and prospective participants. In some aspects, the interaction confirmation information is presented based on parameters set based on user profile data or pre-set conditional data managed by the system. At
+block
+312
+, the neural network computational model is updated with interaction outcome data. At
+block
+314
+, the neural network computational model is updated with changes to system data, user profile data, preference data, and interaction data associated with respective users. In some aspects, the process of the system or
+method
+300
+can continue to any of
+blocks
+302
+,
+303
+,
+306
+,
+308
+,
+310
+,
+312
+, or
+314
+.
+Referring to
+ 
+, a flow diagram is depicted illustrating a system or
+method
+320
+for determining
+interaction inference intelligence
+132
+for a subject associated with a ubiquitous computing environment, according to an implementation of the disclosure. System or
+method
+320
+may be performed by processing logic that comprises hardware, software, or a combination thereof. In some aspects, system or
+method
+320
+may be performed by
+recommendation engine
+100
+coupled to
+ubicomp
+12
+. At
+block
+322
+, processing logic identifies
+engagement data
+110
+events and
+interactions
+130
+associated with a subject. In some aspects, a subject and/or associated user may interact with
+ubicomp
+12
+and one another from within
+ubicomp
+12
+while in other aspects a subject may be physically in remote location while interacting with
+ubicomp
+12
+and associated users. At
+block
+324
+, processing logic applies
+engagement data
+110
+events and
+interactions
+130
+to train a neural network model to identify
+inference intelligence
+132
+information. In some aspects,
+inference intelligence
+132
+may include data derived from a subject, a subject's associated users, system program applications, system devices, or combination therein. In some aspects, the inference intelligence may be calculated using individual datasets or a combination therein including but not limited to environmental data, experiential data, user profile data, user preference data, historical data, and generic training data. In some aspects, the relevancy of the identified
+engagement data
+110
+is a calculated value, used as weights and biases, based on individual or multiple datasets including real-time data, historical data of user profile and previous interactions, training data, and probability values related to user preference, intentions, desired outcomes, and the like. At
+block
+326
+, processing logic calculates a score comparing inference intelligence with interaction outcome values
+306
+. At
+block
+328
+, processing logic applies correlated
+inference intelligence
+132
+and interaction outcome scores to train a neural network model to identify
+engagement data
+110
+precursors with interaction outcomes, which adds deeper contextual data to
+inference intelligence
+132
+. In some aspects, the precursor or precursors may be a value, a data point, a data set or defined by parameters that establish a baseline, benchmark, threshold and the like. In some aspects, the precursor value calculation is based on a probability, an algorithm, an analytic program, and the like. In some aspects the precursors may be represented by a label, category, type, number, percentage, unique identifying code and the like. At
+block
+330
+, processing logic applies
+engagement data
+110
+precursors to train a neural network model to establish notifications, indicators and triggers based on interaction outcomes desired by a user. In some aspects, notifications, indicators and triggers can be presented to users in various formats including alphanumeric, graph, line charts, percentage, ranked and rated lists, and the like. In some aspects, the notifications, indicators and triggers can be associated with interaction recommendations presented to users based on non-computational values such as category, type, schedule, attendees, content, method, device, and the like. At
+block
+332
+, the neural network model is updated with
+engagement data
+110
+and precursor data. At block
+334
+, the neural network model is updated with changes to system data, user profile data, preference data, and interaction data associated with respective users. In some aspects, the process of the system or
+method
+320
+can continue to any of
+blocks
+322
+,
+324
+,
+326
+,
+328
+,
+330
+,
+332
+, or
+334
+.
+Referring to
+ 
+, a flow diagram is depicted illustrating system or
+method
+340
+for generating interaction recommendations using preference related data associated with a ubiquitous computing environment, according to an implementation of the disclosure. System or
+method
+340
+may be performed by processing logic that comprises hardware, software, or a combination thereof. In some aspects, system or
+method
+340
+may be performed by
+recommendation engine
+100
+coupled to
+API
+24
+and
+ubicomp
+12
+. At
+block
+342
+, the processing logic generates a neural network model using
+computer application
+78
+to correlate
+ubicomp
+12
+data,
+system data
+10
+,
+engagement data
+110
+,
+interaction data
+130
+,
+inference intelligence
+132
+, and
+user preference data
+114
+. At block
+344
+, using the neural network model, the processing logic trains the model to determine a user's intention with the above correlated data including real-time event inference information and environmental data, archived interaction data and generic training data. At block
+346
+, using the neural network model, the processing logic to train model to determine a user's desired outcome with correlated data including real-time inference information information and environmental data, preference data, archived interaction data and generic training data. At
+block
+348
+, using the neural network model, the processing logic determines the likely availability of physical and non-physical elements of possible interaction outcomes based on user intention and desired outcome preference data including conditions, prerequisites, and precursors for possible interaction outcomes. At
+block
+350
+, the processing logic calculates a comparison score based on value associated with availability of physical and non-physical elements and user intention preference data to determine the likelihood of the desired interaction outcome occurring. At
+block
+352
+, the processing logic generates a list of interaction recommendations and, where applicable, includes conditions, prerequisites, and precursors associated with desired outcome. At
+block
+354
+, using the neural network model, based on the interaction selected, the processing logic solicits user response data and, based on the response data, calculates a value that determines a correlation level, higher or lower, between a subject's desired outcome compared to actual outcome of the interaction. In some aspects, the processing logic solicits user response data feedback from various sources including but not limited to device data, biometric data, audible surveys, electronic surveys, subject centric information, a subject's associated user centric information, text based communications,
+inference intelligence
+132
+and
+system
+10
+data. At
+block
+356
+, the neural network model is updated with interaction recommendation information. At
+block
+358
+, the neural network model is updated with changes to system data, user profile data, preference data, and interaction data associated with respective users. In some aspects, the process of the system or
+method
+340
+can continue to any of
+blocks
+342
+,
+344
+,
+346
+,
+348
+,
+350
+,
+352
+,
+354
+,
+356
+or
+358
+.
+Referring to
+ 
+, a flow diagram is depicted illustrating a system or
+method
+360
+for managing interaction recommendations using interaction data associated with a ubiquitous computing environment, according to an implementation of the disclosure. System or
+method
+360
+may be performed by processing logic that comprises hardware, software, or a combination thereof. In some aspects, system or
+method
+360
+may be performed by
+recommendation engine
+100
+coupled to
+ubicomp
+12
+,
+server
+116
+,
+API
+24
+and
+user profile data
+114
+stored on
+database
+108
+. At
+block
+362
+, ubicomp engagement data event triggers generation of interaction recommendation(s). At
+block
+364
+, the processing logic coupled to
+API
+24
+identifies, correlates and filters interaction recommendations according users associated with a defined
+interaction dataset
+130
+event. The available recommendations may be stored in a data file associated with
+user profile data
+114
+. At
+block
+366
+, the processing logic determines the nature, composition, hierarchy and ranking of the interaction recommendation list using a neural network model based at least in part on the available user data, inference information, audience member status, schedule, authorization level, privacy setting, notification protocol, user status and the like. At
+block
+368
+, the processing logic coupled to
+API
+24
+selects at least one recommendation from data files associated with
+user profile data
+114
+and serves the recommendations to
+user interface
+70
+within
+ubicomp
+12
+or a user interface operating on
+computing device
+26
+using a distribution method and confirmation means. In some aspects, a distribution method and confirmation means can include an audible tone, voice or sound, visual image or graphic, alphanumeric value, video clip and the like. In some aspects, the rendered recommendations may be conditional and require a response that is time sensitive, the number of users that select the same recommendation, based which audience members respond, and the like. At
+block
+370
+, the processing logic can change, edit or revise the recommendation list where the presented options are not accepted or selected by a single or multiple participants of the distributed interaction recommendations. Additional recommendations are re-distributed to respective users and added to the associated
+user profile data
+114
+. In some aspects, the processing logic can change, edit or revise the recommendation list using a neural network model based at least in part on the available user data, inference information, audience status, schedule, notification protocol, user status and the like. In some aspects, the processing logic can solicit or receive interaction recommendation alternative from a user's interface via
+API
+24
+and add them to associated
+user profile data
+114
+as possible interaction recommendations based on the engagement data event or for future reference of user preference and interaction data. In some aspects, a user associated with an engagement event can initiate the distribution of a customized interaction recommendation list to a specific audience. At
+block
+372
+, the neural network model is updated with interaction recommendation distribution service, response data, and
+user profile data
+114
+. At
+block
+374
+, the neural network model is updated with changes to system data, user profile data, preference data, interaction data, and content database associated with respective users. In some aspects, the process of the system or
+method
+360
+can continue to any of
+blocks
+362
+,
+364
+,
+366
+,
+368
+,
+370
+,
+372
+or
+374
+.
+Referring to
+ 
+, a flow diagram is depicted illustrating a system or
+method
+380
+for optimizing interaction recommendations using interaction data associated with a ubiquitous computing environment, according to an implementation of the disclosure. System or
+method
+380
+may be performed by processing logic that comprises hardware, software, or a combination thereof. In some aspects, system or
+method
+380
+may be performed by
+recommendation engine
+100
+coupled to
+ubicomp
+12
+,
+API
+24
+and
+user profile data
+114
+stored on
+database
+108
+. At
+block
+382
+, processing logic generates a neural network model using
+computer application
+78
+to correlate
+engagement data
+110
+associated with
+interaction data
+130
+to identify user intention information and desired outcome information. At
+block
+384
+, using the neural network model, the processing logic calculates and assigns weights and bias values to engagement data associated with user intention information
+344
+and desired outcome information
+346
+. In some aspects, values for weights and biases may be generated from generic training data or historical data associated with a user profile. At
+block
+386
+, using the neural network model, the processing logic determines correlations between user intention and interaction outcome information compared to interaction recommendations. At
+block
+388
+, the processing logic determines if there is a minimum threshold met for the calculated weight and bias score combination that 
+
+[TRUNCATED]

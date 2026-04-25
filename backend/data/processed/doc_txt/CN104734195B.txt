@@ -1,0 +1,28 @@
+A monitoring method for a wind-solar-storage integrated microgrid capable of …. A monitoring method of a wind-solar-storage integrated micro-grid capable of being operated in a grid-connected mode can predict the power generation power of wind-solar power generation equipment in the micro-grid and the load change in the micro-grid, track voltage information of grid-connected points of a large power grid, acquire a large power grid dispatching instruction in real time, detect the battery capacity of a storage battery module in real time, set a discharge interval of an energy storage system, optimally manage the energy of the energy storage system based on an SOC hierarchical control strategy, correct the charge-discharge power of the energy storage system in real time, optimize the working performance of the energy storage system, make and implement an optimal control strategy, ensure that the micro-grid participates in voltage regulation of the large power grid according to the requirements of the large power grid when in grid-. 1. a kind of monitoring method of the wind-light storage one micro-capacitance sensor being incorporated into the power networks, method comprise the steps：
+ S1. wind power plant and photovoltaic power generation equipment monitoring module obtain wind power plant and photovoltaic power generation equipment in real time
+Service data, and data storage, obtain load power demand situation in micro-capacitance sensor in real time；Sent out according to wind power plant, photovoltaic
+The service data of electric equipment, the output to the wind power plant in following predetermined instant, photovoltaic power generation equipment are active and idle
+It is predicted；
+ S2. grid entry point information of voltage is gathered, while determining that micro-capacitance sensor is active and idle output demand according to bulk power grid dispatch command；
+ S3. real-time detection obtains the SOC of battery module, and setting energy storage system discharges are interval, build SOC muti-layer control tactics；
+ S4. bearing power in micro-capacitance sensor active and idle output demand, current SOC muti-layer control tactics, current micro-capacitance sensor is needed
+Ask, wind power plant and photovoltaic power generation equipment it is exportable active and idle as constraints, realize the optimization fortune of micro-capacitance sensor
+OK；
+ In step s3, following concrete steps are specifically included：
+ S31. energy storage system discharges are set interval
+ Energy storage system discharges interval determiner do not break through after wind power is received electrical network can utilize spatial margins value when
+Section, sets the discharge range α, 0≤α of energy-storage system 0
+ 
+ 
+ 
+ xc=(S-Smax)/(Spre_max-Smax) (6)
+ Energy-storage system is under discharge condition, PESS(t)<0
+ 
+ 
+ 
+ xf=(S-Smin)/(Spre_min-Smin) (8)
+ Adjusted COEFFICIENT KSOCAmendment determines the actual charge-discharge electric power P of energy-storage systemSOC_ESST () is：
+ PSOC_ESS(t)=KSOCPESS(t) (9)
+ State-of-charges of the wherein S for energy-storage system；SmaxFor the lower limit of the emergency stratum that do not charge；Smax、Spre_maxFor few charging preventive stratum
+Bound；Spre_max、Spre_minFor the bound of normal discharge and recharge safe floor；SminFor the lower limit of few electric discharge preventive stratum；XcFor
+K is calculated under energy-storage system charged stateSOCCoefficient；XfTo calculate K under energy storage system discharges stateSOCCoefficient.
