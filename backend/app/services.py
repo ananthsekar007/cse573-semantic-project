@@ -156,7 +156,7 @@ def load_embedding_model() -> SentenceTransformer | None:
         return None
     try:
         log.info("Loading SBERT model from local cache: %s", SBERT_MODEL)
-        model = SentenceTransformer(SBERT_MODEL, device="cpu", local_files_only=True)
+        model = SentenceTransformer(SBERT_MODEL)
         log.info("SBERT model loaded successfully.")
         return model
     except Exception as exc:
@@ -287,7 +287,7 @@ def embed_query(text: str) -> np.ndarray:
 
 def _encode_query_worker(text: str, output_queue) -> None:
     try:
-        model = SentenceTransformer(SBERT_MODEL, device="cpu", local_files_only=True)
+        model = SentenceTransformer(SBERT_MODEL)
         vector = model.encode(
             [text],
             batch_size=1,
